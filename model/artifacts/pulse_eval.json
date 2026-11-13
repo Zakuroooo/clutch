@@ -1,0 +1,76 @@
+{
+  "split": "test",
+  "test_matches": 673,
+  "definition": {
+    "biggest_swings": "the 10 balls per match with the largest |wp.after - wp.before|",
+    "caught": "a call-back at that bar or higher in the 6 legal balls up to and including the ball",
+    "random": "same number of call-backs at random balls, mean of 20 draws",
+    "last_overs": "same number of call-backs, one at the start of each of the final overs",
+    "after_wickets": "a call-back on the ball after each wicket"
+  },
+  "thresholds": {
+    "notable": 52.4,
+    "big": 76.5,
+    "decider": 88.6,
+    "cooldown_balls": 6
+  },
+  "bars": {
+    "notable": {
+      "name": "Everything",
+      "callbacks_median": 20.0,
+      "callbacks_p10": 6.200000000000003,
+      "callbacks_p90": 35.0,
+      "coverage": 0.816,
+      "random_same_count": 0.417,
+      "last_overs_same_count": 0.496
+    },
+    "big": {
+      "name": "Big moments",
+      "callbacks_median": 8.0,
+      "callbacks_p10": 1.0,
+      "callbacks_p90": 21.0,
+      "coverage": 0.517,
+      "random_same_count": 0.222,
+      "last_overs_same_count": 0.299
+    },
+    "decider": {
+      "name": "The decider",
+      "callbacks_median": 2.0,
+      "callbacks_p10": 0.0,
+      "callbacks_p90": 12.0,
+      "coverage": 0.303,
+      "random_same_count": 0.096,
+      "last_overs_same_count": 0.177
+    },
+    "after_wickets": {
+      "callbacks_median": 12.0,
+      "coverage": 0.232,
+      "note": "reactive: its count is not matched to a bar"
+    }
+  },
+  "replay_match": {
+    "match_id": "1529297",
+    "after_wickets": {
+      "callbacks": 15,
+      "coverage": 0.4
+    },
+    "notable": {
+      "callbacks": 40,
+      "coverage": 1.0,
+      "random": 0.665,
+      "last_overs": 1.0
+    },
+    "big": {
+      "callbacks": 28,
+      "coverage": 1.0,
+      "random": 0.5900000000000001,
+      "last_overs": 1.0
+    },
+    "decider": {
+      "callbacks": 15,
+      "coverage": 1.0,
+      "random": 0.41000000000000003,
+      "last_overs": 0.9
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "fitted_on": "train",
+  "fitted_at": "2026-11-14",
+  "train_matches": 3137,
+  "pulse": {
+    "building": 63.2,
+    "high": 76.5,
+    "decider": 88.6
+  },
+  "alert": {
+    "notable": 52.4,
+    "big": 76.5,
+    "decider": 88.6,
+    "cooldown_balls": 6
+  },
+  "moment": {
+    "min_swing": 0.0572
+  },
+  "fit": {
+    "targets_median_per_match": {
+      "decider": 4,
+      "big": 12,
+      "notable": 25,
+      "moments": 15
+    },
+    "achieved_median_on_train": {
+      "decider": 4.0,
+      "big": 12.0,
+      "notable": 25.0,
+      "moments": 15.0
+    }
+  }
+}
