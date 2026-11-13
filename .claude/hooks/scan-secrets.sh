@@ -15,8 +15,8 @@ fi
 
 if git rev-parse --verify -q HEAD >/dev/null; then BASE=HEAD; else BASE=$(git hash-object -t tree /dev/null); fi
 # The index is what a commit actually records, so it is scanned on its own, as well as the working tree.
-STAGED_HITS=$(git diff --cached --text --no-color --no-ext-diff --no-textconv "$BASE" 2>/dev/null | grep -E '^\+' | grep -cE "$PATTERN" || true)
-TREE_HITS=$(git diff --text --no-color --no-ext-diff --no-textconv "$BASE" 2>/dev/null | grep -E '^\+' | grep -cE "$PATTERN" || true)
+STAGED_HITS=$(git diff --cached --text --no-color --no-ext-diff --no-textconv "$BASE" 2>/dev/null | grep -aE '^\+' | grep -acE "$PATTERN" || true)
+TREE_HITS=$(git diff --text --no-color --no-ext-diff --no-textconv "$BASE" 2>/dev/null | grep -aE '^\+' | grep -acE "$PATTERN" || true)
 HITS=$(( ${STAGED_HITS:-0} + ${TREE_HITS:-0} ))
 UNTRACKED=$(git ls-files --others --exclude-standard -z 2>/dev/null | xargs -0 grep -alE "$PATTERN" 2>/dev/null || true)
 if [ "${HITS:-0}" != "0" ] || [ -n "$UNTRACKED" ]; then
