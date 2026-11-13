@@ -1,0 +1,13 @@
+{
+  "downloaded_on": "2026-11-14",
+  "files": {
+    "t20s_male_json.zip": {
+      "url": "https://cricsheet.org/downloads/t20s_male_json.zip",
+      "matches_in_file": 3649
+    },
+    "ipl_json.zip": {
+      "url": "https://cricsheet.org/downloads/ipl_json.zip",
+      "matches_in_file": 1243
+    }
+  }
+}

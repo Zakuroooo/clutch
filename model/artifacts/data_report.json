@@ -1,0 +1,32 @@
+{
+  "source": "Cricsheet (cricsheet.org), ODC-By 1.0",
+  "downloaded_on": "2026-11-14",
+  "files": {
+    "t20s_male_json.zip": {
+      "url": "https://cricsheet.org/downloads/t20s_male_json.zip",
+      "matches_in_file": 3649
+    },
+    "ipl_json.zip": {
+      "url": "https://cricsheet.org/downloads/ipl_json.zip",
+      "matches_in_file": 1243
+    }
+  },
+  "files_read": 4892,
+  "matches_kept": 4482,
+  "matches_kept_by_file": {
+    "t20s_male_json": 3297,
+    "ipl_json": 1185
+  },
+  "excluded": {
+    "overs_not_20": 11,
+    "rain_rule_method": 152,
+    "shortened_target": 105,
+    "super_over_or_bowl_out": 51,
+    "tie_or_no_result": 91
+  },
+  "excluded_total": 410,
+  "balls": 1048402,
+  "first_match_date": "2005-02-17",
+  "last_match_date": "2026-11-01",
+  "bat_first_win_share": 0.4813
+}
