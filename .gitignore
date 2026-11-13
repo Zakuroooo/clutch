@@ -33,3 +33,6 @@ coverage/
 .vercel/
 .claude/settings.local.json
 *.log
+
+# data pulled in for the build
+model/.venv/

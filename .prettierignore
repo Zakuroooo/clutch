@@ -1,0 +1,8 @@
+.next
+node_modules
+data
+model
+evals/outputs
+evals/results
+design/screens
+package-lock.json

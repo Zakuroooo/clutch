@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "../design/tokens.css";
+
+/* Tailwind v4: map the design tokens to utilities. Tailwind's own palette is not used. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-pulse: var(--pulse);
+  --color-pulse-2: var(--pulse-2);
+  --color-calm: var(--calm);
+  --color-go: var(--go);
+  --color-go-ink: var(--go-ink);
+  --color-four: var(--four);
+  --color-six: var(--six);
+  --color-wicket: var(--wicket);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-team-a: var(--team-a);
+  --color-team-b: var(--team-b);
+  --font-head: var(--font-head);
+  --font-text: var(--font-text);
+  --radius-chip: var(--r-chip);
+  --radius-tile: var(--r-tile);
+  --radius-card: var(--r-card);
+  --radius-sheet: var(--r-sheet);
+}
+
+:root {
+  /* next/font serves the files; the token names stay the same. */
+  --font-head: var(--font-outfit), "Helvetica Neue", Arial, sans-serif;
+  --font-text: var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--page-edge);
+}
+
+body {
+  max-width: 430px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--t-body) / var(--lh-body) var(--font-text);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+.head {
+  font-family: var(--font-head);
+  line-height: var(--lh-tight);
+}
+
+.num {
+  font-family: var(--font-head);
+  font-variant-numeric: tabular-nums;
+}

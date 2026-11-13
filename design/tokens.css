@@ -6,6 +6,7 @@
 
 :root {
   /* ---- Surfaces: a match centre at night ------------------------------ */
+  --page-edge: #000000;     /* outside the 430px column on wide screens */
   --bg: #080a10;            /* page */
   --surface: #131722;       /* cards */
   --surface-2: #1b2130;     /* raised inside a card: tiles, chips */
