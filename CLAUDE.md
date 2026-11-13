@@ -1,6 +1,6 @@
 # Clutch
 
-A second screen for casual sports fans: one dial that says when to look up, a shelf of missed moments, and explanations in the fan's own world. It replays one real past cricket match as live. Dream11 assignment, due 16 Nov 2026.
+A second screen for casual sports fans: a Pulse ring that says when to look up, a shelf of missed moments, and explanations in the fan's own world. It replays one real past cricket match as live. Dream11 assignment, due 16 Nov 2026.
 
 Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to read for each task.
 
@@ -20,7 +20,7 @@ Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to r
 1. **Facts come from code, never from the model.** The LLM only words facts it is given. Every LLM output goes through `lib/cards/check.ts` before anyone sees it. On failure, show the template.
 2. **No number without a source.** Do not write a metric, count or percentage into any doc or UI string unless it is read from a file in `model/artifacts/` or `evals/results/`. Unmeasured means blank.
 3. **It is a replay.** "Replay of a real match, running as live" stays visible on every match screen. Never describe the product as live or as having users.
-4. **No faces.** Never generate, draw or add an image of a real player. Team colour and jersey number only.
+4. **No faces.** Never generate, draw or add an image of a real player, and no official logos. Jerseys, crests and numbers only.
 5. **No betting language** anywhere: bet, odds, wager, gamble, jackpot, payout.
 6. **Secrets stay in `.env.local`.** Never print, log, commit or paste a key. Server-only keys never get a `NEXT_PUBLIC_` prefix.
 7. **Tier 1 before tier 2.** Do not start a tier 2 task until Review 3 in the build plan.
@@ -31,7 +31,8 @@ Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to r
 - Look up current docs before writing framework or SDK code (context7 MCP). Do not rely on memory for Next.js, Tailwind v4, Supabase or the LLM SDK.
 - Logic is pure and takes `now` as a parameter. No `Date.now()` inside `lib/clock` or `lib/engine` functions.
 - The engine (`lib/engine`, `lib/clock`, `lib/cards`) must not import from `lib/adapters/cricket` or mention cricket.
-- UI uses tokens from `design/tokens.css` only. `--pulse` is for stakes and nothing else. Read `docs/DESIGN-SYSTEM.md` §9 before finishing any screen.
+- UI uses tokens from `design/tokens.css` only. The pulse gradient is for stakes and nothing else. Read `docs/DESIGN-SYSTEM.md` §10 before finishing any screen.
+- The mock-ups in `design/screens/` are the floor. Improve the design while building; it should look like a finished sports app (Dream11, JioHotstar class), not a web page. Show Pranay real screenshots early and often.
 - 8 GB RAM machine: do not run the dev server, Playwright and model training at the same time.
 - Verify in a browser at 390 × 844 before calling UI work done (`/verify`).
 

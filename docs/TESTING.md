@@ -51,12 +51,12 @@ Rules:
 | `check-data`: every event in the replay timeline has `wp`, `stakes`, and a `state` consistent with the running total | script in CI | AC2.1 |
 | `metrics.json` exists and has all four rows before `MODEL.md` tables may be filled (doc check) | script | AC2.3 |
 
-### F3. The Pulse (dial)
+### F3. The Pulse
 
 | Test | Kind | Checks |
 |---|---|---|
 | `pulseState(pct, thresholds)` at each boundary | unit | AC3.1 |
-| Dial renders the right number of lit ticks and moment ticks for a given index | component | |
+| The ring's arc length matches `stakes.pct`; the card is in its glowing style only for high and decider | component | |
 | Reduced motion: no animation is running; the word still changes | e2e | AC3.2 |
 | The live region text changes once per state change | component | AC3.4 |
 | `--pulse` colour is not used outside the allowed components (grep test over `components/`) | script | AC3.3 |

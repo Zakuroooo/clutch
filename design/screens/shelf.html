@@ -7,51 +7,57 @@
 <link rel="stylesheet" href="mock.css">
 </head>
 <body>
-  <div class="top"><span>Replay of a real match, running as live</span><span>South Africa 151/5</span></div>
+  <header class="appbar">
+    <span class="brand"><i></i>Clutch</span>
+    <span class="badge replay">Replay of a real match</span>
+  </header>
 
-  <h1 class="page-title">You missed three.</h1>
-
-  <section class="moment missed" aria-label="Missed moment, over 16.1" style="border-top: 0">
-    <span class="ov">16.1</span>
-    <div>
-      <span class="h">Their best hitter is gone.</span>
-      <span class="m">151/4 to 151/5</span>
-      <figure class="replay">
-        <!-- Side-on drawing built from the recorded outcome (caught behind). Not ball tracking. -->
-        <svg viewBox="0 0 300 96" role="img" aria-label="Drawing: the ball is bowled, takes the edge, and is caught by the wicketkeeper.">
-          <line x1="0" y1="84" x2="300" y2="84" stroke="#27342e"/>
-          <g stroke="#f1ede2" stroke-width="1"><line x1="70" y1="84" x2="70" y2="62"/><line x1="74" y1="84" x2="74" y2="62"/><line x1="78" y1="84" x2="78" y2="62"/></g>
-          <g stroke="#6c7872" stroke-width="1"><line x1="236" y1="84" x2="236" y2="62"/><line x1="240" y1="84" x2="240" y2="62"/><line x1="244" y1="84" x2="244" y2="62"/></g>
-          <line x1="86" y1="44" x2="96" y2="80" stroke="#f1ede2" stroke-width="2" stroke-linecap="round"/>
-          <path d="M 240 34 Q 180 48 136 83 Q 112 64 94 56" fill="none" stroke="#6c7872" stroke-width="1" stroke-dasharray="2 4"/>
-          <path d="M 94 56 Q 62 42 30 50" fill="none" stroke="#ff2f6d" stroke-width="1.2"/>
-          <circle cx="30" cy="50" r="3.5" fill="#ff2f6d"/>
-        </svg>
-        <figcaption>A drawing of what was recorded: bowled, edged, caught. Not the ball's real path.</figcaption>
-      </figure>
-      <div class="chance" aria-label="South Africa's chance of winning fell from 71 to 48 percent">
-        <div class="track"><span class="was" style="width: 48%"></span><span class="swing" style="left: 48%; width: 23%"></span></div>
-        <div class="ends"><span>South Africa's chance</span><span><b>71</b> to <b>48</b></span></div>
-      </div>
+  <section class="wrap">
+    <div class="card hero pad">
+      <div class="row between"><span class="badge missed">3 missed</span><span class="small muted">SA 151/5, over 16.1</span></div>
+      <h1 style="font-size: var(--t-score); font-weight: 800; margin-top: var(--s-3); letter-spacing: -0.02em">You missed three<br>big moments</h1>
+      <p class="small muted" style="margin-top: var(--s-2)">They're kept here so you can't lose them.</p>
+      <button class="btn go wide" style="margin-top: var(--s-4)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5-12-7.5Z"/></svg>Catch me up in 40 seconds</button>
     </div>
   </section>
 
-  <button class="moment missed">
-    <span class="ov">14.6</span>
-    <span><span class="h">Twenty-four in one over.</span><span class="m">123/3 to 147/3</span></span>
-  </button>
-  <button class="moment missed">
-    <span class="ov">12.3</span>
-    <span><span class="h">A set batter falls.</span><span class="m">106/3 to 106/4</span></span>
-  </button>
-  <button class="moment seen">
-    <span class="ov">2.3</span>
-    <span><span class="h">Two wickets in three balls.</span><span class="m">You saw this</span></span>
-  </button>
+  <div class="sec"><h2>Moments</h2><span class="small muted">Newest first</span></div>
+  <section class="wrap stack">
+    <button class="card moment">
+      <span class="thumb"><svg viewBox="0 0 76 76" aria-hidden="true"><line x1="6" y1="58" x2="70" y2="58" stroke="rgba(255,255,255,.25)"/><g stroke="#fff" stroke-width="1.5"><line x1="20" y1="58" x2="20" y2="44"/><line x1="23" y1="58" x2="23" y2="44"/><line x1="26" y1="58" x2="26" y2="44"/></g><line x1="30" y1="34" x2="35" y2="54" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M68 28 Q52 36 42 57 Q36 46 32 42" fill="none" stroke="rgba(255,255,255,.5)" stroke-dasharray="2 3"/><path d="M32 42 Q20 34 10 38" fill="none" stroke="#ff2e63" stroke-width="1.8"/><circle cx="10" cy="38" r="3.4" fill="#ff2e63"/></svg></span>
+      <span>
+        <span class="row" style="gap: var(--s-2)"><span class="badge missed">Missed</span><span class="swing down">SA -23%</span></span>
+        <h3>Their best hitter is gone</h3>
+        <span class="small muted">Over 16.1, 151/4 to 151/5</span>
+      </span>
+    </button>
+    <button class="card moment">
+      <span class="thumb"><svg viewBox="0 0 76 76" aria-hidden="true"><line x1="6" y1="58" x2="70" y2="58" stroke="rgba(255,255,255,.25)"/><line x1="60" y1="58" x2="60" y2="50" stroke="#fff" stroke-width="1.5"/><line x1="16" y1="36" x2="22" y2="54" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M20 46 Q40 2 66 30" fill="none" stroke="#a78bfa" stroke-width="1.8"/><circle cx="66" cy="30" r="3.4" fill="#a78bfa"/><text x="38" y="72" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="11" fill="#a78bfa">6</text></svg></span>
+      <span>
+        <span class="row" style="gap: var(--s-2)"><span class="badge missed">Missed</span><span class="swing up">SA +19%</span></span>
+        <h3>24 runs in one over</h3>
+        <span class="small muted">Over 15, 123/3 to 147/3</span>
+      </span>
+    </button>
+    <button class="card moment">
+      <span class="thumb"><svg viewBox="0 0 76 76" aria-hidden="true"><line x1="6" y1="58" x2="70" y2="58" stroke="rgba(255,255,255,.25)"/><g stroke="#fff" stroke-width="1.5"><line x1="18" y1="58" x2="14" y2="44"/><line x1="23" y1="58" x2="23" y2="43"/><line x1="28" y1="58" x2="32" y2="44"/></g><path d="M68 30 Q50 38 40 57 Q32 52 24 50" fill="none" stroke="#ff4d4f" stroke-width="1.8"/><circle cx="24" cy="50" r="3.4" fill="#ff4d4f"/></svg></span>
+      <span>
+        <span class="row" style="gap: var(--s-2)"><span class="badge missed">Missed</span><span class="swing down">SA -11%</span></span>
+        <h3>A set batter falls</h3>
+        <span class="small muted">Over 12.3, 106/3 to 106/4</span>
+      </span>
+    </button>
+    <button class="card moment">
+      <span class="thumb"><svg viewBox="0 0 76 76" aria-hidden="true"><line x1="6" y1="58" x2="70" y2="58" stroke="rgba(255,255,255,.25)"/><g stroke="#fff" stroke-width="1.5"><line x1="18" y1="58" x2="14" y2="44"/><line x1="23" y1="58" x2="23" y2="43"/><line x1="28" y1="58" x2="32" y2="44"/></g><path d="M68 30 Q50 38 40 57 Q32 52 24 50" fill="none" stroke="#ff4d4f" stroke-width="1.8"/><circle cx="24" cy="50" r="3.4" fill="#ff4d4f"/></svg></span>
+      <span>
+        <span class="row" style="gap: var(--s-2)"><span class="badge">Seen</span><span class="swing down">SA -14%</span></span>
+        <h3>Two wickets in three balls</h3>
+        <span class="small muted">Over 2.3, 12/0 to 12/2</span>
+      </span>
+    </button>
+  </section>
+  <p class="note">Drawings show what was recorded, not the ball's real path. Sample numbers.</p>
 
-  <span class="grow"></span>
-  <nav class="bar">
-    <button class="pill wide">Catch me up in 40 seconds</button>
-  </nav>
+  <nav class="tabbar" aria-label="Main"><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M12 8v4l2.5 2.5"/></svg>Match</button><button class="tab on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>Moments<span class="dot">3</span></button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 4-8 12L4 8l3-4Z"/><path d="M4 8h16"/></svg>Back me up</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.3.2 4 1.7 4.5 4.3"/></svg>Room</button></nav>
 </body>
 </html>

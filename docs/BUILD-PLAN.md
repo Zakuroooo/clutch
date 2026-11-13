@@ -73,19 +73,19 @@ Pranay reviews at the four checkpoints marked **Review**. He must be able to exp
 - **Tests first:** F1 row 6, F3 row 1, F4 rows 1 and 2, F5 rows 1 to 4.
 - **Accept:** unit tests pass; `moments.json` is written for the replay match by a script using `detectMoments`.
 
-### T7. The room screen and the dial
+### T7. The Match screen and the Pulse
 - **Read:** DRD §2.1 to §2.3 and §3, DESIGN-SYSTEM §7, `design/screens/room.html`.
-- **Create:** `components/Dial.tsx`, `ScoreLine.tsx`, `JustHappened.tsx`, `BottomBar.tsx`, `PillButton.tsx`; `app/page.tsx` (start), `app/world/page.tsx`, `app/match/page.tsx` (solo room).
+- **Create:** `components/AppBar.tsx`, `ScoreCard.tsx`, `PulseCard.tsx` (with `Ring`), `WinBar.tsx`, `BallChips.tsx`, `MomentCard.tsx`, `TabBar.tsx`, `Button.tsx`, `Badge.tsx`, `Jersey.tsx`; `app/page.tsx` (start), `app/world/page.tsx`, `app/match/page.tsx` (solo Match tab).
 - **Tests first:** F3 rows 2 to 5; e2e F1 rows 9 to 11.
-- **Accept:** `verify` skill at 390 × 844: the room matches the mock-up; every state in DRD §2.3 is reachable; `design-review` passes.
+- **Accept:** `verify` skill at 390 × 844: the screen is at least as good as the mock-up; score card and Pulse are above the fold; every state in DRD §2.3 is reachable; `design-review` passes. Save a screenshot to `design/review/` for Pranay.
 
 ### T8. Focus mode and call-backs
 - **Read:** PRD F4, TRD §8, DRD §2.4 and §4.
-- **Create:** `lib/notify/`, `public/sw.js`, `app/manifest.ts`, `components/Selector.tsx`, Focus state in the match page.
+- **Create:** `lib/notify/`, `public/sw.js`, `app/manifest.ts`, `components/Segmented.tsx`, `StatTile.tsx`, Focus state in the match page.
 - **Tests first:** F4 rows 3 to 6.
 - **Accept:** on the laptop, with the tab in the background, a call-back notification arrives within 5 seconds of its time. Checked by hand; note the result in the README.
 
-**Review 2 (Pranay):** open it on your phone. Is the dial readable in two seconds? Is anything on the room screen unnecessary?
+**Review 2 (Pranay):** open it on your phone. Is the Pulse readable in two seconds? Does it look like an app you would install? Say what to improve; the design is improved alongside the build.
 
 ### T9. Facts, check, templates
 - **Read:** CARDS §2, §3, §6, §8.
@@ -101,18 +101,18 @@ Pranay reviews at the four checkpoints marked **Review**. He must be able to exp
 
 ### T11. Card screen and Your World
 - **Read:** DRD §2.2 and §2.6, `design/screens/card.html`.
-- **Create:** `components/Card.tsx`, `WinChanceLine.tsx`, `PlayerArt.tsx`; wire `JustHappened` to open it.
+- **Create:** `components/ExplanationCard.tsx`, `BeforeAfter.tsx`; wire `MomentCard` to open it.
 - **Tests first:** e2e F6 row 8.
 - **Accept:** `verify`: a card appears at a moment in the chosen world; "Say it plainly" swaps it; the template shows when the route is forced to fail.
 
 ### T12. Moment Shelf, mini replay, Catch me up
-- **Read:** PRD F5, DRD §2.5, DESIGN-SYSTEM (MomentRow, MiniReplay), `design/screens/shelf.html`.
-- **Create:** `components/MomentRow.tsx`, `MiniReplay.tsx` (one drawing per `replay_kind`), `app/match/shelf` view, seen and missed storage, `CatchMeUp.tsx`.
+- **Read:** PRD F5, DRD §2.5, DESIGN-SYSTEM (MomentCard, MiniReplay), `design/screens/shelf.html`.
+- **Create:** `components/MiniReplay.tsx`, `SwingChip.tsx` (one drawing per `replay_kind`), `app/match/shelf` view, seen and missed storage, `CatchMeUp.tsx`.
 - **Tests first:** e2e F5 rows 5 and 6; component row 7.
-- **Accept:** `verify`: hide the tab past a moment, come back, the shelf says "You missed one." and plays it.
+- **Accept:** `verify`: hide the tab past a moment, come back, Moments says "You missed one big moment" and plays it.
 
 ### T13. Demo mode and evals
-- **Read:** PRD F7, DRD §2.8 and §7, EVALS.
+- **Read:** PRD F7, DRD §2.9 and §7, EVALS.
 - **Create:** demo guide state, "Skip ahead"; `evals/make_cases.ts`, `evals/run.ts`, `evals/rubric.md`; run `evals:generate` and `evals:judge` once; commit outputs and `summary.json`.
 - **Tests first:** F7 rows 1 and 2.
 - **Accept:** the 2-minute demo runs start to finish in a private window with Supabase env vars unset. `npm run evals:check` passes in CI. Copy results into EVALS.md.
@@ -136,7 +136,7 @@ Pranay reviews at the four checkpoints marked **Review**. He must be able to exp
 
 ### T16. Back me up
 - **Read:** PRD F11, CARDS §7, DRD §2.7, `design/screens/backup.html`.
-- **Create:** `lib/cards/backup.ts` (`chooseBackupFacts`, `checkBackup`, templates), `app/api/backup/route.ts`, `components/FactRow.tsx`, the Back me up screen.
+- **Create:** `lib/cards/backup.ts` (`chooseBackupFacts`, `checkBackup`, templates), `app/api/backup/route.ts`, `components/VersusCard.tsx`, `CompareRow.tsx`, `QuoteCard.tsx`, the Back me up screen.
 - **Tests first:** tier 2 rows 10 to 14.
 - **Accept:** fact values equal `players.json`; swapping players swaps leaders; a planted insult is blocked.
 
@@ -177,7 +177,7 @@ If time runs short, cut from the top. Each cut moves the item to "designed, not 
 8. The LLM judge for the rubric (keep the code check and Pranay's hand-scored sample)
 9. Worlds beyond football and plain
 
-**Never cut:** the clock, the model with saved metrics, the dial, Focus call-backs, the shelf with the mini replay, checked cards with template fallback, the 2-minute demo, the replay note, honest documents.
+**Never cut:** the clock, the model with saved metrics, the Pulse, Focus call-backs, the shelf with the mini replay, checked cards with template fallback, the 2-minute demo, the replay note, honest documents.
 
 ## Already cut from the plan, and why
 
@@ -189,4 +189,4 @@ If time runs short, cut from the top. Each cut moves the item to "designed, not 
 | `reactions`, `moments`, `moments_seen` tables | Reactions are broadcast only; moments are static files; seen and missed live in the browser | Less to build and nothing personal stored |
 | Runtime LLM calls for every card | Cards are pre-generated once and shipped as data | Demo cannot fail on a rate limit; cost near zero |
 | Room vote on debates, memento, spoiler guard, voice, floating mini Pulse, football, roar trigger | Tier 3, designed not built | Three days |
-| Broadcast-scoreboard look | One dial on an empty screen | Pranay's review. DECISIONS 0009 |
+| Broadcast-scoreboard look, then a minimal one-dial look | A match-centre app in the style of mainstream sports apps, improved alongside the build | Pranay's reviews. DECISIONS 0009 |

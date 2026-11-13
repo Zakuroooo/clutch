@@ -25,7 +25,9 @@ I did not write most of this code by hand. I directed it, reviewed it, and studi
 | 13 Nov | The fan problem: missing moments while working; not knowing why a player matters; not wanting to keep asking friends | Mine | From my own experience |
 | 13 Nov | The name "Clutch" | AI suggested, I chose _(confirm)_ | |
 | 13 Nov | Three scope tiers; tier 1 before anything else | AI proposed after I gave the real deadline; I agreed | |
-| 13 Nov | **Rejected the first design.** It followed a "broadcast scoreboard" brief and looked cluttered and like every other sports app. I asked for something classy and minimal | Mine | Led to the single-dial design. See DECISIONS/0009 |
+| 13 Nov | **Rejected the first design** (broadcast scoreboard): cluttered and boring | Mine | |
+| 13 Nov | **Rejected the second design** (one dial, serif type, no cards): looked like a plain page with big fonts, not a professional app. I asked for the patterns real apps use, like Dream11 and JioHotstar | Mine | DECISIONS/0009 |
+| 13 Nov | Accepted the third direction (match centre with cards, crests, jerseys and the Pulse ring) as good enough to start building, to be improved alongside the build | Mine | Not yet the design I want |
 | 13 Nov | Notifications from the open page only; closed-app push not built | AI flagged it as unrealistic in three days; _(fill in: agreed / changed)_ | DECISIONS/0007 |
 | 13 Nov | Mini replay as a labelled drawing, not a ball path | AI found the data has no tracking; _(fill in)_ | DECISIONS/0008 |
 | | Replay match chosen: _(fill in)_ | Mine | |
@@ -63,7 +65,9 @@ Kept because it is the useful part. Add every one, including small ones.
 
 | Date | What went wrong | How it was caught | Fix |
 |---|---|---|---|
-| 13 Nov | First design direction was cluttered and generic | My review of the mock-ups | Redesigned around one dial |
+| 13 Nov | First design direction was cluttered and generic | My review of the mock-ups | Redesigned |
+| 13 Nov | Second design over-corrected into a bare page with large serif text | My review of the mock-ups | Redesigned as a match-centre app |
+| 13 Nov | The AI wrote full design documents before showing me a screenshot, twice, so two rounds of documents were thrown away | Hindsight | Screenshots first from now on |
 | 13 Nov | The original plan described a ball-path replay the data cannot support | The AI checked the data format before writing the spec | Changed to a labelled drawing |
 | | | | |
 

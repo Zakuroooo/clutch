@@ -7,33 +7,50 @@
 <link rel="stylesheet" href="mock.css">
 </head>
 <body>
-  <div class="top"><span>Replay of a real match, running as live</span><span>Focus is on</span></div>
+  <header class="appbar">
+    <span class="brand"><i></i>Clutch</span>
+    <span class="badge replay">Replay of a real match</span>
+  </header>
 
-  <main class="grow" style="display: grid; align-content: center">
-    <div class="dial calm" data-balls="120" data-now="70" data-missed="52" data-seen="15" role="img"
-         aria-label="Calm. Nothing big right now. 70 of 120 balls bowled.">
-      <div>
-        <div class="word" style="color: var(--dust)">Calm</div>
-        <div class="reason">Keep working</div>
+  <section class="wrap">
+    <div class="card pulse-card">
+      <div class="row between" style="margin-bottom: var(--s-3)"><span class="badge">Focus is on</span><span class="small muted">SA 98/3, over 11.4</span></div>
+      <div class="ring calm" role="img" aria-label="Calm. Keep working.">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e63"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><circle cx="50" cy="50" r="44" fill="none" stroke="#252c3e" stroke-width="6"/><circle cx="50" cy="50" r="44" fill="none" stroke="#3a4358" stroke-width="6" stroke-linecap="round" stroke-dasharray="66.4 276.5"/></svg>
+        
+        <div><div class="word">Calm</div><div class="sub">Keep working</div></div>
       </div>
+      <p class="pulse-why">Nothing big right now.<br><span class="muted" style="font-weight: 500">Clutch will call you back.</span></p>
     </div>
-    <div class="score">
-      <div class="sub">South Africa 98/3. Clutch will call you back.</div>
-    </div>
-  </main>
+  </section>
 
-  <section aria-labelledby="bar-h" style="padding-bottom: var(--s-5)">
-    <p id="bar-h" class="small dust" style="margin-bottom: var(--s-3)">Call me back for</p>
-    <div class="choose" role="group" aria-labelledby="bar-h">
-      <button aria-pressed="false">The decider</button>
+  <div class="sec"><h2>Call me back for</h2></div>
+  <section class="wrap">
+    <div class="seg" role="group" aria-label="Call me back for">
+      <button aria-pressed="false">Only the decider</button>
       <button aria-pressed="true">Big moments</button>
       <button aria-pressed="false">Everything</button>
     </div>
   </section>
 
-  <nav class="bar">
-    <button class="pill wide">I'm back. Catch me up</button>
-  </nav>
+  <section class="wrap" style="margin-top: var(--s-3)">
+    <div class="tiles">
+      <div class="tile"><b>4</b><span>call-backs so far</span></div>
+      <div class="tile"><b style="color: var(--pulse)">3</b><span>moments waiting</span></div>
+      <div class="tile"><b>52</b><span>balls left</span></div>
+    </div>
+  </section>
+
+  <section class="wrap" style="margin-top: var(--s-3)">
+    <div class="card pad row">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a0a9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7 2.5 7h-17S6 15 6 9Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+      <div class="grow"><div class="card-title" style="font-size: var(--t-body)">Notifications are on</div><div class="small muted">Your phone buzzes once when it matters.</div></div>
+    </div>
+  </section>
+
+  <div class="cta-bar"><button class="btn go wide">I'm back. Catch me up</button></div>
+  <p class="note">Mock-up. Sample numbers, not model output.</p>
+
+  <nav class="tabbar" aria-label="Main"><button class="tab on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M12 8v4l2.5 2.5"/></svg>Match</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>Moments<span class="dot">3</span></button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 4-8 12L4 8l3-4Z"/><path d="M4 8h16"/></svg>Back me up</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.3.2 4 1.7 4.5 4.3"/></svg>Room</button></nav>
 </body>
-<script src="dial.js"></script>
 </html>

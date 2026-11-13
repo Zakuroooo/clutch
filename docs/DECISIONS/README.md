@@ -12,4 +12,4 @@ One short record per decision that someone might later ask "why?" about. Format:
 | [0006](0006-sport-agnostic-engine-cricket-demo.md) | Sport-agnostic engine, demonstrated on cricket |
 | [0007](0007-local-notifications-first.md) | Notifications from the open page first; push with the app closed is not built |
 | [0008](0008-schematic-replay.md) | The mini replay draws the kind of outcome, not the ball's path |
-| [0009](0009-one-object-interface.md) | One object on an empty screen |
+| [0009](0009-match-centre-interface.md) | A match-centre interface in the style of the sports apps fans already use |

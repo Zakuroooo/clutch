@@ -6,28 +6,50 @@
 <title>Clutch mock-up: Back me up</title>
 <link rel="stylesheet" href="mock.css">
 </head>
-<body style="--team-a: #2f6fe0; --team-b: #14306b; --team-b-ink: #f1ede2">
-  <div class="top"><span>Back me up</span><span>You against Arjun</span></div>
+<body style="--team-b: #27408f; --team-b-2: #101c45">
+  <header class="appbar">
+    <span class="brand"><i></i>Back me up</span>
+    <span class="badge">You vs Arjun</span>
+  </header>
 
-  <!-- Player art: team colour and jersey number only. Never a face. -->
-  <section class="versus" aria-label="Your player against their player">
-    <div class="art a"><span class="jersey" aria-hidden="true">18</span><span class="role">Yours</span><span class="name">V Kohli</span></div>
-    <div class="art b"><span class="jersey" aria-hidden="true">45</span><span class="role">Arjun's</span><span class="name">RG Sharma</span></div>
+  <section class="wrap">
+    <div class="card">
+      <div class="hero versus">
+        <div class="p"><svg class="jersey" viewBox="0 0 120 112" role="img" aria-label="Jersey number 18">
+          <defs><linearGradient id="j18" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6fe0"/><stop offset="1" stop-color="#1b3f9c"/></linearGradient></defs>
+          <path d="M42 8 L22 16 L4 40 L22 54 L30 46 L30 106 L90 106 L90 46 L98 54 L116 40 L98 16 L78 8 Q60 24 42 8 Z" fill="url(#j18)" stroke="rgba(255,255,255,.22)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M42 8 Q60 24 78 8" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+          <path d="M30 46 L30 106 M90 46 L90 106" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+          <text x="60" y="78" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="40" fill="#fff">18</text>
+        </svg><b>V Kohli</b><span class="badge" style="margin-top: 6px">Yours</span></div>
+        <span class="mid">VS</span>
+        <div class="p"><svg class="jersey" viewBox="0 0 120 112" role="img" aria-label="Jersey number 45">
+          <defs><linearGradient id="j45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#27408f"/><stop offset="1" stop-color="#14306b"/></linearGradient></defs>
+          <path d="M42 8 L22 16 L4 40 L22 54 L30 46 L30 106 L90 106 L90 46 L98 54 L116 40 L98 16 L78 8 Q60 24 42 8 Z" fill="url(#j45)" stroke="rgba(255,255,255,.22)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M42 8 Q60 24 78 8" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+          <path d="M30 46 L30 106 M90 46 L90 106" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+          <text x="60" y="78" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="40" fill="#fff">45</text>
+        </svg><b>RG Sharma</b><span class="badge" style="margin-top: 6px">Arjun's</span></div>
+      </div>
+      <div style="padding: 0 var(--s-4) var(--s-2)">
+        <div class="cmp "><div class="top"><b>__</b><span>Average when chasing</span><b>__</b></div><div class="bars"><i class="l" style="--w: 82%"></i><i class="r" style="--w: 58%"></i></div></div>
+        <div class="cmp "><div class="top"><b>__</b><span>Fifties in chases</span><b>__</b></div><div class="bars"><i class="l" style="--w: 74%"></i><i class="r" style="--w: 49%"></i></div></div>
+        <div class="cmp "><div class="top"><b>__</b><span>Not out at the finish</span><b>__</b></div><div class="bars"><i class="l" style="--w: 68%"></i><i class="r" style="--w: 40%"></i></div></div>
+        <div class="cmp lose"><div class="top"><b>__</b><span>Strike rate, fair point to them</span><b>__</b></div><div class="bars"><i class="l" style="--w: 61%"></i><i class="r" style="--w: 78%"></i></div></div>
+      </div>
+    </div>
   </section>
 
-  <ul class="facts" aria-label="True facts for your player, and one fair point for theirs">
-    <li><span class="v">__</span><span class="k">average when chasing</span><span class="v r less">__</span></li>
-    <li><span class="v">__</span><span class="k">fifties in chases</span><span class="v r less">__</span></li>
-    <li><span class="v less">__</span><span class="k">strike rate, fair point to them</span><span class="v r">__</span></li>
-  </ul>
+  <section class="wrap" style="margin-top: var(--s-3)">
+    <div class="quote">"Yours starts the fire. Mine is still there when it has to be put out."<small>Based on __ matches in our data. Numbers and bar lengths fill in from the data.</small></div>
+  </section>
 
-  <p class="analogy" style="padding-top: var(--s-5)">Yours starts the fire. Mine is still there when it has to be put out.</p>
-  <p class="micro ash" style="margin-top: var(--s-3)">Based on __ matches in our data. Numbers appear once computed.</p>
+  <section class="wrap row" style="margin-top: var(--s-3)">
+    <button class="btn ghost" style="flex: 1">Another line</button>
+    <button class="btn go" style="flex: 1.4">Drop it in the room</button>
+  </section>
+  <p class="note">Mock-up. No stat is shown until it is computed. Jerseys, never faces.</p>
 
-  <span class="grow"></span>
-  <nav class="bar">
-    <button>Another line</button>
-    <button class="pill">Drop it in the room</button>
-  </nav>
+  <nav class="tabbar" aria-label="Main"><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M12 8v4l2.5 2.5"/></svg>Match</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>Moments<span class="dot">3</span></button><button class="tab on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 4-8 12L4 8l3-4Z"/><path d="M4 8h16"/></svg>Back me up</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.3.2 4 1.7 4.5 4.3"/></svg>Room</button></nav>
 </body>
 </html>

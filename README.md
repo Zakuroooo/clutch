@@ -10,10 +10,10 @@ A second screen for casual sports fans. Get on with your work: Clutch calls you 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
 <p>
-  <img src="design/screens/room.png" width="24%" alt="The room: one dial, the word Look up, and one line of score">
-  <img src="design/screens/card.png" width="24%" alt="A card explaining a wicket in football terms">
-  <img src="design/screens/shelf.png" width="24%" alt="The shelf: You missed three, with a drawn replay">
-  <img src="design/screens/focus.png" width="24%" alt="Focus mode: a calm dial and Keep working">
+  <img src="design/screens/room.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, ball chips and the latest moment">
+  <img src="design/screens/card.png" width="24%" alt="An explanation card with a jersey, stat tiles and the moment explained in football terms">
+  <img src="design/screens/shelf.png" width="24%" alt="Moments: You missed three big moments, with replay thumbnails and swing chips">
+  <img src="design/screens/focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector and stat tiles">
 </p>
 
 *Design mock-ups (static HTML in [`design/screens/`](design/screens/)), not the running app. Numbers in them are samples, not model output.*
@@ -36,9 +36,9 @@ This prototype can show that experience. It cannot prove the hypothesis: that ne
 
 ## What it is
 
-One dial on an empty screen.
+A match centre built like the sports apps fans already use, with one thing of its own: the Pulse.
 
-- **The dial (the Pulse).** One tick per ball. A halo wakes when the next ball could change the match, and one word tells you what to do: *Calm*, *Building*, *Look up*, *This is it*. A win-probability model decides.
+- **The Pulse.** A ring that fills and pulses when the next ball could change the match, with one word that tells you what to do: Calm, Building, Look up, This is it. A win-probability model decides.
 - **Focus mode.** Say you're working. Clutch goes quiet and calls you back only for moments above the bar you choose.
 - **The Moment Shelf.** Every big moment is kept. Come back after two minutes or twenty and it says "You missed three", with a drawn replay of each and how far the win chance moved. "Catch me up" plays them in under a minute.
 - **Your World.** Pick what you already love: football, F1, chess, Bollywood, gaming. Each moment is explained in those terms. The facts come from code; the LLM only chooses the words; code checks every number and name before you see it.
@@ -52,7 +52,7 @@ Tier 1 is finished before tier 2 starts. This table is updated as work lands; to
 |---|---|---|
 | 1 | Shared match clock and score (replay) | not built yet |
 | 1 | Win-probability model and stakes | not built yet |
-| 1 | The dial and Focus mode call-backs | not built yet |
+| 1 | The Pulse and Focus mode call-backs | not built yet |
 | 1 | Moment Shelf, drawn replay, Catch me up | not built yet |
 | 1 | Your World cards with the faithfulness check | not built yet |
 | 1 | Two-minute reviewer demo | not built yet |
@@ -60,7 +60,7 @@ Tier 1 is finished before tier 2 starts. This table is updated as work lands; to
 | 2 | Reactions | not built yet |
 | 2 | Per-over calls and leaderboard | not built yet |
 | 2 | Back me up | not built yet |
-| 3 | Voice room · floating mini dial · memento · spoiler guard · football adapter · roar trigger · push with the app closed | designed, not built |
+| 3 | Voice room · floating mini Pulse · memento · spoiler guard · football adapter · roar trigger · push with the app closed | designed, not built |
 
 ## How it works
 
@@ -78,8 +78,8 @@ flowchart LR
     CHK -->|no| TPL[Plain template] --> CARDS
   end
   subgraph App["Next.js app"]
-    CLK[Shared match clock] --> ENG[Engine: dial state, call-backs, shelf]
-    ENG --> UI[One dial, one line, three words]
+    CLK[Shared match clock] --> ENG[Engine: Pulse state, call-backs, shelf]
+    ENG --> UI[Match centre: score, Pulse, moments]
     ENG --> NOTE[Notification + vibration]
   end
   TL --> CLK
@@ -148,7 +148,7 @@ Watching alone needs no keys. Rooms need a Supabase project; card wording needs 
 | [CARDS](docs/CARDS.md) · [EVALS](docs/EVALS.md) | Moments, facts, prompt, the check, templates; how cards are evaluated |
 | [TESTING](docs/TESTING.md) | Unit, integration and two-browser tests per feature |
 | [DATA](docs/DATA.md) · [PRIVACY](docs/PRIVACY.md) · [RUNBOOK](docs/RUNBOOK.md) | Source and licence; what is stored; run, deploy, recover |
-| [DECISIONS](docs/DECISIONS/) | Why replay, why facts by code, why no faces, and six more |
+| [DECISIONS](docs/DECISIONS/) | Why replay, why facts by code, why no faces, how the design changed, and more |
 | [BUILD-PLAN](docs/BUILD-PLAN.md) | Ordered tasks, tests first, and the cut order |
 | [AI-WORKFLOW](docs/AI-WORKFLOW.md) | Which AI tools did what, and what I decided and reviewed |
 
@@ -160,6 +160,6 @@ With AI coding agents, on purpose and in the open. The fan problem, the hypothes
 
 Match data from [Cricsheet](https://cricsheet.org), used under the [Open Data Commons Attribution License v1.0](https://opendatacommons.org/licenses/by/1-0/). Processed files in `data/` are adapted from it and carry the same licence. Details in [DATA.md](docs/DATA.md).
 
-No real player's face or likeness is used anywhere. No video. No betting, money or prizes.
+No real player's face or likeness is used anywhere; players are shown as jerseys. No video. No betting, money or prizes.
 
 Pranay Sarkar

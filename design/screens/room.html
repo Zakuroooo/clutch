@@ -7,38 +7,65 @@
 <link rel="stylesheet" href="mock.css">
 </head>
 <body>
-  <div class="top">
-    <span>Replay of a real match, running as live</span>
-    <span class="friends" aria-label="3 friends here"><i>A</i><i>R</i><i>P</i></span>
-  </div>
+  <header class="appbar">
+    <span class="brand"><i></i>Clutch</span>
+    <span class="badge replay">Replay of a real match</span>
+  </header>
+  <section class="wrap">
+    <div class="card hero score">
+      <div class="row between small muted"><span>Final, T20 World Cup</span><span>Over 16.1</span></div>
+      <div class="teams" style="margin-top: var(--s-3)">
+        <div class="team dim"><span class="crest a">IND</span><div><div class="runs">176<small>/7</small></div><div class="ov">20 overs</div></div></div>
+        <span class="vs">VS</span>
+        <div class="team r"><span class="crest b">SA</span><div><div class="runs">151<small>/5</small></div><div class="ov">batting</div></div></div>
+      </div>
+      <div class="chase"><span>South Africa need <b>26</b> from <b>23</b> balls</span><span class="muted">5 wkts left</span></div>
+    </div>
+  </section>
 
-  <main class="grow" style="display: grid; align-content: center">
-    <!-- The dial: 120 ticks, one per ball. Lit ticks are bowled. Long pink ticks are moments you missed. -->
-    <div class="dial high" data-balls="120" data-now="97" data-missed="75,90,97" data-seen="15,52" role="img"
-         aria-label="Stakes are high. Look up. 97 of 120 balls bowled. 3 moments missed.">
-      <span class="halo"></span>
-      <div>
-        <div class="word">Look up</div>
-        <div class="reason">This over can decide it</div>
+  <section class="wrap" style="margin-top: var(--s-3)">
+    <div class="card pulse-card hot">
+      <div class="row between" style="margin-bottom: var(--s-3)"><span class="badge hot">The Pulse</span><span class="small muted">Stakes 92 of 100</span></div>
+      <div class="ring " role="img" aria-label="Look up. This over can decide it.">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e63"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><circle cx="50" cy="50" r="44" fill="none" stroke="#252c3e" stroke-width="6"/><circle cx="50" cy="50" r="44" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-dasharray="254.3 276.5"/></svg>
+        <span class="wave"></span><span class="wave w2"></span>
+        <div><div class="word">Look up</div><div class="sub">This over can decide it</div></div>
+      </div>
+      <div class="winbar" aria-label="Chance of winning: India 52 percent, South Africa 48 percent">
+        <div class="bar"><span class="a" style="width: 52%"></span><span class="b" style="width: 48%"></span></div>
+        <div class="ends"><span><span class="crest a sm">IND</span>52%</span><span>48%<span class="crest b sm">SA</span></span></div>
       </div>
     </div>
+  </section>
 
-    <div class="score">
-      <div class="line">South Africa 151<span>/5</span></div>
-      <div class="sub">need 26 from 23 balls</div>
+  <div class="sec"><h2>This over</h2><span class="small muted">Over 17</span></div>
+  <div class="wrap balls" aria-label="Over 17 so far: wicket">
+    <span class="ball w">W</span><span class="ball next">2</span><span class="ball next">3</span><span class="ball next">4</span><span class="ball next">5</span><span class="ball next">6</span>
+  </div>
+
+  <div class="sec"><h2>Just happened</h2><a href="shelf.html">All moments</a></div>
+  <section class="wrap">
+    <button class="card moment">
+      <span class="thumb"><svg viewBox="0 0 76 76" aria-hidden="true"><line x1="6" y1="58" x2="70" y2="58" stroke="rgba(255,255,255,.25)"/><g stroke="#fff" stroke-width="1.5"><line x1="20" y1="58" x2="20" y2="44"/><line x1="23" y1="58" x2="23" y2="44"/><line x1="26" y1="58" x2="26" y2="44"/></g><line x1="30" y1="34" x2="35" y2="54" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M68 28 Q52 36 42 57 Q36 46 32 42" fill="none" stroke="rgba(255,255,255,.5)" stroke-dasharray="2 3"/><path d="M32 42 Q20 34 10 38" fill="none" stroke="#ff2e63" stroke-width="1.8"/><circle cx="10" cy="38" r="3.4" fill="#ff2e63"/></svg></span>
+      <span>
+        <span class="row" style="gap: var(--s-2)"><span class="badge hot">Wicket</span><span class="swing down">SA -23%</span></span>
+        <h3>Their best hitter is gone</h3>
+        <span class="small muted">Tap to see why the room went loud</span>
+      </span>
+    </button>
+  </section>
+
+  <section class="wrap row between" style="margin-top: var(--s-4)">
+    <div class="row" style="gap: var(--s-2)">
+      <button class="react" aria-label="React: fire">🔥</button><button class="react" aria-label="React: shocked">😱</button><button class="react" aria-label="React: clap">👏</button>
     </div>
-  </main>
+    <div class="row" style="gap: var(--s-2)">
+      <span class="avatars" aria-label="3 friends here"><span style="background:#7c5cff">A</span><span style="background:#ff8a3d">R</span><span style="background:#22b8cf">P</span></span>
+      <span class="small muted">KXT4PM</span>
+    </div>
+  </section>
+  <p class="note">Mock-up. Sample numbers, not model output.</p>
 
-  <button class="just">
-    <span class="h">Their best hitter is gone.</span>
-    <span class="small dust">See why the room went loud</span>
-  </button>
-
-  <nav class="bar" aria-label="Room">
-    <button>Focus</button>
-    <button>React</button>
-    <button class="on">Missed <span class="pink">3</span></button>
-  </nav>
+  <nav class="tabbar" aria-label="Main"><button class="tab on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M12 8v4l2.5 2.5"/></svg>Match</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>Moments<span class="dot">3</span></button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 4-8 12L4 8l3-4Z"/><path d="M4 8h16"/></svg>Back me up</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.3.2 4 1.7 4.5 4.3"/></svg>Room</button></nav>
 </body>
-<script src="dial.js"></script>
 </html>

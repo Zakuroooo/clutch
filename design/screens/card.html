@@ -7,22 +7,52 @@
 <link rel="stylesheet" href="mock.css">
 </head>
 <body>
-  <div class="top"><span>Replay of a real match, running as live</span><span>In football terms</span></div>
+  <header class="appbar">
+    <span class="brand"><i></i>Clutch</span>
+    <span class="badge replay">Replay of a real match</span>
+  </header>
 
-  <article class="grow" style="display: flex; flex-direction: column; justify-content: center" aria-labelledby="c-h">
-    <p class="kicker">Over 16.1</p>
-    <h1 id="c-h" class="headline">Their best hitter is gone.</h1>
-    <p class="analogy">A team one goal up has just lost its only striker to a red card with ten minutes left. They still lead. Nobody on the pitch can finish it.</p>
-    <p class="fact">Klaasen is caught for 52 off 27 balls. South Africa still need 26 from 23.</p>
-    <div class="chance" aria-label="South Africa's chance of winning fell from 71 to 48 percent">
-      <div class="track"><span class="was" style="width: 48%"></span><span class="swing" style="left: 48%; width: 23%"></span></div>
-      <div class="ends"><span>South Africa's chance</span><span><b>71</b> to <b>48</b></span></div>
-    </div>
-  </article>
+  <section class="wrap">
+    <article class="card" aria-labelledby="c-h">
+      <div class="hero" style="padding: var(--s-4); display: grid; grid-template-columns: 1fr 104px; gap: var(--s-3); align-items: end">
+        <div>
+          <div class="row" style="gap: var(--s-2)"><span class="badge hot">Wicket, over 16.1</span></div>
+          <h1 id="c-h" style="font-size: var(--t-score); font-weight: 800; letter-spacing: -0.02em; margin-top: var(--s-3)">Their best hitter is gone</h1>
+          <p class="small muted" style="margin-top: var(--s-2)">H Klaasen, caught</p>
+        </div>
+        <svg class="jersey" viewBox="0 0 120 112" role="img" aria-label="Jersey number 45">
+          <defs><linearGradient id="j45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f9d55"/><stop offset="1" stop-color="#0d5c30"/></linearGradient></defs>
+          <path d="M42 8 L22 16 L4 40 L22 54 L30 46 L30 106 L90 106 L90 46 L98 54 L116 40 L98 16 L78 8 Q60 24 42 8 Z" fill="url(#j45)" stroke="rgba(255,255,255,.22)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M42 8 Q60 24 78 8" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+          <path d="M30 46 L30 106 M90 46 L90 106" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+          <text x="60" y="78" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="40" fill="#fff">45</text>
+        </svg>
+      </div>
+      <div style="padding: var(--s-4)" class="stack">
+        <div class="tiles">
+          <div class="tile"><b>52</b><span>runs he made</span></div>
+          <div class="tile"><b>27</b><span>balls faced</span></div>
+          <div class="tile"><b>26</b><span>still needed</span></div>
+        </div>
+        <div>
+          <span class="badge world">In football terms</span>
+          <p class="head" style="font-size: var(--t-title); font-weight: 700; line-height: 1.25; margin-top: var(--s-3)">A team one goal up just lost its only striker to a red card with ten minutes left.</p>
+          <p class="muted" style="margin-top: var(--s-2)">They still lead, but nobody left on the pitch can finish it.</p>
+        </div>
+        <div>
+          <div class="small muted" style="margin-bottom: var(--s-2)">South Africa's chance to win</div>
+          <div class="ba"><div><b>71%</b><div class="micro muted">before this ball</div></div><span class="to">→</span><div class="after"><b>48%</b><div class="micro muted">after</div></div></div>
+        </div>
+        <div class="row">
+          <button class="btn ghost" style="flex: 1">Say it plainly</button>
+          <button class="btn go" style="flex: 1">Got it</button>
+        </div>
+        <p class="micro faint">Every number here comes from the match data and is checked before you see it.</p>
+      </div>
+    </article>
+  </section>
+  <p class="note">Mock-up. Sample numbers, not model output.</p>
 
-  <nav class="bar">
-    <button>Say it plainly</button>
-    <button class="pill">Got it</button>
-  </nav>
+  <nav class="tabbar" aria-label="Main"><button class="tab on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M12 8v4l2.5 2.5"/></svg>Match</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>Moments<span class="dot">3</span></button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l3 4-8 12L4 8l3-4Z"/><path d="M4 8h16"/></svg>Back me up</button><button class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.3.2 4 1.7 4.5 4.3"/></svg>Room</button></nav>
 </body>
 </html>
