@@ -72,7 +72,7 @@ Things the format does **not** contain, which shape the product:
 
 - **No time for each ball.** The replay timeline is synthetic (TRD section 3.1).
 - **No ball tracking:** no pitch location, no shot direction, no fielder positions. The mini replay therefore draws only the kind of outcome ([DECISIONS/0008](DECISIONS/0008-schematic-replay.md)).
-- **No jersey numbers.** These are typed by hand into `data/jerseys.json` from a public squad list.
+- **No jersey numbers.** These are typed by hand into `data/jerseys.json` from a public squad list. The file is keyed by match id, then player name. A player with no entry shows initials on the jersey, never a guessed number.
 
 ## 5. Cleaning
 
@@ -101,7 +101,9 @@ Chosen by Pranay from the test split. `model/src/pick_replay.py` lists test-spli
 { "match_id": "", "chosen_by": "Pranay", "chosen_on": "" }
 ```
 
-Empty until chosen. The mock-ups use India v South Africa as sample content with sample numbers; that is not a decision about the replay match.
+The ranked list is saved to `model/artifacts/replay_candidates.json`. Until Pranay picks, the file holds the top well-known candidate and says so in `chosen_by`. Changing the match is: edit the id, `make export`, `npm run moments`, `npm run pregen`.
+
+The mock-ups use India v South Africa as sample content with sample numbers; that is not a decision about the replay match.
 
 ## 8. Files we publish
 

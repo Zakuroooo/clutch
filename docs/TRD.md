@@ -92,6 +92,9 @@ Produced by the pipeline, read by the app. Types live in `lib/engine/types.ts` a
     "format": "T20",
     "date": "2024-06-29",
     "venue": "…",
+    "city": "…",
+    "event": { "name": "…", "stage": "…" },
+    "squads": { "IND": ["…"], "SA": ["…"] },
     "teams": [
       { "code": "IND", "name": "India", "colors": ["#2f6fe0", "#ffffff"] },
       { "code": "SA", "name": "South Africa", "colors": ["#1f8a4c", "#ffffff"] }
@@ -128,7 +131,9 @@ Produced by the pipeline, read by the app. Types live in `lib/engine/types.ts` a
 - `t_ms` is the replay time of the event (section 3.1).
 - `state` is the state **after** the event. `stakes` is computed from the state **before** it (what was at risk on this ball).
 - `wp` is the win chance of `match.batting_order[0]` (the team that batted first), before and after the ball. One team's view throughout, so swings have a consistent sign.
-- `stakes.pct` is 0 to 100: the percentile of `stakes.raw` among all balls in the training set.
+- `stakes.pct` is 0 to 100: the percentile of `stakes.raw` among all balls in the training set, to one decimal place.
+- `event.ball` is the ball's number in the over (1 to 6). A wide or no-ball carries the number of the ball that has to be bowled again.
+- `squads` lists each side's players for this match, by team code. Team colours and codes are typed in `data/teams.json`; a team not listed there gets a code from its initials and the default colours.
 - Names are Cricsheet's names. The example values above are placeholders; real values come from the pipeline.
 - `wicket`, when present: `{ "kind": "caught", "player_out": "…", "fielders": ["…"] }`.
 
@@ -152,7 +157,7 @@ All zeros until the pipeline writes real values. `pulse.*` and `alert.*` are `st
 [{ "i": 187, "bar": "big", "line": "This over can decide it" }]
 ```
 
-One entry per call-back, at the highest bar it qualifies for. A fan at bar "notable" gets all entries; at "big" gets `big` and `decider`; at "decider" gets only `decider`. Written by the pipeline using the rule in MODEL.md section 6, so the app and the evaluation use the same alerts.
+One entry per call-back, at its level (the highest bar the ball's stakes reach). A fan at bar "notable" gets all entries; at "big" gets `big` and `decider`; at "decider" gets only `decider`. Written by the pipeline using the rule in MODEL.md section 6, so the app and the evaluation use the same alerts.
 
 ### `moments.json`, `cards.json`, `players.json`
 

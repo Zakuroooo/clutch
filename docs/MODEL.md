@@ -1,6 +1,6 @@
 # Clutch: the win-probability model, stakes and the Pulse
 
-Status: design only. Every result table is blank until the pipeline produces it. Do not type a number into this file by hand; copy it from the artifact file named beside each table.
+Status: built and run on 14 Nov 2026. Every number below was copied from the artifact file named beside its table. Do not type a number into this file by hand; rerun the pipeline and copy it.
 
 Code lives in `model/`. It runs offline on a laptop (8 GB RAM is enough) and never in production.
 
@@ -21,6 +21,8 @@ Source and licence: [DATA.md](DATA.md). Men's T20 matches from Cricsheet (T20 in
 
 **One row per ball** (including wides and no-balls), with the state *before* that ball.
 
+From `model/artifacts/data_report.json` (downloaded 2026-11-14): 4,892 files read, 4,482 matches kept, 410 excluded, 1,048,402 balls. Excluded: 152 with a rain-rule method, 105 with a shortened chase, 91 ties or no-results, 51 decided by a super over or bowl-out, 11 not 20 overs a side.
+
 ## 3. Features
 
 | Feature | Meaning | Innings |
@@ -29,7 +31,6 @@ Source and licence: [DATA.md](DATA.md). Men's T20 matches from Cricsheet (T20 in
 | `balls_left` | legal balls left in this innings (120 at the start) | both |
 | `wickets_left` | 10 minus wickets fallen | both |
 | `score` | runs so far in this innings | both |
-| `crr` | current run rate (runs per over so far; 0 at ball one) | both |
 | `target` | runs needed to win at the start of the chase | 2 only (0 in innings 1) |
 | `needed` | runs still needed | 2 only |
 | `rrr` | required run rate (needed per over left; capped at 36) | 2 only |
@@ -37,6 +38,8 @@ Source and licence: [DATA.md](DATA.md). Men's T20 matches from Cricsheet (T20 in
 Label: `1` if the team that batted first won the match.
 
 No feature uses anything from the future, and no feature identifies teams or players. That keeps the model honest and easy to explain.
+
+**The current run rate is not a feature.** The first version had it. Early in an innings it is runs divided by almost nothing, so one six on the first ball swung the win chance wildly and the opening over looked like a decider. Score and balls left carry the same information without the blow-up, and removing it changed the validation Brier score only in the fourth decimal place. The scoreboard still shows the run rate; the model does not read it.
 
 ## 4. Split
 
@@ -51,9 +54,9 @@ Why by date and not random: a random split would let the model train on matches 
 
 | | Matches | Balls | From | To |
 |---|---|---|---|---|
-| Train | | | | |
-| Validation | | | | |
-| Test | | | | |
+| Train | 3,137 | 739,719 | 2005-02-17 | 2024-08-25 |
+| Validation | 672 | 155,080 | 2024-08-25 | 2025-10-15 |
+| Test | 673 | 153,603 | 2025-10-16 | 2026-11-01 |
 
 Source: `model/artifacts/split.json`.
 
@@ -62,11 +65,11 @@ Source: `model/artifacts/split.json`.
 | Name | What it is |
 |---|---|
 | Baseline A: constant | Always predicts the training share of matches won by the team batting first |
-| Baseline B: run-rate rule | Innings 1: Baseline A. Innings 2: a one-feature logistic regression on `rrr − crr` |
+| Baseline B: run-rate rule | Innings 1: Baseline A. Innings 2: a one-feature logistic regression on required run rate minus the run rate so far |
 | Model 1: logistic regression | All features, standardised, separate models for innings 1 and innings 2 |
-| Model 2: gradient-boosted trees | `HistGradientBoostingClassifier`, same features, tuned on validation only (depth, learning rate, iterations) |
+| Model 2: gradient-boosted trees | `HistGradientBoostingClassifier`, same features, separate models for innings 1 and innings 2, tuned on validation only (depth, learning rate, iterations, and whether to force sensible directions: more runs needed can never help the chasing side) |
 
-The shipped model is whichever of Model 1 and Model 2 has the lower validation Brier score. If they are within noise, ship the logistic regression because it is easier to explain. The test set is used once, at the end, to report.
+The shipped model is whichever of Model 1 and Model 2 has the lower validation Brier score. If they are within noise, ship the logistic regression because it is easier to explain. "Within noise" is tested, not judged by eye: resample validation matches 1,000 times and take the 95% interval of (logistic − boosted) Brier; the boosted trees ship only if the whole interval is above zero. The test set is used once, at the end, to report.
 
 ### Metrics
 
@@ -77,20 +80,22 @@ The shipped model is whichever of Model 1 and Model 2 has the lower validation B
 
 Because balls from one match are not independent, confidence intervals come from resampling **matches** (1,000 bootstrap samples of test matches), not balls.
 
-| On test matches | Brier | Log loss | Calibration error |
+| On test matches | Brier (95% interval) | Log loss (95% interval) | Calibration error |
 |---|---|---|---|
-| Baseline A: constant | | | |
-| Baseline B: run-rate rule | | | |
-| Model 1: logistic regression | | | |
-| Model 2: gradient-boosted trees | | | |
+| Baseline A: constant | 0.2501 (0.2499 to 0.2503) | 0.6933 (0.6929 to 0.6938) | 0.0158 |
+| Baseline B: run-rate rule | 0.1926 (0.188 to 0.1971) | 0.5566 (0.5452 to 0.5689) | 0.0175 |
+| Model 1: logistic regression | 0.155 (0.1457 to 0.1644) | 0.4617 (0.4383 to 0.4858) | 0.0223 |
+| Model 2: gradient-boosted trees | 0.1533 (0.144 to 0.1623) | 0.4552 (0.4325 to 0.4777) | 0.018 |
 
-Source: `model/artifacts/metrics.json`. Shipped model: to be decided on validation.
+Source: `model/artifacts/metrics.json` (673 test matches, 153,603 balls; intervals from 1,000 resamples of matches).
+
+**Shipped model: Model 2, gradient-boosted trees** (depth 3, learning rate 0.05, 300 iterations, directions forced). On validation the logistic regression scored 0.16657 and the boosted trees 0.16479; the 95% interval of the difference is 0.00035 to 0.00316, which is above zero, so the trees ship. The gain is small. Both models are far better than the baselines and close to each other.
 
 | Shipped model by phase (test) | Brier | Calibration error |
 |---|---|---|
-| Innings 1 | | |
-| Innings 2, overs 1 to 10 | | |
-| Innings 2, overs 11 to 20 | | |
+| Innings 1 | 0.197 | 0.0293 |
+| Innings 2, overs 1 to 10 | 0.1233 | 0.0254 |
+| Innings 2, overs 11 to 20 | 0.0724 | 0.0123 |
 
 ## 6. From win chance to stakes, the Pulse and call-backs
 
@@ -110,7 +115,7 @@ Both outcomes use up one ball. If a six would win the match, `best` is 1 for the
 
 This uses only the model and the current state. It does not look at what actually happened next, so it can be computed "live".
 
-`stakes.pct` is the percentile (0 to 100) of `stakes.raw` among all balls in **training** matches. The percentile table is saved to `model/artifacts/stakes_percentiles.json`. Percentiles make the thresholds below readable: "90" means "bigger than 90% of balls ever bowled in our training data".
+`stakes.pct` is the percentile (0 to 100, to one decimal place) of `stakes.raw` among all balls in **training** matches. The percentile table is saved to `model/artifacts/stakes_percentiles.json`. Percentiles make the thresholds below readable: "90" means "bigger than 90% of balls ever bowled in our training data".
 
 ### 6.2 Pulse states
 
@@ -125,9 +130,9 @@ This uses only the model and the current state. It does not look at what actuall
 
 A call-back fires **before** a ball, so the fan looks up in time. For each Focus bar `b` in {notable, big, decider} with threshold `alert[b]`:
 
-> Walk through the match ball by ball. At ball `i`, if `stakes.pct ≥ alert[b]` and no call-back for bar `b` has fired in the last `cooldown_balls` legal balls of this innings, fire one at ball `i`.
+> Walk through the match ball by ball. A ball's level is the highest bar whose cut-off its `stakes.pct` reaches. It fires a call-back unless one of the same or a higher level fired in the last `cooldown_balls` legal balls of this innings.
 
-Each alert is stored once, at the highest bar it qualifies for. The line shown is chosen by code: "This over can decide it" (decider), "Big moment coming" (big), "Worth a look" (notable). It fires 10 seconds before the ball on the replay clock.
+So a step up (a "big" call-back, then a "decider" two balls later) is never swallowed by the cool-down, and repeats at the same level are. Each alert is stored once, at its level; a fan at bar `b` receives every alert at level `b` or above. The code is `model/src/alerts.py`, used by the threshold fit, the evaluation and the export, so all three agree. The line shown is chosen by code: "This over can decide it" (decider), "Big moment coming" (big), "Worth a look" (notable). It fires 10 seconds before the ball on the replay clock.
 
 ### 6.4 Moments (for the shelf)
 
@@ -142,7 +147,7 @@ All thresholds are chosen by `model/src/thresholds.py` using **training matches 
 | `alert.decider` | The `pct` cut-off giving a median of about 4 call-backs per training match |
 | `alert.big` | Median of about 12 |
 | `alert.notable` | Median of about 25 |
-| `alert.cooldown_balls` | 12 (two overs). Fixed, not tuned |
+| `alert.cooldown_balls` | 6 (one over). Fixed, not tuned. The plan said 12, but that caps a match at 20 call-backs, so the "about 25" target could never be reached |
 | `pulse.high`, `pulse.decider` | Equal to `alert.big` and `alert.decider`, so the Pulse and the call-backs agree |
 | `pulse.building` | Halfway (in percentile) between 50 and `pulse.high` |
 | `moment.min_swing` | The swing giving a median of about 15 moments per training match |
@@ -151,13 +156,13 @@ The targets (4, 12, 25, 15) are product choices: they are what "only the decider
 
 | Threshold | Value |
 |---|---|
-| `alert.decider` | |
-| `alert.big` | |
-| `alert.notable` | |
-| `pulse.building` | |
-| `moment.min_swing` | |
+| `alert.decider` (= `pulse.decider`) | 88.6 |
+| `alert.big` (= `pulse.high`) | 76.5 |
+| `alert.notable` | 52.4 |
+| `pulse.building` | 63.2 |
+| `moment.min_swing` | 0.0572 |
 
-Source: `data/thresholds.json`.
+Source: `data/thresholds.json`, fitted on 3,137 training matches. Medians reached on training matches: 4, 12 and 25 call-backs, and 15 moments.
 
 ## 7. Evaluating the Pulse itself
 
@@ -180,11 +185,15 @@ The model's Brier score does not tell us whether the call-backs are any good. Th
 | Last overs | The same number of call-backs, spread evenly over the final overs of the chase |
 | After wickets | A call-back on the ball after each wicket (reactive, like a score app's notification) |
 
-| On test matches | Call-backs per match (median, 10th to 90th) | Coverage of top-10 swings | Random | Last overs | After wickets |
-|---|---|---|---|---|---|
-| The decider | | | | | |
-| Big moments | | | | | |
-| Everything | | | | | |
+| On 673 test matches | Call-backs per match (median, 10th to 90th) | Coverage of top-10 swings | Random, same count | Last overs, same count |
+|---|---|---|---|---|
+| The decider | 2 (0 to 12) | 30% | 10% | 18% |
+| Big moments | 8 (1 to 21) | 52% | 22% | 30% |
+| Everything | 20 (6 to 35) | 82% | 42% | 50% |
+
+After wickets (reactive, a call-back on the ball after each wicket): a median of 12 call-backs a match and 23% coverage. Its count is its own, not matched to a bar.
+
+**How to read it.** At every bar the Pulse catches two to three times as many of the biggest swings as the same number of random call-backs, and clearly more than calling the fan back for the final overs. It is not complete: at "Big moments" about half of a match's ten biggest swings had a call-back in the over before them. The spread is wide because matches differ: a one-sided match has almost no call-backs and a tight one has many.
 
 Source: `model/artifacts/pulse_eval.json`. The same file gives the replay match's own row, which is what a reviewer will actually experience.
 

@@ -1,0 +1,2006 @@
+{
+  "split": "test",
+  "ranked_by": "late_swing + 0.5 * total_swing + 0.3 * lead_changes",
+  "candidates": [
+    {
+      "match_id": "1548123",
+      "date": "2026-08-01",
+      "teams": "Bahrain v Kenya",
+      "event": "Bahrain tour of Kenya",
+      "stage": "Match 2",
+      "result": "Kenya won by 1 wickets",
+      "total_swing": 7.66,
+      "late_swing": 4.0,
+      "biggest_single_swing": 0.837,
+      "lead_changes": 24,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 30,
+      "callbacks": {
+        "notable": 37,
+        "big": 21,
+        "decider": 15
+      },
+      "rank_score": 15.03
+    },
+    {
+      "match_id": "1513094",
+      "date": "2025-12-08",
+      "teams": "Nigeria v Zambia",
+      "event": "West Africa Trophy",
+      "stage": "Match 10",
+      "result": "Nigeria won by 23 runs",
+      "total_swing": 5.9,
+      "late_swing": 1.52,
+      "biggest_single_swing": 0.207,
+      "lead_changes": 33,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 31,
+      "callbacks": {
+        "notable": 37,
+        "big": 25,
+        "decider": 14
+      },
+      "rank_score": 14.37
+    },
+    {
+      "match_id": "1522996",
+      "date": "2026-02-14",
+      "teams": "Qatar v Bahrain",
+      "event": "Bahrain tour of Qatar",
+      "stage": "Match 4",
+      "result": "Bahrain won by 5 wickets",
+      "total_swing": 6.63,
+      "late_swing": 2.71,
+      "biggest_single_swing": 0.63,
+      "lead_changes": 24,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 30,
+      "callbacks": {
+        "notable": 42,
+        "big": 30,
+        "decider": 14
+      },
+      "rank_score": 13.22
+    },
+    {
+      "match_id": "1534051",
+      "date": "2026-05-20",
+      "teams": "Switzerland v Cyprus",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Match 14",
+      "result": "Switzerland won by 25 runs",
+      "total_swing": 5.95,
+      "late_swing": 1.12,
+      "biggest_single_swing": 0.214,
+      "lead_changes": 29,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 35,
+        "big": 26,
+        "decider": 15
+      },
+      "rank_score": 12.79
+    },
+    {
+      "match_id": "1519138",
+      "date": "2026-01-26",
+      "teams": "Ireland v Italy",
+      "event": "Ireland tour of United Arab Emirates",
+      "stage": "Match 3",
+      "result": "Italy won by 4 wickets",
+      "total_swing": 6.34,
+      "late_swing": 1.63,
+      "biggest_single_swing": 0.557,
+      "lead_changes": 26,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 28,
+      "callbacks": {
+        "notable": 41,
+        "big": 28,
+        "decider": 16
+      },
+      "rank_score": 12.6
+    },
+    {
+      "match_id": "1539472",
+      "date": "2026-06-18",
+      "teams": "Denmark v Germany",
+      "event": "Germany tour of Denmark",
+      "stage": "Match 1",
+      "result": "Germany won by 2 wickets",
+      "total_swing": 7.61,
+      "late_swing": 3.36,
+      "biggest_single_swing": 0.925,
+      "lead_changes": 18,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 34,
+      "callbacks": {
+        "notable": 33,
+        "big": 21,
+        "decider": 17
+      },
+      "rank_score": 12.56
+    },
+    {
+      "match_id": "1538216",
+      "date": "2026-06-06",
+      "teams": "Mozambique v Eswatini",
+      "event": "Eswatini T20 Tri-Series",
+      "stage": "Match 7",
+      "result": "Eswatini won by 3 wickets",
+      "total_swing": 8.0,
+      "late_swing": 2.59,
+      "biggest_single_swing": 0.374,
+      "lead_changes": 18,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 40,
+      "callbacks": {
+        "notable": 40,
+        "big": 30,
+        "decider": 17
+      },
+      "rank_score": 11.99
+    },
+    {
+      "match_id": "1529297",
+      "date": "2026-05-10",
+      "teams": "Mumbai Indians v Royal Challengers Bengaluru",
+      "event": "Indian Premier League",
+      "stage": "Match 54",
+      "result": "Royal Challengers Bengaluru won by 2 wickets",
+      "total_swing": 8.12,
+      "late_swing": 3.7,
+      "biggest_single_swing": 0.759,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 36,
+      "callbacks": {
+        "notable": 40,
+        "big": 28,
+        "decider": 15
+      },
+      "rank_score": 11.36
+    },
+    {
+      "match_id": "1529790",
+      "date": "2026-04-09",
+      "teams": "Sweden v Indonesia",
+      "event": "Sweden tour of Indonesia",
+      "stage": "Match 4",
+      "result": "Sweden won by 10 runs",
+      "total_swing": 5.28,
+      "late_swing": 0.38,
+      "biggest_single_swing": 0.182,
+      "lead_changes": 27,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 35,
+        "big": 26,
+        "decider": 15
+      },
+      "rank_score": 11.12
+    },
+    {
+      "match_id": "1546389",
+      "date": "2026-07-30",
+      "teams": "France v Romania",
+      "event": "ECA Men's European Cup",
+      "stage": "Final",
+      "result": "France won by 4 runs",
+      "total_swing": 7.49,
+      "late_swing": 2.81,
+      "biggest_single_swing": 0.448,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 39,
+      "callbacks": {
+        "notable": 33,
+        "big": 23,
+        "decider": 18
+      },
+      "rank_score": 11.05
+    },
+    {
+      "match_id": "1539477",
+      "date": "2026-06-26",
+      "teams": "Czech Republic v Luxembourg",
+      "event": "Central Europe Cup",
+      "stage": "Match 2",
+      "result": "Luxembourg won by 2 wickets",
+      "total_swing": 6.77,
+      "late_swing": 2.19,
+      "biggest_single_swing": 0.269,
+      "lead_changes": 18,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 36,
+      "callbacks": {
+        "notable": 41,
+        "big": 33,
+        "decider": 19
+      },
+      "rank_score": 10.97
+    },
+    {
+      "match_id": "1512738",
+      "date": "2026-02-13",
+      "teams": "Canada v United Arab Emirates",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 20",
+      "result": "United Arab Emirates won by 5 wickets",
+      "total_swing": 5.41,
+      "late_swing": 1.71,
+      "biggest_single_swing": 0.178,
+      "lead_changes": 20,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 40,
+        "big": 25,
+        "decider": 12
+      },
+      "rank_score": 10.41
+    },
+    {
+      "match_id": "1528303",
+      "date": "2026-04-07",
+      "teams": "France v Norway",
+      "event": "Portugal T20 Tri-Series",
+      "stage": "Match 5",
+      "result": "France won by 7 runs",
+      "total_swing": 6.68,
+      "late_swing": 1.58,
+      "biggest_single_swing": 0.324,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 29,
+      "callbacks": {
+        "notable": 41,
+        "big": 28,
+        "decider": 18
+      },
+      "rank_score": 10.02
+    },
+    {
+      "match_id": "1527687",
+      "date": "2026-04-08",
+      "teams": "Gujarat Titans v Delhi Capitals",
+      "event": "Indian Premier League",
+      "stage": "Match 14",
+      "result": "Gujarat Titans won by 1 runs",
+      "total_swing": 7.0,
+      "late_swing": 3.15,
+      "biggest_single_swing": 0.734,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 30,
+        "big": 20,
+        "decider": 10
+      },
+      "rank_score": 9.95
+    },
+    {
+      "match_id": "1538450",
+      "date": "2026-06-05",
+      "teams": "Bahrain v Singapore",
+      "event": "Asian Games Men's Qualifier",
+      "stage": "Match 8",
+      "result": "Bahrain won by 2 runs",
+      "total_swing": 6.04,
+      "late_swing": 1.61,
+      "biggest_single_swing": 0.301,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 40,
+        "big": 26,
+        "decider": 14
+      },
+      "rank_score": 9.73
+    },
+    {
+      "match_id": "1547092",
+      "date": "2026-08-12",
+      "teams": "Zambia v Rwanda",
+      "event": "Malawi Tri-Nation T20I Series",
+      "stage": "Match 4",
+      "result": "Zambia won by 8 runs",
+      "total_swing": 6.42,
+      "late_swing": 2.54,
+      "biggest_single_swing": 0.376,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 33,
+        "big": 24,
+        "decider": 15
+      },
+      "rank_score": 9.65
+    },
+    {
+      "match_id": "1534039",
+      "date": "2026-05-16",
+      "teams": "Guernsey v Sweden",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Match 2",
+      "result": "Guernsey won by 12 runs",
+      "total_swing": 6.21,
+      "late_swing": 2.03,
+      "biggest_single_swing": 0.407,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 32,
+        "big": 21,
+        "decider": 14
+      },
+      "rank_score": 9.63
+    },
+    {
+      "match_id": "1512719",
+      "date": "2026-02-07",
+      "teams": "Netherlands v Pakistan",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 1",
+      "result": "Pakistan won by 3 wickets",
+      "total_swing": 5.16,
+      "late_swing": 2.1,
+      "biggest_single_swing": 0.455,
+      "lead_changes": 16,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 18,
+      "callbacks": {
+        "notable": 34,
+        "big": 18,
+        "decider": 10
+      },
+      "rank_score": 9.48
+    },
+    {
+      "match_id": "1528301",
+      "date": "2026-04-06",
+      "teams": "Portugal v Norway",
+      "event": "Portugal T20 Tri-Series",
+      "stage": "Match 3",
+      "result": "Portugal won by 12 runs",
+      "total_swing": 5.33,
+      "late_swing": 1.6,
+      "biggest_single_swing": 0.193,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 35,
+        "big": 17,
+        "decider": 12
+      },
+      "rank_score": 9.37
+    },
+    {
+      "match_id": "1527682",
+      "date": "2026-04-04",
+      "teams": "Rajasthan Royals v Gujarat Titans",
+      "event": "Indian Premier League",
+      "stage": "Match 9",
+      "result": "Rajasthan Royals won by 6 runs",
+      "total_swing": 6.67,
+      "late_swing": 2.12,
+      "biggest_single_swing": 0.262,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 29,
+        "big": 22,
+        "decider": 11
+      },
+      "rank_score": 9.36
+    },
+    {
+      "match_id": "1529271",
+      "date": "2026-04-19",
+      "teams": "Rajasthan Royals v Kolkata Knight Riders",
+      "event": "Indian Premier League",
+      "stage": "Match 28",
+      "result": "Kolkata Knight Riders won by 4 wickets",
+      "total_swing": 5.52,
+      "late_swing": 1.7,
+      "biggest_single_swing": 0.329,
+      "lead_changes": 16,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 31,
+        "big": 19,
+        "decider": 8
+      },
+      "rank_score": 9.26
+    },
+    {
+      "match_id": "1529146",
+      "date": "2026-04-17",
+      "teams": "Scotland v Namibia",
+      "event": "Scotland tour of Namibia",
+      "stage": "Match 2",
+      "result": "Scotland won by 19 runs",
+      "total_swing": 5.35,
+      "late_swing": 0.64,
+      "biggest_single_swing": 0.179,
+      "lead_changes": 19,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 40,
+        "big": 30,
+        "decider": 16
+      },
+      "rank_score": 9.02
+    },
+    {
+      "match_id": "1513832",
+      "date": "2025-12-13",
+      "teams": "Thailand v Philippines",
+      "event": "SEA Games Men's Twenty20 Cricket Competition",
+      "stage": "Match 9",
+      "result": "Philippines won by 1 wickets",
+      "total_swing": 5.79,
+      "late_swing": 2.47,
+      "biggest_single_swing": 0.503,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 29,
+        "big": 14,
+        "decider": 8
+      },
+      "rank_score": 8.96
+    },
+    {
+      "match_id": "1512723",
+      "date": "2026-02-08",
+      "teams": "England v Nepal",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 5",
+      "result": "England won by 4 runs",
+      "total_swing": 6.7,
+      "late_swing": 2.27,
+      "biggest_single_swing": 0.208,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 33,
+      "callbacks": {
+        "notable": 41,
+        "big": 26,
+        "decider": 15
+      },
+      "rank_score": 8.92
+    },
+    {
+      "match_id": "1525176",
+      "date": "2026-03-15",
+      "teams": "Mexico v Suriname",
+      "event": "ICC Men's T20 World Cup Sub Regional Americas Qualifier B",
+      "stage": "Match 11",
+      "result": "Suriname won by 4 wickets",
+      "total_swing": 5.36,
+      "late_swing": 1.93,
+      "biggest_single_swing": 0.447,
+      "lead_changes": 14,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 37,
+        "big": 18,
+        "decider": 10
+      },
+      "rank_score": 8.81
+    },
+    {
+      "match_id": "1506436",
+      "date": "2025-10-18",
+      "teams": "Romania v Austria",
+      "event": "Austria tour of Romania",
+      "stage": "Match 1",
+      "result": "Austria won by 4 wickets",
+      "total_swing": 5.05,
+      "late_swing": 1.48,
+      "biggest_single_swing": 0.182,
+      "lead_changes": 16,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 27,
+        "big": 15,
+        "decider": 8
+      },
+      "rank_score": 8.8
+    },
+    {
+      "match_id": "1538309",
+      "date": "2026-06-14",
+      "teams": "Sri Lanka v West Indies",
+      "event": "Sri Lanka tour of West Indies",
+      "stage": "Match 3",
+      "result": "West Indies won by 5 wickets",
+      "total_swing": 6.2,
+      "late_swing": 2.09,
+      "biggest_single_swing": 0.312,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 29,
+      "callbacks": {
+        "notable": 36,
+        "big": 22,
+        "decider": 9
+      },
+      "rank_score": 8.79
+    },
+    {
+      "match_id": "1532655",
+      "date": "2026-05-16",
+      "teams": "Vanuatu v Indonesia",
+      "event": "ICC Men's T20 World Cup East Asia-Pacific Qualifier",
+      "stage": "Match 16",
+      "result": "Vanuatu won by 1 runs",
+      "total_swing": 5.62,
+      "late_swing": 3.27,
+      "biggest_single_swing": 0.484,
+      "lead_changes": 9,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 27,
+      "callbacks": {
+        "notable": 24,
+        "big": 13,
+        "decider": 8
+      },
+      "rank_score": 8.78
+    },
+    {
+      "match_id": "1513830",
+      "date": "2025-12-12",
+      "teams": "Indonesia v Singapore",
+      "event": "SEA Games Men's Twenty20 Cricket Competition",
+      "stage": "Match 7",
+      "result": "Singapore won by 3 wickets",
+      "total_swing": 6.21,
+      "late_swing": 1.97,
+      "biggest_single_swing": 0.337,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 31,
+      "callbacks": {
+        "notable": 35,
+        "big": 24,
+        "decider": 18
+      },
+      "rank_score": 8.68
+    },
+    {
+      "match_id": "1549355",
+      "date": "2026-08-09",
+      "teams": "Brazil v Panama",
+      "event": "South American Men's Championships",
+      "stage": "Final",
+      "result": "Brazil won by 3 runs",
+      "total_swing": 5.96,
+      "late_swing": 2.32,
+      "biggest_single_swing": 0.466,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 41,
+        "big": 18,
+        "decider": 6
+      },
+      "rank_score": 8.6
+    },
+    {
+      "match_id": "1557534",
+      "date": "2026-10-25",
+      "teams": "Nigeria v Uganda",
+      "event": "ICC Men's T20 World Cup Africa Sub Regional Qualifier C",
+      "stage": "Match 15",
+      "result": "Nigeria won by 1 runs",
+      "total_swing": 5.68,
+      "late_swing": 1.86,
+      "biggest_single_swing": 0.504,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 33,
+      "callbacks": {
+        "notable": 36,
+        "big": 19,
+        "decider": 10
+      },
+      "rank_score": 8.6
+    },
+    {
+      "match_id": "1529787",
+      "date": "2026-04-07",
+      "teams": "Indonesia v Sweden",
+      "event": "Sweden tour of Indonesia",
+      "stage": "Match 1",
+      "result": "Sweden won by 4 wickets",
+      "total_swing": 6.09,
+      "late_swing": 1.88,
+      "biggest_single_swing": 0.368,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 33,
+      "callbacks": {
+        "notable": 35,
+        "big": 20,
+        "decider": 16
+      },
+      "rank_score": 8.52
+    },
+    {
+      "match_id": "1534055",
+      "date": "2026-05-22",
+      "teams": "Austria v Sweden",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Match 18",
+      "result": "Sweden won by 3 wickets",
+      "total_swing": 5.39,
+      "late_swing": 1.03,
+      "biggest_single_swing": 0.243,
+      "lead_changes": 16,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 37,
+        "big": 22,
+        "decider": 16
+      },
+      "rank_score": 8.52
+    },
+    {
+      "match_id": "1554574",
+      "date": "2026-10-11",
+      "teams": "Saudi Arabia v Hong Kong",
+      "event": "ICC Men's T20 World Cup Sub Regional Asia Qualifier B",
+      "stage": "Match 7",
+      "result": "Saudi Arabia won by 10 runs",
+      "total_swing": 5.91,
+      "late_swing": 1.64,
+      "biggest_single_swing": 0.277,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 38,
+        "big": 23,
+        "decider": 15
+      },
+      "rank_score": 8.49
+    },
+    {
+      "match_id": "1519140",
+      "date": "2026-01-31",
+      "teams": "Ireland v United Arab Emirates",
+      "event": "Ireland tour of United Arab Emirates",
+      "stage": "Match 2",
+      "result": "Ireland won by 30 runs",
+      "total_swing": 4.13,
+      "late_swing": 0.05,
+      "biggest_single_swing": 0.163,
+      "lead_changes": 21,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 33,
+        "big": 26,
+        "decider": 12
+      },
+      "rank_score": 8.41
+    },
+    {
+      "match_id": "1515543",
+      "date": "2025-12-23",
+      "teams": "Indonesia v Cambodia",
+      "event": "Cambodia tour of Indonesia",
+      "stage": "Match 2",
+      "result": "Indonesia won by 3 runs",
+      "total_swing": 3.76,
+      "late_swing": 1.4,
+      "biggest_single_swing": 0.216,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 16,
+      "callbacks": {
+        "notable": 23,
+        "big": 8,
+        "decider": 3
+      },
+      "rank_score": 8.38
+    },
+    {
+      "match_id": "1534044",
+      "date": "2026-05-17",
+      "teams": "Slovenia v Austria",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Match 7",
+      "result": "Austria won by 2 wickets",
+      "total_swing": 6.55,
+      "late_swing": 2.11,
+      "biggest_single_swing": 0.286,
+      "lead_changes": 10,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 29,
+      "callbacks": {
+        "notable": 33,
+        "big": 27,
+        "decider": 14
+      },
+      "rank_score": 8.38
+    },
+    {
+      "match_id": "1505126",
+      "date": "2025-10-29",
+      "teams": "West Indies v Bangladesh",
+      "event": "West Indies tour of Bangladesh",
+      "stage": "Match 2",
+      "result": "West Indies won by 14 runs",
+      "total_swing": 5.32,
+      "late_swing": 1.19,
+      "biggest_single_swing": 0.216,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 39,
+        "big": 24,
+        "decider": 17
+      },
+      "rank_score": 8.35
+    },
+    {
+      "match_id": "1527158",
+      "date": "2026-03-08",
+      "teams": "Bahrain v Malaysia",
+      "event": "Bahrain tour of Malaysia",
+      "stage": "Match 2",
+      "result": "Bahrain won by 2 runs",
+      "total_swing": 6.64,
+      "late_swing": 2.93,
+      "biggest_single_swing": 0.411,
+      "lead_changes": 7,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 39,
+      "callbacks": {
+        "notable": 32,
+        "big": 19,
+        "decider": 11
+      },
+      "rank_score": 8.35
+    },
+    {
+      "match_id": "1512763",
+      "date": "2026-02-24",
+      "teams": "Pakistan v England",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 45",
+      "result": "England won by 2 wickets",
+      "total_swing": 5.44,
+      "late_swing": 0.78,
+      "biggest_single_swing": 0.212,
+      "lead_changes": 16,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 30,
+      "callbacks": {
+        "notable": 36,
+        "big": 19,
+        "decider": 9
+      },
+      "rank_score": 8.3
+    },
+    {
+      "match_id": "1505127",
+      "date": "2025-10-31",
+      "teams": "Bangladesh v West Indies",
+      "event": "West Indies tour of Bangladesh",
+      "stage": "Match 3",
+      "result": "West Indies won by 5 wickets",
+      "total_swing": 4.12,
+      "late_swing": 0.19,
+      "biggest_single_swing": 0.205,
+      "lead_changes": 20,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 28,
+        "big": 15,
+        "decider": 9
+      },
+      "rank_score": 8.25
+    },
+    {
+      "match_id": "1527681",
+      "date": "2026-04-04",
+      "teams": "Mumbai Indians v Delhi Capitals",
+      "event": "Indian Premier League",
+      "stage": "Match 8",
+      "result": "Delhi Capitals won by 6 wickets",
+      "total_swing": 4.17,
+      "late_swing": 0.13,
+      "biggest_single_swing": 0.171,
+      "lead_changes": 20,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 32,
+        "big": 18,
+        "decider": 6
+      },
+      "rank_score": 8.21
+    },
+    {
+      "match_id": "1532650",
+      "date": "2026-05-13",
+      "teams": "Samoa v Papua New Guinea",
+      "event": "ICC Men's T20 World Cup East Asia-Pacific Qualifier",
+      "stage": "Match 12",
+      "result": "Papua New Guinea won by 2 wickets",
+      "total_swing": 6.34,
+      "late_swing": 3.18,
+      "biggest_single_swing": 0.918,
+      "lead_changes": 6,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 28,
+      "callbacks": {
+        "notable": 32,
+        "big": 18,
+        "decider": 15
+      },
+      "rank_score": 8.15
+    },
+    {
+      "match_id": "1478909",
+      "date": "2025-11-02",
+      "teams": "Australia v India",
+      "event": "India tour of Australia",
+      "stage": "Match 3",
+      "result": "India won by 5 wickets",
+      "total_swing": 4.94,
+      "late_swing": 0.68,
+      "biggest_single_swing": 0.159,
+      "lead_changes": 16,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 31,
+        "big": 20,
+        "decider": 13
+      },
+      "rank_score": 7.95
+    },
+    {
+      "match_id": "1513090",
+      "date": "2025-12-06",
+      "teams": "Zambia v Sierra Leone",
+      "event": "West Africa Trophy",
+      "stage": "Match 6",
+      "result": "Zambia won by 15 runs",
+      "total_swing": 4.64,
+      "late_swing": 1.59,
+      "biggest_single_swing": 0.223,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 16,
+      "callbacks": {
+        "notable": 30,
+        "big": 15,
+        "decider": 8
+      },
+      "rank_score": 7.81
+    },
+    {
+      "match_id": "1527677",
+      "date": "2026-03-31",
+      "teams": "Gujarat Titans v Punjab Kings",
+      "event": "Indian Premier League",
+      "stage": "Match 4",
+      "result": "Punjab Kings won by 3 wickets",
+      "total_swing": 5.73,
+      "late_swing": 1.88,
+      "biggest_single_swing": 0.269,
+      "lead_changes": 10,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 32,
+        "big": 18,
+        "decider": 9
+      },
+      "rank_score": 7.75
+    },
+    {
+      "match_id": "1532654",
+      "date": "2026-05-14",
+      "teams": "Japan v Cook Islands",
+      "event": "ICC Men's T20 World Cup East Asia-Pacific Qualifier",
+      "stage": "Match 15",
+      "result": "Cook Islands won by 3 wickets",
+      "total_swing": 6.37,
+      "late_swing": 2.74,
+      "biggest_single_swing": 0.803,
+      "lead_changes": 6,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 29,
+        "big": 20,
+        "decider": 13
+      },
+      "rank_score": 7.73
+    },
+    {
+      "match_id": "1552777",
+      "date": "2026-10-01",
+      "teams": "India v Sri Lanka",
+      "event": "Asian Games Men's Cricket Competition",
+      "stage": "Semi Final",
+      "result": "India won by 124 runs",
+      "total_swing": 2.62,
+      "late_swing": 0.05,
+      "biggest_single_swing": 0.114,
+      "lead_changes": 21,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 11,
+      "callbacks": {
+        "notable": 21,
+        "big": 9,
+        "decider": 1
+      },
+      "rank_score": 7.66
+    },
+    {
+      "match_id": "1532484",
+      "date": "2026-06-19",
+      "teams": "Australia v Bangladesh",
+      "event": "Australia tour of Bangladesh",
+      "stage": "Match 2",
+      "result": "Australia won by 7 runs",
+      "total_swing": 5.89,
+      "late_swing": 1.41,
+      "biggest_single_swing": 0.279,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 36,
+        "big": 27,
+        "decider": 15
+      },
+      "rank_score": 7.65
+    },
+    {
+      "match_id": "1527688",
+      "date": "2026-04-09",
+      "teams": "Kolkata Knight Riders v Lucknow Super Giants",
+      "event": "Indian Premier League",
+      "stage": "Match 15",
+      "result": "Lucknow Super Giants won by 3 wickets",
+      "total_swing": 6.3,
+      "late_swing": 2.08,
+      "biggest_single_swing": 0.843,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 36,
+        "big": 17,
+        "decider": 11
+      },
+      "rank_score": 7.63
+    },
+    {
+      "match_id": "1526845",
+      "date": "2026-03-25",
+      "teams": "Malawi v Ghana",
+      "event": "ICC Men's T20 World Cup Africa Sub Regional Qualifier B",
+      "stage": "Match 6",
+      "result": "Ghana won by 2 wickets",
+      "total_swing": 5.76,
+      "late_swing": 2.34,
+      "biggest_single_swing": 0.991,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 35,
+        "big": 23,
+        "decider": 14
+      },
+      "rank_score": 7.62
+    },
+    {
+      "match_id": "1529147",
+      "date": "2026-04-18",
+      "teams": "Scotland v Namibia",
+      "event": "Scotland tour of Namibia",
+      "stage": "Match 3",
+      "result": "Namibia won by 4 wickets",
+      "total_swing": 6.23,
+      "late_swing": 2.68,
+      "biggest_single_swing": 0.905,
+      "lead_changes": 6,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 30,
+        "big": 19,
+        "decider": 11
+      },
+      "rank_score": 7.59
+    },
+    {
+      "match_id": "1529301",
+      "date": "2026-05-14",
+      "teams": "Punjab Kings v Mumbai Indians",
+      "event": "Indian Premier League",
+      "stage": "Match 58",
+      "result": "Mumbai Indians won by 6 wickets",
+      "total_swing": 6.06,
+      "late_swing": 2.15,
+      "biggest_single_swing": 0.404,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 34,
+        "big": 21,
+        "decider": 10
+      },
+      "rank_score": 7.58
+    },
+    {
+      "match_id": "1529289",
+      "date": "2026-05-03",
+      "teams": "Punjab Kings v Gujarat Titans",
+      "event": "Indian Premier League",
+      "stage": "Match 46",
+      "result": "Gujarat Titans won by 4 wickets",
+      "total_swing": 6.23,
+      "late_swing": 2.05,
+      "biggest_single_swing": 0.276,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 30,
+      "callbacks": {
+        "notable": 33,
+        "big": 24,
+        "decider": 17
+      },
+      "rank_score": 7.56
+    },
+    {
+      "match_id": "1478910",
+      "date": "2025-11-06",
+      "teams": "India v Australia",
+      "event": "India tour of Australia",
+      "stage": "Match 4",
+      "result": "India won by 48 runs",
+      "total_swing": 4.41,
+      "late_swing": 0.21,
+      "biggest_single_swing": 0.162,
+      "lead_changes": 17,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 26,
+        "big": 17,
+        "decider": 11
+      },
+      "rank_score": 7.51
+    },
+    {
+      "match_id": "1539475",
+      "date": "2026-06-20",
+      "teams": "Germany v Denmark",
+      "event": "Germany tour of Denmark",
+      "stage": "Match 4",
+      "result": "Denmark won by 5 wickets",
+      "total_swing": 5.0,
+      "late_swing": 1.41,
+      "biggest_single_swing": 0.245,
+      "lead_changes": 12,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 40,
+        "big": 30,
+        "decider": 16
+      },
+      "rank_score": 7.51
+    },
+    {
+      "match_id": "1554552",
+      "date": "2026-10-14",
+      "teams": "Bahrain v Qatar",
+      "event": "ICC Men's T20 World Cup Sub Regional Asia Qualifier A",
+      "stage": "Match 20",
+      "result": "Qatar won by 2 wickets",
+      "total_swing": 6.15,
+      "late_swing": 2.58,
+      "biggest_single_swing": 0.713,
+      "lead_changes": 6,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 26,
+      "callbacks": {
+        "notable": 33,
+        "big": 17,
+        "decider": 11
+      },
+      "rank_score": 7.46
+    },
+    {
+      "match_id": "1513828",
+      "date": "2025-12-11",
+      "teams": "Singapore v Thailand",
+      "event": "SEA Games Men's Twenty20 Cricket Competition",
+      "stage": "Match 5",
+      "result": "Singapore won by 4 runs",
+      "total_swing": 6.36,
+      "late_swing": 1.56,
+      "biggest_single_swing": 0.238,
+      "lead_changes": 9,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 36,
+      "callbacks": {
+        "notable": 41,
+        "big": 30,
+        "decider": 14
+      },
+      "rank_score": 7.44
+    },
+    {
+      "match_id": "1512724",
+      "date": "2026-02-08",
+      "teams": "Sri Lanka v Ireland",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 6",
+      "result": "Sri Lanka won by 20 runs",
+      "total_swing": 4.3,
+      "late_swing": 0.77,
+      "biggest_single_swing": 0.233,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 34,
+        "big": 21,
+        "decider": 15
+      },
+      "rank_score": 7.42
+    },
+    {
+      "match_id": "1532637",
+      "date": "2026-05-08",
+      "teams": "Indonesia v Philippines",
+      "event": "ICC Men's T20 World Cup East Asia-Pacific Qualifier",
+      "stage": "Match 1",
+      "result": "Indonesia won by 11 runs",
+      "total_swing": 5.41,
+      "late_swing": 1.42,
+      "biggest_single_swing": 0.204,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 42,
+        "big": 28,
+        "decider": 16
+      },
+      "rank_score": 7.42
+    },
+    {
+      "match_id": "1534594",
+      "date": "2026-05-10",
+      "teams": "Romania v Bulgaria",
+      "event": "Bulgaria tour of Romania",
+      "stage": "Match 5",
+      "result": "Romania won by 30 runs",
+      "total_swing": 4.4,
+      "late_swing": 0.09,
+      "biggest_single_swing": 0.163,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 15,
+      "callbacks": {
+        "notable": 33,
+        "big": 21,
+        "decider": 11
+      },
+      "rank_score": 7.39
+    },
+    {
+      "match_id": "1512728",
+      "date": "2026-02-10",
+      "teams": "Namibia v Netherlands",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 10",
+      "result": "Netherlands won by 7 wickets",
+      "total_swing": 4.41,
+      "late_swing": 0.37,
+      "biggest_single_swing": 0.167,
+      "lead_changes": 16,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 31,
+        "big": 18,
+        "decider": 10
+      },
+      "rank_score": 7.38
+    },
+    {
+      "match_id": "1512733",
+      "date": "2026-02-11",
+      "teams": "West Indies v England",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 15",
+      "result": "West Indies won by 30 runs",
+      "total_swing": 4.91,
+      "late_swing": 0.36,
+      "biggest_single_swing": 0.221,
+      "lead_changes": 15,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 35,
+        "big": 26,
+        "decider": 10
+      },
+      "rank_score": 7.31
+    },
+    {
+      "match_id": "1533391",
+      "date": "2026-05-02",
+      "teams": "Malaysia v Indonesia",
+      "event": "Indonesia tour of Malaysia",
+      "stage": "Match 2",
+      "result": "Malaysia won by 12 runs",
+      "total_swing": 5.0,
+      "late_swing": 0.31,
+      "biggest_single_swing": 0.206,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 30,
+        "big": 23,
+        "decider": 12
+      },
+      "rank_score": 7.31
+    },
+    {
+      "match_id": "1534061",
+      "date": "2026-05-23",
+      "teams": "Guernsey v Jersey",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Final",
+      "result": "Jersey won by 4 wickets",
+      "total_swing": 4.49,
+      "late_swing": 0.84,
+      "biggest_single_swing": 0.177,
+      "lead_changes": 14,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 37,
+        "big": 23,
+        "decider": 10
+      },
+      "rank_score": 7.29
+    },
+    {
+      "match_id": "1529379",
+      "date": "2026-04-03",
+      "teams": "Mexico v Brazil",
+      "event": "Central American Cricket Championships",
+      "stage": "Match 4",
+      "result": "Mexico won by 16 runs",
+      "total_swing": 4.75,
+      "late_swing": 0.37,
+      "biggest_single_swing": 0.164,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 15,
+      "callbacks": {
+        "notable": 37,
+        "big": 21,
+        "decider": 11
+      },
+      "rank_score": 7.25
+    },
+    {
+      "match_id": "1528299",
+      "date": "2026-04-05",
+      "teams": "Norway v France",
+      "event": "Portugal T20 Tri-Series",
+      "stage": "Match 1",
+      "result": "Norway won by 10 runs",
+      "total_swing": 6.11,
+      "late_swing": 1.72,
+      "biggest_single_swing": 0.418,
+      "lead_changes": 8,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 32,
+      "callbacks": {
+        "notable": 31,
+        "big": 25,
+        "decider": 15
+      },
+      "rank_score": 7.18
+    },
+    {
+      "match_id": "1528306",
+      "date": "2026-04-08",
+      "teams": "Portugal v France",
+      "event": "Portugal T20 Tri-Series",
+      "stage": "Match 7",
+      "result": "France won by 2 wickets",
+      "total_swing": 5.38,
+      "late_swing": 1.47,
+      "biggest_single_swing": 0.691,
+      "lead_changes": 10,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 35,
+        "big": 20,
+        "decider": 13
+      },
+      "rank_score": 7.16
+    },
+    {
+      "match_id": "1544121",
+      "date": "2026-07-14",
+      "teams": "Denmark v Romania",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier B",
+      "stage": "Final",
+      "result": "Denmark won by 6 runs",
+      "total_swing": 5.64,
+      "late_swing": 2.21,
+      "biggest_single_swing": 0.347,
+      "lead_changes": 7,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 32,
+        "big": 24,
+        "decider": 16
+      },
+      "rank_score": 7.13
+    },
+    {
+      "match_id": "1529283",
+      "date": "2026-04-28",
+      "teams": "Punjab Kings v Rajasthan Royals",
+      "event": "Indian Premier League",
+      "stage": "Match 40",
+      "result": "Rajasthan Royals won by 6 wickets",
+      "total_swing": 5.19,
+      "late_swing": 0.88,
+      "biggest_single_swing": 0.189,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 29,
+        "big": 22,
+        "decider": 12
+      },
+      "rank_score": 7.07
+    },
+    {
+      "match_id": "1545681",
+      "date": "2026-08-21",
+      "teams": "Bulgaria v Czech Republic",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier C",
+      "stage": "7th Place Play-Off",
+      "result": "Czech Republic won by 5 wickets",
+      "total_swing": 4.0,
+      "late_swing": 0.83,
+      "biggest_single_swing": 0.107,
+      "lead_changes": 14,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 29,
+        "big": 18,
+        "decider": 8
+      },
+      "rank_score": 7.03
+    },
+    {
+      "match_id": "1540308",
+      "date": "2026-06-19",
+      "teams": "Belgium v Romania",
+      "event": "Continental Cup",
+      "stage": "Match 1",
+      "result": "Belgium won by 20 runs",
+      "total_swing": 4.51,
+      "late_swing": 0.24,
+      "biggest_single_swing": 0.175,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 12,
+      "callbacks": {
+        "notable": 31,
+        "big": 15,
+        "decider": 11
+      },
+      "rank_score": 7.0
+    },
+    {
+      "match_id": "1534052",
+      "date": "2026-05-20",
+      "teams": "Sweden v Malta",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier A",
+      "stage": "Match 15",
+      "result": "Malta won by 6 wickets",
+      "total_swing": 4.16,
+      "late_swing": 0.09,
+      "biggest_single_swing": 0.142,
+      "lead_changes": 16,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 13,
+      "callbacks": {
+        "notable": 35,
+        "big": 21,
+        "decider": 8
+      },
+      "rank_score": 6.97
+    },
+    {
+      "match_id": "1496577",
+      "date": "2026-07-09",
+      "teams": "India v England",
+      "event": "India tour of England",
+      "stage": "Match 4",
+      "result": "England won by 9 wickets",
+      "total_swing": 3.08,
+      "late_swing": 0.02,
+      "biggest_single_swing": 0.104,
+      "lead_changes": 18,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 14,
+      "callbacks": {
+        "notable": 28,
+        "big": 14,
+        "decider": 6
+      },
+      "rank_score": 6.96
+    },
+    {
+      "match_id": "1545655",
+      "date": "2026-08-06",
+      "teams": "Mexico v Panama",
+      "event": "South American Men's Championships",
+      "stage": "Match 2",
+      "result": "Panama won by 5 wickets",
+      "total_swing": 5.43,
+      "late_swing": 0.65,
+      "biggest_single_swing": 0.147,
+      "lead_changes": 12,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 25,
+      "callbacks": {
+        "notable": 44,
+        "big": 29,
+        "decider": 14
+      },
+      "rank_score": 6.96
+    },
+    {
+      "match_id": "1513086",
+      "date": "2025-12-04",
+      "teams": "Nigeria v Zambia",
+      "event": "West Africa Trophy",
+      "stage": "Match 1",
+      "result": "Nigeria won by 19 runs",
+      "total_swing": 4.69,
+      "late_swing": 0.67,
+      "biggest_single_swing": 0.176,
+      "lead_changes": 13,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 35,
+        "big": 24,
+        "decider": 12
+      },
+      "rank_score": 6.92
+    },
+    {
+      "match_id": "1540309",
+      "date": "2026-06-19",
+      "teams": "Romania v Switzerland",
+      "event": "Continental Cup",
+      "stage": "Match 2",
+      "result": "Switzerland won by 4 wickets",
+      "total_swing": 5.68,
+      "late_swing": 1.66,
+      "biggest_single_swing": 0.238,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 29,
+      "callbacks": {
+        "notable": 37,
+        "big": 21,
+        "decider": 9
+      },
+      "rank_score": 6.9
+    },
+    {
+      "match_id": "1511996",
+      "date": "2025-11-30",
+      "teams": "Argentina v Brazil",
+      "event": "Brazil tour of Argentina",
+      "stage": "Match 4",
+      "result": "Argentina won by 44 runs",
+      "total_swing": 3.55,
+      "late_swing": 0.02,
+      "biggest_single_swing": 0.178,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 15,
+      "callbacks": {
+        "notable": 31,
+        "big": 19,
+        "decider": 13
+      },
+      "rank_score": 6.89
+    },
+    {
+      "match_id": "1519139",
+      "date": "2026-01-29",
+      "teams": "Ireland v United Arab Emirates",
+      "event": "Ireland tour of United Arab Emirates",
+      "stage": "Match 1",
+      "result": "Ireland won by 57 runs",
+      "total_swing": 3.55,
+      "late_swing": 0.02,
+      "biggest_single_swing": 0.112,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 13,
+      "callbacks": {
+        "notable": 31,
+        "big": 15,
+        "decider": 4
+      },
+      "rank_score": 6.89
+    },
+    {
+      "match_id": "1538303",
+      "date": "2026-07-19",
+      "teams": "Zimbabwe v Bangladesh",
+      "event": "Bangladesh tour of Zimbabwe",
+      "stage": "Match 3",
+      "result": "Bangladesh won by 4 wickets",
+      "total_swing": 4.31,
+      "late_swing": 0.53,
+      "biggest_single_swing": 0.204,
+      "lead_changes": 14,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 26,
+        "big": 17,
+        "decider": 11
+      },
+      "rank_score": 6.88
+    },
+    {
+      "match_id": "1529278",
+      "date": "2026-04-25",
+      "teams": "Delhi Capitals v Punjab Kings",
+      "event": "Indian Premier League",
+      "stage": "Match 35",
+      "result": "Punjab Kings won by 6 wickets",
+      "total_swing": 5.76,
+      "late_swing": 1.56,
+      "biggest_single_swing": 0.264,
+      "lead_changes": 8,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 30,
+      "callbacks": {
+        "notable": 28,
+        "big": 18,
+        "decider": 14
+      },
+      "rank_score": 6.84
+    },
+    {
+      "match_id": "1542989",
+      "date": "2026-06-28",
+      "teams": "Hungary v Austria",
+      "event": "Austria tour of Hungary",
+      "stage": "Match 2",
+      "result": "Austria won by 9 wickets",
+      "total_swing": 2.81,
+      "late_swing": 0.04,
+      "biggest_single_swing": 0.111,
+      "lead_changes": 18,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 9,
+      "callbacks": {
+        "notable": 20,
+        "big": 11,
+        "decider": 2
+      },
+      "rank_score": 6.84
+    },
+    {
+      "match_id": "1513101",
+      "date": "2025-12-12",
+      "teams": "Bahrain v Bhutan",
+      "event": "Bahrain tour of Bhutan",
+      "stage": "Match 4",
+      "result": "Bahrain won by 42 runs",
+      "total_swing": 3.26,
+      "late_swing": 0.03,
+      "biggest_single_swing": 0.151,
+      "lead_changes": 17,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 10,
+      "callbacks": {
+        "notable": 27,
+        "big": 15,
+        "decider": 8
+      },
+      "rank_score": 6.76
+    },
+    {
+      "match_id": "1522998",
+      "date": "2026-02-25",
+      "teams": "Japan v Thailand",
+      "event": "Quadrangular Twenty20 Series (Thailand)",
+      "stage": "Match 1",
+      "result": "Japan won by 37 runs",
+      "total_swing": 4.26,
+      "late_swing": 0.13,
+      "biggest_single_swing": 0.181,
+      "lead_changes": 15,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 16,
+      "callbacks": {
+        "notable": 28,
+        "big": 21,
+        "decider": 12
+      },
+      "rank_score": 6.76
+    },
+    {
+      "match_id": "1502053",
+      "date": "2025-11-27",
+      "teams": "Sri Lanka v Pakistan",
+      "event": "Pakistan T20I Tri-Series",
+      "stage": "Match 6",
+      "result": "Sri Lanka won by 6 runs",
+      "total_swing": 5.53,
+      "late_swing": 2.47,
+      "biggest_single_swing": 0.277,
+      "lead_changes": 5,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 25,
+        "big": 11,
+        "decider": 6
+      },
+      "rank_score": 6.74
+    },
+    {
+      "match_id": "1515012",
+      "date": "2025-12-26",
+      "teams": "Bhutan v Myanmar",
+      "event": "Myanmar tour of Bhutan",
+      "stage": "Match 3",
+      "result": "Bhutan won by 82 runs",
+      "total_swing": 3.02,
+      "late_swing": 0.69,
+      "biggest_single_swing": 0.181,
+      "lead_changes": 15,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 14,
+      "callbacks": {
+        "notable": 24,
+        "big": 14,
+        "decider": 5
+      },
+      "rank_score": 6.7
+    },
+    {
+      "match_id": "1540316",
+      "date": "2026-06-21",
+      "teams": "Belgium v Romania",
+      "event": "Continental Cup",
+      "stage": "Final",
+      "result": "Belgium won by 8 runs",
+      "total_swing": 4.32,
+      "late_swing": 1.21,
+      "biggest_single_swing": 0.202,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 31,
+        "big": 14,
+        "decider": 4
+      },
+      "rank_score": 6.67
+    },
+    {
+      "match_id": "1545664",
+      "date": "2026-08-15",
+      "teams": "Greece v Czech Republic",
+      "event": "ICC Men's T20 World Cup Sub Regional Europe Qualifier C",
+      "stage": "Match 5",
+      "result": "Czech Republic won by 6 wickets",
+      "total_swing": 5.08,
+      "late_swing": 1.12,
+      "biggest_single_swing": 0.184,
+      "lead_changes": 10,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 37,
+        "big": 24,
+        "decider": 14
+      },
+      "rank_score": 6.66
+    },
+    {
+      "match_id": "1554592",
+      "date": "2026-09-26",
+      "teams": "Nigeria v Ghana",
+      "event": "Nigeria Quadrangular T20 Series",
+      "stage": "Match 10",
+      "result": "Nigeria won by 91 runs",
+      "total_swing": 2.85,
+      "late_swing": 0.12,
+      "biggest_single_swing": 0.185,
+      "lead_changes": 17,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 11,
+      "callbacks": {
+        "notable": 17,
+        "big": 7,
+        "decider": 3
+      },
+      "rank_score": 6.64
+    },
+    {
+      "match_id": "1533389",
+      "date": "2026-05-03",
+      "teams": "Austria v Germany",
+      "event": "Austria tour of Germany",
+      "stage": "Match 5",
+      "result": "Germany won by 5 wickets",
+      "total_swing": 3.93,
+      "late_swing": 0.46,
+      "biggest_single_swing": 0.139,
+      "lead_changes": 14,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 14,
+      "callbacks": {
+        "notable": 23,
+        "big": 17,
+        "decider": 11
+      },
+      "rank_score": 6.62
+    },
+    {
+      "match_id": "1527680",
+      "date": "2026-04-03",
+      "teams": "Chennai Super Kings v Punjab Kings",
+      "event": "Indian Premier League",
+      "stage": "Match 7",
+      "result": "Punjab Kings won by 5 wickets",
+      "total_swing": 5.01,
+      "late_swing": 1.1,
+      "biggest_single_swing": 0.171,
+      "lead_changes": 10,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 20,
+      "callbacks": {
+        "notable": 30,
+        "big": 20,
+        "decider": 10
+      },
+      "rank_score": 6.61
+    },
+    {
+      "match_id": "1515542",
+      "date": "2025-12-23",
+      "teams": "Indonesia v Cambodia",
+      "event": "Cambodia tour of Indonesia",
+      "stage": "Match 1",
+      "result": "Indonesia won by 60 runs",
+      "total_swing": 4.16,
+      "late_swing": 1.19,
+      "biggest_single_swing": 0.144,
+      "lead_changes": 11,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 19,
+      "callbacks": {
+        "notable": 31,
+        "big": 14,
+        "decider": 6
+      },
+      "rank_score": 6.57
+    },
+    {
+      "match_id": "1491736",
+      "date": "2026-03-17",
+      "teams": "New Zealand v South Africa",
+      "event": "South Africa tour of New Zealand",
+      "stage": "Match 2",
+      "result": "New Zealand won by 68 runs",
+      "total_swing": 3.5,
+      "late_swing": 0.29,
+      "biggest_single_swing": 0.131,
+      "lead_changes": 15,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 15,
+      "callbacks": {
+        "notable": 24,
+        "big": 7,
+        "decider": 2
+      },
+      "rank_score": 6.54
+    },
+    {
+      "match_id": "1512767",
+      "date": "2026-02-27",
+      "teams": "New Zealand v England",
+      "event": "ICC Men's T20 World Cup",
+      "stage": "Match 49",
+      "result": "England won by 4 wickets",
+      "total_swing": 5.29,
+      "late_swing": 1.49,
+      "biggest_single_swing": 0.336,
+      "lead_changes": 8,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 23,
+      "callbacks": {
+        "notable": 39,
+        "big": 19,
+        "decider": 10
+      },
+      "rank_score": 6.54
+    },
+    {
+      "match_id": "1527280",
+      "date": "2026-03-13",
+      "teams": "Botswana v Lesotho",
+      "event": "Lesotho tour of Botswana",
+      "stage": "Match 4",
+      "result": "Botswana won by 104 runs",
+      "total_swing": 2.7,
+      "late_swing": 0.07,
+      "biggest_single_swing": 0.108,
+      "lead_changes": 17,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 9,
+      "callbacks": {
+        "notable": 21,
+        "big": 7,
+        "decider": 1
+      },
+      "rank_score": 6.52
+    },
+    {
+      "match_id": "1540313",
+      "date": "2026-06-20",
+      "teams": "Belgium v Switzerland",
+      "event": "Continental Cup",
+      "stage": "Match 6",
+      "result": "Belgium won by 16 runs",
+      "total_swing": 4.57,
+      "late_swing": 0.33,
+      "biggest_single_swing": 0.169,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 16,
+      "callbacks": {
+        "notable": 31,
+        "big": 18,
+        "decider": 5
+      },
+      "rank_score": 6.52
+    },
+    {
+      "match_id": "1523003",
+      "date": "2026-02-27",
+      "teams": "Bahrain v Thailand",
+      "event": "Quadrangular Twenty20 Series (Thailand)",
+      "stage": "Match 6",
+      "result": "Bahrain won by 12 runs",
+      "total_swing": 4.91,
+      "late_swing": 0.74,
+      "biggest_single_swing": 0.189,
+      "lead_changes": 11,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 22,
+      "callbacks": {
+        "notable": 36,
+        "big": 21,
+        "decider": 14
+      },
+      "rank_score": 6.5
+    },
+    {
+      "match_id": "1547095",
+      "date": "2026-08-15",
+      "teams": "Rwanda v Zambia",
+      "event": "Malawi Tri-Nation T20I Series",
+      "stage": "Match 7",
+      "result": "Zambia won by 4 wickets",
+      "total_swing": 4.68,
+      "late_swing": 1.16,
+      "biggest_single_swing": 0.185,
+      "lead_changes": 10,
+      "went_to_last_over": false,
+      "moments_over_min_swing": 21,
+      "callbacks": {
+        "notable": 33,
+        "big": 21,
+        "decider": 11
+      },
+      "rank_score": 6.5
+    },
+    {
+      "match_id": "1506437",
+      "date": "2025-10-18",
+      "teams": "Austria v Romania",
+      "event": "Austria tour of Romania",
+      "stage": "Match 2",
+      "result": "Romania won by 3 wickets",
+      "total_swing": 5.6,
+      "late_swing": 1.89,
+      "biggest_single_swing": 0.314,
+      "lead_changes": 6,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 24,
+      "callbacks": {
+        "notable": 23,
+        "big": 9,
+        "decider": 3
+      },
+      "rank_score": 6.49
+    },
+    {
+      "match_id": "1528549",
+      "date": "2026-06-28",
+      "teams": "Ireland v India",
+      "event": "India tour of Ireland",
+      "stage": "Match 2",
+      "result": "Ireland won by 1 runs",
+      "total_swing": 3.85,
+      "late_swing": 0.66,
+      "biggest_single_swing": 0.128,
+      "lead_changes": 13,
+      "went_to_last_over": true,
+      "moments_over_min_swing": 17,
+      "callbacks": {
+        "notable": 37,
+        "big": 20,
+        "decider": 9
+      },
+      "rank_score": 6.48
+    }
+  ]
+}
