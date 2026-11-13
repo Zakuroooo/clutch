@@ -29,6 +29,12 @@ Tier 1 runs with **no keys at all**: cards fall back to templates.
 
 ## 3. Run locally *(after T0)*
 
+Once per clone, switch on the commit guard (it blocks env files and anything that looks like a key):
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ```bash
 npm install
 ```

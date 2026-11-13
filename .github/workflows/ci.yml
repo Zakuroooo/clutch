@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Hook scripts parse
-        run: bash -n .claude/hooks/after-edit.sh && bash -n .claude/hooks/guard-commit.sh
+        run: bash -n .claude/hooks/after-edit.sh && bash -n .claude/hooks/guard-commit.sh && bash -n .claude/hooks/scan-secrets.sh && bash -n .githooks/pre-commit
       - name: Config files are valid JSON
         run: jq empty .claude/settings.json .mcp.json
       - name: No env files or obvious keys committed
         run: |
           ! git ls-files | grep -E '(^|/)\.env(\..+)?$' | grep -v '\.env\.example$'
-          ! git grep -nE '(sk-ant-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gsk_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . ':!.claude/hooks/guard-commit.sh' ':!.github/workflows/ci.yml'
+          ! git grep -nE '(sk-ant-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gsk_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . ':!.claude/hooks/scan-secrets.sh' ':!.github/workflows/ci.yml'
 
   web:
     runs-on: ubuntu-latest

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Git pre-commit hook: the real gate. Sees the final index whoever runs the commit.
+# Enable once per clone:  git config core.hooksPath .githooks
+exec "$(git rev-parse --show-toplevel)/.claude/hooks/scan-secrets.sh"
