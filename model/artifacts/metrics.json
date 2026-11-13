@@ -1,0 +1,286 @@
+{
+  "split": "test",
+  "test_matches": 673,
+  "test_balls": 153603,
+  "bootstrap": {
+    "samples": 1000,
+    "unit": "match",
+    "seed": 20261114
+  },
+  "shipped": "boosted",
+  "shipped_name": "Model 2: gradient-boosted trees",
+  "validation": {
+    "seed": 20261114,
+    "train_balls": 739719,
+    "validation_balls": 155080,
+    "validation_brier": {
+      "baseline_constant": 0.25015,
+      "baseline_run_rate": 0.19662,
+      "logistic": 0.16657,
+      "boosted": 0.16479
+    },
+    "boosted_grid": [
+      {
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "max_iter": 100,
+        "monotone": true,
+        "validation_brier": 0.16745
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "max_iter": 100,
+        "monotone": false,
+        "validation_brier": 0.16734
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "monotone": true,
+        "validation_brier": 0.16479
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "monotone": false,
+        "validation_brier": 0.16485
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "monotone": true,
+        "validation_brier": 0.16517
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "monotone": false,
+        "validation_brier": 0.16516
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "max_iter": 300,
+        "monotone": true,
+        "validation_brier": 0.16491
+      },
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "max_iter": 300,
+        "monotone": false,
+        "validation_brier": 0.16526
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "max_iter": 100,
+        "monotone": true,
+        "validation_brier": 0.16531
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "max_iter": 100,
+        "monotone": false,
+        "validation_brier": 0.16554
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "monotone": true,
+        "validation_brier": 0.16522
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "monotone": false,
+        "validation_brier": 0.16603
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "monotone": true,
+        "validation_brier": 0.16489
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "monotone": false,
+        "validation_brier": 0.16563
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1,
+        "max_iter": 300,
+        "monotone": true,
+        "validation_brier": 0.16665
+      },
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1,
+        "max_iter": 300,
+        "monotone": false,
+        "validation_brier": 0.16791
+      }
+    ],
+    "boosted_params": {
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "max_iter": 300,
+      "monotone": true
+    },
+    "logistic_minus_boosted_validation_brier_95": [
+      0.00035,
+      0.00316
+    ],
+    "shipped": "boosted",
+    "ship_rule": "boosted if the 95% interval of (logistic - boosted) validation Brier, resampling matches, is above zero; otherwise logistic"
+  },
+  "models": {
+    "baseline_constant": {
+      "name": "Baseline A: constant",
+      "brier": 0.2501,
+      "brier_95": [
+        0.2499,
+        0.2503
+      ],
+      "log_loss": 0.6933,
+      "log_loss_95": [
+        0.6929,
+        0.6938
+      ],
+      "calibration_error": 0.0158
+    },
+    "baseline_run_rate": {
+      "name": "Baseline B: run-rate rule",
+      "brier": 0.1926,
+      "brier_95": [
+        0.188,
+        0.1971
+      ],
+      "log_loss": 0.5566,
+      "log_loss_95": [
+        0.5452,
+        0.5689
+      ],
+      "calibration_error": 0.0175
+    },
+    "logistic": {
+      "name": "Model 1: logistic regression",
+      "brier": 0.155,
+      "brier_95": [
+        0.1457,
+        0.1644
+      ],
+      "log_loss": 0.4617,
+      "log_loss_95": [
+        0.4383,
+        0.4858
+      ],
+      "calibration_error": 0.0223
+    },
+    "boosted": {
+      "name": "Model 2: gradient-boosted trees",
+      "brier": 0.1533,
+      "brier_95": [
+        0.144,
+        0.1623
+      ],
+      "log_loss": 0.4552,
+      "log_loss_95": [
+        0.4325,
+        0.4777
+      ],
+      "calibration_error": 0.018
+    }
+  },
+  "shipped_by_phase": {
+    "Innings 1": {
+      "balls": 82906,
+      "brier": 0.197,
+      "calibration_error": 0.0293
+    },
+    "Innings 2, overs 1 to 10": {
+      "balls": 41037,
+      "brier": 0.1233,
+      "calibration_error": 0.0254
+    },
+    "Innings 2, overs 11 to 20": {
+      "balls": 29660,
+      "brier": 0.0724,
+      "calibration_error": 0.0123
+    }
+  },
+  "calibration_bins_shipped": [
+    {
+      "bin": 0,
+      "n": 20714,
+      "mean_predicted": 0.02907762939814812,
+      "share_won": 0.014676064497441344
+    },
+    {
+      "bin": 1,
+      "n": 10926,
+      "mean_predicted": 0.15100872565004445,
+      "share_won": 0.14259564341936665
+    },
+    {
+      "bin": 2,
+      "n": 10747,
+      "mean_predicted": 0.24957060742043605,
+      "share_won": 0.24397506280822556
+    },
+    {
+      "bin": 3,
+      "n": 12605,
+      "mean_predicted": 0.3537870020660714,
+      "share_won": 0.3396271320904403
+    },
+    {
+      "bin": 4,
+      "n": 20138,
+      "mean_predicted": 0.45410252471854756,
+      "share_won": 0.46598470553183036
+    },
+    {
+      "bin": 5,
+      "n": 19691,
+      "mean_predicted": 0.5490563219860662,
+      "share_won": 0.5927073282210147
+    },
+    {
+      "bin": 6,
+      "n": 14285,
+      "mean_predicted": 0.648018677770903,
+      "share_won": 0.6888344417220861
+    },
+    {
+      "bin": 7,
+      "n": 12683,
+      "mean_predicted": 0.7487982844837732,
+      "share_won": 0.7600725380430498
+    },
+    {
+      "bin": 8,
+      "n": 11570,
+      "mean_predicted": 0.8507026609810379,
+      "share_won": 0.839066551426102
+    },
+    {
+      "bin": 9,
+      "n": 20244,
+      "mean_predicted": 0.9676465511610297,
+      "share_won": 0.9761904761904762
+    }
+  ]
+}
