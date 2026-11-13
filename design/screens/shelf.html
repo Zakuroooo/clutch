@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clutch mock-up: Moment Shelf</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+  <div class="top"><span>Replay of a real match, running as live</span><span>South Africa 151/5</span></div>
+
+  <h1 class="page-title">You missed three.</h1>
+
+  <section class="moment missed" aria-label="Missed moment, over 16.1" style="border-top: 0">
+    <span class="ov">16.1</span>
+    <div>
+      <span class="h">Their best hitter is gone.</span>
+      <span class="m">151/4 to 151/5</span>
+      <figure class="replay">
+        <!-- Side-on drawing built from the recorded outcome (caught behind). Not ball tracking. -->
+        <svg viewBox="0 0 300 96" role="img" aria-label="Drawing: the ball is bowled, takes the edge, and is caught by the wicketkeeper.">
+          <line x1="0" y1="84" x2="300" y2="84" stroke="#27342e"/>
+          <g stroke="#f1ede2" stroke-width="1"><line x1="70" y1="84" x2="70" y2="62"/><line x1="74" y1="84" x2="74" y2="62"/><line x1="78" y1="84" x2="78" y2="62"/></g>
+          <g stroke="#6c7872" stroke-width="1"><line x1="236" y1="84" x2="236" y2="62"/><line x1="240" y1="84" x2="240" y2="62"/><line x1="244" y1="84" x2="244" y2="62"/></g>
+          <line x1="86" y1="44" x2="96" y2="80" stroke="#f1ede2" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 240 34 Q 180 48 136 83 Q 112 64 94 56" fill="none" stroke="#6c7872" stroke-width="1" stroke-dasharray="2 4"/>
+          <path d="M 94 56 Q 62 42 30 50" fill="none" stroke="#ff2f6d" stroke-width="1.2"/>
+          <circle cx="30" cy="50" r="3.5" fill="#ff2f6d"/>
+        </svg>
+        <figcaption>A drawing of what was recorded: bowled, edged, caught. Not the ball's real path.</figcaption>
+      </figure>
+      <div class="chance" aria-label="South Africa's chance of winning fell from 71 to 48 percent">
+        <div class="track"><span class="was" style="width: 48%"></span><span class="swing" style="left: 48%; width: 23%"></span></div>
+        <div class="ends"><span>South Africa's chance</span><span><b>71</b> to <b>48</b></span></div>
+      </div>
+    </div>
+  </section>
+
+  <button class="moment missed">
+    <span class="ov">14.6</span>
+    <span><span class="h">Twenty-four in one over.</span><span class="m">123/3 to 147/3</span></span>
+  </button>
+  <button class="moment missed">
+    <span class="ov">12.3</span>
+    <span><span class="h">A set batter falls.</span><span class="m">106/3 to 106/4</span></span>
+  </button>
+  <button class="moment seen">
+    <span class="ov">2.3</span>
+    <span><span class="h">Two wickets in three balls.</span><span class="m">You saw this</span></span>
+  </button>
+
+  <span class="grow"></span>
+  <nav class="bar">
+    <button class="pill wide">Catch me up in 40 seconds</button>
+  </nav>
+</body>
+</html>

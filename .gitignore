@@ -1,0 +1,35 @@
+# dependencies and builds
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# model: raw data and binaries stay local; artifacts (json, png) are committed
+model/data/
+model/artifacts/*.joblib
+model/artifacts/*.pkl
+
+# tests
+playwright-report/
+test-results/
+coverage/
+
+# local
+.DS_Store
+.vercel/
+.claude/settings.local.json
+*.log

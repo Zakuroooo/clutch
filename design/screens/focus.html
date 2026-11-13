@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clutch mock-up: Focus mode</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+  <div class="top"><span>Replay of a real match, running as live</span><span>Focus is on</span></div>
+
+  <main class="grow" style="display: grid; align-content: center">
+    <div class="dial calm" data-balls="120" data-now="70" data-missed="52" data-seen="15" role="img"
+         aria-label="Calm. Nothing big right now. 70 of 120 balls bowled.">
+      <div>
+        <div class="word" style="color: var(--dust)">Calm</div>
+        <div class="reason">Keep working</div>
+      </div>
+    </div>
+    <div class="score">
+      <div class="sub">South Africa 98/3. Clutch will call you back.</div>
+    </div>
+  </main>
+
+  <section aria-labelledby="bar-h" style="padding-bottom: var(--s-5)">
+    <p id="bar-h" class="small dust" style="margin-bottom: var(--s-3)">Call me back for</p>
+    <div class="choose" role="group" aria-labelledby="bar-h">
+      <button aria-pressed="false">The decider</button>
+      <button aria-pressed="true">Big moments</button>
+      <button aria-pressed="false">Everything</button>
+    </div>
+  </section>
+
+  <nav class="bar">
+    <button class="pill wide">I'm back. Catch me up</button>
+  </nav>
+</body>
+<script src="dial.js"></script>
+</html>

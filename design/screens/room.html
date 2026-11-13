@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clutch mock-up: the room</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+  <div class="top">
+    <span>Replay of a real match, running as live</span>
+    <span class="friends" aria-label="3 friends here"><i>A</i><i>R</i><i>P</i></span>
+  </div>
+
+  <main class="grow" style="display: grid; align-content: center">
+    <!-- The dial: 120 ticks, one per ball. Lit ticks are bowled. Long pink ticks are moments you missed. -->
+    <div class="dial high" data-balls="120" data-now="97" data-missed="75,90,97" data-seen="15,52" role="img"
+         aria-label="Stakes are high. Look up. 97 of 120 balls bowled. 3 moments missed.">
+      <span class="halo"></span>
+      <div>
+        <div class="word">Look up</div>
+        <div class="reason">This over can decide it</div>
+      </div>
+    </div>
+
+    <div class="score">
+      <div class="line">South Africa 151<span>/5</span></div>
+      <div class="sub">need 26 from 23 balls</div>
+    </div>
+  </main>
+
+  <button class="just">
+    <span class="h">Their best hitter is gone.</span>
+    <span class="small dust">See why the room went loud</span>
+  </button>
+
+  <nav class="bar" aria-label="Room">
+    <button>Focus</button>
+    <button>React</button>
+    <button class="on">Missed <span class="pink">3</span></button>
+  </nav>
+</body>
+<script src="dial.js"></script>
+</html>

@@ -1,0 +1,86 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Runs before any app code exists: the guard script must at least parse.
+  repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hook scripts parse
+        run: bash -n .claude/hooks/after-edit.sh && bash -n .claude/hooks/guard-commit.sh
+      - name: Config files are valid JSON
+        run: jq empty .claude/settings.json .mcp.json
+      - name: No env files or obvious keys committed
+        run: |
+          ! git ls-files | grep -E '(^|/)\.env(\..+)?$' | grep -v '\.env\.example$'
+          ! git grep -nE '(sk-ant-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gsk_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . ':!.claude/hooks/guard-commit.sh' ':!.github/workflows/ci.yml'
+
+  web:
+    runs-on: ubuntu-latest
+    if: ${{ hashFiles('package.json') != '' }}
+    env:
+      LLM_PROVIDER: none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - name: Data files are consistent
+        run: npm run check-data --if-present
+      - name: Card evals on recorded outputs (no LLM key, no network)
+        run: npm run evals:check --if-present
+      - run: npm run build
+
+  model:
+    runs-on: ubuntu-latest
+    if: ${{ hashFiles('model/requirements.txt') != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: model/requirements.txt
+      - run: pip install -r model/requirements.txt
+      - name: Pipeline unit tests (fixtures only, no download)
+        run: pytest model/tests -q
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: web
+    if: ${{ hashFiles('playwright.config.ts') != '' }}
+    env:
+      LLM_PROVIDER: none
+      NEXT_PUBLIC_E2E: "1"
+      # Tier 2 two-browser tests run only when these secrets exist; otherwise they skip.
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
