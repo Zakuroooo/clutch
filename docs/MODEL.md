@@ -9,7 +9,7 @@ Code lives in `model/`. It runs offline on a laptop (8 GB RAM is enough) and nev
 For any point in a T20 match it estimates the chance that the team batting first wins. From that we derive two things the product uses:
 
 - **Win chance before and after each ball** (shown on cards and the shelf).
-- **Stakes for each ball** (drives the dial and the call-backs).
+- **Stakes for each ball** (drives the Pulse and the call-backs).
 
 It is a simple model on public data. It knows the score situation and nothing else: not who is batting, not the pitch, not the teams.
 
@@ -92,7 +92,7 @@ Source: `model/artifacts/metrics.json`. Shipped model: to be decided on validati
 | Innings 2, overs 1 to 10 | | |
 | Innings 2, overs 11 to 20 | | |
 
-## 6. From win chance to stakes, the dial and call-backs
+## 6. From win chance to stakes, the Pulse and call-backs
 
 ### 6.1 Stakes for a ball
 
@@ -112,7 +112,7 @@ This uses only the model and the current state. It does not look at what actuall
 
 `stakes.pct` is the percentile (0 to 100) of `stakes.raw` among all balls in **training** matches. The percentile table is saved to `model/artifacts/stakes_percentiles.json`. Percentiles make the thresholds below readable: "90" means "bigger than 90% of balls ever bowled in our training data".
 
-### 6.2 Dial states
+### 6.2 Pulse states
 
 | State | Rule |
 |---|---|
@@ -143,7 +143,7 @@ All thresholds are chosen by `model/src/thresholds.py` using **training matches 
 | `alert.big` | Median of about 12 |
 | `alert.notable` | Median of about 25 |
 | `alert.cooldown_balls` | 12 (two overs). Fixed, not tuned |
-| `pulse.high`, `pulse.decider` | Equal to `alert.big` and `alert.decider`, so the dial and the call-backs agree |
+| `pulse.high`, `pulse.decider` | Equal to `alert.big` and `alert.decider`, so the Pulse and the call-backs agree |
 | `pulse.building` | Halfway (in percentile) between 50 and `pulse.high` |
 | `moment.min_swing` | The swing giving a median of about 15 moments per training match |
 

@@ -12,7 +12,7 @@ Live sport is long quiet stretches and a few seconds that matter. Nobody tells c
 
 **Hypothesis:** if a fan is called back when a moment matters, can see what they missed, and is told why in terms they already know, they stay with the match.
 
-**What I built:** a second screen with one dial. A win-probability model, trained on ____ T20 matches, scores what is at stake on every ball. The dial wakes and calls you back before big moments. Missed moments are kept on a shelf with a drawn replay. An LLM explains each one in your world (football, F1, chess, Bollywood, gaming); code supplies every fact and checks every number. Friends can join a room by code.
+**What I built:** a match-centre app with one ring, the Pulse. A win-probability model, trained on ____ T20 matches, scores what is at stake on every ball. The Pulse fills and calls you back before big moments. Missed moments are kept on a shelf with a drawn replay. An LLM explains each one in your world (football, F1, chess, Bollywood, gaming); code supplies every fact and checks every number. Friends can join a room by code.
 
 **Honest limits:** it replays a real past match as live. No real users, so the hypothesis is untested. On held-out matches, call-backs came before ____% of the biggest swings.
 

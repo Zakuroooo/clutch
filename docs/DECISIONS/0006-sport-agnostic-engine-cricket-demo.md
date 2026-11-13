@@ -9,7 +9,7 @@
 The engine works on a stream of `{state, event, stakes}` ticks and never mentions cricket. One adapter module per sport turns raw data into ticks and supplies the scoreboard text, the moment rules and the facts. Only the cricket adapter is built. The claim is exactly: "built for any live sport, demonstrated on cricket."
 
 ## Why
-- The dial, call-backs, shelf, cards and room all sit on "stakes" and "moments", which every sport has.
+- The Pulse, call-backs, shelf, cards and room all sit on "stakes" and "moments", which every sport has.
 - The boundary is cheap to keep now and expensive to add later.
 - One sport done fully is a stronger demonstration than three half-working.
 

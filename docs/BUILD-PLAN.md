@@ -17,7 +17,7 @@ Pranay reviews at the four checkpoints marked **Review**. He must be able to exp
 | When | Tasks | Done when |
 |---|---|---|
 | 14 Nov, morning | T0 to T4 | Model trained, metrics saved, replay match exported |
-| 14 Nov, afternoon | T5 to T8 | A replay runs with the dial; Focus call-backs arrive in a background tab |
+| 14 Nov, afternoon | T5 to T8 | A replay runs with the Pulse; Focus call-backs arrive in a background tab |
 | 15 Nov, morning | T9 to T13 | Cards, shelf and demo mode work; evals recorded. **Tier 1 complete** |
 | 15 Nov, afternoon | T14 to T17, as far as time allows | Room, reactions, calls, Back me up |
 | 15 Nov, evening | T18 to T20 | Deployed, README true, note final, submitted |
