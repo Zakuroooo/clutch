@@ -101,7 +101,7 @@ Chosen by Pranay from the test split. `model/src/pick_replay.py` lists test-spli
 { "match_id": "", "chosen_by": "Pranay", "chosen_on": "" }
 ```
 
-The ranked list is saved to `model/artifacts/replay_candidates.json`. Until Pranay picks, the file holds the top well-known candidate and says so in `chosen_by`. Changing the match is: edit the id, `make export`, `npm run moments`, `npm run pregen`.
+The ranked list is saved to `model/artifacts/replay_candidates.json`. Pranay chose match 1529301, Punjab Kings v Mumbai Indians (Indian Premier League, 14 May 2026), on 15 Nov 2026: a quiet first half and a tight finish, so the Pulse goes from calm to hot. Changing the match is: edit the id, `make export`, `npm run moments`, `npm run pregen`.
 
 The mock-ups use India v South Africa as sample content with sample numbers; that is not a decision about the replay match.
 
