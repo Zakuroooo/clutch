@@ -181,6 +181,7 @@ export class MatchStore {
     this.update(restart(this.session, startAnchor(this.now(), -COUNTDOWN_MS)));
   }
   markSeen(ids: string[]) {
+    if (ids.every((id) => this.session.marks[id] === "seen")) return; // nothing to change
     this.update({ ...this.session, marks: markSeen(this.session.marks, ids) });
   }
 }

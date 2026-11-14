@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ExplanationCard } from "./ExplanationCard";
 import { useMatch } from "./MatchProvider";
 
@@ -25,12 +25,17 @@ export function CatchMeUp({ ids, onDone }: { ids: string[]; onDone: () => void }
     return () => clearTimeout(timer);
   }, [id, at, ids.length, onDone, store]);
 
+  const next = useCallback(
+    () => (at + 1 < ids.length ? setAt(at + 1) : onDone()),
+    [at, ids.length, onDone],
+  );
+
   if (!id) return null;
   return (
     <ExplanationCard
       key={id}
       momentId={id}
-      onClose={() => (at + 1 < ids.length ? setAt(at + 1) : onDone())}
+      onClose={next}
       footer={
         <div data-testid="catch-up">
           <div

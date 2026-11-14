@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { plural } from "@/lib/adapters/cricket/scoreboard";
 import { cardKey } from "@/lib/cards/schema";
 import { useSettings } from "@/lib/client/settings";
@@ -19,6 +19,7 @@ export function MomentsScreen() {
   const view = useMatchView();
   const settings = useSettings();
   const [playing, setPlaying] = useState<string[] | null>(null);
+  const stop = useCallback(() => setPlaying(null), []);
   const missed = view.missed;
   const now = snap.index >= 0 ? data.ticks[Math.min(snap.index, data.ticks.length - 1)] : null;
 
@@ -107,7 +108,7 @@ export function MomentsScreen() {
           <p className="note">Drawings show what was recorded, not the ball&apos;s real path.</p>
         </>
       ) : null}
-      {playing ? <CatchMeUp ids={playing} onDone={() => setPlaying(null)} /> : null}
+      {playing ? <CatchMeUp ids={playing} onDone={stop} /> : null}
     </main>
   );
 }
