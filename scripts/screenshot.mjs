@@ -17,5 +17,8 @@ for (const f of flags.filter((f) => f.startsWith("--click="))) {
   await page.waitForTimeout(900);
 }
 await page.screenshot({ path: `design/review/${name}.png`, fullPage: flags.includes("--full") });
-console.log(`design/review/${name}.png`, errors.length ? `console errors: ${errors.join(" | ")}` : "no console errors");
+console.log(
+  `design/review/${name}.png`,
+  errors.length ? `console errors: ${errors.join(" | ")}` : "no console errors",
+);
 await browser.close();
