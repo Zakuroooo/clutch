@@ -4,19 +4,19 @@
 
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
-> **Status, 13 Nov 2026: documents and design only. No feature code yet.**
-> Every result below says "to be measured" until the pipeline produces it. Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested.
+> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Not deployed yet.**
+> Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. No LLM key has been used yet, so every explanation card is a fixed template filled by code; the LLM path is built and tested with a fake provider only.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
 <p>
-  <img src="design/screens/room.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, ball chips and the latest moment">
-  <img src="design/screens/card.png" width="24%" alt="An explanation card with a jersey, stat tiles and the moment explained in football terms">
-  <img src="design/screens/shelf.png" width="24%" alt="Moments: You missed three big moments, with replay thumbnails and swing chips">
-  <img src="design/screens/focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector and stat tiles">
+  <img src="design/review/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
+  <img src="design/review/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
+  <img src="design/review/07-moments.png" width="24%" alt="Moments: You missed one big moment, with replay thumbnails and swing chips">
+  <img src="design/review/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
 </p>
 
-*Design mock-ups (static HTML in [`design/screens/`](design/screens/)), not the running app. Numbers in them are samples, not model output.*
+*Screenshots of the running app at 390 by 844, taken by `scripts/demo-shots.mjs`. The match is Punjab Kings v Mumbai Indians, Indian Premier League, 2026-05-14, replayed from Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
 
 ## The problem, in my words
 
@@ -46,20 +46,20 @@ A match centre built like the sports apps fans already use, with one thing of it
 
 ## Built, and designed but not built
 
-Tier 1 is finished before tier 2 starts. This table is updated as work lands; today nothing is built.
+Tier 1 is finished before tier 2 starts. This table is updated as work lands.
 
 | Tier | Feature | State |
 |---|---|---|
-| 1 | Shared match clock and score (replay) | not built yet |
-| 1 | Win-probability model and stakes | not built yet |
-| 1 | The Pulse and Focus mode call-backs | not built yet |
-| 1 | Moment Shelf, drawn replay, Catch me up | not built yet |
-| 1 | Your World cards with the faithfulness check | not built yet |
-| 1 | Two-minute reviewer demo | not built yet |
-| 2 | Friends' room by code | not built yet |
-| 2 | Reactions | not built yet |
-| 2 | Per-over calls and leaderboard | not built yet |
-| 2 | Back me up | not built yet |
+| 1 | Shared match clock and score (replay) | built, solo. The shared part (two devices on one clock) needs rooms, which are not built |
+| 1 | Win-probability model and stakes | built |
+| 1 | The Pulse and Focus mode call-backs | built. Background-tab notification not yet checked by hand |
+| 1 | Moment Shelf, drawn replay, Catch me up | built |
+| 1 | Your World cards with the faithfulness check | built. Wording is template-only until an LLM key is used |
+| 1 | Two-minute reviewer demo | built |
+| 2 | Friends' room by code | designed, not built |
+| 2 | Reactions | designed, not built |
+| 2 | Per-over calls and leaderboard | designed, not built |
+| 2 | Back me up | designed, not built |
 | 3 | Voice room · floating mini Pulse · memento · spoiler guard · football adapter · roar trigger · push with the app closed | designed, not built |
 
 ## How it works
@@ -98,18 +98,21 @@ Three ideas carry the design:
 
 ## Results
 
-All blank until measured. Each number will be copied from the file named, not typed.
+Each number is copied from the file named, not typed. Run on 14 and 15 Nov 2026.
 
 | Question | Result | Source |
 |---|---|---|
-| Matches used (train / validation / test) | to be measured | `model/artifacts/split.json` |
-| Model Brier score on test matches, vs a run-rate baseline | to be measured | `model/artifacts/metrics.json` |
-| Share of each test match's 10 biggest swings that got a call-back first, per Focus bar | to be measured | `model/artifacts/pulse_eval.json` |
-| Call-backs per match, per Focus bar | to be measured | same |
-| Cards passing the faithfulness check first time | to be measured | `evals/results/summary.json` |
-| Planted errors the check caught | to be measured | same |
-| Analogy quality by rubric; agreement with my own scoring of 30 cards | to be measured | same |
-| Automated tests | to be measured | CI |
+| Matches used (train / validation / test), split by date | 3,137 / 672 / 673 | `model/artifacts/split.json` |
+| Model Brier score on test matches (lower is better) | 0.1533 for the shipped model, against 0.1926 for a run-rate rule and 0.2501 for a constant | `model/artifacts/metrics.json` |
+| Share of each test match's 10 biggest swings that had a call-back in the over before | Only the decider 30% (random, same count: 10%) · Big moments 52% (random, same count: 22%) · Everything 82% (random, same count: 42%) | `model/artifacts/pulse_eval.json` |
+| Call-backs per match (median) | 2 · 8 · 20 | same |
+| Planted errors the check caught | 30 of 30, each by the rule it was planted for; 10 of 10 good cards passed | `evals/results/summary.json` |
+| Recorded cards for the replay match that pass the check | 216 of 216, all templates | same |
+| Cards passing the check first time when written by an LLM | not measured: no LLM key has been used | |
+| Analogy quality by rubric; agreement with my own scoring | not measured: needs LLM-written cards | |
+| Automated tests, run locally | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |
+
+**Reading the Pulse numbers honestly.** At every bar the Pulse catches two to three times as many of the biggest swings as the same number of random call-backs. It is far from complete: at "Big moments", about half of a match's ten biggest swings had a call-back in the over before them. And "biggest swings" are measured with the same model that triggers the call-backs, so the absolute number is optimistic ([MODEL.md](docs/MODEL.md) section 8).
 
 ## Limits
 
@@ -124,9 +127,7 @@ All blank until measured. Each number will be copied from the file named, not ty
 
 ## Run it
 
-Nothing to run yet beyond the mock-ups: open any file in `design/screens/` in a browser at phone width.
-
-Once the first build task is done, see [RUNBOOK.md](docs/RUNBOOK.md):
+Needs Node 22. No keys, no database.
 
 ```bash
 npm install
@@ -135,7 +136,22 @@ npm install
 npm run dev
 ```
 
-Watching alone needs no keys. Rooms need a Supabase project; card wording needs one LLM key. Both go in `.env.local`, never in the repository.
+Open http://localhost:3000 and tap **Show me in 2 minutes**. The match data, the model's numbers and the cards are committed in `data/`, so nothing has to be trained to run the app.
+
+Checks:
+
+```bash
+npm run typecheck && npm run lint && npm test && npm run check-data && npm run evals:check
+```
+```bash
+npm run e2e
+```
+
+To rebuild the model from Cricsheet (Python 3.11, about 100 MB of downloads): `make model-setup`, `make model`, `make model-test`. See [RUNBOOK.md](docs/RUNBOOK.md).
+
+To have an LLM write the cards, put `LLM_PROVIDER=gemini`, `LLM_MODEL` and `LLM_API_KEY` in `.env.local` (never in the repository) and run `npm run pregen`, then `npm run evals:check`. This path is built and unit-tested with a fake provider; it has not been run against a real model yet.
+
+**Not checked yet:** a background-tab notification on a laptop, vibration on an Android phone, an iPhone with the app on its Home Screen, and CI on GitHub (nothing has been pushed).
 
 ## Documents
 

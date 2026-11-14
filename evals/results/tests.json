@@ -1,0 +1,23 @@
+{
+  "run_on": "2026-11-14",
+  "where": "locally, not CI",
+  "unit_and_integration": {
+    "tool": "vitest",
+    "total": 159,
+    "passed": 159,
+    "failed": 0
+  },
+  "python": {
+    "tool": "pytest",
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0
+  },
+  "end_to_end": {
+    "tool": "playwright, chromium, 390 x 844, production build",
+    "passed": 13,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0
+  }
+}

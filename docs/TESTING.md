@@ -152,8 +152,15 @@ Playwright launches two (sometimes three) separate browser contexts in one test,
 
 | | Count | Passing |
 |---|---|---|
-| Unit and integration tests | | |
-| End-to-end tests | | |
-| Python tests | | |
+| Unit and integration tests | 159 | 159 |
+| End-to-end tests | 13 | 13 |
+| Python tests | 33 | 33 |
 
-To be filled from CI output.
+Source: `evals/results/tests.json`, written by `node scripts/test-report.mjs`. Run locally on 2026-11-14, not yet in CI.
+
+Differences from the plan above, said plainly:
+
+- The two-browser clock test (F1 row 8) is not written: it needs rooms, which are tier 2. The offset arithmetic is covered by the unit test of worked example A.
+- "With permission granted, an alert produces a notification call" (F4 row 4) is not automated: headless Chromium refuses notification permission even when the test grants it. The test covers the path with notifications off (title and banner). The granted path is a hand check.
+- The model sanity tests need the trained model file, which is not committed, so they skip on a fresh clone and in CI. They pass locally after `make model`.
+- Component tests for the empty shelf and the hidden-page mark are covered at unit and end-to-end level instead of as component tests.

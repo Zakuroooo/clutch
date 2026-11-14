@@ -16,6 +16,16 @@ Everything goes in `.env.local` on the laptop and in Vercel's project settings. 
 
 Tier 1 runs with **no keys at all**: cards fall back to templates.
 
+For LLM-written cards, put these three lines in `.env.local` (create it by copying `.env.example`), then run `npm run pregen` and `npm run evals:check`:
+
+```
+LLM_PROVIDER=gemini
+LLM_MODEL=<a current Gemini model id from AI Studio>
+LLM_API_KEY=<your key>
+```
+
+Only `gemini` and `none` are built. `groq` and `anthropic` are named in the design and fall back to templates.
+
 ## 2. Free-tier limits (checked 13 Nov 2026)
 
 | Service | Limit on the free plan | What it means here |
@@ -45,7 +55,9 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open http://localhost:3000. On a phone on the same Wi-Fi, use the laptop's IP address; notifications need HTTPS, so test those on the deployed link.
+Open http://localhost:3000. To open it on a phone on the same Wi-Fi: put `DEV_LAN_HOST=<the laptop's Wi-Fi address>` in `.env.local`, start with `npm run dev -- -H 0.0.0.0`, and open `http://<that address>:3000` on the phone. Notifications and the service worker need HTTPS, so on the phone the Pulse, cards and shelf work but call-back notifications do not; test those on the laptop or the deployed link.
+
+If a style change does not show up in `npm run dev`, restart it: the dev server has served a stale stylesheet after edits to `app/globals.css`.
 
 Checks:
 

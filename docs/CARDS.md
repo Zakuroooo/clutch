@@ -92,6 +92,9 @@ Rules for the builder:
 - `chance_team` is the batting team in a chase and the team batting first otherwise, so the sentence reads naturally.
 - `names` includes each full name and its last word ("H Klaasen" and "Klaasen").
 - If a field cannot be computed, it is `null`. Never a guess.
+- For `innings_end`, `needed` is what the other side must now chase (the score plus one) and `balls_left` is a full innings, so the template can say "{bowling_team} need {needed}".
+- `numbers` is built from every field except `moment_id`, which is a label. `names` also holds each word of a team name.
+- In R2, names from `facts.names` are set aside before number words are looked for, so a surname that is also a number word is not read as a number.
 
 ## 3. Your World: analogy rules
 
@@ -205,7 +208,7 @@ The check runs on the three text fields joined together (`headline`, `what`, `wh
 | R8 | Used facts are real | Every entry of `used_facts` is a field name of `Facts`, and its value is not null. |
 | R9 | The analogy is one | If `world` is not `plain`, the `why` field contains at least one word from that world's vocabulary list. If `world` is `plain`, it contains none of the other worlds' vocabulary. |
 
-**Fixed phrases allowed by R2** (numbers that are idiom, not data): `one goal up`, `one goal down`, `a goal up`, `a goal down`, `one move`, `one lap`, `one life`, `last life`, `first ball`, `one ball`, `one over`, `one shot`, `number one`.
+**Fixed phrases allowed by R2** (numbers that are idiom, not data): `out of 100` (the scale every chance is stated on), `one goal up`, `one goal down`, `a goal up`, `a goal down`, `one move`, `one lap`, `one life`, `last life`, `first ball`, `one ball`, `one over`, `one shot`, `number one`.
 
 The check is deliberately strict. A false failure costs nothing: the fan gets a correct template card. A false pass shows a wrong fact. When in doubt, fail.
 
@@ -306,10 +309,12 @@ Every Back me up card shows: **"Based on N matches in our data."** where N is th
 
 Used when the LLM is off, slow, or fails the check. Built by code from the facts, so they are always correct. `{…}` are `Facts` fields.
 
+**Two layers.** The table below is the plain card. On top of it, each world has one fixed analogy sentence per kind (`lib/cards/templates.ts`), filled with the anchors, used as the "why" line: for a wicket in football, "Think of minute {minute} in football: {batting_team} just lost a striker to a red card, and {bowling_team} have the momentum." The sentences use roles only and say nothing the facts do not support; a wicket analogy is used only when `who_gained` is the bowling side, otherwise the card stays plain. They pass through the same check as an LLM card. With no LLM key, this is what the fan reads.
+
 | Kind | Headline | What | Why (plain) |
 |---|---|---|---|
 | `wicket_big` | "{wicket.player_out} is out." | "{wicket.player_out} is out for {batter_runs} off {batter_balls}. {batting_team} are {score_after}." | "{chance_team}'s chance of winning went from {chance_before} to {chance_after} out of 100 on that ball." |
-| `swing` | "{runs_off_ball} off one ball." | "{batter} hits {runs_off_ball}. {batting_team} are {score_after}." | same chance sentence |
+| `swing` | "{batter} hits a six." or "a four."; "A dot ball that hurts." for no run; otherwise "{runs_off_ball} off one ball." | "{runs_off_ball} off this ball, {bowler} to {batter}. {batting_team} are {score_after}." (the facts do not say whether the runs were extras, so the sentence does not claim the batter hit them) | same chance sentence |
 | `over_big` | "{over_runs} runs in one over." | "{batting_team} go from {score_before} to {score_after} in the over." | same chance sentence |
 | `milestone` | "{batter} reaches {batter_runs}." | "{batter} has {batter_runs} off {batter_balls} balls." | "A batter who has been in this long is hard to stop, and {batting_team} know it." |
 | `innings_end` | "{bowling_team} need {needed}." | "{batting_team} finish on {score_after}." | "Now the other side bats and has to beat that score." |

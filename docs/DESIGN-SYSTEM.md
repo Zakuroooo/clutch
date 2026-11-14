@@ -78,7 +78,7 @@ Cards have a 1 px `--line` border and no shadow. Only two things glow: the Pulse
 - Mobile first, 390 px design width, holds at 360 px. On wider screens the app is a centred 430 px column.
 - A screen is: app bar, a stack of cards with 12 px between them, section titles between groups, and the tab bar.
 - **The main screen answers "should I look up?" above the fold:** score card, then the Pulse card, with nothing else before them.
-- A fixed tab bar with four tabs: Match, Moments, Back me up, Room. A count badge sits on Moments when anything is missed.
+- A fixed tab bar. Tier 1 has three tabs: Match, Focus, Moments. Back me up and Room join when tier 2 is built; a tab that leads nowhere is not shown. A count badge sits on Moments when anything is missed.
 - A screen has at most one green button.
 
 ## 6. Imagery
@@ -111,14 +111,14 @@ Rules are in [DRD.md](DRD.md) section 3.
 Brand dot (pulse gradient, glowing) and "Clutch" on the left. On the right, the **replay badge**: a pill reading "Replay of a real match" with a pulse-coloured dot. It is on every match screen and is never shortened to "Live".
 
 ### ScoreCard
-A hero card. Top row: competition and stage on the left, the over on the right. Middle: two teams facing each other, each with a crest, score (32 px, 800) with wickets smaller and muted, and a caption ("20 overs", "batting"). The side not batting is dimmed. Bottom: the chase strip on a dark blurred tile: "South Africa need **26** from **23** balls" and "5 wkts left".
+A hero card with a wash of each team's colour from its own side, and two thin bars at the bottom showing how much of each innings has been bowled. Top row: competition and stage on the left, the over on the right. Middle: two teams facing each other, each with a crest, score (32 px, 800) with wickets smaller and muted, and a caption ("20 overs", "batting"). The side not batting is dimmed. Bottom: the chase strip on a dark blurred tile: "South Africa need **26** from **23** balls" and "5 wkts left".
 
 States: loading shows crests with dashes; innings break shows the target in the strip; finished shows the result in the strip.
 
 ### PulseCard and Ring
 The main element. A card with a "The Pulse" badge, "Stakes 92 of 100", the ring, and the win-chance bar.
 
-- **Ring:** an SVG circle. The track is `--surface-3`; the arc is the pulse gradient and fills to `stakes.pct`. Two thin waves expand outward and fade.
+- **Ring:** an SVG circle. The track is `--surface-3`; the arc is the pulse gradient and fills to `stakes.pct`. Around it is a dial of 60 ticks, lit to the same point as the arc, and inside it a soft dark disc, so the ring reads as an instrument and not a progress circle. Two thin waves expand outward and fade. The CSS class is `pulse-ring`, not `ring`: `ring` is a Tailwind utility that draws an outline.
 - **Centre:** the word (40 px, 800) and one line of reason.
 - **Card background:** a soft pink glow and a pink-tinted border when the state is high or decider.
 
@@ -132,8 +132,8 @@ The main element. A card with a "The Pulse" badge, "Stakes 92 of 100", the ring,
 
 Sizes: 208 px, and 132 px (small, word only). Accessibility: `role="img"` with a full-sentence label, plus a polite live region that announces the word when the state changes.
 
-### WinBar
-Two segments in the two team colours that meet at the current win chance, with a small crest and percentage at each end. Always has an `aria-label` with the full sentence.
+### WinBar and WinWorm
+Two segments in the two team colours that meet at the current win chance, with a small crest and percentage at each end. Always has an `aria-label` with the full sentence. Above it, inside the Pulse card, the **WinWorm**: the win-chance line for the match so far, with a dashed middle line. It shows how the match got here in one glance.
 
 ### BallChips ("This over")
 Six 34 px circles. Bowled balls show the runs; a four is `--four`, a six is `--six`, a wicket is `--wicket` with "W". Balls to come are dashed outlines with their number. Extras add a chip.
@@ -171,7 +171,7 @@ Chips are 36 px pills; the selected chip is inverted (light fill, dark text). Th
 28 px circles with an initial on a colour picked by hashing the name. Overlapping row, up to five, then "+N".
 
 ### Jersey (PlayerArt)
-An SVG shirt in a team-colour gradient with a light collar line and the number in white (Outfit 800). Used at 104 px in card headers, larger on Back me up, and 76 px as a thumbnail. Never a face, photograph or silhouette.
+An SVG shirt in a team-colour gradient with a collar, sleeve cuffs, darker side panels and a light sash, and the number in white (Outfit 800). When we have no number for a player it shows their initials, never a guessed number. Used at 104 px in card headers, larger on Back me up, and 76 px as a thumbnail. Never a face, photograph or silhouette.
 
 ### VersusCard (Back me up)
 A hero with two jerseys and a "VS" disc between them, each with the player's name and a "Yours" or friend's-name badge. Under it, **CompareRows**: my value, the label, their value, with two bars growing from the centre; the losing side's bar is grey. The fair-point row is labelled as such.
@@ -183,7 +183,7 @@ The closing line on a pulse-gradient card, 22 px bold white, with "Based on N ma
 A side-on SVG: ground line, stumps, bat, a dashed delivery path, and the outcome path and ball in the outcome's colour (`--six`, `--four`, `--wicket`, or pulse for a catch). One drawing per outcome kind: dot, runs, four, six, bowled, caught, lbw, run out, stumped, wide, no-ball. Nothing shows direction or position, because the data has none. Wherever it is shown large, it carries the caption "A drawing of what was recorded. Not the ball's real path."
 
 ### TabBar
-Four tabs with a line icon (inline SVG, 1.8 px stroke) and a label: Match, Moments, Back me up, Room. The active tab is `--text`, others `--faint`. Blurred dark background, 1 px top border, safe-area padding.
+Tabs with a line icon (inline SVG, 1.8 px stroke) and a label. Tier 1: Match, Focus, Moments. The active tab is `--text`, others `--faint`. Blurred dark background, 1 px top border, safe-area padding.
 
 ## 9. Using the tokens in the app
 
@@ -235,3 +235,11 @@ Used by the `design-review` skill and the `design-critic` agent.
 9. Does every state in DRD section 2 exist, including loading and empty?
 10. Contrast, focus ring, 48 px targets, reduced motion.
 11. Any number on screen that is not from data?
+
+## 11. Added while building (15 Nov)
+
+Tokens added to `design/tokens.css`, each because a component needed a colour that had no token: `--page-edge`, `--on-color`, `--hot-ink`, `--world`, `--world-ink`, `--four-ink`, `--six-ink`, `--hero-top`, `--hero-bottom`, `--floodlight`, `--grass`, `--pitch`, `--pitch-2`, `--shadow-art`, `--shadow-sheet`. Tints are made with `color-mix()` from a token, so no component or stylesheet rule holds a literal colour.
+
+Components added: **Chip row** on the Match tab (Focus, Skip ahead, replay speed, your world); **Banner** (the in-page call-back on the Focus screen, pulse-tinted because it is a stakes signal); **Coach card** (the demo guide: inverted, above the tab bar, or at the top when a card is open so it never covers the card's buttons); **Sheet** (the explanation card rises from the bottom, traps focus, closes with Escape); **ThumbChart** (a small rising or falling line for moments that are not one ball).
+
+A test (`components/pulse.test.tsx`) fails if a pulse token is used outside the ring, the Pulse card, the brand dot, the hot, missed and replay badges, the missed count, the call-back banner or the "moments waiting" number.

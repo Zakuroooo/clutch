@@ -1,6 +1,6 @@
 # Clutch: product requirements
 
-Status: written 13 Nov, before any feature code. Nothing here has been built or measured yet.
+Status: written 13 Nov, before any feature code. Tier 1 was built on 14 and 15 Nov; what is built and measured is in the README.
 
 ## 1. The user
 
@@ -154,10 +154,10 @@ Limit, stated honestly: call-backs need the page to be open (in front or in a ba
 
 | Measure | Where it comes from | Result |
 |---|---|---|
-| Model Brier score vs baselines on test matches | `model/artifacts/metrics.json` | to be measured |
-| Share of each test match's biggest swings that got a call-back first, per Focus bar | `model/artifacts/pulse_eval.json` | to be measured |
-| Call-backs per match, per Focus bar | same | to be measured |
-| Cards passing the faithfulness check | `evals/results/summary.json` | to be measured |
+| Model Brier score vs baselines on test matches | `model/artifacts/metrics.json` | 0.1533 against 0.1926 and 0.2501 |
+| Share of each test match's biggest swings that got a call-back first, per Focus bar | `model/artifacts/pulse_eval.json` | 30%, 52%, 82% |
+| Call-backs per match, per Focus bar | same | median 2, 8, 20 |
+| Cards passing the faithfulness check | `evals/results/summary.json` | templates only so far; no LLM-written cards yet |
 | Analogy quality by rubric | same | to be measured |
 | Clock agreement between two browsers | Playwright test | to be measured |
 

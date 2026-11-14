@@ -67,8 +67,8 @@ At least three cases per rule, 30 in total, including: a wrong score, a number o
 
 | Metric | Target | Result |
 |---|---|---|
-| Planted errors caught | 30 of 30 | to be measured |
-| Good cards passed | 10 of 10 | to be measured |
+| Planted errors caught | 30 of 30 | 30 of 30 (`evals/results/summary.json`) |
+| Good cards passed | 10 of 10 | 10 of 10 |
 
 This set runs as a unit test on every push. If someone loosens the check and a planted error slips through, CI fails.
 
@@ -127,3 +127,7 @@ Smaller set: 20 player pairs from the replay match's squads × 2 worlds (plain a
 - Whether real fans find the analogies helpful. Nobody outside the builder has used this.
 - Whether the judge model shares the writer's blind spots.
 - Anything beyond cricket and the six worlds.
+
+## 9. Status on 15 Nov 2026
+
+Built and run: the adversarial set (30 of 30 caught, 10 of 10 good cards pass) and `npm run evals:check`, which also re-checks every recorded card for the replay match. Not run: anything that needs an LLM. No key has been used, so sections 3, 5 and 6 have no results, and every recorded card is a template. `evals:judge` is designed, not built. Back me up (section 6) is tier 2 and not built.

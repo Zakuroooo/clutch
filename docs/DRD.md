@@ -16,7 +16,7 @@ Tokens and component specs are in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md). Static m
 
 Every screen handles: loading, empty, error, offline, finished. "Offline" means no network. Solo mode keeps working offline once the match data has loaded.
 
-Tabs: **Match** (the room), **Moments** (the shelf), **Back me up**, **Room** (friends).
+Tabs in tier 1: **Match**, **Focus**, **Moments** (the shelf). **Back me up** and **Room** (friends) are tier 2 and join the bar when they are built.
 
 ### 2.1 Start
 
@@ -44,7 +44,8 @@ Mock-up: `design/screens/room.html`. Top to bottom:
 1. **App bar:** brand, replay badge.
 2. **Score card:** both teams with crests and scores; the chase strip.
 3. **Pulse card:** the ring with its word and reason, "Stakes N of 100", and the win-chance bar.
-4. **This over:** ball chips.
+4. **Chip row:** Focus, Skip ahead (to 8 seconds before the next moment), replay speed (1, 4 or 16 times), your world.
+4a. **This over:** ball chips, with the time to the next ball.
 5. **Just happened:** the latest moment card. Tap to open its explanation.
 6. **Room row** (tier 2): reaction buttons, friends' avatars, the room code.
 7. **Tab bar.**
@@ -66,7 +67,7 @@ Items 1 to 3 fit above the fold at 390 by 844.
 
 ### 2.4 Focus mode
 
-Mock-up: `design/screens/focus.html`. Reached from a "Focus" chip on the Match tab. A Pulse card in its calm state ("Calm. Keep working."), the **Call me back for** segmented control (Only the decider, Big moments, Everything), three stat tiles (call-backs so far, moments waiting, balls left), a notifications card, and the green button **I'm back. Catch me up**.
+Mock-up: `design/screens/focus.html`. Reached from the Focus tab or the "Focus" chip on the Match tab. Focus is off until the fan taps **Turn Focus on**; call-backs interrupt only while it is on. A Pulse card in its calm state ("Calm. Keep working."), the **Call me back for** segmented control (Only the decider, Big moments, Everything), three stat tiles (call-backs so far, moments waiting, balls left), a notifications card, and the green button **I'm back. Catch me up**.
 
 When a call-back fires: the Pulse card switches to its glowing state with "Look up" and the reason, the device vibrates once, and a system notification is sent if allowed.
 
@@ -100,7 +101,7 @@ Mock-up: `design/screens/card.html`. Hero header with a kind badge, the headline
 | State | What the fan sees |
 |---|---|
 | Loading | Header, tiles and before and after at once (from code). The analogy as skeleton lines. |
-| Failed | The template text in the analogy area, with the world badge hidden. |
+| Failed, or no LLM | A template. Each world has one fixed analogy sentence per kind of moment, filled with the anchors by code, so the card still reads "In football terms". If that sentence would be untrue for this moment, the plain template is shown under "In plain words". The caption says the wording is a fixed template, not written by an AI model. |
 | Plain | The world badge reads "In plain words"; the button becomes "In football terms". |
 
 ### 2.7 Back me up (tier 2)
@@ -127,7 +128,7 @@ A card with the room code in large type and a **Share** button, a list of friend
 
 ### 2.9 Reviewer demo
 
-The Match screen with a coach card pinned above the tab bar: one sentence per step ("The ring fills when a ball could change the match.") with **Next** and **Skip demo**. A "Skip ahead" chip stays on the Match tab for the whole session and jumps to the next big moment.
+Opened by "Show me in 2 minutes". The clock is set a little before a moment the Pulse rises into, chosen by code (`lib/engine/demo.ts`), having skipped one earlier moment so the shelf has something missed. The Match screen with a coach card pinned above the tab bar: one sentence per step ("The ring fills when a ball could change the match.") with **Next** and **Skip demo**. A "Skip ahead" chip stays on the Match tab for the whole session and jumps to the next big moment.
 
 ## 3. Motion
 
