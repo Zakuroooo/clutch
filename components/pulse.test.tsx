@@ -14,7 +14,7 @@ const view = (pct: number) => pulseView({ thresholds, nextPct: pct, phase: "play
 
 describe("Ring", () => {
   test("the arc length matches stakes.pct", () => {
-    const full = 2 * Math.PI * 78;
+    const full = 2 * Math.PI * 84;
     expect(arcLength(0)).toBe(0);
     expect(arcLength(50)).toBeCloseTo(full / 2);
     expect(arcLength(100)).toBeCloseTo(full);

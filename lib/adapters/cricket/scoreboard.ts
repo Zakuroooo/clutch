@@ -94,7 +94,14 @@ export function scoreboardAt(
       },
     };
   }
-  return { rows };
+  // Innings 1: the strip is there from the first ball, so the screen does not jump later.
+  return {
+    rows,
+    chase: {
+      left: `${shortName(match, first)} are batting first`,
+      right: `${plural(state.balls_left, "ball")} left`,
+    },
+  };
 }
 
 function sideWhenDone(row: ScoreboardView["rows"][number]): string {

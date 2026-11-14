@@ -11,7 +11,7 @@ const shot = async (name) => { await page.waitForTimeout(700); await page.screen
 await page.goto(base + "/", { waitUntil: "load" }); await shot("01-start");
 await page.goto(base + "/world", { waitUntil: "load" }); await page.getByText("Football").click(); await shot("02-world");
 await page.goto(base + "/", { waitUntil: "load" });
-await page.getByText("Show me in 2 minutes").click();
+await page.getByRole("link", { name: "Show me in 2 minutes" }).click();
 await page.waitForSelector('[data-testid="coach"]'); await shot("03-demo-pulse");
 console.log("coach:", await page.locator('[data-testid="coach"] p').innerText(), "| ring:", await page.getByTestId("pulse-card").getByTestId("ring").getAttribute("data-state"));
 await page.getByText("Skip to the ball").click();

@@ -22,7 +22,7 @@
   --pulse-grad: linear-gradient(135deg, #ff2e63 0%, #ff8a3d 100%);
   --pulse-soft: rgba(255, 46, 99, 0.16);
   --pulse-glow: rgba(255, 46, 99, 0.45);
-  --calm: #3a4358;          /* the ring when nothing is at stake */
+  --calm: #56617d;          /* the ring when nothing is at stake */
 
   /* ---- Action and outcome colours ------------------------------------- */
   --go: #3ddc84;            /* the primary button */
@@ -99,6 +99,7 @@
   --d-tap: 90ms;
   --d-quick: 180ms;
   --d-sheet: 320ms;
+  --d-pulse: 600ms;         /* the ring arc, the card's glow and the win bar moving */
   --d-burst: 900ms;
   --d-replay: 2400ms;
   --e-out: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -117,6 +118,7 @@
 @media (prefers-reduced-motion: reduce) {
   :root {
     --d-sheet: 1ms;
+    --d-pulse: 1ms;
     --d-burst: 1ms;
     --d-replay: 1ms;
     --breath-calm: 0s;

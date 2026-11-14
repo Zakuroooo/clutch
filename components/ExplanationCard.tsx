@@ -184,7 +184,7 @@ export function ExplanationCard({
               <div className="replay" key={momentId}>
                 <MiniReplay kind={moment.replay_kind} animate />
               </div>
-              <figcaption className="micro faint" style={{ marginTop: "var(--s-1)" }}>
+              <figcaption className="micro muted" style={{ marginTop: "var(--s-1)" }}>
                 {REPLAY_CAPTION}
               </figcaption>
             </figure>

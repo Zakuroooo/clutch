@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { AppBar } from "@/components/AppBar";
 import { BallChips } from "@/components/BallChips";
-import { IconBell, IconRestart, IconSkip, IconSpeed, IconWorld } from "@/components/Icons";
+import { IconRestart, IconSkip, IconSpeed, IconWorld } from "@/components/Icons";
 import { useMatch, useMatchView } from "@/components/MatchProvider";
 import { MomentCard } from "@/components/MomentCard";
 import { PulseCard } from "@/components/PulseCard";
@@ -48,10 +48,6 @@ export default function MatchPage() {
       </div>
 
       <div className="chiprow" style={{ marginTop: "var(--s-3)" }}>
-        <Link href="/match/focus" className={`chip${snap.session.focus ? " on" : ""}`}>
-          <IconBell />
-          {snap.session.focus ? "Focus is on" : "Focus"}
-        </Link>
         {view.phase === "finished" ? (
           <button type="button" className="chip" onClick={() => store.restart()}>
             <IconRestart />

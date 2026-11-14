@@ -17,7 +17,7 @@ export function MomentCard({
   onOpen,
 }: {
   moment: Moment;
-  /** The kind in words ("Wicket"); replaced by Missed or Seen when a mark is given. */
+  /** The kind in words ("Wicket"); joined by a Missed badge when the fan missed it. */
   badge: string;
   title: string;
   line: string;
@@ -44,14 +44,8 @@ export function MomentCard({
       </span>
       <span>
         <span className="row" style={{ gap: "var(--s-2)", flexWrap: "wrap" }}>
-          {mark === "missed" ? (
-            <Badge kind="missed">Missed</Badge>
-          ) : mark === "seen" ? (
-            <Badge>Seen</Badge>
-          ) : (
-            <Badge kind="hot">{badge}</Badge>
-          )}
-          {mark ? <Badge>{badge}</Badge> : null}
+          {mark === "missed" ? <Badge kind="missed">Missed</Badge> : null}
+          <Badge kind={mark ? "neutral" : "hot"}>{badge}</Badge>
           <SwingChip code={swing.code} points={swing.points} />
         </span>
         <h3>{title}</h3>

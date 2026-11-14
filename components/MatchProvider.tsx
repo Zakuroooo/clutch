@@ -214,7 +214,7 @@ export function useMatchView(): MatchView {
             ? "Finished"
             : phase === "break"
               ? "Innings break"
-              : `Over ${now!.event.over}.${now!.event.ball}`,
+              : `Over ${Math.floor(now!.state.balls_bowled / 6)}.${now!.state.balls_bowled % 6}`,
       chanceA: now ? now.wp.after : ticks[0].wp.before,
       nextBallIn,
       shelf,

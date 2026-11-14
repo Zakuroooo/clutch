@@ -16,11 +16,13 @@ const alerts = JSON.parse(readFileSync(`${dir}/alerts.json`, "utf8")) as {
 }[];
 const ticks = timeline.events as {
   t_ms: number;
-  state: { score: number; wickets: number };
+  state: { score: number; wickets: number; balls_bowled: number };
   event: { over: number; ball: number; innings: number };
 }[];
 const winner = timeline.match.result.winner as string;
 
+const overText = (i: number) =>
+  `Over ${Math.floor(ticks[i].state.balls_bowled / 6)}.${ticks[i].state.balls_bowled % 6}`;
 const ring = (page: Page) => page.getByTestId("pulse-card").getByTestId("ring");
 const moment = moments.find((m) => m.replay_kind !== "none" && m.i > 20)!;
 
@@ -31,15 +33,13 @@ test.describe("clock and scoreboard", () => {
     await expect(page.getByTestId("team-a").locator(".runs")).toHaveText(
       `${ticks[i].state.score}/${ticks[i].state.wickets}`,
     );
-    await expect(
-      page.getByText(`Over ${ticks[i].event.over}.${ticks[i].event.ball}`),
-    ).toBeVisible();
+    await expect(page.getByText(overText(i))).toBeVisible();
   });
 
   test("a reload keeps the same ball", async ({ page }) => {
     const i = 100;
     await page.goto(`/match?t0=${ticks[i].t_ms + 1000}`);
-    const over = `Over ${ticks[i].event.over}.${ticks[i].event.ball}`;
+    const over = overText(i);
     await expect(page.getByText(over)).toBeVisible();
     await page.goto("/match");
     await expect(page.getByText(over)).toBeVisible();
@@ -135,7 +135,7 @@ test.describe("focus mode and the shelf", () => {
   }) => {
     const alert = alerts.find((a) => a.bar === "decider")!;
     await page.goto(`/match/focus?t0=${ticks[alert.i].t_ms - 14_000}`);
-    await page.getByRole("button", { name: "Only the decider" }).click();
+    await page.getByRole("button", { name: "The decider" }).click();
     await page.getByRole("button", { name: "Turn Focus on" }).click();
     await expect(page).toHaveTitle("Look up · Clutch", { timeout: 12_000 });
     await expect(page.getByRole("status")).toContainText("Look up");

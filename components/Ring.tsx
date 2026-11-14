@@ -1,7 +1,7 @@
 import { useId } from "react";
 import type { PulseState } from "@/lib/engine/pulse";
 
-const R = 78;
+const R = 84;
 const C = 2 * Math.PI * R;
 const TICKS = 60;
 /** Rounded so the server and the browser print the same coordinate. */
@@ -65,29 +65,29 @@ export function Ring({
           {Array.from({ length: TICKS }, (_, k) => {
             const a = (k / TICKS) * 2 * Math.PI - Math.PI / 2;
             const major = k % 5 === 0;
-            const r1 = major ? 91 : 93;
+            const r1 = major ? 93 : 95;
             return (
               <line
                 key={k}
-                className={`tick${k < lit ? " lit" : ""}`}
+                className={`tick${k < lit ? " lit" : ""}${major ? " major" : ""}`}
                 x1={at(r1 * Math.cos(a))}
                 y1={at(r1 * Math.sin(a))}
-                x2={at(97 * Math.cos(a))}
-                y2={at(97 * Math.sin(a))}
+                x2={at(98 * Math.cos(a))}
+                y2={at(98 * Math.sin(a))}
                 strokeWidth={major ? 2 : 1.2}
                 strokeLinecap="round"
               />
             );
           })}
         </g>
-        <circle cx="100" cy="100" r="66" fill={`url(#${id}-disc)`} />
+        <circle cx="100" cy="100" r="74" fill={`url(#${id}-disc)`} />
         <circle
           cx="100"
           cy="100"
           r={R}
           fill="none"
           style={{ stroke: "var(--surface-3)" }}
-          strokeWidth="11"
+          strokeWidth="9"
         />
         <g transform="rotate(-90 100 100)" className="arc-glow">
           <circle
@@ -99,7 +99,7 @@ export function Ring({
             fill="none"
             stroke={calm ? undefined : `url(#${id}-g)`}
             style={calm ? { stroke: "var(--calm)" } : undefined}
-            strokeWidth={state === "decider" ? 14 : 11}
+            strokeWidth={state === "decider" ? 12 : 9}
             strokeLinecap="round"
             strokeDasharray={`${arcLength(pct).toFixed(1)} ${C.toFixed(1)}`}
           />
@@ -108,7 +108,7 @@ export function Ring({
       <span className="wave" />
       <span className="wave w2" />
       <div className="centre">
-        <div key={word} className={`word${word.length > 9 ? " long" : ""}`}>
+        <div key={word} className={`word${word.length > 7 ? " long" : ""}`}>
           {word}
         </div>
         {reason && size === "lg" ? <div className="sub">{reason}</div> : null}

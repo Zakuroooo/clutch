@@ -12,7 +12,7 @@ import { Segmented } from "./Segmented";
 import { StatTile } from "./StatTile";
 
 const BARS: { value: Bar; label: string }[] = [
-  { value: "decider", label: "Only the decider" },
+  { value: "decider", label: "The decider" },
   { value: "big", label: "Big moments" },
   { value: "notable", label: "Everything" },
 ];

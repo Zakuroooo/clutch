@@ -20,7 +20,7 @@ Tabs in tier 1: **Match**, **Focus**, **Moments** (the shelf). **Back me up** an
 
 ### 2.1 Start
 
-A hero with the brand and one line ("Get on with your work. Clutch calls you back when it matters."), a match card for today's replay (crests, teams, "Replay of a real match"), and two buttons: **Watch alone** (green) and **Watch with friends**. A link: "Show me in 2 minutes".
+A hero with the Pulse ring and one line ("Get on with your work. Clutch calls you back when it matters."), a match card for today's replay (crests, teams, "Replay of a real match, running as live"), and two buttons: **Watch alone** (green) and **Show me in 2 minutes**. Until rooms are built, one quiet line says watching with friends is coming later; there is no dead button.
 
 | State | What the fan sees |
 |---|---|
@@ -67,7 +67,7 @@ Items 1 to 3 fit above the fold at 390 by 844.
 
 ### 2.4 Focus mode
 
-Mock-up: `design/screens/focus.html`. Reached from the Focus tab or the "Focus" chip on the Match tab. Focus is off until the fan taps **Turn Focus on**; call-backs interrupt only while it is on. A Pulse card in its calm state ("Calm. Keep working."), the **Call me back for** segmented control (Only the decider, Big moments, Everything), three stat tiles (call-backs so far, moments waiting, balls left), a notifications card, and the green button **I'm back. Catch me up**.
+Mock-up: `design/screens/focus.html`. Reached from the Focus tab or the "Focus" chip on the Match tab. Focus is off until the fan taps **Turn Focus on**; call-backs interrupt only while it is on. A Pulse card in its calm state ("Calm. Keep working."), the **Call me back for** segmented control (The decider, Big moments, Everything), three stat tiles (call-backs so far, moments waiting, balls left), a notifications card, and the green button **I'm back. Catch me up**.
 
 When a call-back fires: the Pulse card switches to its glowing state with "Look up" and the reason, the device vibrates once, and a system notification is sent if allowed.
 
@@ -81,14 +81,14 @@ When a call-back fires: the Pulse card switches to its glowing state with "Look 
 
 ### 2.5 Moments (the shelf)
 
-Mock-up: `design/screens/shelf.html`. A hero card: a "3 missed" badge, "You missed three big moments", and the green button **Catch me up in 40 seconds**. Then the list of moment cards, newest first, each with a replay thumbnail, a Missed or Seen badge, a swing chip, a title and the score change.
+Mock-up: `design/screens/shelf.html`. A hero card: a "3 missed" badge, "You missed three big moments", and the green button **Catch me up in 40 seconds**. Then the list of moment cards, newest first, each with a replay thumbnail, a Missed badge if the fan missed it, the kind, a swing chip, a title and the score change. Seen moments carry no extra badge.
 
 Opening a moment shows its explanation card (2.6) with the mini replay at full width above the tiles.
 
 | State | What the fan sees |
 |---|---|
 | Empty | Hero: "Nothing big yet." Caption: "When something happens, it's kept here so you can't miss it." No button. |
-| Nothing missed | Hero: "You've seen it all." Cards all carry the Seen badge. |
+| Nothing missed | Hero: "You've seen it all." No card carries the Missed badge. |
 | Card loading | The card opens with the replay and tiles; the analogy area shows skeleton lines. |
 | Card failed | Plain template text. |
 | Catch me up playing | Moments play one at a time as full explanation cards with a progress bar at the top and a **Stop** button. |

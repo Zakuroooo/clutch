@@ -20,7 +20,7 @@ describe("scoreboard", () => {
       batting: true,
     });
     expect(fixtureTicks[2].state.balls_bowled).toBe(2);
-    expect(at(2).chase).toBeUndefined();
+    expect(at(2).chase).toEqual({ left: "Alphas are batting first", right: "16 balls left" });
   });
   test("after a wicket", () => {
     expect(at(4).rows[0]).toMatchObject({ main: "6", sub: "/1" });
