@@ -16,18 +16,18 @@ Live sport is long quiet stretches and a few seconds that matter, and nobody tel
 
 **What I built:** a match-centre app with one ring, the Pulse. A win-probability model, trained on 3,137 T20 matches, scores the stakes of every ball. The Pulse fills and calls you back before big moments. Missed moments wait on a shelf with a drawn replay. Each is explained in your world (football, F1, chess, Bollywood, gaming); code supplies every fact and checks every number.
 
-**Honest limits:** it replays a real past match as live. No real users, so the hypothesis is untested. On held-out matches, call-backs came before 52% of the biggest swings; random ones caught 22%. Rooms with friends are designed, not built.
+**Honest limits:** it replays a real past match as live. No real users, so the hypothesis is untested. On held-out matches, call-backs came before 52% of the biggest swings; random ones caught 22%. Rooms with friends are designed only.
 
 Built with AI coding agents; decisions and review are mine: docs/AI-WORKFLOW.md.
 
 ---
 
-Word count of the note above (title to last line): 201, counted by script on 15 Nov. Recount after any edit.
+Word count of the note above (title to last line): 200, counted by script on 15 Nov. Recount after any edit.
 
 ## Before submitting
 
 - [x] Every blank filled from `model/artifacts/` or `evals/results/`, or its sentence removed
 - [x] "Friends can join a room by code" removed (tier 2 was not built)
 - [ ] The worlds listed are the ones that actually work
-- [ ] 200 words or fewer
+- [x] 200 words or fewer
 - [ ] The form's AI question answered from `docs/AI-WORKFLOW.md`, in the same words
