@@ -8,21 +8,21 @@ One sentence depends on work not done yet: the cards are explained by fixed temp
 
 **Clutch: the friend who tells you when to look up**
 
-I follow sport casually. The match is on beside my work, I look away, and I miss the one ball everyone talks about. With friends, the room roars and I don't know why. I can't keep asking.
+The match is on beside my work, I look away, and I miss the one ball everyone talks about. With friends, the room roars and I don't know why.
 
-Live sport is long quiet stretches and a few seconds that matter. Nobody tells casual fans which seconds.
+Live sport is long quiet stretches and a few seconds that matter, and nobody tells casual fans which.
 
 **Hypothesis:** if a fan is called back when a moment matters, sees what they missed, and is told why in terms they already know, they stay with the match.
 
-**What I built:** a match-centre app with one ring, the Pulse. A win-probability model, trained on 3,137 T20 matches, scores what is at stake on every ball. The Pulse fills and calls you back before big moments. Missed moments are kept on a shelf with a drawn replay. Each is explained in your world (football, F1, chess, Bollywood, gaming); code supplies every fact and checks every number.
+**What I built:** a match-centre app with one ring, the Pulse. A win-probability model, trained on 3,137 T20 matches, scores the stakes of every ball. The Pulse fills and calls you back before big moments. Missed moments wait on a shelf with a drawn replay. Each is explained in your world (football, F1, chess, Bollywood, gaming); code supplies every fact and checks every number.
 
-**Honest limits:** it replays a real past match as live. No real users, so the hypothesis is untested. On 673 held-out matches, call-backs came before 52% of the biggest swings; random ones caught 22%. Rooms with friends are designed, not built.
+**Honest limits:** it replays a real past match as live. No real users, so the hypothesis is untested. On held-out matches, call-backs came before 52% of the biggest swings; random ones caught 22%. Rooms with friends are designed, not built.
 
 Built with AI coding agents; decisions and review are mine: docs/AI-WORKFLOW.md.
 
 ---
 
-Word count of the note above (title to last line): 213, counted by script on 15 Nov. Recount after any edit.
+Word count of the note above (title to last line): 201, counted by script on 15 Nov. Recount after any edit.
 
 ## Before submitting
 
