@@ -162,7 +162,8 @@ export function facts(
   };
 
   const numbers = new Set<number>();
-  collectNumbers(base, numbers);
+  // Every field except the id, which is a label and not a fact.
+  collectNumbers({ ...base, moment_id: "" }, numbers);
   const names = withSurnames([
     batting_team,
     bowling_team,

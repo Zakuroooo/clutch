@@ -1,0 +1,12 @@
+queen
+rook
+bishop
+knight
+pawn
+sacrifice
+endgame
+time trouble
+checkmate
+piece
+board
+pieces

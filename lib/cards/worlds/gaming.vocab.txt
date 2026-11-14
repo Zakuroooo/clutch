@@ -1,0 +1,10 @@
+final boss
+boss
+health bar
+respawn
+respawns
+clutch round
+clutch play
+carry
+last life
+game over

@@ -1,0 +1,21 @@
+striker
+keeper
+goalkeeper
+red card
+yellow card
+penalty
+extra time
+goal
+goals
+bench
+defence
+defender
+midfield
+half-time
+full-time
+kick-off
+offside
+football
+scoreline
+second half
+first half

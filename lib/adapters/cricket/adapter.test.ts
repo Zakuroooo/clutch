@@ -150,7 +150,7 @@ describe("detectMoments", () => {
 
   test("a batter reaching 50 is a milestone", () => {
     const ticks = structuredClone(fixtureTicks) as CricketTick[];
-    // A Three has 6 + 2 before over 2; give the first ball of over 3 a made-up 42.
+    // A Catto has 6 + 2 before over 2; give the first ball of over 3 a made-up 42.
     ticks[13].event.runs = { bat: 42, extras: 0, total: 42 };
     ticks[13].wp.after = ticks[13].wp.before + 0.01;
     ticks[14].wp.before = ticks[13].wp.after;
@@ -161,12 +161,12 @@ describe("detectMoments", () => {
 describe("new batter events", () => {
   test("first ball of a batter who came in after a wicket, when stakes are building", () => {
     const events = detectNewBatters(fixtureTicks, fixtureThresholds);
-    // A Three at ball 5 (pct 60) and B Three at ball 26 (pct 72) qualify.
-    // A Four at ball 16 (pct 10) does not. B Four at ball 34 (pct 95) does.
+    // A Catto at ball 5 (pct 60) and B Marlow at ball 26 (pct 72) qualify.
+    // A Dovey at ball 16 (pct 10) does not. B Nesbit at ball 34 (pct 95) does.
     expect(events.map((e) => [e.i, e.batter])).toEqual([
-      [5, "A Three"],
-      [26, "B Three"],
-      [34, "B Four"],
+      [5, "A Catto"],
+      [26, "B Marlow"],
+      [34, "B Nesbit"],
     ]);
   });
 });
