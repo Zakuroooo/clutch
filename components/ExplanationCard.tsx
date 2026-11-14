@@ -228,6 +228,14 @@ export function ExplanationCard({
               {card.watch}
             </p>
           ) : null}
+          <p className="micro faint">
+            Every number here comes from the match data and is checked before you see it.
+            {card?.source === "template"
+              ? ` This wording is a fixed template${mine !== "plain" && !plain ? ` for ${WORLD_LABEL[mine].toLowerCase()}` : ""}, not written by an AI model.`
+              : ""}
+          </p>
+        </div>
+        <div className="sheet-actions">
           <div className="row">
             {mine !== "plain" ? (
               <Button onClick={() => setPlain((p) => !p)} style={{ flex: 1 }}>
@@ -238,12 +246,6 @@ export function ExplanationCard({
               Got it
             </Button>
           </div>
-          <p className="micro faint">
-            Every number here comes from the match data and is checked before you see it.
-            {card?.source === "template"
-              ? ` This wording is a fixed template${mine !== "plain" && !plain ? ` for ${WORLD_LABEL[mine].toLowerCase()}` : ""}, not written by an AI model.`
-              : ""}
-          </p>
         </div>
       </div>
     </>

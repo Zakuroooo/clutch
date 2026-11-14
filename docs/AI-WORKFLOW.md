@@ -14,7 +14,7 @@ I did not write most of this code by hand. I directed it, reviewed it, and studi
 | Tool | Used for | Not used for |
 |---|---|---|
 | Claude Code (Anthropic), model Claude Fable 5.2 | Research, the plan, every document in `docs/`, the design tokens and mock-ups, the agent setup in `.claude/`; from 14 Nov, code and tests | Deciding the problem, the hypothesis or scope |
-| _LLM provider used in the product (fill in: name and model)_ | Wording of explanation cards and Back me up closing lines, from facts built by code | Any fact, number or decision in the product |
+| _LLM provider used in the product (fill in: name and model)_. **As of 15 Nov: none. No LLM has written any card; all cards are fixed templates** | Wording of explanation cards, from facts built by code | Any fact, number or decision in the product |
 | _Judge model for the rubric (fill in)_ | Scoring analogy quality in evals | |
 | _Any other tool (fill in, or delete this row)_ | | |
 
@@ -30,7 +30,8 @@ I did not write most of this code by hand. I directed it, reviewed it, and studi
 | 13 Nov | Accepted the third direction (match centre with cards, crests, jerseys and the Pulse ring) as good enough to start building, to be improved alongside the build | Mine | Not yet the design I want |
 | 13 Nov | Notifications from the open page only; closed-app push not built | AI flagged it as unrealistic in three days; _(fill in: agreed / changed)_ | DECISIONS/0007 |
 | 13 Nov | Mini replay as a labelled drawing, not a ball path | AI found the data has no tracking; _(fill in)_ | DECISIONS/0008 |
-| | Replay match chosen: _(fill in)_ | Mine | |
+| 15 Nov | Replay match: Punjab Kings v Mumbai Indians, IPL, 14 May 2026 | The AI ranked test-split matches and proposed it; I chose it | The AI's first pick (MI v RCB) made the Pulse hot for the whole chase, so it was replaced before I chose |
+| 14 Nov | Removed the run-rate feature from the model; cool-down of 6 balls instead of 12; three tabs instead of four; fixed analogy templates when there is no LLM key | AI decided while building and wrote each into the docs; _(fill in: agreed / changed)_ | BUILD-PLAN "What was done differently" |
 | | My world for the demo: _(fill in)_ | Mine | |
 | | _(add rows as they happen)_ | | |
 
@@ -69,6 +70,14 @@ Kept because it is the useful part. Add every one, including small ones.
 | 13 Nov | Second design over-corrected into a bare page with large serif text | My review of the mock-ups | Redesigned as a match-centre app |
 | 13 Nov | The AI wrote full design documents before showing me a screenshot, twice, so two rounds of documents were thrown away | Hindsight | Screenshots first from now on |
 | 13 Nov | The original plan described a ball-path replay the data cannot support | The AI checked the data format before writing the spec | Changed to a labelled drawing |
+| 14 Nov | The model's run-rate feature blew up in the first over: one six on ball one moved the win chance by 33 points and the opening ball was rated a decider | The AI inspected the exported match and saw a call-back on ball one | Feature removed, model retrained, reason written in MODEL.md |
+| 14 Nov | The plan's cool-down (12 balls) made its own target (about 25 call-backs) impossible | The AI worked out the maximum while writing the threshold fit | Cool-down set to 6 balls, documented |
+| 14 Nov | A CSS class named `ring` clashed with a Tailwind utility and drew a white box around the Pulse | Seen in the first real screenshot | Class renamed `pulse-ring` |
+| 14 Nov | The AI's own template cards broke its own check ("out of 100" was not an allowed phrase; a moment id leaked into the allowed numbers; "one side" counted as the number one) | The template tests failed | Fixed the facts builder, the phrase list and the wording |
+| 14 Nov | The first replay match the AI picked was tight for the whole chase, so the Pulse never moved from calm to hot | The demo walk-through | Ranked matches by calm-then-tense shape and switched |
+| 14 Nov | Catch me up re-ran an effect on every render | An end-to-end test failed | Callbacks made stable |
+| 14 Nov | Tests were mostly written alongside the code, not before it, against the project rule | The AI reported it | Left as is; recorded here and in BUILD-PLAN |
+| 15 Nov | The Pulse word touched its ring and "Look up" looked barely different from "Building" | The design-critic agent, reading real screenshots | Ring given more room, hot state made louder |
 | | | | |
 
 ## What I can explain without help

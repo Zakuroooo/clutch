@@ -81,6 +81,7 @@
   --s-7: 2rem;
   --gutter: var(--s-4);
   --tap: 3rem;            /* 48px minimum touch target */
+  --tabbar-h: 4.5rem;     /* height of the fixed tab bar, for things that sit above it */
 
   /* ---- Radius --------------------------------------------------------- */
   --r-chip: 8px;
