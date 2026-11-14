@@ -4,6 +4,8 @@ import type { PulseState } from "@/lib/engine/pulse";
 const R = 78;
 const C = 2 * Math.PI * R;
 const TICKS = 60;
+/** Rounded so the server and the browser print the same coordinate. */
+const at = (offset: number) => (100 + offset).toFixed(2);
 
 /** Length of the lit arc for a stakes percentile, in SVG units. Exported for the test. */
 export function arcLength(pct: number): number {
@@ -68,10 +70,10 @@ export function Ring({
               <line
                 key={k}
                 className={`tick${k < lit ? " lit" : ""}`}
-                x1={100 + r1 * Math.cos(a)}
-                y1={100 + r1 * Math.sin(a)}
-                x2={100 + 97 * Math.cos(a)}
-                y2={100 + 97 * Math.sin(a)}
+                x1={at(r1 * Math.cos(a))}
+                y1={at(r1 * Math.sin(a))}
+                x2={at(97 * Math.cos(a))}
+                y2={at(97 * Math.sin(a))}
                 strokeWidth={major ? 2 : 1.2}
                 strokeLinecap="round"
               />

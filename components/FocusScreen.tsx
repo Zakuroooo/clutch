@@ -173,7 +173,7 @@ export function FocusScreen() {
           </Button>
         )}
       </div>
-      <div style={{ height: "var(--tap)" }} />
+      <div style={{ height: "6rem" }} />
     </main>
   );
 }

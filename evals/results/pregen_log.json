@@ -1,587 +1,659 @@
 {
  "summary": {
-  "match_id": "1529297",
+  "match_id": "1529301",
   "prompt_version": "p1",
   "provider": "none",
-  "cards": 288,
+  "cards": 216,
   "passed_first_try": 0,
   "passed_on_retry": 0,
-  "template": 288,
+  "template": 216,
   "kept_from_earlier_run": 0
  },
  "cards": [
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_5",
+   "moment_id": "m_33",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_7",
+   "moment_id": "nb_34",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_12",
+   "moment_id": "m_65",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_17",
+   "moment_id": "m_77",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_18",
+   "moment_id": "m_84",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_76",
+   "moment_id": "nb_93",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_94",
+   "moment_id": "m_103",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_100",
+   "moment_id": "m_113",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_116",
+   "moment_id": "m_118",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_122",
+   "moment_id": "m_125",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_127",
+   "moment_id": "m_126",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_128",
+   "moment_id": "m_144",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_140",
+   "moment_id": "m_165",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_141",
+   "moment_id": "nb_166",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_156",
+   "moment_id": "m_175",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_157",
+   "moment_id": "m_179",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_180",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -623,361 +695,109 @@
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_194",
+   "moment_id": "nb_185",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_199",
+   "moment_id": "m_191",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
+   "moment_id": "m_220",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
+   "moment_id": "m_220",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
+   "moment_id": "m_220",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
+   "moment_id": "m_220",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
+   "moment_id": "m_220",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_200",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_207",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_209",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_213",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_217",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_219",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_222",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_223",
+   "moment_id": "m_220",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -1019,109 +839,109 @@
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_224",
+   "moment_id": "m_227",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_226",
+   "moment_id": "m_228",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_228",
+   "moment_id": "nb_229",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -1163,78 +983,6 @@
    "failed_rules": []
   },
   {
-   "moment_id": "m_233",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_233",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_233",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_233",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_233",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_233",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_234",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
    "moment_id": "m_235",
    "world": "football",
    "outcome": "template",
@@ -1266,42 +1014,6 @@
   },
   {
    "moment_id": "m_235",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_236",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -1343,109 +1055,73 @@
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "nb_239",
+   "moment_id": "m_238",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
+   "moment_id": "m_239",
    "world": "football",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
+   "moment_id": "m_239",
    "world": "f1",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
+   "moment_id": "m_239",
    "world": "chess",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
+   "moment_id": "m_239",
    "world": "bollywood",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
+   "moment_id": "m_239",
    "world": "gaming",
    "outcome": "template",
    "failed_rules": []
   },
   {
-   "moment_id": "m_240",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_241",
+   "moment_id": "m_239",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -1482,6 +1158,78 @@
   },
   {
    "moment_id": "m_242",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_244",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -1554,186 +1302,6 @@
   },
   {
    "moment_id": "m_248",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_249",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "nb_250",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_251",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_252",
-   "world": "plain",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
-   "world": "football",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
-   "world": "f1",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
-   "world": "chess",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
-   "world": "bollywood",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
-   "world": "gaming",
-   "outcome": "template",
-   "failed_rules": []
-  },
-  {
-   "moment_id": "m_253",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []

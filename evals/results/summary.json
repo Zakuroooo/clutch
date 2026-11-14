@@ -1,0 +1,29 @@
+{
+  "prompt_version": "p1",
+  "adversarial": {
+    "planted_errors": 30,
+    "caught": 30,
+    "good_cards": 10,
+    "good_passed": 10
+  },
+  "recorded_cards": {
+    "match_id": "1529301",
+    "checked": 216,
+    "passing": 216,
+    "by_source": {
+      "template": 216
+    }
+  },
+  "pregen": {
+    "match_id": "1529301",
+    "prompt_version": "p1",
+    "provider": "none",
+    "cards": 216,
+    "passed_first_try": 0,
+    "passed_on_retry": 0,
+    "template": 216,
+    "kept_from_earlier_run": 0
+  },
+  "rubric": null,
+  "note": "No LLM key was used: every recorded card is a template, so there is no LLM pass rate yet."
+}

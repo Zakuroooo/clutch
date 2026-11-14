@@ -22,6 +22,18 @@ function watchLine(f: Facts): string | null {
   return `${f.batting_team} need ${f.needed} from ${f.balls_left} ball${f.balls_left === 1 ? "" : "s"}.`;
 }
 
+function swingHeadline(f: Facts): string {
+  const line =
+    f.runs_off_ball === 6
+      ? `${f.batter} hits a six.`
+      : f.runs_off_ball === 4
+        ? `${f.batter} hits a four.`
+        : f.runs_off_ball === 0
+          ? "A dot ball that hurts."
+          : `${f.runs_off_ball} off one ball.`;
+  return line.length <= 45 ? line : `${f.runs_off_ball} off one ball.`;
+}
+
 /** The plain template card. Always passes the check with world "plain". */
 export function plainTemplate(f: Facts): CardText {
   const watch = watchLine(f);
@@ -47,7 +59,7 @@ export function plainTemplate(f: Facts): CardText {
       };
     case "swing":
       return {
-        headline: `${f.runs_off_ball} off one ball.`,
+        headline: swingHeadline(f),
         what: `${f.runs_off_ball} off this ball, ${f.bowler} to ${f.batter}. ${f.batting_team} are ${f.score_after}.`,
         why: chanceLine(f, "ball"),
         watch,

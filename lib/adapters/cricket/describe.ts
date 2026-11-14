@@ -15,6 +15,7 @@ export function describeMoment(f: Facts): MomentWords {
     case "swing":
       if (f.runs_off_ball === 6) return { badge: "Six", title: `${f.batter} hits a six`, line };
       if (f.runs_off_ball === 4) return { badge: "Four", title: `${f.batter} hits a four`, line };
+      if (f.runs_off_ball === 0) return { badge: "Dot ball", title: "A dot ball that hurts", line };
       return { badge: "Swing", title: `${f.runs_off_ball} off one ball`, line };
     case "over_big":
       return { badge: "Big over", title: `${f.over_runs} runs in one over`, line };

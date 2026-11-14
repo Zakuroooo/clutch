@@ -5,6 +5,7 @@
  */
 import { z } from "zod";
 import { nextMomentAnchor, setSpeed, skipTo, startAnchor } from "@/lib/clock/anchor";
+import { DEMO_LEAD_MS, type DemoPlan } from "@/lib/engine/demo";
 import { markSeen } from "@/lib/engine/shelf";
 import { newSession, restart, step, type MatchPlan, type Session } from "@/lib/engine/session";
 import { BarSchema, type Alert, type Bar } from "@/lib/engine/types";
@@ -32,6 +33,8 @@ export type Snapshot = {
   finished: boolean;
   /** False when the browser refused storage: progress will not survive a refresh. */
   durable: boolean;
+  /** Set while the two-minute demo is running. */
+  demo: DemoPlan | null;
 };
 
 const IDLE: Session = newSession({ anchor_at: 0, anchor_elapsed_ms: 0, speed: 0 });
@@ -42,6 +45,7 @@ export const SERVER_SNAPSHOT: Snapshot = {
   elapsedSec: 0,
   finished: false,
   durable: true,
+  demo: null,
 };
 
 export class MatchStore {
@@ -49,6 +53,7 @@ export class MatchStore {
   private listeners = new Set<() => void>();
   private session: Session = IDLE;
   private durable = true;
+  private demo: DemoPlan | null = null;
   private readonly key: string;
 
   constructor(
@@ -110,6 +115,7 @@ export class MatchStore {
         elapsedSec,
         finished: r.finished,
         durable: this.durable,
+        demo: this.demo,
       };
       this.listeners.forEach((l) => l());
     }
@@ -121,7 +127,7 @@ export class MatchStore {
     this.save();
     this.tick();
     // tick() only publishes when the step changed something; a setting change must too.
-    this.snapshot = { ...this.snapshot, session: this.session };
+    this.snapshot = { ...this.snapshot, session: this.session, demo: this.demo };
     this.listeners.forEach((l) => l());
   }
 
@@ -131,6 +137,24 @@ export class MatchStore {
     } catch {
       this.durable = false;
     }
+  }
+
+  /**
+   * Start the two-minute demo: a clean session that has just skipped over one earlier
+   * moment (so the shelf has something missed) and sits a few balls before the target.
+   */
+  startDemo(plan: DemoPlan) {
+    const t = this.plan.times;
+    const from =
+      plan.missIndex !== null ? t[plan.missIndex] - 2_000 : t[plan.targetIndex] - DEMO_LEAD_MS;
+    this.start(from);
+    this.demo = plan;
+    this.jumpTo(t[plan.targetIndex] - DEMO_LEAD_MS);
+  }
+  endDemo() {
+    this.demo = null;
+    this.snapshot = { ...this.snapshot, demo: null };
+    this.listeners.forEach((l) => l());
   }
 
   setBar(bar: Bar) {

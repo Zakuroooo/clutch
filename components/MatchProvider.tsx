@@ -19,6 +19,7 @@ import type { CardsFile, Facts } from "@/lib/cards/schema";
 import { MatchStore, SERVER_SNAPSHOT, type Snapshot } from "@/lib/client/matchStore";
 import { settingsStore } from "@/lib/client/settings";
 import { activeAlert } from "@/lib/engine/alerts";
+import { pickDemo } from "@/lib/engine/demo";
 import { pulseView, type PulseView } from "@/lib/engine/pulse";
 import { missedMoments, shelfAt } from "@/lib/engine/shelf";
 import type { Alert, Moment, ScoreboardView } from "@/lib/engine/types";
@@ -66,7 +67,14 @@ export function MatchProvider({
     // (?demo=1) is handled by the demo guide, which also sets the clock.
     const params = new URLSearchParams(window.location.search);
     const t0 = process.env.NEXT_PUBLIC_E2E === "1" ? params.get("t0") : null;
-    store.start(t0 !== null && Number.isFinite(Number(t0)) ? Number(t0) : undefined);
+    const demo = params.get("demo") ? pickDemo(data.ticks, data.moments, data.thresholds) : null;
+    if (demo) {
+      if (settingsStore.get().world === null)
+        settingsStore.set((v) => ({ ...v, world: "football" }));
+      store.startDemo(demo);
+    } else {
+      store.start(t0 !== null && Number.isFinite(Number(t0)) ? Number(t0) : undefined);
+    }
 
     let worker: Worker | null = null;
     let timer: ReturnType<typeof setInterval> | null = null;
@@ -89,7 +97,7 @@ export function MatchProvider({
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("focus", restoreTitle);
     };
-  }, [store]);
+  }, [store, data]);
 
   const lookup = useMemo(() => {
     const cache = new Map<string, Facts | null>();

@@ -1287,3 +1287,46 @@ h3,
   letter-spacing: -0.02em;
   margin-top: var(--s-3);
 }
+
+/* ---- Explanation card ---- */
+.card-hero {
+  padding: var(--s-4);
+  display: grid;
+  grid-template-columns: 1fr 104px;
+  gap: var(--s-3);
+  align-items: end;
+}
+.card-hero .crest {
+  justify-self: end;
+}
+.card-headline {
+  font-size: var(--t-score);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: var(--s-3);
+  text-wrap: balance;
+}
+.card-body {
+  padding: var(--s-4);
+}
+.card-why {
+  font: 700 var(--t-title) / 1.25 var(--font-head);
+  margin-top: var(--s-3);
+  text-wrap: pretty;
+}
+.replay svg {
+  aspect-ratio: 2 / 1;
+}
+.shelf-title {
+  font-size: var(--t-score);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: var(--s-3);
+  text-wrap: balance;
+}
+/* Over an open card the coach sits at the top, so it never covers the card's buttons. */
+.coach.over-sheet {
+  z-index: var(--z-burst);
+  bottom: auto;
+  top: calc(var(--s-3) + env(safe-area-inset-top));
+}

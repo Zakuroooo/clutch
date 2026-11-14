@@ -49,28 +49,28 @@
     }
   },
   "replay_match": {
-    "match_id": "1529297",
+    "match_id": "1529301",
     "after_wickets": {
-      "callbacks": 15,
-      "coverage": 0.4
+      "callbacks": 12,
+      "coverage": 0.2
     },
     "notable": {
-      "callbacks": 40,
+      "callbacks": 34,
       "coverage": 1.0,
-      "random": 0.665,
+      "random": 0.6,
       "last_overs": 1.0
     },
     "big": {
-      "callbacks": 28,
-      "coverage": 1.0,
-      "random": 0.5900000000000001,
+      "callbacks": 21,
+      "coverage": 0.9,
+      "random": 0.45,
       "last_overs": 1.0
     },
     "decider": {
-      "callbacks": 15,
-      "coverage": 1.0,
-      "random": 0.41000000000000003,
-      "last_overs": 0.9
+      "callbacks": 10,
+      "coverage": 0.9,
+      "random": 0.20500000000000002,
+      "last_overs": 0.6
     }
   }
 }

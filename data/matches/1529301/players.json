@@ -1,0 +1,602 @@
+{
+  "Priyansh Arya": {
+    "id": "b5797845",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 31,
+    "batting": {
+      "innings": 31,
+      "runs": 909,
+      "average": 29.3,
+      "strike_rate": 193.0,
+      "fifties": 7,
+      "sixes": 63,
+      "chase_innings": 15,
+      "chase_average": 21.0,
+      "chase_fifties": 2,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "P Simran Singh": {
+    "id": "9418198b",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 66,
+    "batting": {
+      "innings": 65,
+      "runs": 1865,
+      "average": 29.6,
+      "strike_rate": 156.9,
+      "fifties": 15,
+      "sixes": 94,
+      "chase_innings": 33,
+      "chase_average": 28.3,
+      "chase_fifties": 7,
+      "chase_not_outs": 1,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "C Connolly": {
+    "id": "fe366f34",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 28,
+    "batting": {
+      "innings": 23,
+      "runs": 582,
+      "average": 29.1,
+      "strike_rate": 155.2,
+      "fifties": 3,
+      "sixes": 37,
+      "chase_innings": 15,
+      "chase_average": 30.1,
+      "chase_fifties": 2,
+      "chase_not_outs": 2,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 9,
+      "wickets": 3,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "SS Iyer": {
+    "id": "85ec8e33",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 220,
+    "batting": {
+      "innings": 213,
+      "runs": 6001,
+      "average": 34.5,
+      "strike_rate": 138.3,
+      "fifties": 45,
+      "sixes": 248,
+      "chase_innings": 97,
+      "chase_average": 41.0,
+      "chase_fifties": 23,
+      "chase_not_outs": 28,
+      "death_strike_rate": 180.5
+    },
+    "bowling": {
+      "innings": 2,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Suryansh Shedge": {
+    "id": "970ddd24",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 15,
+    "batting": {
+      "innings": 12,
+      "runs": 173,
+      "average": 19.2,
+      "strike_rate": 154.5,
+      "fifties": 1,
+      "sixes": 12,
+      "chase_innings": 7,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 1,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 4,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Shashank Singh": {
+    "id": "26989d80",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 54,
+    "batting": {
+      "innings": 42,
+      "runs": 905,
+      "average": 36.2,
+      "strike_rate": 161.6,
+      "fifties": 6,
+      "sixes": 51,
+      "chase_innings": 25,
+      "chase_average": 37.9,
+      "chase_fifties": 4,
+      "chase_not_outs": 10,
+      "death_strike_rate": 195.4
+    },
+    "bowling": {
+      "innings": 8,
+      "wickets": 5,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Azmatullah Omarzai": {
+    "id": "8f6dd463",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 20,
+    "batting": {
+      "innings": 11,
+      "runs": 151,
+      "average": 15.1,
+      "strike_rate": 149.5,
+      "fifties": 0,
+      "sixes": 10,
+      "chase_innings": 5,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 18,
+      "wickets": 15,
+      "economy": 9.6,
+      "death_economy": 10.5
+    }
+  },
+  "M Jansen": {
+    "id": "81c36ee9",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 77,
+    "batting": {
+      "innings": 44,
+      "runs": 444,
+      "average": 15.3,
+      "strike_rate": 127.2,
+      "fifties": 2,
+      "sixes": 29,
+      "chase_innings": 23,
+      "chase_average": 14.4,
+      "chase_fifties": 1,
+      "chase_not_outs": 6,
+      "death_strike_rate": 140.2
+    },
+    "bowling": {
+      "innings": 75,
+      "wickets": 74,
+      "economy": 9.4,
+      "death_economy": 10.7
+    }
+  },
+  "Vishnu Vinod": {
+    "id": "0494fa6e",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 7,
+    "batting": {
+      "innings": 7,
+      "runs": 71,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 4,
+      "chase_innings": 2,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "XC Bartlett": {
+    "id": "3b53243a",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 35,
+    "batting": {
+      "innings": 16,
+      "runs": 117,
+      "average": 13.0,
+      "strike_rate": 118.2,
+      "fifties": 0,
+      "sixes": 5,
+      "chase_innings": 8,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 135.8
+    },
+    "bowling": {
+      "innings": 34,
+      "wickets": 31,
+      "economy": 9.2,
+      "death_economy": 9.3
+    }
+  },
+  "Arshdeep Singh": {
+    "id": "244048f6",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 194,
+    "batting": {
+      "innings": 49,
+      "runs": 150,
+      "average": 6.0,
+      "strike_rate": 92.0,
+      "fifties": 0,
+      "sixes": 4,
+      "chase_innings": 19,
+      "chase_average": 4.2,
+      "chase_fifties": 0,
+      "chase_not_outs": 7,
+      "death_strike_rate": 93.3
+    },
+    "bowling": {
+      "innings": 188,
+      "wickets": 249,
+      "economy": 9.0,
+      "death_economy": 9.8
+    }
+  },
+  "YS Chahal": {
+    "id": "57ee1fde",
+    "team": "Punjab Kings",
+    "jersey": null,
+    "matches": 269,
+    "batting": {
+      "innings": 23,
+      "runs": 43,
+      "average": 4.8,
+      "strike_rate": 43.4,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 14,
+      "chase_average": 5.0,
+      "chase_fifties": 0,
+      "chase_not_outs": 8,
+      "death_strike_rate": 51.3
+    },
+    "bowling": {
+      "innings": 263,
+      "wickets": 329,
+      "economy": 8.1,
+      "death_economy": 9.6
+    }
+  },
+  "Raghu Sharma": {
+    "id": "5b615e7c",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 6,
+    "batting": {
+      "innings": 0,
+      "runs": 0,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 0,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 5,
+      "wickets": 1,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "RG Sharma": {
+    "id": "740742ef",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 434,
+    "batting": {
+      "innings": 420,
+      "runs": 11356,
+      "average": 30.4,
+      "strike_rate": 135.4,
+      "fifties": 86,
+      "sixes": 518,
+      "chase_innings": 200,
+      "chase_average": 29.2,
+      "chase_fifties": 37,
+      "chase_not_outs": 30,
+      "death_strike_rate": 182.6
+    },
+    "bowling": {
+      "innings": 40,
+      "wickets": 16,
+      "economy": 8.3,
+      "death_economy": null
+    }
+  },
+  "RD Rickelton": {
+    "id": "e66732f8",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 54,
+    "batting": {
+      "innings": 54,
+      "runs": 1516,
+      "average": 30.9,
+      "strike_rate": 157.6,
+      "fifties": 9,
+      "sixes": 93,
+      "chase_innings": 32,
+      "chase_average": 35.5,
+      "chase_fifties": 6,
+      "chase_not_outs": 4,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Naman Dhir": {
+    "id": "fffa744b",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 47,
+    "batting": {
+      "innings": 42,
+      "runs": 886,
+      "average": 28.6,
+      "strike_rate": 172.0,
+      "fifties": 3,
+      "sixes": 48,
+      "chase_innings": 22,
+      "chase_average": 24.3,
+      "chase_fifties": 1,
+      "chase_not_outs": 6,
+      "death_strike_rate": 200.6
+    },
+    "bowling": {
+      "innings": 11,
+      "wickets": 5,
+      "economy": 10.3,
+      "death_economy": null
+    }
+  },
+  "Tilak Varma": {
+    "id": "b0482a1d",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 138,
+    "batting": {
+      "innings": 132,
+      "runs": 3752,
+      "average": 39.5,
+      "strike_rate": 146.0,
+      "fifties": 24,
+      "sixes": 187,
+      "chase_innings": 63,
+      "chase_average": 41.7,
+      "chase_fifties": 12,
+      "chase_not_outs": 19,
+      "death_strike_rate": 194.2
+    },
+    "bowling": {
+      "innings": 12,
+      "wickets": 5,
+      "economy": 6.5,
+      "death_economy": null
+    }
+  },
+  "SE Rutherford": {
+    "id": "d014d5ac",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 89,
+    "batting": {
+      "innings": 76,
+      "runs": 1627,
+      "average": 27.6,
+      "strike_rate": 151.5,
+      "fifties": 9,
+      "sixes": 110,
+      "chase_innings": 38,
+      "chase_average": 27.3,
+      "chase_fifties": 4,
+      "chase_not_outs": 7,
+      "death_strike_rate": 177.7
+    },
+    "bowling": {
+      "innings": 9,
+      "wickets": 3,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "WG Jacks": {
+    "id": "9caf69a1",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 76,
+    "batting": {
+      "innings": 65,
+      "runs": 1286,
+      "average": 24.3,
+      "strike_rate": 152.7,
+      "fifties": 4,
+      "sixes": 72,
+      "chase_innings": 35,
+      "chase_average": 24.6,
+      "chase_fifties": 2,
+      "chase_not_outs": 8,
+      "death_strike_rate": 207.0
+    },
+    "bowling": {
+      "innings": 43,
+      "wickets": 32,
+      "economy": 9.0,
+      "death_economy": null
+    }
+  },
+  "RA Bawa": {
+    "id": "ba6b2f91",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 8,
+    "batting": {
+      "innings": 4,
+      "runs": 35,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 1,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 2,
+      "wickets": 2,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "C Bosch": {
+    "id": "172dff15",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 31,
+    "batting": {
+      "innings": 20,
+      "runs": 212,
+      "average": 17.7,
+      "strike_rate": 124.7,
+      "fifties": 0,
+      "sixes": 7,
+      "chase_innings": 7,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 134.5
+    },
+    "bowling": {
+      "innings": 30,
+      "wickets": 46,
+      "economy": 8.2,
+      "death_economy": 8.2
+    }
+  },
+  "DL Chahar": {
+    "id": "23eeb873",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 127,
+    "batting": {
+      "innings": 24,
+      "runs": 195,
+      "average": 16.2,
+      "strike_rate": 148.9,
+      "fifties": 0,
+      "sixes": 13,
+      "chase_innings": 13,
+      "chase_average": 13.6,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 145.0
+    },
+    "bowling": {
+      "innings": 127,
+      "wickets": 127,
+      "economy": 8.3,
+      "death_economy": 9.7
+    }
+  },
+  "SN Thakur": {
+    "id": "1abb78f8",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 137,
+    "batting": {
+      "innings": 50,
+      "runs": 418,
+      "average": 12.7,
+      "strike_rate": 138.9,
+      "fifties": 1,
+      "sixes": 17,
+      "chase_innings": 24,
+      "chase_average": 13.2,
+      "chase_fifties": 0,
+      "chase_not_outs": 10,
+      "death_strike_rate": 147.7
+    },
+    "bowling": {
+      "innings": 132,
+      "wickets": 152,
+      "economy": 9.5,
+      "death_economy": 10.3
+    }
+  },
+  "JJ Bumrah": {
+    "id": "462411b3",
+    "team": "Mumbai Indians",
+    "jersey": null,
+    "matches": 252,
+    "batting": {
+      "innings": 38,
+      "runs": 87,
+      "average": 6.2,
+      "strike_rate": 83.7,
+      "fifties": 0,
+      "sixes": 1,
+      "chase_innings": 21,
+      "chase_average": 5.3,
+      "chase_fifties": 0,
+      "chase_not_outs": 12,
+      "death_strike_rate": 79.4
+    },
+    "bowling": {
+      "innings": 250,
+      "wickets": 306,
+      "economy": 7.1,
+      "death_economy": 7.9
+    }
+  }
+}

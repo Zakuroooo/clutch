@@ -1,0 +1,31 @@
+// Walks the two-minute demo in a real browser and saves a screenshot of every step.
+import { chromium } from "@playwright/test";
+const base = process.env.BASE_URL ?? "http://localhost:3000";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+const errors = [];
+page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
+page.on("pageerror", (e) => errors.push(String(e)));
+const shot = async (name) => { await page.waitForTimeout(700); await page.screenshot({ path: `design/review/${name}.png` }); console.log(name); };
+
+await page.goto(base + "/", { waitUntil: "load" }); await shot("01-start");
+await page.goto(base + "/world", { waitUntil: "load" }); await page.getByText("Football").click(); await shot("02-world");
+await page.goto(base + "/", { waitUntil: "load" });
+await page.getByText("Show me in 2 minutes").click();
+await page.waitForSelector('[data-testid="coach"]'); await shot("03-demo-pulse");
+console.log("coach:", await page.locator('[data-testid="coach"] p').innerText(), "| ring:", await page.getByTestId("pulse-card").getByTestId("ring").getAttribute("data-state"));
+await page.getByText("Skip to the ball").click();
+await page.waitForSelector('[data-testid="coach"][data-step="1"]'); await shot("04-demo-callback");
+console.log("ring:", await page.getByTestId("pulse-card").getByTestId("ring").getAttribute("data-state"));
+await page.waitForSelector('[data-testid="explanation-card"]', { timeout: 30000 }); await page.waitForTimeout(2600); await shot("05-demo-card");
+console.log("why:", await page.getByTestId("card-why").innerText());
+await page.getByRole("button", { name: "Say it plainly" }).click(); await shot("06-card-plain");
+console.log("plain why:", await page.getByTestId("card-why").innerText());
+await page.locator('[data-testid="coach"] .next').click();
+await page.waitForURL("**/match/moments"); await shot("07-moments");
+console.log("shelf:", await page.getByTestId("shelf-title").innerText());
+await page.locator('[data-testid="coach"] .next').click(); await page.waitForURL("**/match"); await shot("08-demo-end");
+await page.locator('[data-testid="coach"] .next').click();
+await page.goto(base + "/match/focus", { waitUntil: "load" }); await page.waitForTimeout(1500); await shot("09-focus");
+console.log(errors.length ? "console errors: " + errors.join(" | ") : "no console errors");
+await browser.close();
