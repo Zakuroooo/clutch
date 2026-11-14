@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "clutch",
+      "runtimeExecutable": "env",
+      "runtimeArgs": ["NEXT_PUBLIC_E2E=1", "LLM_PROVIDER=none", "npm", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

@@ -6,6 +6,12 @@ export function teamName(match: MatchInfo, code: string): string {
   return match.teams.find((t) => t.code === code)?.name ?? code;
 }
 
+/** The name when it fits on the chase strip's one line, otherwise the code. */
+export function shortName(match: MatchInfo, code: string): string {
+  const name = teamName(match, code);
+  return name.length <= 12 ? name : code;
+}
+
 /** "16.1": the over (0-based) and the ball's number in it. */
 export function overLabel(event: CricketEvent): string {
   return `${event.over}.${event.ball}`;
@@ -74,7 +80,7 @@ export function scoreboardAt(
     return {
       rows,
       chase: {
-        left: `${teamName(match, second)} need ${state.score + 1} to win`,
+        left: `${shortName(match, second)} need ${state.score + 1} to win`,
         right: "Innings break",
       },
     };
@@ -83,7 +89,7 @@ export function scoreboardAt(
     return {
       rows,
       chase: {
-        left: `${teamName(match, second)} need ${state.needed} from ${plural(state.balls_left, "ball")}`,
+        left: `${shortName(match, second)} need ${state.needed} from ${plural(state.balls_left, "ball")}`,
         right: `${10 - state.wickets} wkts left`,
       },
     };
@@ -96,7 +102,7 @@ function sideWhenDone(row: ScoreboardView["rows"][number]): string {
 }
 
 export function resultStrip(match: MatchInfo): { left: string; right: string } {
-  return { left: `${teamName(match, match.result.winner)} won`, right: `by ${margin(match)}` };
+  return { left: `${shortName(match, match.result.winner)} won`, right: `by ${margin(match)}` };
 }
 
 /** "7 runs" or "4 wickets", from the recorded result. */

@@ -33,6 +33,22 @@
   --up: #3ddc84;            /* a swing in your favour */
   --down: #ff4d4f;
 
+  /* ---- Ink on filled colours, and tints -------------------------------- */
+  --on-color: #ffffff;      /* text on team colours, the pulse and the wicket chip */
+  --hot-ink: #ff8fab;       /* text on a pulse-soft badge */
+  --world: #a78bfa;         /* the "in your world" badge */
+  --world-ink: #c9b8ff;
+  --four-ink: #04263a;
+  --six-ink: #1c1040;
+
+  /* ---- The drawn ground: hero and replay tiles (no photographs) -------- */
+  --hero-top: #131a2e;
+  --hero-bottom: #0c111c;
+  --floodlight: #ffffff;
+  --grass: #1f9d55;
+  --pitch: #10351f;         /* replay thumbnail */
+  --pitch-2: #0a1f14;
+
   /* Team colours are data, set per match on the app root. */
   --team-a: #2f6fe0;
   --team-a-2: #1b3f9c;
@@ -76,6 +92,8 @@
   /* ---- Elevation ------------------------------------------------------ */
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
   --shadow-pulse: 0 0 40px var(--pulse-glow);
+  --shadow-art: 0 10px 18px rgba(0, 0, 0, 0.4);   /* under jerseys and crests */
+  --shadow-sheet: 0 -20px 60px rgba(0, 0, 0, 0.6);
 
   /* ---- Motion --------------------------------------------------------- */
   --d-tap: 90ms;

@@ -1,0 +1,116 @@
+import { useId } from "react";
+import type { PulseState } from "@/lib/engine/pulse";
+
+const R = 78;
+const C = 2 * Math.PI * R;
+const TICKS = 60;
+
+/** Length of the lit arc for a stakes percentile, in SVG units. Exported for the test. */
+export function arcLength(pct: number): number {
+  return (Math.max(0, Math.min(100, pct)) / 100) * C;
+}
+
+/**
+ * The Pulse ring. The arc fills to stakes.pct; two waves breathe faster as the stakes
+ * rise. The pulse gradient is used here because this is stakes, and nowhere else.
+ */
+export function Ring({
+  state,
+  pct,
+  still = false,
+  word,
+  reason,
+  size = "lg",
+  label,
+}: {
+  state: PulseState;
+  pct: number;
+  still?: boolean;
+  word: string;
+  reason?: string;
+  size?: "lg" | "sm";
+  /** The full sentence a screen reader hears. */
+  label: string;
+}) {
+  const id = useId();
+  const hot = state === "high" || state === "decider";
+  const calm = state === "calm";
+  const lit = Math.round((Math.max(0, Math.min(100, pct)) / 100) * TICKS);
+  const cls = [
+    "pulse-ring",
+    size === "sm" ? "sm" : "",
+    state,
+    hot ? "hot" : "",
+    still ? "still" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  return (
+    <div className={cls} role="img" aria-label={label} data-state={state} data-testid="ring">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id={`${id}-g`} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" style={{ stopColor: "var(--pulse)" }} />
+            <stop offset="1" style={{ stopColor: "var(--pulse-2)" }} />
+          </linearGradient>
+          <radialGradient id={`${id}-disc`} cx="50%" cy="38%" r="70%">
+            <stop offset="0" style={{ stopColor: "var(--surface-3)" }} stopOpacity="0.75" />
+            <stop offset="1" style={{ stopColor: "var(--bg)" }} stopOpacity="0.6" />
+          </radialGradient>
+        </defs>
+        {/* a dial of ticks around the ring, lit up to the same point as the arc */}
+        <g>
+          {Array.from({ length: TICKS }, (_, k) => {
+            const a = (k / TICKS) * 2 * Math.PI - Math.PI / 2;
+            const major = k % 5 === 0;
+            const r1 = major ? 91 : 93;
+            return (
+              <line
+                key={k}
+                className={`tick${k < lit ? " lit" : ""}`}
+                x1={100 + r1 * Math.cos(a)}
+                y1={100 + r1 * Math.sin(a)}
+                x2={100 + 97 * Math.cos(a)}
+                y2={100 + 97 * Math.sin(a)}
+                strokeWidth={major ? 2 : 1.2}
+                strokeLinecap="round"
+              />
+            );
+          })}
+        </g>
+        <circle cx="100" cy="100" r="66" fill={`url(#${id}-disc)`} />
+        <circle
+          cx="100"
+          cy="100"
+          r={R}
+          fill="none"
+          style={{ stroke: "var(--surface-3)" }}
+          strokeWidth="11"
+        />
+        <g transform="rotate(-90 100 100)" className="arc-glow">
+          <circle
+            className="arc"
+            data-testid="ring-arc"
+            cx="100"
+            cy="100"
+            r={R}
+            fill="none"
+            stroke={calm ? undefined : `url(#${id}-g)`}
+            style={calm ? { stroke: "var(--calm)" } : undefined}
+            strokeWidth={state === "decider" ? 14 : 11}
+            strokeLinecap="round"
+            strokeDasharray={`${arcLength(pct).toFixed(1)} ${C.toFixed(1)}`}
+          />
+        </g>
+      </svg>
+      <span className="wave" />
+      <span className="wave w2" />
+      <div className="centre">
+        <div key={word} className={`word${word.length > 9 ? " long" : ""}`}>
+          {word}
+        </div>
+        {reason && size === "lg" ? <div className="sub">{reason}</div> : null}
+      </div>
+    </div>
+  );
+}
