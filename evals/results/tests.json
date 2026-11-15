@@ -1,6 +1,6 @@
 {
   "run_on": "2026-11-14",
-  "where": "locally, not CI",
+  "where": "locally on 14 Nov; the same suites passed in GitHub Actions on 15 Nov (runs for c4b0de0 and 4aa67d2)",
   "unit_and_integration": {
     "tool": "vitest",
     "total": 159,
