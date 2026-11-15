@@ -2,7 +2,7 @@
 
 For the coding agent. Work top to bottom. **Finish tier 1 before touching tier 2.**
 
-**Status, 15 Nov:** T0 to T13 are built (tier 1). Review 1 to Review 3 are Pranay's and are still open. The replay match is chosen (DATA.md section 7). Tier 2 has not been started. What was done differently from this plan is listed at the end.
+**Status, 15 Nov:** T0 to T13 are built (tier 1) and deployed (T19) at https://clutch-one-mu.vercel.app. Review 1 to Review 3 are Pranay's and are still open. The replay match is chosen (DATA.md section 7). Tier 2 has not been started. What was done differently from this plan is listed at the end.
 
 Rules for every task:
 1. Read the linked doc section first.
@@ -204,4 +204,4 @@ If time runs short, cut from the top. Each cut moves the item to "designed, not 
 | `evals:generate` and `evals:judge` run once | Not run | No LLM key yet; the judge is cut-order item 8 |
 | Pranay picks the replay match from the list first | A provisional match was used while building; Pranay confirmed it on 15 Nov | Work was not blocked |
 | Tests written before code | Mostly written alongside the code, some after | Speed. Every test listed in TESTING.md for tier 1 exists except the ones named there |
-| CI goes green | Not checked | Nothing has been pushed |
+| CI goes green | Green from 15 Nov | The workflow used `hashFiles()` in job conditions, which GitHub rejects, so CI never ran until it was fixed on the first push |

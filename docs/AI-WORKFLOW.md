@@ -78,6 +78,7 @@ Kept because it is the useful part. Add every one, including small ones.
 | 14 Nov | Catch me up re-ran an effect on every render | An end-to-end test failed | Callbacks made stable |
 | 14 Nov | Tests were mostly written alongside the code, not before it, against the project rule | The AI reported it | Left as is; recorded here and in BUILD-PLAN |
 | 15 Nov | The Pulse word touched its ring and "Look up" looked barely different from "Building" | The design-critic agent, reading real screenshots | Ring given more room, hot state made louder |
+| 15 Nov | The CI workflow, written by the AI on 13 Nov, used `hashFiles()` in job-level conditions, which GitHub rejects. Every run had failed before starting, unnoticed | The first push of code; the AI read the run status | Conditions removed; CI green |
 | | | | |
 
 ## What I can explain without help

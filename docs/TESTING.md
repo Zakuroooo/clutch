@@ -156,7 +156,7 @@ Playwright launches two (sometimes three) separate browser contexts in one test,
 | End-to-end tests | 13 | 13 |
 | Python tests | 33 | 33 |
 
-Source: `evals/results/tests.json`, written by `node scripts/test-report.mjs`. Run locally on 2026-11-14, not yet in CI.
+Source: `evals/results/tests.json`, written by `node scripts/test-report.mjs`. Run locally on 2026-11-14. The same suites pass in GitHub Actions since 15 Nov.
 
 Differences from the plan above, said plainly:
 

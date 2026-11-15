@@ -104,6 +104,11 @@ npm run pregen
 
 ## 5. Deploy
 
+**Live:** https://clutch-one-mu.vercel.app (Vercel project `clutch`, linked to the GitHub repository; every push to `main` deploys to production). Set up on 15 Nov 2026 with no environment variables, so cards are templates.
+
+- Only the production domain above is public. The team aliases (`clutch-zakuroooos-projects.vercel.app`, `clutch-git-main-…`) and per-deployment URLs sit behind Vercel login. Give reviewers the production domain only.
+- Never set `NEXT_PUBLIC_E2E` on Vercel: it switches on the `?t0=` test anchor.
+
 1. Push to `main`. Vercel builds from GitHub.
 2. In Vercel → Project → Settings → Environment Variables, add every name from `.env.example` that you use. Mark the service-role key and LLM key as sensitive. Do not prefix them with `NEXT_PUBLIC_`.
 3. Apply the SQL in `supabase/migrations/` (Supabase SQL editor, or the Supabase MCP server).

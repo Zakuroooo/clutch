@@ -6,7 +6,7 @@ const page = await browser.newPage({ viewport: { width: 390, height: 844 }, devi
 const errors = [];
 page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
 page.on("pageerror", (e) => errors.push(String(e)));
-const shot = async (name) => { await page.waitForTimeout(700); await page.screenshot({ path: `design/review/${name}.png` }); console.log(name); };
+const shot = async (name) => { await page.waitForTimeout(700); await page.screenshot({ path: `${process.env.SHOTS_DIR ?? "design/review"}/${name}.png` }); console.log(name); };
 
 await page.goto(base + "/", { waitUntil: "load" }); await shot("01-start");
 await page.goto(base + "/world", { waitUntil: "load" }); await page.getByText("Football").click(); await shot("02-world");

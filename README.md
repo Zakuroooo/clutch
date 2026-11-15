@@ -4,19 +4,19 @@
 
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
-> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Not deployed yet.**
+> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Live at https://clutch-one-mu.vercel.app**
 > Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. No LLM key has been used yet, so every explanation card is a fixed template filled by code; the LLM path is built and tested with a fake provider only.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
 <p>
-  <img src="design/review/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
-  <img src="design/review/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
-  <img src="design/review/07-moments.png" width="24%" alt="Moments: You missed one big moment, with replay thumbnails and swing chips">
-  <img src="design/review/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
+  <img src="design/review/live/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
+  <img src="design/review/live/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
+  <img src="design/review/live/07-moments.png" width="24%" alt="Moments: You missed one big moment, with replay thumbnails and swing chips">
+  <img src="design/review/live/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
 </p>
 
-*Screenshots of the running app at 390 by 844, taken by `scripts/demo-shots.mjs`. The match is Punjab Kings v Mumbai Indians, Indian Premier League, 2026-05-14, replayed from Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
+*Screenshots of the deployed app at 390 by 844, taken by `scripts/demo-shots.mjs` against the live link. The match is Punjab Kings v Mumbai Indians, Indian Premier League, 2026-05-14, replayed from Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
 
 ## The problem, in my words
 
@@ -110,7 +110,7 @@ Each number is copied from the file named, not typed. Run on 14 and 15 Nov 2026.
 | Recorded cards for the replay match that pass the check | 216 of 216, all templates | same |
 | Cards passing the check first time when written by an LLM | not measured: no LLM key has been used | |
 | Analogy quality by rubric; agreement with my own scoring | not measured: needs LLM-written cards | |
-| Automated tests, run locally | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |
+| Automated tests, run locally and in CI | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |
 
 **Reading the Pulse numbers honestly.** At every bar the Pulse catches two to three times as many of the biggest swings as the same number of random call-backs. It is far from complete: at "Big moments", about half of a match's ten biggest swings had a call-back in the over before them. And "biggest swings" are measured with the same model that triggers the call-backs, so the absolute number is optimistic ([MODEL.md](docs/MODEL.md) section 8).
 
@@ -136,7 +136,9 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 and tap **Show me in 2 minutes**. The match data, the model's numbers and the cards are committed in `data/`, so nothing has to be trained to run the app.
+**Try it:** open https://clutch-one-mu.vercel.app on a phone and tap **Show me in 2 minutes**. No sign-up, no permission prompt.
+
+To run it yourself, open http://localhost:3000 after the commands above and tap **Show me in 2 minutes**. The match data, the model's numbers and the cards are committed in `data/`, so nothing has to be trained to run the app.
 
 Checks:
 
@@ -151,7 +153,9 @@ To rebuild the model from Cricsheet (Python 3.11, about 100 MB of downloads): `m
 
 To have an LLM write the cards, put `LLM_PROVIDER=gemini`, `LLM_MODEL` and `LLM_API_KEY` in `.env.local` (never in the repository) and run `npm run pregen`, then `npm run evals:check`. This path is built and unit-tested with a fake provider; it has not been run against a real model yet.
 
-**Not checked yet:** a background-tab notification on a laptop, vibration on an Android phone, an iPhone with the app on its Home Screen, and CI on GitHub (nothing has been pushed).
+**CI:** green on GitHub Actions for the first time on 15 Nov (lint, typecheck, unit tests, data check, evals check, build, Python tests and the 13 end-to-end tests). Before that, every run had failed at the start because of a mistake in the workflow file.
+
+**Not checked yet:** a call-back notification in a background tab (needs a person to allow notifications; the live link is HTTPS, so it can be checked there), vibration on an Android phone, and an iPhone with the app on its Home Screen.
 
 ## Documents
 
