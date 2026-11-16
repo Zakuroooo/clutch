@@ -57,13 +57,18 @@ export function MatchVideo({ video }: { video: VideoInfo }) {
     let player: YTPlayer | null = null;
     let link: VideoLink | null = null;
     let ready = false;
+    let mount: HTMLElement | null = null;
     let gone = false;
     const timer = setTimeout(() => !ready && !gone && setState("failed"), READY_TIMEOUT_MS);
     loadApi()
       .then((YT) => {
         if (gone || !holder.current) return;
         const start = Math.max(0, Math.floor(store.clockMs() / 1000));
-        player = new YT.Player(holder.current, {
+        // YouTube replaces the element it is given with its iframe. Give it a fresh child,
+        // so React's own element survives and the player can be built again on return.
+        mount = document.createElement("div");
+        holder.current.replaceChildren(mount);
+        player = new YT.Player(mount, {
           videoId: video.youtube_id,
           width: "100%",
           height: "100%",
@@ -114,6 +119,7 @@ export function MatchVideo({ video }: { video: VideoInfo }) {
       } catch {
         // already gone
       }
+      mount?.remove();
     };
     // The player is created once per start; later state changes must not rebuild it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
