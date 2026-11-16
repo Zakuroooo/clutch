@@ -1446,6 +1446,7 @@ h3,
     max-width: 1180px;
   }
   .match-grid {
+    margin-top: var(--s-4);
     display: grid;
     grid-template-columns: minmax(0, 1fr) 420px;
     gap: var(--s-5);
@@ -1659,4 +1660,282 @@ h3,
     max-width: 640px;
     margin: 0 auto;
   }
+}
+
+/* ==========================================================================
+   Redesign, 16 Nov: a broadcast-style score strip, the Pulse as a row on
+   phones, a commentary feed. Every value is a token.
+   ========================================================================== */
+.phone-stack > * + * {
+  margin-top: var(--s-3);
+}
+.block-gap {
+  margin-top: var(--s-4);
+}
+
+/* ---- Score strip ---- */
+.strip {
+  padding: var(--s-3) var(--s-4) var(--s-3);
+}
+.strip-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-3);
+  font-size: var(--t-micro);
+  color: var(--muted);
+}
+.strip-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.strip-over {
+  color: var(--text);
+  font: 700 var(--t-small) / 1 var(--font-head);
+}
+.strip-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}
+.strip-vs {
+  font: 600 var(--t-micro) / 1 var(--font-head);
+  color: var(--faint);
+}
+.strip-side {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-width: 0;
+  opacity: 0.62;
+  transition: opacity var(--d-quick) linear;
+}
+.strip-side.on {
+  opacity: 1;
+}
+.strip-side.b {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.strip-side .crest {
+  width: 38px;
+  height: 38px;
+  font-size: var(--t-micro);
+}
+.strip-score .runs {
+  font: 800 var(--t-title) / 1 var(--font-head);
+  letter-spacing: -0.02em;
+}
+.strip-side.on .strip-score .runs {
+  font-size: var(--t-score);
+}
+.strip-score .runs small {
+  font-size: var(--t-small);
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.strip-side-note {
+  font-size: var(--t-micro);
+  color: var(--muted);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.strip-side-note b {
+  color: var(--text);
+  font-weight: 700;
+}
+.strip-chase {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-chip);
+  background: color-mix(in srgb, var(--bg) 62%, transparent);
+  font-size: var(--t-small);
+}
+.strip-chase b {
+  font: 700 var(--t-body) / 1 var(--font-head);
+  font-variant-numeric: tabular-nums;
+}
+.strip .progress {
+  margin-top: var(--s-2);
+}
+
+/* ---- The Pulse as a row (phones) ---- */
+.pulse-row {
+  padding: var(--s-3) var(--s-4) var(--s-4);
+  text-align: left;
+}
+.pulse-row-main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--s-4);
+}
+.pulse-row .pulse-ring.sm {
+  width: 124px;
+}
+.ring-num {
+  display: grid;
+  justify-items: center;
+  line-height: 1;
+}
+.ring-num b {
+  font: 800 var(--t-score) / 1 var(--font-head);
+  letter-spacing: -0.03em;
+}
+.ring-num span {
+  font-size: var(--t-micro);
+  color: var(--muted);
+  margin-top: 2px;
+}
+.ring-num-word {
+  font: 800 var(--t-lead) / 1 var(--font-head);
+}
+.pulse-row-word {
+  font: 800 var(--t-score) / 1.05 var(--font-head);
+  letter-spacing: -0.02em;
+  margin-top: var(--s-2);
+  animation: word-in var(--d-quick) var(--e-out);
+}
+.pulse-row-reason {
+  color: var(--muted);
+  font-size: var(--t-small);
+  margin-top: var(--s-1);
+  line-height: var(--lh-snug);
+}
+.pulse-row .winbar {
+  margin-top: var(--s-3);
+}
+
+/* ---- This over ---- */
+.over-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--s-2);
+}
+.over-head h2 {
+  font-size: var(--t-body);
+  font-weight: 700;
+}
+.controls {
+  margin-top: var(--s-3);
+}
+
+/* ---- Ball by ball ---- */
+.feed {
+  padding: var(--s-4);
+}
+.feed-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.feed-empty {
+  margin-top: var(--s-2);
+}
+.feed-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-3) 0 0;
+}
+.feed-list li {
+  display: grid;
+  grid-template-columns: 34px 30px 1fr auto;
+  gap: var(--s-2);
+  align-items: center;
+  padding: var(--s-2) 0;
+  border-top: 1px solid var(--line);
+}
+.feed-list li.has-moment {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--surface-2) 90%, transparent), transparent);
+}
+.feed-over {
+  font-size: var(--t-small);
+  color: var(--muted);
+}
+.feed-ball {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-full);
+  display: grid;
+  place-items: center;
+  font: 700 var(--t-micro) / 1 var(--font-head);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.feed-ball.four {
+  background: var(--four);
+  color: var(--four-ink);
+  border-color: transparent;
+}
+.feed-ball.six {
+  background: var(--six);
+  color: var(--six-ink);
+  border-color: transparent;
+}
+.feed-ball.wicket {
+  background: var(--wicket);
+  color: var(--on-color);
+  border-color: transparent;
+}
+.feed-ball.extra {
+  color: var(--muted);
+}
+.feed-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px var(--s-2);
+  align-items: baseline;
+  min-width: 0;
+  font-size: var(--t-small);
+}
+.feed-who {
+  color: var(--muted);
+}
+.feed-result {
+  font-weight: 700;
+}
+.feed-result.wicket {
+  color: var(--wicket);
+}
+.feed-result.four {
+  color: var(--four);
+}
+.feed-result.six {
+  color: var(--six);
+}
+.feed-why {
+  font: 600 var(--t-micro) / 1 var(--font-text);
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 28px;
+}
+.feed-score {
+  font-size: var(--t-micro);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.feed-more {
+  margin-top: var(--s-3);
+}
+
+@media (min-width: 1024px) {
+  .match-grid .stage .wrap + .wrap,
+  .match-grid .stage > * + * {
+    margin-top: var(--s-3);
+  }
+  .match-grid .stage {
+    position: static;
+  }
+}
+.over-block .balls {
+  padding: 0;
 }

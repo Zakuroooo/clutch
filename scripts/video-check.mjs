@@ -20,5 +20,5 @@ const shown = await p.getByTestId("team-b").locator(".runs").innerText().catch((
 const over = await p.locator(".score .num").first().innerText().catch(() => "?");
 const vt = await p.evaluate(() => document.querySelector("iframe") ? "iframe present" : "no iframe");
 console.log({ expect_near: `${at.state.score}/${at.state.wickets} at ball ${at.event.over}.${at.event.ball}`, shown, over, vt, errors: errors.slice(0, 3) });
-await p.screenshot({ path: `design/review/${name}.png` });
+await p.screenshot({ path: `design/review/${name}.png`, fullPage: process.env.FULL === "1" });
 await b.close();

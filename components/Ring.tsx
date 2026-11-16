@@ -24,6 +24,7 @@ export function Ring({
   reason,
   size = "lg",
   label,
+  centre,
 }: {
   state: PulseState;
   pct: number;
@@ -33,6 +34,8 @@ export function Ring({
   size?: "lg" | "sm";
   /** The full sentence a screen reader hears. */
   label: string;
+  /** Replaces the word in the middle (the compact Pulse shows the stakes number there). */
+  centre?: React.ReactNode;
 }) {
   const id = useId();
   const hot = state === "high" || state === "decider";
@@ -108,10 +111,14 @@ export function Ring({
       <span className="wave" />
       <span className="wave w2" />
       <div className="centre">
-        <div key={word} className={`word${word.length > 7 ? " long" : ""}`}>
-          {word}
-        </div>
-        {reason && size === "lg" ? <div className="sub">{reason}</div> : null}
+        {centre ?? (
+          <>
+            <div key={word} className={`word${word.length > 7 ? " long" : ""}`}>
+              {word}
+            </div>
+            {reason && size === "lg" ? <div className="sub">{reason}</div> : null}
+          </>
+        )}
       </div>
     </div>
   );
