@@ -24,6 +24,12 @@ from pathlib import Path
 
 from .common import DATA, read_json, write_json
 
+# The stream's scoreboard updates some seconds after the ball is bowled. Measured by eye on
+# two balls (16 Nov 2026): bowled at about 1250 s and shown at 1259.7 s; bowled at about
+# 1471 s and shown at 1483.7 s. A ball's time on the match timeline is the scoreboard time
+# minus this, so call-backs and cards follow the delivery, not the scorer.
+SCOREBOARD_LAG_S = 10.0
+
 SCORE = re.compile(r"^(\d{1,3})\s*/\s*(\d{1,2})$")
 OVERS = re.compile(r"^OVERS\s*(\d{1,2})\s*[.,]\s*(\d)$", re.I)
 
@@ -54,10 +60,12 @@ def state_index(events: list[dict]) -> dict[tuple[int, int, int], list[tuple[int
     for e in events:
         s = e["state"]
         out.setdefault((e["event"]["innings"], s["wickets"], s["balls_bowled"]), []).append((s["score"], e["i"]))
-    out.setdefault((1, 0, 0), [(0, -1)])
+    # "0/0, 0 balls" before each innings is a state of its own, even when the first
+    # delivery was a wide (which also ends with 0 legal balls).
+    out.setdefault((1, 0, 0), []).append((0, -1))
     first2 = next((e["i"] for e in events if e["event"]["innings"] == 2), None)
     if first2 is not None:
-        out.setdefault((2, 0, 0), [(0, first2 - 1)])
+        out.setdefault((2, 0, 0), []).append((0, first2 - 1))
     return out
 
 
@@ -139,6 +147,8 @@ def main(samples_path: str) -> None:
         {
             "youtube_id": replay["video"]["youtube_id"],
             "method": "scoreboard read from the embedded video; a ball's time is when the scoreboard first shows it; balls between anchors spread evenly",
+            "scoreboard_lag_s": SCOREBOARD_LAG_S,
+            "lag_evidence": "bowled about 1250 s, shown 1259.7 s; bowled about 1471 s, shown 1483.7 s",
             "readings": len(readings),
             "anchored_balls": len(exact),
             "unresolved_readings": unresolved,

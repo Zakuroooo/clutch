@@ -1,0 +1,5478 @@
+[
+{
+"t": 9.6,
+"scoreboard": null
+},
+{
+"t": 600.5,
+"scoreboard": "DNM"
+},
+{
+"t": 630.6,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 660.7,
+"scoreboard": "DNM"
+},
+{
+"t": 690.8,
+"scoreboard": "DNM"
+},
+{
+"t": 720.8,
+"scoreboard": "DNM 0/0 OVERS 0.0"
+},
+{
+"t": 750.8,
+"scoreboard": "DNM"
+},
+{
+"t": 780.8,
+"scoreboard": "DNM"
+},
+{
+"t": 811,
+"scoreboard": "DNM"
+},
+{
+"t": 841,
+"scoreboard": "DNM"
+},
+{
+"t": 870.8,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 901,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 930.9,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 960.9,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 990.7,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 1020.9,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 1050.6,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 1080.7,
+"scoreboard": "DNM OVERS 0.0"
+},
+{
+"t": 1110.5,
+"scoreboard": "DNM 1/0 OVERS 0.0"
+},
+{
+"t": 1126.1,
+"scoreboard": "DNM 1/0 OVERS 0.0"
+},
+{
+"t": 1130.4,
+"scoreboard": "DNM 1/0 OVERS 0.0"
+},
+{
+"t": 1132,
+"scoreboard": "DNM 1/0 OVERS 0.0"
+},
+{
+"t": 1134.2,
+"scoreboard": "DNM 1/0 OVERS 0.1"
+},
+{
+"t": 1140.8,
+"scoreboard": "DNM 1/0 OVERS 0.1"
+},
+{
+"t": 1154,
+"scoreboard": null
+},
+{
+"t": 1155,
+"scoreboard": null
+},
+{
+"t": 1155,
+"scoreboard": null
+},
+{
+"t": 1157,
+"scoreboard": null
+},
+{
+"t": 1171,
+"scoreboard": "DNM 2/0 OVERS 0.2"
+},
+{
+"t": 1200.9,
+"scoreboard": "DNM 2/0 OVERS 0.2"
+},
+{
+"t": 1215,
+"scoreboard": null
+},
+{
+"t": 1216.6,
+"scoreboard": "DNM 2/0 OVERS 0.2"
+},
+{
+"t": 1224.3,
+"scoreboard": "DNM 2/0 OVERS 0.2"
+},
+{
+"t": 1226.2,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1228,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1230.9,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1246.5,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1254.4,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1258.1,
+"scoreboard": "DNM 3/0 OVERS 0.3"
+},
+{
+"t": 1259.7,
+"scoreboard": "DNM 4/0 OVERS 0.4"
+},
+{
+"t": 1261,
+"scoreboard": "DNM 4/0 OVERS 0.4"
+},
+{
+"t": 1291,
+"scoreboard": "DNM 4/0 OVERS 0.4"
+},
+{
+"t": 1293.8,
+"scoreboard": "DNM 4/0 OVERS 0.4"
+},
+{
+"t": 1295.5,
+"scoreboard": "DNM 4/0 OVERS 0.5"
+},
+{
+"t": 1299.4,
+"scoreboard": "DNM 4/0 OVERS 0.5"
+},
+{
+"t": 1306.8,
+"scoreboard": "DNM 4/0 OVERS 0.5"
+},
+{
+"t": 1320.8,
+"scoreboard": null
+},
+{
+"t": 1321.8,
+"scoreboard": "DNM 4/0 OVERS 0.5"
+},
+{
+"t": 1330.1,
+"scoreboard": "DNM 4/0 OVERS 0.5"
+},
+{
+"t": 1332,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1333.9,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1337.3,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1351,
+"scoreboard": "DNM 5/0"
+},
+{
+"t": 1351,
+"scoreboard": null
+},
+{
+"t": 1351.6,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1381,
+"scoreboard": "DNM 5/0"
+},
+{
+"t": 1382,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1397,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1404.2,
+"scoreboard": "DNM 5/0 OVERS 1.0"
+},
+{
+"t": 1406.4,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1408.2,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1411,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1424,
+"scoreboard": null
+},
+{
+"t": 1425,
+"scoreboard": null
+},
+{
+"t": 1425,
+"scoreboard": null
+},
+{
+"t": 1426.5,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1427,
+"scoreboard": null
+},
+{
+"t": 1434.1,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1438,
+"scoreboard": "DNM 5/0 OVERS 1.1"
+},
+{
+"t": 1439.9,
+"scoreboard": "DNM 9/0 OVERS 1.2"
+},
+{
+"t": 1440.9,
+"scoreboard": "DNM 9/0 OVERS 1.2"
+},
+{
+"t": 1470.5,
+"scoreboard": "DNM 9/0 OVERS 1.2"
+},
+{
+"t": 1478.8,
+"scoreboard": "DNM 9/0 OVERS 1.2"
+},
+{
+"t": 1482.4,
+"scoreboard": "DNM 9/0 OVERS 1.2"
+},
+{
+"t": 1484.3,
+"scoreboard": "DNM 10/0 OVERS 1.2"
+},
+{
+"t": 1486.4,
+"scoreboard": "DNM 10/0 OVERS 1.2"
+},
+{
+"t": 1500.6,
+"scoreboard": "DNM 10/0 OVERS 1.2"
+},
+{
+"t": 1505.2,
+"scoreboard": "DNM 10/0 OVERS 1.2"
+},
+{
+"t": 1507.1,
+"scoreboard": "DNM 10/0 OVERS 1.2"
+},
+{
+"t": 1509,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1515,
+"scoreboard": null
+},
+{
+"t": 1516.4,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1530.6,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1561,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1569.3,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1572.8,
+"scoreboard": "DNM 11/0 OVERS 1.3"
+},
+{
+"t": 1574.9,
+"scoreboard": "DNM 12/0 OVERS 1.4"
+},
+{
+"t": 1575,
+"scoreboard": null
+},
+{
+"t": 1576.6,
+"scoreboard": "DNM 12/0 OVERS 1.4"
+},
+{
+"t": 1590.7,
+"scoreboard": "DNM 12/0 OVERS 1.4"
+},
+{
+"t": 1606.3,
+"scoreboard": "DNM 12/0 OVERS 1.4"
+},
+{
+"t": 1608.1,
+"scoreboard": "DNM 12/0 OVERS 1.4"
+},
+{
+"t": 1610.2,
+"scoreboard": "DNM 12/0 OVERS 1.5"
+},
+{
+"t": 1614,
+"scoreboard": "DNM 12/0 OVERS 1.5"
+},
+{
+"t": 1620.5,
+"scoreboard": "DNM 12/0 OVERS 1.5"
+},
+{
+"t": 1633,
+"scoreboard": null
+},
+{
+"t": 1635,
+"scoreboard": null
+},
+{
+"t": 1635,
+"scoreboard": null
+},
+{
+"t": 1636,
+"scoreboard": null
+},
+{
+"t": 1650.8,
+"scoreboard": "DNM 13/0 OVERS 2.0"
+},
+{
+"t": 1680.8,
+"scoreboard": "DNM 13/0 OVERS 2.0"
+},
+{
+"t": 1695,
+"scoreboard": null
+},
+{
+"t": 1696.6,
+"scoreboard": "DNM 13/0 OVERS 2.0"
+},
+{
+"t": 1704.3,
+"scoreboard": "DNM 13/0 OVERS 2.0"
+},
+{
+"t": 1706.2,
+"scoreboard": "DNM 15/0 OVERS 2.1"
+},
+{
+"t": 1708,
+"scoreboard": "DNM 15/0 OVERS 2.1"
+},
+{
+"t": 1710.9,
+"scoreboard": "DNM 15/0 OVERS 2.1"
+},
+{
+"t": 1740.9,
+"scoreboard": "DNM 15/0 OVERS 2.1"
+},
+{
+"t": 1743.4,
+"scoreboard": "DNM 15/0 OVERS 2.1"
+},
+{
+"t": 1745.5,
+"scoreboard": "DNM 15/0 OVERS 2.2"
+},
+{
+"t": 1749.3,
+"scoreboard": "DNM 15/0 OVERS 2.2"
+},
+{
+"t": 1756.8,
+"scoreboard": "DNM 15/0 OVERS 2.2"
+},
+{
+"t": 1771,
+"scoreboard": "DNM 15/0 OVERS 2.2"
+},
+{
+"t": 1773.5,
+"scoreboard": "DNM 15/0 OVERS 2.2"
+},
+{
+"t": 1775.4,
+"scoreboard": "DNM 15/0 OVERS 2.3"
+},
+{
+"t": 1779.4,
+"scoreboard": "DNM 15/0 OVERS 2.3"
+},
+{
+"t": 1786,
+"scoreboard": null
+},
+{
+"t": 1786.8,
+"scoreboard": "DNM 15/0 OVERS 2.3"
+},
+{
+"t": 1801,
+"scoreboard": "DNM 15/0 OVERS 2.3"
+},
+{
+"t": 1814,
+"scoreboard": null
+},
+{
+"t": 1815,
+"scoreboard": null
+},
+{
+"t": 1815,
+"scoreboard": null
+},
+{
+"t": 1817,
+"scoreboard": null
+},
+{
+"t": 1830.8,
+"scoreboard": "DNM 19/0 OVERS 2.4"
+},
+{
+"t": 1861,
+"scoreboard": "DNM 19/0 OVERS 2.4"
+},
+{
+"t": 1863.6,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1865.6,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1869.3,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1876.7,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1890.9,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1905,
+"scoreboard": null
+},
+{
+"t": 1906.2,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1913.9,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1917.9,
+"scoreboard": "DNM 23/0 OVERS 2.5"
+},
+{
+"t": 1919.6,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1920.8,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1950.5,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1965,
+"scoreboard": null
+},
+{
+"t": 1966.4,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1973.8,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1977.7,
+"scoreboard": "DNM 29/0 OVERS 3.0"
+},
+{
+"t": 1979.7,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 1980.7,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 2010.7,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 2026.4,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 2033.7,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 2037.7,
+"scoreboard": "DNM 29/0 OVERS 3.1"
+},
+{
+"t": 2039.5,
+"scoreboard": "DNM 30/0 OVERS 3.3"
+},
+{
+"t": 2040.5,
+"scoreboard": "DNM 30/0 OVERS 3.3"
+},
+{
+"t": 2071,
+"scoreboard": "DNM 30/0 OVERS 3.3"
+},
+{
+"t": 2075.6,
+"scoreboard": "DNM 30/0 OVERS 3.3"
+},
+{
+"t": 2077.4,
+"scoreboard": "DNM 30/0 OVERS 3.3"
+},
+{
+"t": 2079.2,
+"scoreboard": "DNM 31/0 OVERS 3.3"
+},
+{
+"t": 2084,
+"scoreboard": null
+},
+{
+"t": 2085,
+"scoreboard": null
+},
+{
+"t": 2085,
+"scoreboard": null
+},
+{
+"t": 2086.7,
+"scoreboard": "DNM 31/0 OVERS 3.3"
+},
+{
+"t": 2087,
+"scoreboard": null
+},
+{
+"t": 2100.7,
+"scoreboard": "DNM 31/0 OVERS 3.3"
+},
+{
+"t": 2103.4,
+"scoreboard": "DNM 31/0 OVERS 3.3"
+},
+{
+"t": 2105.4,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2109.1,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2115,
+"scoreboard": null
+},
+{
+"t": 2116.5,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2130.8,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2160.6,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2176.6,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2184.2,
+"scoreboard": "DNM 37/0 OVERS 3.4"
+},
+{
+"t": 2185.9,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2188,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2190.9,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2220.7,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2250.9,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2265,
+"scoreboard": null
+},
+{
+"t": 2266.6,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2270.4,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2272,
+"scoreboard": "DNM 38/0 OVERS 4.0"
+},
+{
+"t": 2274.2,
+"scoreboard": "DNM 39/0 OVERS 4.1"
+},
+{
+"t": 2280.7,
+"scoreboard": "DNM 39/0 OVERS 4.1"
+},
+{
+"t": 2293,
+"scoreboard": null
+},
+{
+"t": 2295,
+"scoreboard": null
+},
+{
+"t": 2295,
+"scoreboard": null
+},
+{
+"t": 2296,
+"scoreboard": null
+},
+{
+"t": 2296.4,
+"scoreboard": "DNM 39/0 OVERS 4.1"
+},
+{
+"t": 2304,
+"scoreboard": "DNM 39/0 OVERS 4.1"
+},
+{
+"t": 2305.6,
+"scoreboard": "DNM 39/0 OVERS 4.1"
+},
+{
+"t": 2307.8,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2310.6,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2340.6,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2370.6,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2400.8,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2431,
+"scoreboard": "DNM 39/1 OVERS 4.2"
+},
+{
+"t": 2433.5,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2435.6,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2439.3,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2446.7,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2460.8,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2463.6,
+"scoreboard": "DNM 40/1 OVERS 4.3"
+},
+{
+"t": 2465.3,
+"scoreboard": "DNM 40/1 OVERS 4.4"
+},
+{
+"t": 2469,
+"scoreboard": "DNM 40/1 OVERS 4.4"
+},
+{
+"t": 2475,
+"scoreboard": null
+},
+{
+"t": 2476.6,
+"scoreboard": "DNM 40/1 OVERS 4.4"
+},
+{
+"t": 2490.6,
+"scoreboard": "DNM 41/1 OVERS 4.5"
+},
+{
+"t": 2505,
+"scoreboard": null
+},
+{
+"t": 2506.5,
+"scoreboard": "DNM 41/1 OVERS 4.5"
+},
+{
+"t": 2510.3,
+"scoreboard": "DNM 41/1 OVERS 4.5"
+},
+{
+"t": 2512.1,
+"scoreboard": "DNM 41/1 OVERS 4.5"
+},
+{
+"t": 2513.8,
+"scoreboard": "DNM 41/1 OVERS 5.0"
+},
+{
+"t": 2520.7,
+"scoreboard": "DNM 41/1 OVERS 5.0"
+},
+{
+"t": 2550.9,
+"scoreboard": "DNM 41/1"
+},
+{
+"t": 2580.6,
+"scoreboard": "DNM 41/1 OVERS 5.0"
+},
+{
+"t": 2588.9,
+"scoreboard": "DNM 41/1 OVERS 5.0"
+},
+{
+"t": 2592.9,
+"scoreboard": "DNM 41/1 OVERS 5.0"
+},
+{
+"t": 2594.8,
+"scoreboard": "DNM 42/1 OVERS 5.1"
+},
+{
+"t": 2596.6,
+"scoreboard": "DNM 42/1 OVERS 5.1"
+},
+{
+"t": 2611,
+"scoreboard": "DNM 42/1 OVERS 5.1"
+},
+{
+"t": 2640.8,
+"scoreboard": "DNM 42/1 OVERS 5.1"
+},
+{
+"t": 2654,
+"scoreboard": null
+},
+{
+"t": 2655,
+"scoreboard": null
+},
+{
+"t": 2655,
+"scoreboard": null
+},
+{
+"t": 2657,
+"scoreboard": null
+},
+{
+"t": 2670.7,
+"scoreboard": "DNM 42/1 OVERS 5.2"
+},
+{
+"t": 2701,
+"scoreboard": "DNM 42/1 OVERS 5.2"
+},
+{
+"t": 2716,
+"scoreboard": null
+},
+{
+"t": 2716.9,
+"scoreboard": "DNM 42/1 OVERS 5.2"
+},
+{
+"t": 2718.7,
+"scoreboard": "DNM 42/1 OVERS 5.2"
+},
+{
+"t": 2720.4,
+"scoreboard": "DNM 44/1 OVERS 5.4"
+},
+{
+"t": 2724.1,
+"scoreboard": "DNM 44/1 OVERS 5.4"
+},
+{
+"t": 2731,
+"scoreboard": "DNM 44/1 OVERS 5.4"
+},
+{
+"t": 2746.6,
+"scoreboard": "DNM 44/1 OVERS 5.4"
+},
+{
+"t": 2754.3,
+"scoreboard": "DNM 44/1 OVERS 5.4"
+},
+{
+"t": 2756.1,
+"scoreboard": "DNM 48/1 OVERS 5.5"
+},
+{
+"t": 2758,
+"scoreboard": "DNM 48/1 OVERS 5.5"
+},
+{
+"t": 2760.8,
+"scoreboard": "DNM 48/1 OVERS 5.5"
+},
+{
+"t": 2790.7,
+"scoreboard": "DNM 48/1 OVERS 5.5"
+},
+{
+"t": 2793.5,
+"scoreboard": "DNM 48/1 OVERS 5.5"
+},
+{
+"t": 2795.3,
+"scoreboard": "DNM 48/1 OVERS 6.0"
+},
+{
+"t": 2799.1,
+"scoreboard": "DNM 48/1 OVERS 6.0"
+},
+{
+"t": 2805,
+"scoreboard": null
+},
+{
+"t": 2806.6,
+"scoreboard": "DNM 48/1 OVERS 6.0"
+},
+{
+"t": 2820.9,
+"scoreboard": "DNM 48/1 OVERS 6.0"
+},
+{
+"t": 2851,
+"scoreboard": "DNM 48/1 OVERS 6.0"
+},
+{
+"t": 2864,
+"scoreboard": null
+},
+{
+"t": 2865,
+"scoreboard": null
+},
+{
+"t": 2865,
+"scoreboard": null
+},
+{
+"t": 2867,
+"scoreboard": null
+},
+{
+"t": 2880.8,
+"scoreboard": "DNM 49/1 OVERS 6.1"
+},
+{
+"t": 2896.7,
+"scoreboard": "DNM 49/1 OVERS 6.1"
+},
+{
+"t": 2904.1,
+"scoreboard": "DNM 49/1 OVERS 6.1"
+},
+{
+"t": 2908.1,
+"scoreboard": "DNM 49/1 OVERS 6.1"
+},
+{
+"t": 2909.7,
+"scoreboard": "DNM 50/1 OVERS 6.3"
+},
+{
+"t": 2911,
+"scoreboard": "DNM 50/1 OVERS 6.3"
+},
+{
+"t": 2925,
+"scoreboard": null
+},
+{
+"t": 2926.8,
+"scoreboard": "DNM 50/1 OVERS 6.3"
+},
+{
+"t": 2934.2,
+"scoreboard": "DNM 50/1 OVERS 6.3"
+},
+{
+"t": 2936,
+"scoreboard": "DNM 50/1 OVERS 6.4"
+},
+{
+"t": 2937.9,
+"scoreboard": "DNM 50/1 OVERS 6.4"
+},
+{
+"t": 2940.7,
+"scoreboard": "DNM 50/1 OVERS 6.4"
+},
+{
+"t": 2955,
+"scoreboard": null
+},
+{
+"t": 2956.5,
+"scoreboard": "DNM 50/1 OVERS 6.4"
+},
+{
+"t": 2958.4,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2960.4,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2964,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2970.7,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2979.2,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2982.9,
+"scoreboard": "DNM 51/1 OVERS 6.5"
+},
+{
+"t": 2984.6,
+"scoreboard": "DNM 52/1 OVERS 7.0"
+},
+{
+"t": 2986.6,
+"scoreboard": "DNM 52/1 OVERS 7.0"
+},
+{
+"t": 3000.9,
+"scoreboard": "DNM 52/1 OVERS 7.0"
+},
+{
+"t": 3031,
+"scoreboard": "DNM 52/1 OVERS 7.0"
+},
+{
+"t": 3060.8,
+"scoreboard": "DNM 52/1 OVERS 7.0"
+},
+{
+"t": 3074,
+"scoreboard": null
+},
+{
+"t": 3075,
+"scoreboard": null
+},
+{
+"t": 3075,
+"scoreboard": null
+},
+{
+"t": 3077,
+"scoreboard": null
+},
+{
+"t": 3090.8,
+"scoreboard": "DNM 53/1 OVERS 7.1"
+},
+{
+"t": 3120.8,
+"scoreboard": "DNM 53/1 OVERS 7.1"
+},
+{
+"t": 3129.1,
+"scoreboard": "DNM 53/1 OVERS 7.1"
+},
+{
+"t": 3132.6,
+"scoreboard": "DNM 53/1 OVERS 7.1"
+},
+{
+"t": 3134.7,
+"scoreboard": "DNM 54/1 OVERS 7.2"
+},
+{
+"t": 3135,
+"scoreboard": null
+},
+{
+"t": 3136.6,
+"scoreboard": "DNM 54/1 OVERS 7.2"
+},
+{
+"t": 3150.6,
+"scoreboard": "DNM 54/1 OVERS 7.2"
+},
+{
+"t": 3166.4,
+"scoreboard": "DNM 54/1 OVERS 7.2"
+},
+{
+"t": 3168.1,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3169.9,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3173.7,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3180.5,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3189,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3192.8,
+"scoreboard": "DNM 56/1 OVERS 7.3"
+},
+{
+"t": 3194.5,
+"scoreboard": "DNM 56/1 OVERS 7.4"
+},
+{
+"t": 3195,
+"scoreboard": null
+},
+{
+"t": 3196.6,
+"scoreboard": "DNM 56/1 OVERS 7.4"
+},
+{
+"t": 3211,
+"scoreboard": "DNM 56/1 OVERS 7.4"
+},
+{
+"t": 3224,
+"scoreboard": null
+},
+{
+"t": 3225,
+"scoreboard": null
+},
+{
+"t": 3225,
+"scoreboard": null
+},
+{
+"t": 3227,
+"scoreboard": null
+},
+{
+"t": 3240.6,
+"scoreboard": "DNM 57/1 OVERS 8.0"
+},
+{
+"t": 3271.1,
+"scoreboard": "DNM 57/1 OVERS 8.0"
+},
+{
+"t": 3300.5,
+"scoreboard": "DNM 57/1 OVERS 8.0"
+},
+{
+"t": 3316.6,
+"scoreboard": "DNM 57/1 OVERS 8.0"
+},
+{
+"t": 3318.5,
+"scoreboard": "DNM 57/1 OVERS 8.0"
+},
+{
+"t": 3320.2,
+"scoreboard": "DNM 57/1 OVERS 8.1"
+},
+{
+"t": 3324,
+"scoreboard": "DNM 57/1 OVERS 8.1"
+},
+{
+"t": 3331,
+"scoreboard": "DNM 57/1 OVERS 8.1"
+},
+{
+"t": 3333.8,
+"scoreboard": "DNM 57/1 OVERS 8.1"
+},
+{
+"t": 3335.4,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3339.3,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3345,
+"scoreboard": null
+},
+{
+"t": 3346.6,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3360.5,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3365.2,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3367.1,
+"scoreboard": "DNM 58/1 OVERS 8.2"
+},
+{
+"t": 3369,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3375,
+"scoreboard": null
+},
+{
+"t": 3376.4,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3390.9,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3420.7,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3450.5,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3466.4,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3470.2,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3472.1,
+"scoreboard": "DNM 58/2 OVERS 8.3"
+},
+{
+"t": 3473.7,
+"scoreboard": "DNM 58/2 OVERS 8.4"
+},
+{
+"t": 3480.6,
+"scoreboard": "DNM 58/2 OVERS 8.4"
+},
+{
+"t": 3494,
+"scoreboard": null
+},
+{
+"t": 3495,
+"scoreboard": null
+},
+{
+"t": 3495,
+"scoreboard": null
+},
+{
+"t": 3497,
+"scoreboard": null
+},
+{
+"t": 3510.9,
+"scoreboard": "DNM 59/2 OVERS 8.5"
+},
+{
+"t": 3515.5,
+"scoreboard": "DNM 59/2 OVERS 8.5"
+},
+{
+"t": 3517.4,
+"scoreboard": "DNM 59/2 OVERS 8.5"
+},
+{
+"t": 3519.1,
+"scoreboard": "DNM 60/2 OVERS 9.0"
+},
+{
+"t": 3525,
+"scoreboard": null
+},
+{
+"t": 3526.7,
+"scoreboard": "DNM 60/2 OVERS 9.0"
+},
+{
+"t": 3540.8,
+"scoreboard": "DNM 60/2 OVERS 9.0"
+},
+{
+"t": 3570.8,
+"scoreboard": "DNM 60/2 OVERS 9.0"
+},
+{
+"t": 3579.2,
+"scoreboard": "DNM 60/2 OVERS 9.0"
+},
+{
+"t": 3581.1,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3582.9,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3586.6,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3600.9,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3615,
+"scoreboard": null
+},
+{
+"t": 3616.5,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3624.1,
+"scoreboard": "DNM 61/2 OVERS 9.1"
+},
+{
+"t": 3626,
+"scoreboard": "DNM 61/2 OVERS 9.2"
+},
+{
+"t": 3627.9,
+"scoreboard": "DNM 61/2 OVERS 9.2"
+},
+{
+"t": 3630.7,
+"scoreboard": "DNM 61/2 OVERS 9.2"
+},
+{
+"t": 3644,
+"scoreboard": null
+},
+{
+"t": 3645,
+"scoreboard": null
+},
+{
+"t": 3645,
+"scoreboard": null
+},
+{
+"t": 3647,
+"scoreboard": null
+},
+{
+"t": 3660.8,
+"scoreboard": "DNM 62/2 OVERS 9.4"
+},
+{
+"t": 3676.7,
+"scoreboard": "DNM 62/2 OVERS 9.4"
+},
+{
+"t": 3684.1,
+"scoreboard": "DNM 62/2 OVERS 9.4"
+},
+{
+"t": 3686,
+"scoreboard": "DNM 62/2 OVERS 9.5"
+},
+{
+"t": 3688.1,
+"scoreboard": "DNM 62/2 OVERS 9.5"
+},
+{
+"t": 3691,
+"scoreboard": "DNM 62/2 OVERS 9.5"
+},
+{
+"t": 3721,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3750.9,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3780.9,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3809.8,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3810,
+"scoreboard": null
+},
+{
+"t": 3811,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3811.8,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3813.1,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3840.8,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3870.6,
+"scoreboard": null
+},
+{
+"t": 3900.5,
+"scoreboard": "DNM 63/2"
+},
+{
+"t": 3930.8,
+"scoreboard": "DNM 64/2 OVERS 10.1"
+},
+{
+"t": 3960.8,
+"scoreboard": "DNM 65/2"
+},
+{
+"t": 3990,
+"scoreboard": null
+},
+{
+"t": 3990,
+"scoreboard": "DNM 66/2"
+},
+{
+"t": 3990.8,
+"scoreboard": "DNM 66/2"
+},
+{
+"t": 3991.5,
+"scoreboard": "DNM 66/2"
+},
+{
+"t": 3992.9,
+"scoreboard": "DNM 66/2"
+},
+{
+"t": 4020.8,
+"scoreboard": "DNM 66/2"
+},
+{
+"t": 4050.8,
+"scoreboard": "DNM 67/2 OVERS 11.0"
+},
+{
+"t": 4066.7,
+"scoreboard": "DNM 67/2 OVERS 11.0"
+},
+{
+"t": 4074,
+"scoreboard": "DNM 67/2 OVERS 11.0"
+},
+{
+"t": 4078,
+"scoreboard": "DNM 67/2 OVERS 11.0"
+},
+{
+"t": 4079.6,
+"scoreboard": "DNM 67/2 OVERS 11.1"
+},
+{
+"t": 4080.9,
+"scoreboard": "DNM 67/2 OVERS 11.1"
+},
+{
+"t": 4094,
+"scoreboard": null
+},
+{
+"t": 4095,
+"scoreboard": null
+},
+{
+"t": 4095,
+"scoreboard": null
+},
+{
+"t": 4097,
+"scoreboard": null
+},
+{
+"t": 4110.7,
+"scoreboard": "DNM 71/2 OVERS 11.2"
+},
+{
+"t": 4125,
+"scoreboard": null
+},
+{
+"t": 4126.4,
+"scoreboard": "DNM 71/2 OVERS 11.2"
+},
+{
+"t": 4133.7,
+"scoreboard": "DNM 71/2 OVERS 11.2"
+},
+{
+"t": 4135.8,
+"scoreboard": "DNM 71/2 OVERS 11.3"
+},
+{
+"t": 4137.7,
+"scoreboard": "DNM 71/2 OVERS 11.3"
+},
+{
+"t": 4140.5,
+"scoreboard": "DNM 71/2 OVERS 11.3"
+},
+{
+"t": 4156.5,
+"scoreboard": "DNM 71/2 OVERS 11.3"
+},
+{
+"t": 4158.5,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4160.1,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4164.2,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4170.9,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4179.3,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4183.1,
+"scoreboard": "DNM 75/2 OVERS 11.4"
+},
+{
+"t": 4184.9,
+"scoreboard": "DNM 75/2 OVERS 11.5"
+},
+{
+"t": 4185,
+"scoreboard": null
+},
+{
+"t": 4186.8,
+"scoreboard": "DNM 75/2 OVERS 11.5"
+},
+{
+"t": 4200.9,
+"scoreboard": "DNM 75/2 OVERS 11.5"
+},
+{
+"t": 4230.9,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4259,
+"scoreboard": null
+},
+{
+"t": 4259.9,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4260,
+"scoreboard": null
+},
+{
+"t": 4260,
+"scoreboard": null
+},
+{
+"t": 4260.1,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4261,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4261.7,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4261.7,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4262,
+"scoreboard": null
+},
+{
+"t": 4263.1,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4263.1,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4291,
+"scoreboard": "DNM 81/2"
+},
+{
+"t": 4320.9,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4350.6,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4381,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4410.9,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4441,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4471,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4486.8,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4488.5,
+"scoreboard": "DNM 81/3 OVERS 12.1"
+},
+{
+"t": 4490.6,
+"scoreboard": "DNM 82/3 OVERS 12.3"
+},
+{
+"t": 4494.1,
+"scoreboard": "DNM 82/3 OVERS 12.3"
+},
+{
+"t": 4500.9,
+"scoreboard": "DNM 82/3 OVERS 12.3"
+},
+{
+"t": 4530.9,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4559.8,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4559.8,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4560,
+"scoreboard": null
+},
+{
+"t": 4561,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4561.6,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4561.6,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4563,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4563,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4590.2,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4620.7,
+"scoreboard": "DNM 82/4 OVERS 12.5"
+},
+{
+"t": 4650.8,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4681,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4694.8,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4695,
+"scoreboard": null
+},
+{
+"t": 4696.4,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4697.8,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4710.6,
+"scoreboard": "DNM 82/4"
+},
+{
+"t": 4740.7,
+"scoreboard": "DNM 83/4"
+},
+{
+"t": 4770.6,
+"scoreboard": "DNM 83/4 OVERS 13.1"
+},
+{
+"t": 4786.4,
+"scoreboard": "DNM 83/4 OVERS 13.1"
+},
+{
+"t": 4788.3,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4789.9,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4793.7,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4800.5,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4813,
+"scoreboard": null
+},
+{
+"t": 4815,
+"scoreboard": null
+},
+{
+"t": 4815,
+"scoreboard": null
+},
+{
+"t": 4816,
+"scoreboard": null
+},
+{
+"t": 4816.5,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4820.1,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4821.9,
+"scoreboard": "DNM 87/4 OVERS 13.2"
+},
+{
+"t": 4824.1,
+"scoreboard": "DNM 88/4 OVERS 13.3"
+},
+{
+"t": 4830.8,
+"scoreboard": "DNM 88/4 OVERS 13.3"
+},
+{
+"t": 4860.9,
+"scoreboard": "DNM 88/4 OVERS 13.3"
+},
+{
+"t": 4863.5,
+"scoreboard": "DNM 89/4 OVERS 13.3"
+},
+{
+"t": 4865.3,
+"scoreboard": "DNM 89/4 OVERS 13.3"
+},
+{
+"t": 4869.2,
+"scoreboard": "DNM 89/4 OVERS 13.3"
+},
+{
+"t": 4875,
+"scoreboard": null
+},
+{
+"t": 4876.6,
+"scoreboard": "DNM 89/4 OVERS 13.3"
+},
+{
+"t": 4890.7,
+"scoreboard": "DNM 89/4 OVERS 13.3"
+},
+{
+"t": 4920.9,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4934.8,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4936.6,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4936.6,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4938,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4950.8,
+"scoreboard": "DNM 90/4"
+},
+{
+"t": 4980.8,
+"scoreboard": "DNM 91/4 OVERS 13.5"
+},
+{
+"t": 5010.8,
+"scoreboard": "DNM 92/4"
+},
+{
+"t": 5023,
+"scoreboard": null
+},
+{
+"t": 5025,
+"scoreboard": null
+},
+{
+"t": 5025,
+"scoreboard": null
+},
+{
+"t": 5026,
+"scoreboard": null
+},
+{
+"t": 5040.8,
+"scoreboard": "DNM 92/4"
+},
+{
+"t": 5070.5,
+"scoreboard": "DNM 92/4 OVERS 14.1"
+},
+{
+"t": 5100.5,
+"scoreboard": "DNM 93/4"
+},
+{
+"t": 5130.5,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5160.6,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5174.9,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5174.9,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5174.9,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5175,
+"scoreboard": null
+},
+{
+"t": 5176.5,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5176.5,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5176.5,
+"scoreboard": "DNM 96/4"
+},
+{
+"t": 5177.8,
+"scoreboard": "DNM 97/4"
+},
+{
+"t": 5177.9,
+"scoreboard": "DNM 97/4"
+},
+{
+"t": 5177.9,
+"scoreboard": "DNM 97/4"
+},
+{
+"t": 5191,
+"scoreboard": "DNM 97/4"
+},
+{
+"t": 5220.8,
+"scoreboard": "DNM 101/4"
+},
+{
+"t": 5251,
+"scoreboard": "DNM 101/4"
+},
+{
+"t": 5280.9,
+"scoreboard": "DNM 101/4 OVERS 15.1"
+},
+{
+"t": 5289.1,
+"scoreboard": "DNM 101/4 OVERS 15.1"
+},
+{
+"t": 5291.1,
+"scoreboard": "DNM 102/4 OVERS 15.2"
+},
+{
+"t": 5292.7,
+"scoreboard": "DNM 102/4 OVERS 15.2"
+},
+{
+"t": 5296.5,
+"scoreboard": "DNM 102/4 OVERS 15.2"
+},
+{
+"t": 5310.7,
+"scoreboard": "DNM 102/4 OVERS 15.2"
+},
+{
+"t": 5340.9,
+"scoreboard": "DNM 102/4 OVERS 15.2"
+},
+{
+"t": 5343.4,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5345.5,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5349.2,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5355,
+"scoreboard": null
+},
+{
+"t": 5356.6,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5370.7,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5400.9,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5430.6,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5460.8,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5490.7,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5520.7,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5551,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5564,
+"scoreboard": null
+},
+{
+"t": 5565,
+"scoreboard": null
+},
+{
+"t": 5565,
+"scoreboard": null
+},
+{
+"t": 5566.6,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5567,
+"scoreboard": null
+},
+{
+"t": 5574.2,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5577.6,
+"scoreboard": "DNM 102/5 OVERS 15.3"
+},
+{
+"t": 5579.7,
+"scoreboard": "DNM 103/6 OVERS 15.5"
+},
+{
+"t": 5580.7,
+"scoreboard": "DNM 103/6 OVERS 15.5"
+},
+{
+"t": 5589,
+"scoreboard": "DNM 103/6 OVERS 15.5"
+},
+{
+"t": 5591,
+"scoreboard": "DNM 104/6 OVERS 15.5"
+},
+{
+"t": 5592.8,
+"scoreboard": "DNM 104/6 OVERS 15.5"
+},
+{
+"t": 5596.4,
+"scoreboard": "DNM 104/6 OVERS 15.5"
+},
+{
+"t": 5610.7,
+"scoreboard": "DNM 104/6 OVERS 15.5"
+},
+{
+"t": 5641,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5669.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5670,
+"scoreboard": null
+},
+{
+"t": 5670.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5671.5,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5672.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5700.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5730.6,
+"scoreboard": "DNM 104/6 OVERS 16.1"
+},
+{
+"t": 5760.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5789.7,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5789.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5789.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5790,
+"scoreboard": null
+},
+{
+"t": 5790.9,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5791.4,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5791.4,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5791.4,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5792.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5792.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5792.8,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5821,
+"scoreboard": "DNM 104/6"
+},
+{
+"t": 5850.6,
+"scoreboard": "DNM 104/7 OVERS 16.3"
+},
+{
+"t": 5880.6,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 5910.7,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 5939,
+"scoreboard": null
+},
+{
+"t": 5940,
+"scoreboard": null
+},
+{
+"t": 5940.5,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 5941.5,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 5942,
+"scoreboard": null
+},
+{
+"t": 5970.7,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 6001,
+"scoreboard": "DNM 105/7"
+},
+{
+"t": 6031,
+"scoreboard": "DNM 108/7 OVERS 17.1"
+},
+{
+"t": 6039.2,
+"scoreboard": "DNM 108/7 OVERS 17.1"
+},
+{
+"t": 6042.8,
+"scoreboard": "DNM 108/7 OVERS 17.1"
+},
+{
+"t": 6045,
+"scoreboard": null
+},
+{
+"t": 6045,
+"scoreboard": "DNM 108/7 OVERS 17.1"
+},
+{
+"t": 6046.7,
+"scoreboard": "DNM 108/7 OVERS 17.2"
+},
+{
+"t": 6060.8,
+"scoreboard": "DNM 108/7 OVERS 17.2"
+},
+{
+"t": 6090.7,
+"scoreboard": "DNM 108/7 OVERS 17.2"
+},
+{
+"t": 6121,
+"scoreboard": "DNM 108/7 OVERS 17.2"
+},
+{
+"t": 6129.3,
+"scoreboard": "DNM 108/7 OVERS 17.2"
+},
+{
+"t": 6131.2,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6132.8,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6135,
+"scoreboard": null
+},
+{
+"t": 6136.4,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6150.8,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6166.5,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6174.1,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6175.9,
+"scoreboard": "DNM 108/8 OVERS 17.3"
+},
+{
+"t": 6177.7,
+"scoreboard": "DNM 108/8 OVERS 17.4"
+},
+{
+"t": 6180.6,
+"scoreboard": "DNM 108/8 OVERS 17.4"
+},
+{
+"t": 6211,
+"scoreboard": "DNM 108/8 OVERS 17.4"
+},
+{
+"t": 6224,
+"scoreboard": null
+},
+{
+"t": 6225,
+"scoreboard": null
+},
+{
+"t": 6225,
+"scoreboard": null
+},
+{
+"t": 6227,
+"scoreboard": null
+},
+{
+"t": 6240.8,
+"scoreboard": "DNM 108/8 OVERS 17.5"
+},
+{
+"t": 6270.9,
+"scoreboard": "DNM 109/8"
+},
+{
+"t": 6284.7,
+"scoreboard": "DNM 109/8"
+},
+{
+"t": 6285,
+"scoreboard": null
+},
+{
+"t": 6286.6,
+"scoreboard": "DNM 109/8"
+},
+{
+"t": 6287.9,
+"scoreboard": "DNM 109/8"
+},
+{
+"t": 6300.9,
+"scoreboard": "DNM 109/8"
+},
+{
+"t": 6330.7,
+"scoreboard": "DNM 109/9 OVERS 18.1"
+},
+{
+"t": 6361,
+"scoreboard": "DNM 109/9 OVERS 18.1"
+},
+{
+"t": 6376.5,
+"scoreboard": "DNM 109/9 OVERS 18.1"
+},
+{
+"t": 6380.5,
+"scoreboard": "DNM 109/9 OVERS 18.1"
+},
+{
+"t": 6382.4,
+"scoreboard": "DNM 109/9 OVERS 18.1"
+},
+{
+"t": 6384,
+"scoreboard": "DNM 109/9 OVERS 18.2"
+},
+{
+"t": 6390.8,
+"scoreboard": "DNM 109/9 OVERS 18.2"
+},
+{
+"t": 6405,
+"scoreboard": null
+},
+{
+"t": 6406.7,
+"scoreboard": "DNM 109/9 OVERS 18.2"
+},
+{
+"t": 6414.4,
+"scoreboard": "DNM 109/9 OVERS 18.2"
+},
+{
+"t": 6416.2,
+"scoreboard": "DNM 110/9 OVERS 18.3"
+},
+{
+"t": 6418.1,
+"scoreboard": "DNM 110/9 OVERS 18.3"
+},
+{
+"t": 6421,
+"scoreboard": "DNM 110/9 OVERS 18.3"
+},
+{
+"t": 6450.8,
+"scoreboard": "DNM 110/9 OVERS 18.3"
+},
+{
+"t": 6479,
+"scoreboard": null
+},
+{
+"t": 6480,
+"scoreboard": null
+},
+{
+"t": 6480,
+"scoreboard": null
+},
+{
+"t": 6480.6,
+"scoreboard": "DNM 112/9"
+},
+{
+"t": 6482,
+"scoreboard": null
+},
+{
+"t": 6510.8,
+"scoreboard": "DNM 113/9 OVERS 18.5"
+},
+{
+"t": 6540.8,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6571,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6585,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6586.5,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6586.6,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6587.9,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6601,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6631,
+"scoreboard": "DNM 113/9"
+},
+{
+"t": 6660.7,
+"scoreboard": "DNM 113/9 OVERS 19.1"
+},
+{
+"t": 6669.1,
+"scoreboard": "DNM 113/9 OVERS 19.1"
+},
+{
+"t": 6670.9,
+"scoreboard": "DNM 113/9 OVERS 19.2"
+},
+{
+"t": 6672.8,
+"scoreboard": "DNM 113/9 OVERS 19.2"
+},
+{
+"t": 6675,
+"scoreboard": null
+},
+{
+"t": 6676.4,
+"scoreboard": "DNM 113/9 OVERS 19.2"
+},
+{
+"t": 6690.6,
+"scoreboard": "DNM 113/9 OVERS 19.2"
+},
+{
+"t": 6703,
+"scoreboard": null
+},
+{
+"t": 6705,
+"scoreboard": null
+},
+{
+"t": 6705,
+"scoreboard": null
+},
+{
+"t": 6706,
+"scoreboard": null
+},
+{
+"t": 6720.7,
+"scoreboard": "DNM 114/9 OVERS 19.3"
+},
+{
+"t": 6749.6,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6749.9,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6750.5,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6751.3,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6751.5,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6751.5,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6752.8,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6752.9,
+"scoreboard": "DNM 115/9"
+},
+{
+"t": 6780.7,
+"scoreboard": "DNM 115/9 OVERS 19.5"
+},
+{
+"t": 6810.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 6840.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 6870.5,
+"scoreboard": "116/9"
+},
+{
+"t": 6900.6,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 6930.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 6961,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 6990.6,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7020.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7051,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7080.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7110.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7140.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7170.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7200.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7230.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7260.5,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7290.6,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7320.5,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7350.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7381,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7410.6,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7440.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7470.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7500.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7531,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7560.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7590.5,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7620.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7650.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7680.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7710.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7739.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7739.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7739.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7739.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7740,
+"scoreboard": null
+},
+{
+"t": 7740.9,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7741.3,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7741.4,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7741.4,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7741.4,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7742.7,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7742.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7742.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7742.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7770.8,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7801,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7830.5,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7860.5,
+"scoreboard": "DNM 116/9"
+},
+{
+"t": 7891,
+"scoreboard": "GRM OVERS 0.0"
+},
+{
+"t": 7920.6,
+"scoreboard": "GRM OVERS 0.0"
+},
+{
+"t": 7950.8,
+"scoreboard": "GRM OVERS 0.1"
+},
+{
+"t": 7980.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8010.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8040.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8070.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8100.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8130.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8160.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8190.9,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8221,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8250.5,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8281,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8311,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8340.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8370.9,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8400.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8430.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8460.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8490.6,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8521,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8550.8,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8580.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8610.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8640.9,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8670.7,
+"scoreboard": "GRM OVERS 0.2"
+},
+{
+"t": 8700.5,
+"scoreboard": "GRM 1/0 OVERS 0.3"
+},
+{
+"t": 8730.8,
+"scoreboard": "GRM 1/0 OVERS 0.3"
+},
+{
+"t": 8739.2,
+"scoreboard": "GRM 1/0 OVERS 0.3"
+},
+{
+"t": 8741.1,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8742.9,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8744,
+"scoreboard": null
+},
+{
+"t": 8745,
+"scoreboard": null
+},
+{
+"t": 8745,
+"scoreboard": null
+},
+{
+"t": 8746.6,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8747,
+"scoreboard": null
+},
+{
+"t": 8760.7,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8776.5,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8780.4,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8782.2,
+"scoreboard": "GRM 2/0 OVERS 0.4"
+},
+{
+"t": 8784.1,
+"scoreboard": "GRM 6/0 OVERS 0.5"
+},
+{
+"t": 8790.7,
+"scoreboard": "GRM 6/0 OVERS 0.5"
+},
+{
+"t": 8805,
+"scoreboard": null
+},
+{
+"t": 8806.5,
+"scoreboard": "GRM 6/0 OVERS 0.5"
+},
+{
+"t": 8810.4,
+"scoreboard": "GRM 6/0 OVERS 0.5"
+},
+{
+"t": 8812.2,
+"scoreboard": "GRM 6/0 OVERS 0.5"
+},
+{
+"t": 8814.1,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8820.7,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8850.9,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8880.7,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8910.9,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8919.2,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8923,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8924.7,
+"scoreboard": "GRM 6/0 OVERS 1.0"
+},
+{
+"t": 8925,
+"scoreboard": null
+},
+{
+"t": 8926.7,
+"scoreboard": "GRM 11/0 OVERS 1.2"
+},
+{
+"t": 8940.9,
+"scoreboard": "GRM 11/0 OVERS 1.2"
+},
+{
+"t": 8943.5,
+"scoreboard": "GRM 11/0 OVERS 1.2"
+},
+{
+"t": 8945.5,
+"scoreboard": "GRM 11/0 OVERS 1.3"
+},
+{
+"t": 8949.3,
+"scoreboard": "GRM 11/0 OVERS 1.3"
+},
+{
+"t": 8956.7,
+"scoreboard": "GRM 11/0 OVERS 1.3"
+},
+{
+"t": 8961.3,
+"scoreboard": "GRM 11/0 OVERS 1.3"
+},
+{
+"t": 8962,
+"scoreboard": null
+},
+{
+"t": 8963.2,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 8964,
+"scoreboard": null
+},
+{
+"t": 8965,
+"scoreboard": null
+},
+{
+"t": 8965.1,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 8970.7,
+"scoreboard": null
+},
+{
+"t": 8971.7,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 9001,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 9030.9,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 9045,
+"scoreboard": null
+},
+{
+"t": 9046.7,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 9054.3,
+"scoreboard": "GRM 11/1 OVERS 1.4"
+},
+{
+"t": 9056.2,
+"scoreboard": "GRM 11/1 OVERS 1.5"
+},
+{
+"t": 9058,
+"scoreboard": "GRM 11/1 OVERS 1.5"
+},
+{
+"t": 9060.9,
+"scoreboard": "GRM 11/1 OVERS 1.5"
+},
+{
+"t": 9069.2,
+"scoreboard": "GRM 11/1 OVERS 1.5"
+},
+{
+"t": 9071.1,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9073.1,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9075,
+"scoreboard": null
+},
+{
+"t": 9076.7,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9091,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9121,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9150.8,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9181,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9183.7,
+"scoreboard": "GRM 11/1 OVERS 2.0"
+},
+{
+"t": 9185.6,
+"scoreboard": "GRM 12/1 OVERS 2.1"
+},
+{
+"t": 9189.4,
+"scoreboard": "GRM 12/1 OVERS 2.1"
+},
+{
+"t": 9196.8,
+"scoreboard": "GRM 12/1 OVERS 2.1"
+},
+{
+"t": 9210.9,
+"scoreboard": "GRM 12/1 OVERS 2.1"
+},
+{
+"t": 9213.4,
+"scoreboard": "GRM 12/1 OVERS 2.1"
+},
+{
+"t": 9215.5,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9219.3,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9224,
+"scoreboard": null
+},
+{
+"t": 9225,
+"scoreboard": null
+},
+{
+"t": 9225,
+"scoreboard": null
+},
+{
+"t": 9226.8,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9227,
+"scoreboard": null
+},
+{
+"t": 9241,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9270.8,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9275.5,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9277.3,
+"scoreboard": "GRM 12/1 OVERS 2.2"
+},
+{
+"t": 9279.1,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9285,
+"scoreboard": null
+},
+{
+"t": 9286.4,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9300.8,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9330.8,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9339.2,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9343,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9344.7,
+"scoreboard": "GRM 12/2 OVERS 2.3"
+},
+{
+"t": 9346.7,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9361,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9390.8,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9420.8,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9435,
+"scoreboard": null
+},
+{
+"t": 9436.7,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9444.1,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9448.1,
+"scoreboard": "GRM 13/2 OVERS 2.4"
+},
+{
+"t": 9450,
+"scoreboard": "GRM 13/2 OVERS 3.0"
+},
+{
+"t": 9451,
+"scoreboard": "GRM 13/2 OVERS 3.0"
+},
+{
+"t": 9480.7,
+"scoreboard": "GRM 13/2 OVERS 3.0"
+},
+{
+"t": 9494,
+"scoreboard": null
+},
+{
+"t": 9495,
+"scoreboard": null
+},
+{
+"t": 9495,
+"scoreboard": null
+},
+{
+"t": 9497,
+"scoreboard": null
+},
+{
+"t": 9510.8,
+"scoreboard": "GRM 13/2 OVERS 3.1"
+},
+{
+"t": 9513.3,
+"scoreboard": "GRM 13/2 OVERS 3.1"
+},
+{
+"t": 9515.5,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9519.1,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9526.6,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9534.5,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9536.3,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9537.9,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9540.8,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9571,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9586,
+"scoreboard": null
+},
+{
+"t": 9586.9,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9594.4,
+"scoreboard": "GRM 14/2 OVERS 3.3"
+},
+{
+"t": 9598,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9598.1,
+"scoreboard": "GRM 13/2 OVERS 3.2"
+},
+{
+"t": 9599.5,
+"scoreboard": "GRM 17/2 OVERS 3.4"
+},
+{
+"t": 9600,
+"scoreboard": "GRM 17/2 OVERS 3.4"
+},
+{
+"t": 9601,
+"scoreboard": "GRM 17/2 OVERS 3.4"
+},
+{
+"t": 9630.8,
+"scoreboard": "GRM 17/2 OVERS 3.4"
+},
+{
+"t": 9633.3,
+"scoreboard": "GRM 17/2 OVERS 3.4"
+},
+{
+"t": 9635.2,
+"scoreboard": "GRM 17/2 OVERS 3.5"
+},
+{
+"t": 9639.1,
+"scoreboard": "GRM 17/2 OVERS 3.5"
+},
+{
+"t": 9644,
+"scoreboard": null
+},
+{
+"t": 9645,
+"scoreboard": null
+},
+{
+"t": 9645,
+"scoreboard": null
+},
+{
+"t": 9646.7,
+"scoreboard": "GRM 17/2 OVERS 3.5"
+},
+{
+"t": 9646.7,
+"scoreboard": "GRM 17/2 OVERS 3.5"
+},
+{
+"t": 9647,
+"scoreboard": null
+},
+{
+"t": 9648.6,
+"scoreboard": "GRM 17/2 OVERS 3.5"
+},
+{
+"t": 9650.3,
+"scoreboard": "GRM 17/2 OVERS 4.0"
+},
+{
+"t": 9654.3,
+"scoreboard": "GRM 17/2 OVERS 4.0"
+},
+{
+"t": 9660.9,
+"scoreboard": "GRM 17/2 OVERS 4.0"
+},
+{
+"t": 9691,
+"scoreboard": "GRM 17/2 OVERS 4.0"
+},
+{
+"t": 9699.3,
+"scoreboard": "GRM 17/2 OVERS 4.0"
+},
+{
+"t": 9701.2,
+"scoreboard": "GRM 17/2 OVERS 4.1"
+},
+{
+"t": 9703,
+"scoreboard": "GRM 17/2 OVERS 4.1"
+},
+{
+"t": 9706.7,
+"scoreboard": "GRM 17/2 OVERS 4.1"
+},
+{
+"t": 9720.7,
+"scoreboard": "GRM 17/2 OVERS 4.1"
+},
+{
+"t": 9735,
+"scoreboard": null
+},
+{
+"t": 9736.4,
+"scoreboard": "GRM 17/2 OVERS 4.1"
+},
+{
+"t": 9738.2,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9740.3,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9743.8,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9750.6,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9780.9,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9811,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9841,
+"scoreboard": "GRM 18/2 OVERS 4.2"
+},
+{
+"t": 9870,
+"scoreboard": null
+},
+{
+"t": 9870,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9870.1,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9870.1,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9871,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9871.7,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9871.7,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9871.7,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9873.1,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9873.1,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9873.1,
+"scoreboard": "GRM 24/2 OVERS 4.4"
+},
+{
+"t": 9900.8,
+"scoreboard": "GRM 24/2 OVERS 4.5"
+},
+{
+"t": 9903.3,
+"scoreboard": "GRM 24/2 OVERS 5.0"
+},
+{
+"t": 9905.4,
+"scoreboard": "GRM 24/2 OVERS 5.0"
+},
+{
+"t": 9909.2,
+"scoreboard": "GRM 24/2 OVERS 5.0"
+},
+{
+"t": 9916.6,
+"scoreboard": "GRM 24/2 OVERS 5.0"
+},
+{
+"t": 9930.9,
+"scoreboard": "GRM 24/2 OVERS 5.0"
+},
+{
+"t": 9944,
+"scoreboard": null
+},
+{
+"t": 9945,
+"scoreboard": null
+},
+{
+"t": 9945,
+"scoreboard": null
+},
+{
+"t": 9947,
+"scoreboard": null
+},
+{
+"t": 9961,
+"scoreboard": "GRM 24/2 OVERS 5.1"
+},
+{
+"t": 9990.7,
+"scoreboard": "GRM 24/2 OVERS 5.1"
+},
+{
+"t": 9993.2,
+"scoreboard": "GRM 24/2 OVERS 5.3"
+},
+{
+"t": 9995.4,
+"scoreboard": "GRM 24/2 OVERS 5.3"
+},
+{
+"t": 9999.1,
+"scoreboard": "GRM 24/2 OVERS 5.3"
+},
+{
+"t": 10005,
+"scoreboard": null
+},
+{
+"t": 10006.6,
+"scoreboard": "GRM 24/2 OVERS 5.3"
+},
+{
+"t": 10021,
+"scoreboard": "GRM 24/2 OVERS 5.4"
+},
+{
+"t": 10023.5,
+"scoreboard": "GRM 24/2 OVERS 5.4"
+},
+{
+"t": 10025.6,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10029.4,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10036.6,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10050.8,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10055.4,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10057.3,
+"scoreboard": "GRM 24/2 OVERS 5.5"
+},
+{
+"t": 10059.1,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10065,
+"scoreboard": null
+},
+{
+"t": 10066.6,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10080.8,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10110.5,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10141,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10170.8,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10201,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10230.9,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10239.1,
+"scoreboard": "GRM 24/3 OVERS 6.0"
+},
+{
+"t": 10240.9,
+"scoreboard": "GRM 24/3 OVERS 6.1"
+},
+{
+"t": 10243.1,
+"scoreboard": "GRM 24/3 OVERS 6.1"
+},
+{
+"t": 10244,
+"scoreboard": null
+},
+{
+"t": 10245,
+"scoreboard": null
+},
+{
+"t": 10245,
+"scoreboard": null
+},
+{
+"t": 10246.8,
+"scoreboard": "GRM 24/3 OVERS 6.2"
+},
+{
+"t": 10247,
+"scoreboard": null
+},
+{
+"t": 10261,
+"scoreboard": "GRM 24/3 OVERS 6.2"
+},
+{
+"t": 10269.3,
+"scoreboard": "GRM 24/3 OVERS 6.2"
+},
+{
+"t": 10273.1,
+"scoreboard": "GRM 24/3 OVERS 6.2"
+},
+{
+"t": 10275,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10276.7,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10290.8,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10320.6,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10350.9,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10365,
+"scoreboard": null
+},
+{
+"t": 10366.6,
+"scoreboard": "GRM 25/3 OVERS 6.4"
+},
+{
+"t": 10368.4,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10370.6,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10374.4,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10381,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10411,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10419.3,
+"scoreboard": "GRM 27/3 OVERS 7.0"
+},
+{
+"t": 10421.2,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10422.9,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10425,
+"scoreboard": null
+},
+{
+"t": 10426.6,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10440.6,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10456.5,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10460.3,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10462.2,
+"scoreboard": "GRM 28/3 OVERS 7.1"
+},
+{
+"t": 10464.1,
+"scoreboard": "GRM 28/3 OVERS 7.2"
+},
+{
+"t": 10470.7,
+"scoreboard": "GRM 28/3 OVERS 7.2"
+},
+{
+"t": 10483,
+"scoreboard": null
+},
+{
+"t": 10485,
+"scoreboard": null
+},
+{
+"t": 10485,
+"scoreboard": null
+},
+{
+"t": 10486,
+"scoreboard": null
+},
+{
+"t": 10500.6,
+"scoreboard": "GRM 28/3 OVERS 7.3"
+},
+{
+"t": 10515,
+"scoreboard": null
+},
+{
+"t": 10516.5,
+"scoreboard": "GRM 28/3 OVERS 7.3"
+},
+{
+"t": 10524.1,
+"scoreboard": "GRM 28/3 OVERS 7.3"
+},
+{
+"t": 10526,
+"scoreboard": "GRM 28/3 OVERS 7.4"
+},
+{
+"t": 10527.9,
+"scoreboard": "GRM 28/3 OVERS 7.4"
+},
+{
+"t": 10530.8,
+"scoreboard": "GRM 28/3 OVERS 7.4"
+},
+{
+"t": 10546.6,
+"scoreboard": "GRM 28/3 OVERS 7.4"
+},
+{
+"t": 10548.3,
+"scoreboard": "GRM 28/3 OVERS 7.5"
+},
+{
+"t": 10550.5,
+"scoreboard": "GRM 28/3 OVERS 7.5"
+},
+{
+"t": 10553.9,
+"scoreboard": "GRM 28/3 OVERS 7.5"
+},
+{
+"t": 10560,
+"scoreboard": null
+},
+{
+"t": 10561.7,
+"scoreboard": "GRM 28/3 OVERS 7.5"
+},
+{
+"t": 10564.3,
+"scoreboard": "GRM 28/3 OVERS 7.5"
+},
+{
+"t": 10566,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10569.7,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10577.1,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10590.8,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10621,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10623.8,
+"scoreboard": "GRM 28/3 OVERS 8.0"
+},
+{
+"t": 10625.6,
+"scoreboard": "GRM 30/3 OVERS 8.1"
+},
+{
+"t": 10629.4,
+"scoreboard": "GRM 30/3 OVERS 8.1"
+},
+{
+"t": 10634,
+"scoreboard": null
+},
+{
+"t": 10635,
+"scoreboard": null
+},
+{
+"t": 10635,
+"scoreboard": null
+},
+{
+"t": 10636.6,
+"scoreboard": "GRM 30/3 OVERS 8.1"
+},
+{
+"t": 10637,
+"scoreboard": null
+},
+{
+"t": 10650.9,
+"scoreboard": "GRM 30/3 OVERS 8.1"
+},
+{
+"t": 10653.4,
+"scoreboard": "GRM 31/3 OVERS 8.2"
+},
+{
+"t": 10655.5,
+"scoreboard": "GRM 31/3 OVERS 8.2"
+},
+{
+"t": 10659.2,
+"scoreboard": "GRM 31/3 OVERS 8.2"
+},
+{
+"t": 10665,
+"scoreboard": null
+},
+{
+"t": 10666.5,
+"scoreboard": "GRM 31/3 OVERS 8.2"
+},
+{
+"t": 10680.7,
+"scoreboard": "GRM 31/3 OVERS 8.3"
+},
+{
+"t": 10710.8,
+"scoreboard": "GRM 31/3 OVERS 8.3"
+},
+{
+"t": 10713.3,
+"scoreboard": "GRM 31/3 OVERS 8.3"
+},
+{
+"t": 10715.5,
+"scoreboard": "GRM 32/3 OVERS 8.4"
+},
+{
+"t": 10719.1,
+"scoreboard": "GRM 32/3 OVERS 8.4"
+},
+{
+"t": 10726.6,
+"scoreboard": "GRM 32/3 OVERS 8.4"
+},
+{
+"t": 10740.7,
+"scoreboard": "GRM 32/3 OVERS 8.4"
+},
+{
+"t": 10743.4,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10745.4,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10749.2,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10755,
+"scoreboard": null
+},
+{
+"t": 10756.7,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10771,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10779.4,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10783.1,
+"scoreboard": "GRM 33/3 OVERS 8.5"
+},
+{
+"t": 10784,
+"scoreboard": null
+},
+{
+"t": 10784.8,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10786,
+"scoreboard": null
+},
+{
+"t": 10786,
+"scoreboard": null
+},
+{
+"t": 10786.8,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10787,
+"scoreboard": null
+},
+{
+"t": 10801,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10830.7,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10860.9,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10869.2,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10873.1,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10874.9,
+"scoreboard": "GRM 39/3 OVERS 9.0"
+},
+{
+"t": 10876.7,
+"scoreboard": "GRM 43/3 OVERS 9.1"
+},
+{
+"t": 10890.8,
+"scoreboard": "GRM 43/3 OVERS 9.1"
+},
+{
+"t": 10905,
+"scoreboard": null
+},
+{
+"t": 10906.7,
+"scoreboard": "GRM 43/3 OVERS 9.1"
+},
+{
+"t": 10910.6,
+"scoreboard": "GRM 43/3 OVERS 9.1"
+},
+{
+"t": 10912.4,
+"scoreboard": "GRM 43/3 OVERS 9.1"
+},
+{
+"t": 10914.1,
+"scoreboard": "GRM 44/3 OVERS 9.2"
+},
+{
+"t": 10921,
+"scoreboard": "GRM 44/3 OVERS 9.2"
+},
+{
+"t": 10929.4,
+"scoreboard": "GRM 44/3 OVERS 9.2"
+},
+{
+"t": 10932.9,
+"scoreboard": "GRM 44/3 OVERS 9.2"
+},
+{
+"t": 10935,
+"scoreboard": "GRM 44/3 OVERS 9.3"
+},
+{
+"t": 10936,
+"scoreboard": null
+},
+{
+"t": 10936.7,
+"scoreboard": "GRM 44/3 OVERS 9.3"
+},
+{
+"t": 10951,
+"scoreboard": "GRM 44/3 OVERS 9.3"
+},
+{
+"t": 10966.7,
+"scoreboard": "GRM 44/3 OVERS 9.3"
+},
+{
+"t": 10968.5,
+"scoreboard": "GRM 44/3 OVERS 9.3"
+},
+{
+"t": 10970.3,
+"scoreboard": "GRM 44/3 OVERS 9.5"
+},
+{
+"t": 10974.4,
+"scoreboard": "GRM 44/3 OVERS 9.5"
+},
+{
+"t": 10980.9,
+"scoreboard": "GRM 44/3 OVERS 9.5"
+},
+{
+"t": 11010.5,
+"scoreboard": "GRM 44/3"
+},
+{
+"t": 11040.9,
+"scoreboard": "GRM 44/3"
+},
+{
+"t": 11070.8,
+"scoreboard": "GRM 45/3"
+},
+{
+"t": 11101,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11130.6,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11160.6,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11190.5,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11220.6,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11225,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11225.2,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11226.9,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11226.9,
+"scoreboard": "GRM 45/3 OVERS 9.5"
+},
+{
+"t": 11228.9,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11229,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11233,
+"scoreboard": null
+},
+{
+"t": 11235,
+"scoreboard": null
+},
+{
+"t": 11235,
+"scoreboard": null
+},
+{
+"t": 11236,
+"scoreboard": null
+},
+{
+"t": 11236.4,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11236.5,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11250.7,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11281,
+"scoreboard": "GRM 47/3 OVERS 10.1"
+},
+{
+"t": 11311,
+"scoreboard": "GRM 48/3"
+},
+{
+"t": 11340.9,
+"scoreboard": "GRM 49/3"
+},
+{
+"t": 11371,
+"scoreboard": "GRM 50/3"
+},
+{
+"t": 11399.9,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11400.2,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11400.2,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11400.7,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11401,
+"scoreboard": null
+},
+{
+"t": 11401.5,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11401.8,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11401.9,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11403.2,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11403.2,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11403.2,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11430.8,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11460.9,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11490.8,
+"scoreboard": "GRM 52/3"
+},
+{
+"t": 11521,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11550.8,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11580.8,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11596.5,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11600,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11601.8,
+"scoreboard": "GRM 53/3 OVERS 11.1"
+},
+{
+"t": 11604,
+"scoreboard": "GRM 56/3 OVERS 11.3"
+},
+{
+"t": 11610.5,
+"scoreboard": "GRM 56/3 OVERS 11.3"
+},
+{
+"t": 11625,
+"scoreboard": null
+},
+{
+"t": 11626.5,
+"scoreboard": "GRM 56/3 OVERS 11.3"
+},
+{
+"t": 11634.2,
+"scoreboard": "GRM 56/3 OVERS 11.3"
+},
+{
+"t": 11635.8,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11638,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11640.9,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11654,
+"scoreboard": null
+},
+{
+"t": 11655,
+"scoreboard": null
+},
+{
+"t": 11655,
+"scoreboard": null
+},
+{
+"t": 11656.5,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11657,
+"scoreboard": null
+},
+{
+"t": 11664,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11665.7,
+"scoreboard": "GRM 60/3 OVERS 11.4"
+},
+{
+"t": 11667.8,
+"scoreboard": "GRM 61/3 OVERS 11.5"
+},
+{
+"t": 11670.6,
+"scoreboard": "GRM 61/3 OVERS 11.5"
+},
+{
+"t": 11700.6,
+"scoreboard": "GRM 61/3 OVERS 11.5"
+},
+{
+"t": 11730.7,
+"scoreboard": "GRM 61/3 OVERS 11.5"
+},
+{
+"t": 11744.8,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11744.8,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11744.8,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11746.7,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11746.7,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11746.7,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11746.7,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11748,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11748.1,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11748.1,
+"scoreboard": "GRM 62/3"
+},
+{
+"t": 11761,
+"scoreboard": "GRM 62/3 OVERS 12.1"
+},
+{
+"t": 11763.5,
+"scoreboard": "GRM 62/3 OVERS 12.1"
+},
+{
+"t": 11765.6,
+"scoreboard": "GRM 62/3 OVERS 12.2"
+},
+{
+"t": 11769.4,
+"scoreboard": "GRM 62/3 OVERS 12.2"
+},
+{
+"t": 11776,
+"scoreboard": null
+},
+{
+"t": 11776.8,
+"scoreboard": "GRM 62/3 OVERS 12.2"
+},
+{
+"t": 11791,
+"scoreboard": "GRM 62/3 OVERS 12.2"
+},
+{
+"t": 11820.9,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11834,
+"scoreboard": null
+},
+{
+"t": 11834.8,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11834.8,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11835,
+"scoreboard": null
+},
+{
+"t": 11835,
+"scoreboard": null
+},
+{
+"t": 11835.1,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11836.7,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11836.7,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11836.8,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11837,
+"scoreboard": null
+},
+{
+"t": 11838.1,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11838.1,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11838.1,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11850.7,
+"scoreboard": "GRM 62/4 OVERS 12.3"
+},
+{
+"t": 11880.8,
+"scoreboard": "GRM 62/4 OVERS 12.5"
+},
+{
+"t": 11910.7,
+"scoreboard": "GRM 62/4 OVERS 12.5"
+},
+{
+"t": 11939.7,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11939.8,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11939.8,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11941,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11941.3,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11941.4,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11941.4,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11941.5,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11942.7,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11942.8,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11942.8,
+"scoreboard": "GRM 62/4"
+},
+{
+"t": 11970.5,
+"scoreboard": "GRM 62/4 OVERS 13.1"
+},
+{
+"t": 11979,
+"scoreboard": "GRM 62/4 OVERS 13.1"
+},
+{
+"t": 11982.8,
+"scoreboard": "GRM 62/4 OVERS 13.1"
+},
+{
+"t": 11984.5,
+"scoreboard": "GRM 64/4 OVERS 13.2"
+},
+{
+"t": 11985,
+"scoreboard": null
+},
+{
+"t": 11986.6,
+"scoreboard": "GRM 64/4 OVERS 13.2"
+},
+{
+"t": 12000.9,
+"scoreboard": "GRM 64/4 OVERS 13.2"
+},
+{
+"t": 12031,
+"scoreboard": "GRM 70/4 OVERS 13.3"
+},
+{
+"t": 12059,
+"scoreboard": null
+},
+{
+"t": 12060,
+"scoreboard": null
+},
+{
+"t": 12060,
+"scoreboard": null
+},
+{
+"t": 12060,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12060,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12061,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12061.6,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12061.8,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12062,
+"scoreboard": null
+},
+{
+"t": 12063.1,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12063.1,
+"scoreboard": "GRM 72/4"
+},
+{
+"t": 12090.6,
+"scoreboard": "GRM 73/4"
+},
+{
+"t": 12120.9,
+"scoreboard": "GRM 73/4 OVERS 13.5"
+},
+{
+"t": 12150.7,
+"scoreboard": "GRM 73/4"
+},
+{
+"t": 12180.8,
+"scoreboard": "GRM 77/4"
+},
+{
+"t": 12210.8,
+"scoreboard": "GRM 78/4"
+},
+{
+"t": 12239.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12239.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12239.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12239.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12240,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12240,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12240,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12240,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12240.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.5,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.6,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.8,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.8,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12241.8,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12242.8,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12242.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243.1,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243.1,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12243.1,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12270.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12300.9,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12330.7,
+"scoreboard": "GRM 79/4"
+},
+{
+"t": 12360.8,
+"scoreboard": "GRM 81/4 OVERS 15.1"
+},
+{
+"t": 12390.6,
+"scoreboard": "GRM 81/4 OVERS 15.1"
+},
+{
+"t": 12399,
+"scoreboard": "GRM 81/4 OVERS 15.1"
+},
+{
+"t": 12402.9,
+"scoreboard": "GRM 81/4 OVERS 15.1"
+},
+{
+"t": 12404.8,
+"scoreboard": "GRM 82/4 OVERS 15.3"
+},
+{
+"t": 12405,
+"scoreboard": null
+},
+{
+"t": 12406.5,
+"scoreboard": "GRM 82/4 OVERS 15.3"
+},
+{
+"t": 12421,
+"scoreboard": "GRM 82/4 OVERS 15.3"
+},
+{
+"t": 12450.6,
+"scoreboard": "GRM 82/4"
+},
+{
+"t": 12480.7,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12494,
+"scoreboard": null
+},
+{
+"t": 12495,
+"scoreboard": null
+},
+{
+"t": 12495,
+"scoreboard": null
+},
+{
+"t": 12495.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12495.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12495.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12496.6,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12496.7,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12496.7,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12497,
+"scoreboard": null
+},
+{
+"t": 12498.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12498.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12498.1,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12510.8,
+"scoreboard": "GRM 88/4 OVERS 15.5"
+},
+{
+"t": 12540.9,
+"scoreboard": "GRM 88/4"
+},
+{
+"t": 12570.8,
+"scoreboard": "GRM 89/4 OVERS 16.1"
+},
+{
+"t": 12600.9,
+"scoreboard": "GRM 89/4"
+},
+{
+"t": 12630.5,
+"scoreboard": "GRM 89/5 OVERS 16.3"
+},
+{
+"t": 12660.9,
+"scoreboard": "GRM 89/5 OVERS 16.3"
+},
+{
+"t": 12690.8,
+"scoreboard": "GRM 89/5 OVERS 16.3"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12704.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.5,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.7,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.7,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.7,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.7,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12706.8,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708.1,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708.1,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708.1,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12708.1,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12720.7,
+"scoreboard": "GRM 95/5"
+},
+{
+"t": 12750.5,
+"scoreboard": "GRM 101/5"
+},
+{
+"t": 12781,
+"scoreboard": "GRM 101/5"
+},
+{
+"t": 12810.8,
+"scoreboard": "GRM 101/5"
+},
+{
+"t": 12840.9,
+"scoreboard": "GRM 103/5 OVERS 17.2"
+},
+{
+"t": 12849.3,
+"scoreboard": "GRM 103/5 OVERS 17.2"
+},
+{
+"t": 12853.1,
+"scoreboard": "GRM 103/5 OVERS 17.2"
+},
+{
+"t": 12854.7,
+"scoreboard": "GRM 103/5 OVERS 17.2"
+},
+{
+"t": 12855,
+"scoreboard": null
+},
+{
+"t": 12856.8,
+"scoreboard": "GRM 104/5 OVERS 17.3"
+},
+{
+"t": 12871,
+"scoreboard": "GRM 104/5 OVERS 17.3"
+},
+{
+"t": 12884,
+"scoreboard": null
+},
+{
+"t": 12885,
+"scoreboard": null
+},
+{
+"t": 12885,
+"scoreboard": null
+},
+{
+"t": 12887,
+"scoreboard": null
+},
+{
+"t": 12900.9,
+"scoreboard": "GRM 104/5 OVERS 17.4"
+},
+{
+"t": 12916.7,
+"scoreboard": "GRM 104/5 OVERS 17.4"
+},
+{
+"t": 12918.6,
+"scoreboard": "GRM 105/5 OVERS 17.5"
+},
+{
+"t": 12920.2,
+"scoreboard": "GRM 105/5 OVERS 17.5"
+},
+{
+"t": 12924.2,
+"scoreboard": "GRM 105/5 OVERS 17.5"
+},
+{
+"t": 12930.8,
+"scoreboard": "GRM 105/5 OVERS 17.5"
+},
+{
+"t": 12960.7,
+"scoreboard": "GRM 105/5 OVERS 17.5"
+},
+{
+"t": 12989.8,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12989.8,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12989.9,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12990,
+"scoreboard": null
+},
+{
+"t": 12990.8,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12991.5,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12991.5,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12991.5,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12992.8,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12992.8,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 12992.9,
+"scoreboard": "GRM 106/5"
+},
+{
+"t": 13020.6,
+"scoreboard": "GRM 107/5 OVERS 18.1"
+},
+{
+"t": 13050.5,
+"scoreboard": "GRM 107/5 OVERS 18.1"
+},
+{
+"t": 13082.6,
+"scoreboard": "GRM 107/5 OVERS 18.1"
+},
+{
+"t": 13110.9,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13125.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13125.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13125.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13125.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13126,
+"scoreboard": null
+},
+{
+"t": 13127.3,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13127.6,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13127.6,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13127.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13128.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13128.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13128.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13128.7,
+"scoreboard": "GRM 113/5 OVERS 18.3"
+},
+{
+"t": 13140.8,
+"scoreboard": "GRM 114/5"
+},
+{
+"t": 13171,
+"scoreboard": "GRM 114/5 OVERS 18.5"
+},
+{
+"t": 13200.8,
+"scoreboard": "GRM 114/5 OVERS 18.5"
+},
+{
+"t": 13231,
+"scoreboard": "GRM 114/5 OVERS 18.5"
+},
+{
+"t": 13260.8,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13290.7,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13320.8,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13350.6,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13380.8,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13411,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13440.7,
+"scoreboard": "GRM 114/6"
+},
+{
+"t": 13470,
+"scoreboard": null
+},
+{
+"t": 13500.8,
+"scoreboard": "GRM 115/7 OVERS 19.2"
+},
+{
+"t": 13530.9,
+"scoreboard": "GRM 115/7 OVERS 19.2"
+},
+{
+"t": 13560.9,
+"scoreboard": "GRM 115/8 OVERS 19.3"
+},
+{
+"t": 13590.7,
+"scoreboard": "GRM 115/8 OVERS 19.3"
+},
+{
+"t": 13621,
+"scoreboard": "GRM 115/8 OVERS 19.3"
+},
+{
+"t": 13650.8,
+"scoreboard": "GRM 115/8 OVERS 19.3"
+},
+{
+"t": 13680.8,
+"scoreboard": null
+},
+{
+"t": 13710.9,
+"scoreboard": null
+},
+{
+"t": 13740.7,
+"scoreboard": null
+},
+{
+"t": 13770.9,
+"scoreboard": null
+},
+{
+"t": 13800.8,
+"scoreboard": null
+},
+{
+"t": 13830.9,
+"scoreboard": null
+},
+{
+"t": 13861,
+"scoreboard": null
+},
+{
+"t": 13890.8,
+"scoreboard": null
+},
+{
+"t": 13921,
+"scoreboard": null
+},
+{
+"t": 13951,
+"scoreboard": null
+},
+{
+"t": 13980.9,
+"scoreboard": null
+},
+{
+"t": 14010.9,
+"scoreboard": null
+},
+{
+"t": 14040.7,
+"scoreboard": null
+},
+{
+"t": 14070.9,
+"scoreboard": null
+},
+{
+"t": 14100.9,
+"scoreboard": null
+},
+{
+"t": 14130.7,
+"scoreboard": null
+},
+{
+"t": 14160.8,
+"scoreboard": null
+},
+{
+"t": 14191,
+"scoreboard": null
+},
+{
+"t": 14220.8,
+"scoreboard": null
+},
+{
+"t": 14250.7,
+"scoreboard": null
+},
+{
+"t": 14280.7,
+"scoreboard": null
+},
+{
+"t": 14311,
+"scoreboard": null
+},
+{
+"t": 14341,
+"scoreboard": null
+},
+{
+"t": 14370.9,
+"scoreboard": null
+},
+{
+"t": 14400.9,
+"scoreboard": null
+},
+{
+"t": 14430.9,
+"scoreboard": null
+},
+{
+"t": 14461,
+"scoreboard": null
+},
+{
+"t": 14491,
+"scoreboard": null
+},
+{
+"t": 14520.8,
+"scoreboard": null
+},
+{
+"t": 14550.9,
+"scoreboard": null
+},
+{
+"t": 14580.9,
+"scoreboard": null
+},
+{
+"t": 14610.7,
+"scoreboard": null
+},
+{
+"t": 14640.9,
+"scoreboard": null
+},
+{
+"t": 14670.9,
+"scoreboard": null
+},
+{
+"t": 14701,
+"scoreboard": null
+},
+{
+"t": 14730.8,
+"scoreboard": null
+},
+{
+"t": 14760.7,
+"scoreboard": null
+},
+{
+"t": 14790.9,
+"scoreboard": null
+},
+{
+"t": 14820.8,
+"scoreboard": null
+},
+{
+"t": 14851,
+"scoreboard": null
+},
+{
+"t": 14881,
+"scoreboard": null
+},
+{
+"t": 14911,
+"scoreboard": null
+},
+{
+"t": 14941,
+"scoreboard": null
+},
+{
+"t": 14970.6,
+"scoreboard": null
+},
+{
+"t": 15000.5,
+"scoreboard": null
+},
+{
+"t": 15030.7,
+"scoreboard": null
+},
+{
+"t": 15060.9,
+"scoreboard": null
+},
+{
+"t": 15090.9,
+"scoreboard": null
+},
+{
+"t": 15120.5,
+"scoreboard": null
+},
+{
+"t": 15150.9,
+"scoreboard": null
+},
+{
+"t": 15180.9,
+"scoreboard": null
+},
+{
+"t": 15210.9,
+"scoreboard": null
+},
+{
+"t": 15240.9,
+"scoreboard": null
+},
+{
+"t": 15270.9,
+"scoreboard": null
+},
+{
+"t": 15300.8,
+"scoreboard": null
+},
+{
+"t": 15330.7,
+"scoreboard": null
+},
+{
+"t": 15361,
+"scoreboard": null
+}
+]

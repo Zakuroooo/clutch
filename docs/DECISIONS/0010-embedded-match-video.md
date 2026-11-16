@@ -15,8 +15,12 @@ match changes to one that does.
   It is never downloaded, re-hosted, clipped or drawn over. It starts only on a tap.
 - **Video time is the match timeline.** Each ball's time is when the video's on-screen
   scoreboard first shows it, found by reading the scoreboard (`model/src/video_sync.py`),
-  then bisected to about two seconds. Balls between readings are spread evenly. The result
-  and the evidence are in `data/matches/1539472/video_sync.json`.
+  then bisected to about two seconds, and moved 10 seconds earlier for the scoreboard's
+  delay (measured by eye: 9 and 12 seconds on two balls). 162 of 248 balls are pinned
+  this way, including 26 of the 33 call-back balls; the rest are spread evenly between
+  pinned neighbours. Method: `scripts/video-sync/README.md`. Result:
+  `data/matches/1539472/video_sync.json`. Evidence (what the scoreboard said, and when):
+  `scoreboard_readings.json` beside it.
 - While the tab is visible the **video leads the clock**; when the tab is hidden the clock
   leads, so Focus call-backs keep coming, and the video catches up on return
   (`lib/clock/follow.ts`).

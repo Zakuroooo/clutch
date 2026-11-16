@@ -48,3 +48,10 @@ def test_a_score_a_run_or_two_off_still_matches_the_ball():
     anchors, unresolved = anchors_from([{"now": 5.0, "text": line("1/0", "0.1")}, {"now": 9.0, "text": line("5/0", "0.2")}], ev, CODES)
     assert anchors == [(0, 5.0), (2, 9.0)]
     assert unresolved == []
+
+
+def test_before_the_first_ball_is_not_the_first_ball_when_that_is_a_wide():
+    ev = events([(1, 1, 0, 0), (1, 1, 0, 1)])  # a wide, then a dot
+    line = lambda sc, ov: f"x\tDNM\nx\t{sc}\nx\tOVERS {ov}\n"
+    anchors, _ = anchors_from([{"now": 5.0, "text": line("0/0", "0.0")}, {"now": 50.0, "text": line("1/0", "0.0")}], ev, CODES)
+    assert anchors == [(-1, 5.0), (0, 50.0)]
