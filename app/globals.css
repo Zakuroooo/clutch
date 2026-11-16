@@ -1253,7 +1253,71 @@ h3,
 .start-hero {
   text-align: center;
   padding-top: var(--s-2);
-  padding-bottom: var(--s-5);
+  padding-bottom: var(--s-4);
+}
+.start-lead {
+  max-width: 34ch;
+  margin-inline: auto;
+}
+.start-pulse .pulse-ring.sm {
+  width: 64px;
+  height: 64px;
+}
+.start-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  padding: var(--s-1) var(--s-4) var(--s-1) var(--s-1);
+  border-radius: var(--r-full);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-align: left;
+}
+.start-pulse b {
+  display: block;
+  font: 700 var(--t-body) / 1.2 var(--font-head);
+}
+.start-pulse span {
+  font-size: var(--t-small);
+  color: var(--muted);
+}
+.match-facts {
+  list-style: none;
+  display: grid;
+  gap: var(--s-1);
+  margin: 0 0 var(--s-4);
+  padding: var(--s-3) 0 0;
+  border-top: 1px solid var(--line);
+  font-size: var(--t-small);
+  color: var(--muted);
+  text-align: center;
+}
+.start-side {
+  display: grid;
+  gap: var(--s-4);
+}
+.start-steps {
+  display: grid;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+}
+.step {
+  display: grid;
+  gap: var(--s-1);
+}
+.step b {
+  font: 700 var(--t-body) / 1.25 var(--font-head);
+}
+.step-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: var(--s-1);
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .start-hero h1 {
   font-size: var(--t-score);
@@ -1274,7 +1338,7 @@ h3,
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: var(--s-3);
-  margin: var(--s-5) 0 var(--s-4);
+  margin: var(--s-4) 0 var(--s-3);
   text-align: center;
 }
 .match-teams > div {
@@ -1534,6 +1598,27 @@ h3,
   .start .start-hero {
     padding-top: var(--s-6);
   }
+  .start-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: var(--s-6);
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  .start-grid .wrap {
+    max-width: none;
+  }
+  .start-grid .start-hero {
+    text-align: left;
+  }
+  .start-grid .start-lead {
+    margin-inline: 0;
+  }
+  .start-steps {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1080px;
+  }
 }
 
 /* ---- Match video: YouTube's own player, nothing drawn over it ---- */
@@ -1564,11 +1649,13 @@ h3,
   color: var(--text);
 }
 .video-poster {
+  /* A drawn ground: outfield, the 30-yard ring and the pitch. No frame from the stream. */
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.55);
+  background:
+    linear-gradient(90deg, transparent 47%, color-mix(in srgb, var(--text) 18%, transparent) 47% 53%, transparent 53%) center / 100% 44% no-repeat,
+    radial-gradient(ellipse 34% 46% at 50% 50%, transparent 97%, color-mix(in srgb, var(--text) 16%, transparent) 98%, transparent 100%),
+    radial-gradient(ellipse at 50% 50%, color-mix(in srgb, var(--up) 30%, var(--page-edge)), var(--page-edge) 75%);
 }
 .video-start-label {
   position: relative;
