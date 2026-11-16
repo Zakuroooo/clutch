@@ -9,6 +9,18 @@ A second screen for casual sports fans. Get on with your work: Clutch calls you 
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
+**▶ Try it: [clutch-one-mu.vercel.app](https://clutch-one-mu.vercel.app)** and tap **Show me in 2 minutes**. No sign-up, no key, no permission prompt.
+
+### What you'll see in two minutes
+
+| When | What happens |
+|---|---|
+| 0:00 | The match opens a few balls before a big moment. The Pulse ring is calm: you could look away. |
+| ~0:20 | The ring fills and turns to **Look up**. In Focus mode this is when your phone would buzz. |
+| ~0:40 | The ball happens. A card explains it in football terms, with a drawing of what was recorded and how far the win chance moved. Tap **Say it plainly**, or **Read it out**. |
+| ~1:20 | **Moments** shows the one you missed while you were away, kept for you. |
+| ~1:40 | **Behind the scenes** shows what the model and the rules decided, ball by ball. At full time, **the wrap** shows the turning point. |
+
 <p>
   <img src="design/review/live/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
   <img src="design/review/live/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
