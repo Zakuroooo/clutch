@@ -11,7 +11,7 @@ const STEPS = 5;
  * and opens screens; everything shown is the real product on the real data.
  */
 export function DemoGuide() {
-  const { store, snap, open, openId } = useMatch();
+  const { store, snap, open, openId, data } = useMatch();
   const view = useMatchView();
   const router = useRouter();
   const path = usePathname();
@@ -56,9 +56,10 @@ export function DemoGuide() {
   };
 
   const text = [
-    view.pulse.state === "calm"
-      ? "This ring is all you need to watch. It's calm, so you can look away."
-      : "This ring is all you need to watch. It fills when a ball could change the match.",
+    (data.video && !store.hasVideo() ? "Tap the video to watch along. " : "") +
+      (view.pulse.state === "calm"
+        ? "This ring is all you need to watch. It's calm, so you can look away."
+        : "This ring is all you need to watch. It fills when a ball could change the match."),
     "This is the call-back. In Focus mode your phone would buzz now.",
     "Same facts, your language. Try Say it plainly.",
     "Everything you missed is kept here, with a drawing of what was recorded.",
