@@ -263,7 +263,9 @@ export function ExplanationCard({
             Every number here comes from the match data and is checked before you see it.
             {card?.source === "template"
               ? ` This wording is a fixed template${mine !== "plain" && !plain ? ` for ${WORLD_LABEL[mine].toLowerCase()}` : ""}, not written by an AI model.`
-              : ""}
+              : card
+                ? " An AI model wrote these words from those facts; code checked every number and name before showing them."
+                : ""}
           </p>
         </div>
         <div className="sheet-actions">
