@@ -4,7 +4,12 @@
  */
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { loadMatch, loadPulsePromise, replayMatchId } from "@/lib/adapters/cricket/load";
+import {
+  loadMatch,
+  loadModelInfo,
+  loadPulsePromise,
+  replayMatchId,
+} from "@/lib/adapters/cricket/load";
 import { CardsFileSchema, type CardsFile } from "@/lib/cards/schema";
 import type { MatchBundle } from "@/components/MatchProvider";
 
@@ -20,10 +25,11 @@ async function loadCards(matchId: string): Promise<CardsFile> {
 export async function getBundle(): Promise<MatchBundle> {
   "use cache";
   const id = await replayMatchId();
-  const [data, cards, promise] = await Promise.all([
+  const [data, cards, promise, model] = await Promise.all([
     loadMatch(id),
     loadCards(id),
     loadPulsePromise(),
+    loadModelInfo(),
   ]);
-  return { ...data, cards, promise };
+  return { ...data, cards, promise, model };
 }

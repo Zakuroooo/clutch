@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { canSpeak, speak, stopSpeaking } from "@/lib/client/speak";
 import type { Card, Facts } from "@/lib/cards/schema";
 import { CardSchema, cardKey } from "@/lib/cards/schema";
 import { useSettings, WORLD_LABEL, WORLD_TERMS } from "@/lib/client/settings";
@@ -10,6 +11,7 @@ import { Button } from "./Button";
 import { Crest } from "./Crest";
 import { Jersey } from "./Jersey";
 import { useMatch } from "./MatchProvider";
+import { IconSpeaker } from "./Icons";
 import { MiniReplay, REPLAY_CAPTION } from "./MiniReplay";
 import { StatTile } from "./StatTile";
 
@@ -102,6 +104,13 @@ export function ExplanationCard({
   const { card, loading } = useCard(momentId, world);
   const moment = data.moments.find((m) => m.id === momentId);
   const sheet = useRef<HTMLDivElement>(null);
+  const [speaking, setSpeaking] = useState(false);
+  const voiceOk = useSyncExternalStore(
+    () => () => {},
+    canSpeak,
+    () => false,
+  );
+  useEffect(() => () => stopSpeaking(), []);
 
   // A sheet traps focus and closes with Escape.
   useEffect(() => {
@@ -222,6 +231,28 @@ export function ExplanationCard({
             after={facts.chance_after}
             span={span}
           />
+          {voiceOk && card ? (
+            <button
+              type="button"
+              className="chip"
+              aria-pressed={speaking}
+              onClick={() => {
+                if (speaking) {
+                  stopSpeaking();
+                  setSpeaking(false);
+                  return;
+                }
+                setSpeaking(true);
+                speak(
+                  [card.headline, card.what, card.why, card.watch].filter(Boolean).join(" "),
+                  () => setSpeaking(false),
+                );
+              }}
+            >
+              <IconSpeaker />
+              {speaking ? "Stop reading" : "Read it out"}
+            </button>
+          ) : null}
           {card?.watch ? (
             <p className="small">
               <span className="muted">Watch for: </span>

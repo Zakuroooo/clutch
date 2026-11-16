@@ -13,7 +13,7 @@ import {
 } from "react";
 import { describeMoment, type MomentWords } from "@/lib/adapters/cricket/describe";
 import { facts as buildFacts } from "@/lib/adapters/cricket/facts";
-import type { MatchData, PulsePromise } from "@/lib/adapters/cricket/load";
+import type { MatchData, ModelInfo, PulsePromise } from "@/lib/adapters/cricket/load";
 import { scoreboardAt, segment, teamName } from "@/lib/adapters/cricket/scoreboard";
 import type { CardsFile, Facts } from "@/lib/cards/schema";
 import { MatchStore, SERVER_SNAPSHOT, type Snapshot } from "@/lib/client/matchStore";
@@ -25,7 +25,11 @@ import { missedMoments, shelfAt } from "@/lib/engine/shelf";
 import type { Alert, Moment, ScoreboardView } from "@/lib/engine/types";
 import { registerServiceWorker, restoreTitle, sendCallback } from "@/lib/notify";
 
-export type MatchBundle = MatchData & { cards: CardsFile; promise: PulsePromise | null };
+export type MatchBundle = MatchData & {
+  cards: CardsFile;
+  promise: PulsePromise | null;
+  model: ModelInfo | null;
+};
 
 type Ctx = {
   data: MatchBundle;

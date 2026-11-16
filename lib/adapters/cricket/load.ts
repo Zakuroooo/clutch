@@ -52,6 +52,35 @@ const PulseEvalSchema = z.object({
   ),
 });
 
+/** The shipped model's headline numbers, for the Behind the scenes panel. */
+export type ModelInfo = {
+  name: string;
+  brier: number;
+  baseline_brier: number;
+  test_matches: number;
+};
+
+export async function loadModelInfo(): Promise<ModelInfo | null> {
+  const raw = await readOptional(path.join(process.cwd(), "model", "artifacts", "metrics.json"));
+  const parsed = z
+    .object({
+      shipped: z.string(),
+      test_matches: z.number(),
+      models: z.record(z.string(), z.object({ name: z.string(), brier: z.number() })),
+    })
+    .safeParse(raw);
+  if (!parsed.success) return null;
+  const shipped = parsed.data.models[parsed.data.shipped];
+  const baseline = parsed.data.models.baseline_run_rate;
+  if (!shipped || !baseline) return null;
+  return {
+    name: shipped.name.replace(/^Model \d: /, ""),
+    brier: shipped.brier,
+    baseline_brier: baseline.brier,
+    test_matches: parsed.data.test_matches,
+  };
+}
+
 export async function loadPulsePromise(): Promise<PulsePromise | null> {
   const raw = await readOptional(path.join(process.cwd(), "model", "artifacts", "pulse_eval.json"));
   const parsed = PulseEvalSchema.safeParse(raw);

@@ -21,6 +21,7 @@ const bundle: MatchBundle = {
   players: {},
   cards: {},
   promise: null,
+  model: null,
 };
 
 const GOOD = {
