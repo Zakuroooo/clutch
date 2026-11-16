@@ -9,7 +9,8 @@ import { useMatch, useMatchView } from "@/components/MatchProvider";
 import { MatchVideo } from "@/components/MatchVideo";
 import { MomentCard } from "@/components/MomentCard";
 import { PulseCard } from "@/components/PulseCard";
-import { ScoreCard } from "@/components/ScoreCard";
+import { ScoreStrip } from "@/components/ScoreStrip";
+import { CommentaryFeed } from "@/components/CommentaryFeed";
 import { WinBar, WinWorm } from "@/components/WinBar";
 import { useSettings, WORLD_LABEL } from "@/lib/client/settings";
 import { useWide } from "@/lib/client/useWide";
@@ -36,153 +37,197 @@ export default function MatchPage() {
   const moreMoments = data.moments.some((m) => m.i > snap.index);
   const matchChapters = chapters(ticks, match);
 
-  // On a laptop the Pulse leads the right column, beside the video; on a phone it sits
-  // under the score card. Rendered once, so the live region is announced once.
+  // One block per part of the screen, placed differently on a phone and a laptop.
   const pulse = (
-    <PulseCard pulse={view.pulse} lookUp={view.callback?.line ?? null}>
-      <WinWorm points={worm} />
+    <PulseCard
+      pulse={view.pulse}
+      lookUp={view.callback?.line ?? null}
+      layout={wide ? "stack" : "row"}
+    >
+      {wide ? <WinWorm points={worm} /> : null}
       <WinBar a={a} b={b} chanceA={view.chanceA} />
     </PulseCard>
   );
 
   if (!snap.ready) return <MatchSkeleton />;
 
+  const video = data.video ? (
+    <div className="wrap">
+      <MatchVideo video={data.video} />
+    </div>
+  ) : null;
+
+  const score = (
+    <div className="wrap">
+      <ScoreStrip
+        title={title}
+        right={view.overText}
+        view={view.scoreboard}
+        progress={view.progress}
+      />
+    </div>
+  );
+
+  const thisOver = (
+    <section className="wrap over-block" aria-label="This over">
+      <div className="over-head">
+        <h2>This over</h2>
+        <span className="small muted num">
+          {view.over.label}
+          {view.phase === "play" && view.nextBallIn !== null && !data.video
+            ? ` · next ball in ${view.nextBallIn}s`
+            : ""}
+        </span>
+      </div>
+      <BallChips cells={view.over.cells} spoken={view.over.spoken} />
+    </section>
+  );
+
+  const controls = (
+    <div className="chiprow controls">
+      {view.phase === "finished" ? (
+        <button type="button" className="chip" onClick={() => store.restart()}>
+          <IconRestart />
+          Watch again
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="chip"
+          onClick={() => store.skipAhead()}
+          disabled={!moreMoments}
+          data-testid="skip"
+        >
+          <IconSkip />
+          Skip ahead
+        </button>
+      )}
+      <button
+        type="button"
+        className="chip"
+        onClick={() => {
+          const speeds = store.hasVideo() ? VIDEO_SPEEDS : CLOCK_SPEEDS;
+          store.setSpeed(speeds[(speeds.indexOf(speed) + 1) % speeds.length] ?? 1);
+        }}
+        aria-label={`Replay speed ${speed} times. Tap to change.`}
+      >
+        <IconSpeed />
+        <span className="num">{speed === 0 ? "Paused" : `${speed}×`}</span>
+      </button>
+      <Link href="/world" className="chip">
+        <IconWorld />
+        {settings.world
+          ? WORLD_LABEL[settings.world].replace("Keep it plain", "Plain")
+          : "Your world"}
+      </Link>
+    </div>
+  );
+
+  const justHappened = (
+    <section aria-label={view.phase === "finished" ? "Match summary" : "Just happened"}>
+      <div className="sec">
+        <h2>{view.phase === "finished" ? "Match summary" : "Just happened"}</h2>
+        <Link href="/match/moments" className="link">
+          All moments
+        </Link>
+      </div>
+      <div className="wrap">
+        {latest && words && facts ? (
+          <MomentCard
+            key={latest.id}
+            moment={latest}
+            badge={words.badge}
+            title={data.cards[`${latest.id}:${settings.world ?? "plain"}`]?.headline ?? words.title}
+            line={words.line}
+            swing={{
+              code: codeOf(match, facts.chance_team),
+              points: facts.chance_after - facts.chance_before,
+            }}
+            arrive
+            onOpen={() => open(latest.id)}
+          />
+        ) : (
+          <div className="card pad">
+            <p className="card-title">Nothing big yet</p>
+            <p className="small muted" style={{ marginTop: "var(--s-1)" }}>
+              When something happens, it lands here and is kept in Moments.
+            </p>
+          </div>
+        )}
+        {view.phase === "finished" ? (
+          <Link href="/match/wrap" className="btn ghost wide" style={{ marginTop: "var(--s-3)" }}>
+            <IconTrophy />
+            See the match wrap
+          </Link>
+        ) : null}
+      </div>
+    </section>
+  );
+
+  const jumpTo = (
+    <section aria-label="Jump to">
+      <div className="sec">
+        <h2>Jump to</h2>
+      </div>
+      <div className="chiprow chapters">
+        {matchChapters.map((c) => (
+          <button
+            key={c.label}
+            type="button"
+            className="chapter"
+            onClick={() => store.jumpTo(Math.max(0, data.ticks[c.i].t_ms - CHAPTER_LEAD_MS))}
+          >
+            <b>{c.label}</b>
+            <span>{c.sub}</span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+
+  const feed = (
+    <div className="wrap block-gap">
+      <CommentaryFeed />
+    </div>
+  );
+  const engine = (
+    <div className="wrap block-gap">
+      <EngineLog />
+    </div>
+  );
+
   return (
     <main>
       <AppBar />
-      <div className="match-grid">
-        <div className="stage">
-          {data.video ? (
-            <div className="wrap">
-              <MatchVideo video={data.video} />
-            </div>
-          ) : null}
-          <div className="wrap stack">
-            <ScoreCard
-              title={title}
-              right={view.overText}
-              view={view.scoreboard}
-              progress={view.progress}
-            />
-            {wide ? null : pulse}
+      {wide ? (
+        <div className="match-grid">
+          <div className="stage">
+            {video}
+            {score}
+            {controls}
+            {thisOver}
+            {jumpTo}
+            {feed}
           </div>
-
-          <div className="chiprow" style={{ marginTop: "var(--s-3)" }}>
-            {view.phase === "finished" ? (
-              <button type="button" className="chip" onClick={() => store.restart()}>
-                <IconRestart />
-                Watch again
-              </button>
-            ) : (
-              <button
-                type="button"
-                className="chip"
-                onClick={() => store.skipAhead()}
-                disabled={!moreMoments}
-                data-testid="skip"
-              >
-                <IconSkip />
-                Skip ahead
-              </button>
-            )}
-            <button
-              type="button"
-              className="chip"
-              onClick={() => {
-                const speeds = store.hasVideo() ? VIDEO_SPEEDS : CLOCK_SPEEDS;
-                store.setSpeed(speeds[(speeds.indexOf(speed) + 1) % speeds.length] ?? 1);
-              }}
-              aria-label={`Replay speed ${speed} times. Tap to change.`}
-            >
-              <IconSpeed />
-              <span className="num">{speed === 0 ? "Paused" : `${speed}×`}</span>
-            </button>
-            <Link href="/world" className="chip">
-              <IconWorld />
-              {settings.world
-                ? WORLD_LABEL[settings.world].replace("Keep it plain", "Plain")
-                : "Your world"}
-            </Link>
-          </div>
-
-          <div className="sec">
-            <h2>Jump to</h2>
-          </div>
-          <div className="chiprow chapters">
-            {matchChapters.map((c) => (
-              <button
-                key={c.label}
-                type="button"
-                className="chapter"
-                onClick={() => store.jumpTo(Math.max(0, data.ticks[c.i].t_ms - CHAPTER_LEAD_MS))}
-              >
-                <b>{c.label}</b>
-                <span>{c.sub}</span>
-              </button>
-            ))}
-          </div>
-
-          <div className="sec">
-            <h2>This over</h2>
-            <span className="small muted num">
-              {view.over.label}
-              {view.phase === "play" && view.nextBallIn !== null && !data.video
-                ? ` · next ball in ${view.nextBallIn}s`
-                : ""}
-            </span>
-          </div>
-          <BallChips cells={view.over.cells} spoken={view.over.spoken} />
-        </div>
-
-        <div className="side">
-          {wide ? <div className="wrap side-pulse">{pulse}</div> : null}
-          <div className="sec">
-            <h2>{view.phase === "finished" ? "Match summary" : "Just happened"}</h2>
-            <Link href="/match/moments" className="link">
-              All moments
-            </Link>
-          </div>
-          <div className="wrap">
-            {latest && words && facts ? (
-              <MomentCard
-                key={latest.id}
-                moment={latest}
-                badge={words.badge}
-                title={
-                  data.cards[`${latest.id}:${settings.world ?? "plain"}`]?.headline ?? words.title
-                }
-                line={words.line}
-                swing={{
-                  code: codeOf(match, facts.chance_team),
-                  points: facts.chance_after - facts.chance_before,
-                }}
-                arrive
-                onOpen={() => open(latest.id)}
-              />
-            ) : (
-              <div className="card pad">
-                <p className="card-title">Nothing big yet</p>
-                <p className="small muted" style={{ marginTop: "var(--s-1)" }}>
-                  When something happens, it lands here and is kept in Moments.
-                </p>
-              </div>
-            )}
-            {view.phase === "finished" ? (
-              <Link
-                href="/match/wrap"
-                className="btn ghost wide"
-                style={{ marginTop: "var(--s-3)" }}
-              >
-                <IconTrophy />
-                See the match wrap
-              </Link>
-            ) : null}
-          </div>
-          <div className="wrap" style={{ marginTop: "var(--s-4)" }}>
-            <EngineLog />
+          <div className="side">
+            <div className="wrap side-pulse">{pulse}</div>
+            {justHappened}
+            {engine}
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="phone-stack">
+          {video}
+          {score}
+          <div className="wrap">{pulse}</div>
+          {thisOver}
+          {controls}
+          {justHappened}
+          {feed}
+          {jumpTo}
+          {engine}
+        </div>
+      )}
       {!snap.durable ? (
         <p className="note">Private mode: progress won&apos;t survive a refresh.</p>
       ) : null}

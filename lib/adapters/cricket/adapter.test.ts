@@ -237,3 +237,25 @@ describe("chapters", () => {
     expect(JSON.stringify(list)).not.toMatch(/won|wicket|out\b|six|four/i);
   });
 });
+
+describe("commentary", () => {
+  test("says what the data says, ball by ball", async () => {
+    const { commentary } = await import("./commentary");
+    const lines = commentary(fixtureTicks, 6, fixtureMatch, 7);
+    expect(lines.map((l) => [l.over, l.result, l.tone])).toEqual([
+      ["0.6", "2 runs", "plain"],
+      ["0.5", "SIX", "six"],
+      ["0.4", "OUT, bowled", "wicket"],
+      ["0.3", "no run", "plain"],
+      ["0.3", "wide", "extra"],
+      ["0.2", "FOUR", "four"],
+      ["0.1", "1 run", "plain"],
+    ]);
+    expect(lines[2].who).toBe("Yarrow to Bexley");
+    expect(lines[0].score).toBe("Alphas 14/1");
+  });
+  test("a catch names the fielder", async () => {
+    const { commentaryLine } = await import("./commentary");
+    expect(commentaryLine(fixtureTicks[15], fixtureMatch).result).toBe("OUT, caught by Glover");
+  });
+});
