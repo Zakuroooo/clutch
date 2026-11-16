@@ -245,3 +245,11 @@ Components added: **Chip row** on the Match tab (Focus, Skip ahead, replay speed
 A test (`components/pulse.test.tsx`) fails if a pulse token is used outside the ring, the Pulse card, the brand dot, the hot, missed and replay badges, the missed count, the call-back banner or the "moments waiting" number.
 
 After the design critic's review (15 Nov): the ring got more room inside (the word no longer touches the arc), only the major dial ticks light up, the hot state adds an outer glow and stronger waves so "Look up" is clearly louder than "Building", the win bar is flat and a shade darker so the ring is the brightest thing on the card, the coach card is a dark surface instead of a white slab, inactive tabs and captions use `--muted` for contrast, `--calm` was lightened so a calm arc is visible on its track, the 600 ms Pulse transitions became the token `--d-pulse` (covered by reduced motion), and the score card keeps its strip in innings 1 so the Pulse does not jump when the chase starts. Critic items not done yet: literal layout offsets in the stylesheet (`.cta-bar`, `.coach`, `.screen`), the crest halo, and reordering the explanation card so its buttons fit one screen.
+
+## 12. Added on 16 Nov
+
+- **MatchVideo**: a 16:9 frame with `--r-card` corners and a `--line` border; before play, the thumbnail dimmed to 55% with a pill button; a `--t-micro` credit line under it. Nothing overlays the player.
+- **Chapter**: a 48 px tile on `--surface` with a bold title and a muted line, in a scrolling row.
+- **Engine log**: a card with a definition list (model, cut-offs, next ball) and rows of over, outcome glyph, stakes, win-chance move (green or red), and small `--surface-2` tags.
+- **Wrap**: a hero with both crests and the result, three stat tiles, then moment cards.
+- **Wide layout**: from 1024 px the body is 1180 px; the Match tab is a 1fr + 420 px grid; the tab bar, CTA bar and coach card stay 430 px wide and centred.

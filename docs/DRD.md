@@ -191,3 +191,40 @@ Pulse words: **Calm** (keep working) · **Building** (something's starting) · *
 6. The demo ends on the Match tab with the "Skip ahead" chip and one line: "Try Focus, or start a room and share the code."
 
 The demo uses the same code paths as the product. It only moves the clock.
+
+## 8. Added on 16 Nov
+
+### 8.1 The match video (video branch)
+On the Match tab, above the score card: the match video in YouTube's own player, 16:9, with
+a credit line naming the channel. Before a tap it shows the stream's thumbnail and a
+**Watch the match video** button; nothing is drawn over the player once it plays.
+
+| State | What the fan sees |
+|---|---|
+| Not started | Thumbnail, the button, the credit line. The replay runs on its clock meanwhile. |
+| Playing | The player leads the clock: pause the video and the Pulse waits; seek and the score follows. |
+| Tab hidden | The clock carries on so call-backs still come; the video is moved to the clock on return. |
+| Failed | "The video can't play here. The replay carries on with its own clock, ball for ball." |
+
+### 8.2 Laptop layout
+From 1024 px wide the Match tab is two columns: the video, score card, Pulse, chips and this
+over on the left (sticky), Just happened and Behind the scenes on the right.
+
+### 8.3 Jump to
+Three chapters under the chips: The start, The chase, The last five overs. Labels say where a
+part begins, never what happens in it.
+
+### 8.4 Behind the scenes
+A card on the Match tab: the shipped model and its test score, the Pulse cut-offs, the next
+ball's stakes, and for the last eight balls: stakes, the win-chance move, and tags for a
+call-back, a moment and how its card was made.
+
+### 8.5 The wrap
+`/match/wrap`, linked from the finished state: the result, how many big moments you saw and
+missed, the turning point (the moment that moved the win chance most) and the three biggest
+moments, each opening its card.
+
+### 8.6 Read it out and Hinglish
+Every card has **Read it out** (the browser's own voice; an Indian English voice when the
+device has one). Hinglish is a seventh choice on Pick your world: the same facts, said the way
+friends talk, in Roman script.
