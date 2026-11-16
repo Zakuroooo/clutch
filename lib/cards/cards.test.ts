@@ -249,3 +249,21 @@ describe("templates", () => {
     expect(plainTemplate(facts_).why).toContain("86 to 72");
   });
 });
+
+describe("R4 and the match's own names", () => {
+  test("a player whose name is on a deny-list is allowed when the facts name them", () => {
+    const base = f("m_25");
+    const facts_ = {
+      ...base,
+      batter: "Anand Kumar",
+      names: [...base.names, "Anand Kumar", "Kumar", "Anand"],
+    };
+    const card = { ...plainTemplate(facts_), headline: "Anand Kumar walks out." };
+    expect(check(card, facts_, {}, "plain", [])).toEqual({ ok: true });
+    // The famous one is still blocked when the match has no such player.
+    expect(check({ ...card, headline: "Anand walks out." }, base, {}, "plain", [])).toMatchObject({
+      ok: false,
+      rule: "R4",
+    });
+  });
+});

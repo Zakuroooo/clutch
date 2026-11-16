@@ -71,9 +71,14 @@ function checkMatchNames(text: string, facts: Facts, matchNames: readonly string
 
 /** R4. No real people, clubs, films or games from the analogy world. */
 function checkWorldNames(text: string, facts: Facts, world: World): CheckResult {
+  // A deny-listed word that is also a person or team in this moment's facts is that
+  // person, not the famous one ("Anand" can be a player in the match).
+  const ownWords = new Set(facts.names.flatMap((n) => n.toLowerCase().split(/\s+/)));
   for (const w of WORLDS) {
-    for (const entry of DENY[w])
+    for (const entry of DENY[w]) {
+      if (ownWords.has(entry.toLowerCase())) continue;
       if (wholeWord(entry).test(text)) return fail("R4", `"${entry}" is a real name from ${w}`);
+    }
   }
   const known = new Set<string>(ORDINARY_CAPITALS.map((w) => w.toLowerCase()));
   for (const name of facts.names)
