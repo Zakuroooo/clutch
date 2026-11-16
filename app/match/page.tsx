@@ -95,7 +95,7 @@ export default function MatchPage() {
               aria-label={`Replay speed ${speed} times. Tap to change.`}
             >
               <IconSpeed />
-              <span className="num">{speed}×</span>
+              <span className="num">{speed === 0 ? "Paused" : `${speed}×`}</span>
             </button>
             <Link href="/world" className="chip">
               <IconWorld />

@@ -8,7 +8,7 @@ Casual fans watch with the match beside their work. They look away, miss the one
 
 How Clutch helps.
 
-One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf with a drawn replay, explained in a world you already know: football, F1, chess, Bollywood or gaming. Code builds and checks every number. It replays a real IPL match as if live; there are no real users yet.
+One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf, explained in a world you already know: football, F1, chess, Bollywood, gaming or Hinglish. Code builds and checks every number. It replays a real T20I with its full match video, every ball synced; there are no real users yet.
 
 AI used.
 

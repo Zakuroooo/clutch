@@ -33,7 +33,7 @@ const margin = Object.entries(timeline.result.by)
   .map(([k, v]) => `${v} ${k}`)
   .join("");
 const img = (name) =>
-  `data:image/png;base64,${readFileSync(`design/review/live/${name}.png`).toString("base64")}`;
+  `data:image/png;base64,${readFileSync(`design/review/${name}.png`).toString("base64")}`;
 
 // ---------------------------------------------------------------- the 200-word note
 const NOTE = [
@@ -47,7 +47,7 @@ const NOTE = [
   ["b", "How Clutch helps."],
   [
     "p",
-    `One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf with a drawn replay, explained in a world you already know: football, F1, chess, Bollywood or gaming. Code builds and checks every number. It replays a real IPL match as if live; there are no real users yet.`,
+    `One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf, explained in a world you already know: football, F1, chess, Bollywood, gaming or Hinglish. Code builds and checks every number. It replays a real T20I with its full match video, every ball synced; there are no real users yet.`,
   ],
   ["b", "AI used."],
   [
@@ -115,31 +115,35 @@ const artifactHtml = page(
   `${brand}<h1>Working artifact</h1>
 <div class="kicker">Pranay Sarkar · Dream11 Forward Deployed Engineer internship assignment</div>
 <div class="cta"><b>Open on a phone: ${liveLink}</b><br>Tap <b>Show me in 2 minutes</b>. No sign-up, no download, no permission prompt.</div>
-<p>Clutch is a second screen for casual cricket fans. It replays one real match as if it were live: <b>${matchName}</b>, ${timeline.event.name}, ${matchDate} (${winnerName} won by ${margin}). Ball-by-ball data from Cricsheet.</p>
+<p>Clutch is a second screen for casual cricket fans. It replays one real match as if it were live: <b>${matchName}</b>, 1st T20I, ${matchDate} (${winnerName} won by ${margin}), with the full match video from the host ground's stream, played in YouTube's own player and synced ball by ball to Cricsheet data. Best on a laptop; works on a phone.</p>
+<p><img src="${img("video-1280")}" style="width:100%;border-radius:10px;border:1px solid #dde1ea" alt=""></p>
+<p class="src">On a laptop: the match video, the score, the Pulse ring and Behind the scenes, side by side.</p>
 <h2>Try it in 2 minutes</h2>
 <ol>
-<li>Open the link and tap <b>Show me in 2 minutes</b>. A short guide walks you through.</li>
+<li>Open the link and tap <b>Show me in 2 minutes</b>. A short guide walks you through. Tap the video to watch along.</li>
 <li><b>The Pulse.</b> Watch the ring fill and turn to “Look up” a few balls before a big moment. In Focus mode this is when your phone would buzz.</li>
 <li><b>The card.</b> The ball happens and a card explains it in football terms. Tap <b>Say it plainly</b> to switch to plain words.</li>
 <li><b>Moments.</b> The shelf shows the moment you missed, with a drawing of what was recorded.</li>
+<li><b>Behind the scenes</b> shows what the model and the rules decided for each ball. At full time, <b>the wrap</b> shows the turning point.</li>
 </ol>
-<p class="small">After the demo: open <b>Focus</b>, pick how often to be called back, turn it on and switch tabs; <b>Skip ahead</b> jumps to the next big moment; the globe chip changes your world.</p>
+<p class="small">After the demo: open <b>Focus</b>, pick how often to be called back, turn it on and switch tabs; <b>Skip ahead</b> jumps to the next big moment; the globe chip changes your world (Hinglish included); <b>Read it out</b> speaks a card; <b>Jump to</b> moves to the start, the chase or the last five overs.</p>
 <div class="shots">
-<figure><img src="${img("04-demo-callback")}"><figcaption>The Pulse says “Look up” before the ball.</figcaption></figure>
-<figure><img src="${img("05-demo-card")}"><figcaption>The moment, explained in football terms.</figcaption></figure>
-<figure><img src="${img("07-moments")}"><figcaption>Moments: what you missed, kept for you.</figcaption></figure>
-<figure><img src="${img("09-focus")}"><figcaption>Focus: get on with work, get called back.</figcaption></figure>
+<figure><img src="${img("video/04-demo-callback")}"><figcaption>The Pulse says “Look up” before the ball.</figcaption></figure>
+<figure><img src="${img("video/05-demo-card")}"><figcaption>The moment, explained in football terms.</figcaption></figure>
+<figure><img src="${img("video/07-moments")}"><figcaption>Moments: what you missed, kept for you.</figcaption></figure>
+<figure><img src="${img("video/09-focus")}"><figcaption>Focus: get on with work, get called back.</figcaption></figure>
 </div>
-<p class="src">Screenshots of the deployed app at 390 × 844. Players are drawn as jerseys, never faces. No video, no money, no prizes.</p>
+<p class="src">Screenshots of the app at 390 × 844. Clutch never draws a real player: players are jerseys. The video is the original stream in YouTube’s player, credited, never downloaded or clipped. No money, no prizes.</p>
 <h2>What is built</h2>
 <table>
 <tr><th>Feature</th><th>State</th></tr>
-<tr><td>Match clock and scoreboard (a replay on a clock, so a refresh loses nothing)</td><td>Built</td></tr>
+<tr><td>The full match video, every ball synced to the data (the video leads; if it cannot play, the replay runs on its own clock)</td><td>Built</td></tr>
+<tr><td>Match clock and scoreboard (a refresh loses nothing)</td><td>Built</td></tr>
 <tr><td>Win-probability model and stakes for every ball</td><td>Built</td></tr>
 <tr><td>The Pulse and Focus mode call-backs (notification, vibration, tab title)</td><td>Built. Notifications need the tab open</td></tr>
 <tr><td>Moment shelf, drawn replay, Catch me up</td><td>Built</td></tr>
 <tr><td>Cards in your world, with a code check on every number and name</td><td>Built. Wording comes from checked templates; an LLM writer is built behind the same check but not switched on</td></tr>
-<tr><td>Two-minute guided demo</td><td>Built</td></tr>
+<tr><td>Two-minute guided demo, laptop layout, Behind the scenes, the match wrap, read-aloud, Hinglish</td><td>Built</td></tr>
 <tr><td>Rooms with friends, reactions, per-over calls, Back me up</td><td>Designed, not built</td></tr>
 </table>
 <h2>Code</h2>
@@ -196,7 +200,8 @@ ${prow("notable", "Everything")}
 <p>${tests.unit_and_integration.passed} unit and integration tests, ${tests.python.passed} Python tests and ${tests.end_to_end.passed} end-to-end browser tests at phone size, all passing, locally and in GitHub Actions. <span class="src">Source: evals/results/tests.json.</span></p>
 <h2>Limits, said plainly</h2>
 <ul>
-<li>It is a replay of one past match on a clock, not a live feed. It has no real users, so the idea is untested with fans.</li>
+<li>It is a replay of one past match with its video, not a live feed. It has no real users, so the idea is untested with fans.</li>
+<li>Ball times come from reading the video’s own scoreboard: 162 of 248 balls are pinned to it directly (26 of 33 call-back balls); the rest are spread evenly between them.</li>
 <li>The model knows the score situation only, not who is batting. “Biggest swings” are measured by the same model, so the Pulse numbers are optimistic.</li>
 <li>Call-backs need the page open (in front or in a background tab). Push with the app closed is designed, not built.</li>
 <li>Card wording is from checked templates. An LLM writer is built behind the same check but has not been run.</li>
@@ -233,6 +238,7 @@ const aiHtml = page(
 <tr><td>The first replay match it picked was tense for the whole chase, so the Pulse never went from calm to “Look up”</td><td>Walking the demo; switched to a match with a calm start and a tight finish, which I then chose</td></tr>
 <tr><td>Its own template cards broke its own check</td><td>The tests</td></tr>
 <tr><td>The CI workflow it wrote had never run because of an invalid condition</td><td>The first push; fixed, now green</td></tr>
+<tr><td>The first video sync matched the score exactly, but the stream’s scorer sometimes misses a wide that the data records, so many readings were dropped</td><td>Reading the unmatched readings; matching now allows a few runs’ difference</td></tr>
 <tr><td>The Pulse word touched its ring, and “Look up” looked too like “Building”</td><td>The design-critic agent reading real screenshots</td></tr>
 </table>`,
 );

@@ -112,7 +112,12 @@ export class MatchStore {
     this.video = link;
   }
   detachVideo(link: VideoLink) {
-    if (this.video === link) this.video = null;
+    if (this.video !== link) return;
+    this.video = null;
+    // The video may have paused the clock (loading, buffering). Without it, play on.
+    if (this.session.anchor.speed === 0) {
+      this.update({ ...this.session, anchor: setSpeed(this.session.anchor, this.now(), 1) });
+    }
   }
   hasVideo(): boolean {
     return this.video !== null;
