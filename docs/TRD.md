@@ -417,7 +417,7 @@ create table public.members (
   room_id    uuid not null references public.rooms(id) on delete cascade,
   user_id    uuid not null,
   name       text not null check (char_length(name) between 1 and 24),
-  world      text not null check (world in ('football','f1','chess','bollywood','gaming','plain')),
+  world      text not null check (world in ('football','f1','chess','bollywood','gaming','hinglish','plain')),
   is_host    boolean not null default false,
   joined_at  timestamptz not null default now(),
   unique (room_id, user_id)

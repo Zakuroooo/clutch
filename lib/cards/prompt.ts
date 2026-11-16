@@ -6,7 +6,7 @@ import type { World } from "@/lib/engine/types";
 import type { Anchors } from "./anchors";
 import type { Facts } from "./schema";
 
-export const PROMPT_VERSION = "p1";
+export const PROMPT_VERSION = "p2";
 
 export function systemPrompt(sport: string): string {
   return `You write one short explanation card for a casual fan watching a ${sport} match.
@@ -20,7 +20,7 @@ Rules:
 - No betting or gambling words. No insults.
 - "headline": at most 45 characters. A spoken line that says what it means for the match. End with a full stop.
 - "what": one sentence of plain fact, at most 120 characters.
-- "why": at most 220 characters. If WORLD is not "plain", explain why this matters as an analogy from WORLD, using ANCHORS where a number helps. If WORLD is "plain", explain it in everyday words with no ${sport} jargon.
+- "why": at most 220 characters. If WORLD is not "plain", explain why this matters as an analogy from WORLD, using ANCHORS where a number helps. If WORLD is "plain", explain it in everyday words with no ${sport} jargon. If WORLD is "hinglish", write every field in natural Hinglish (Hindi and English mixed, Roman script, the way friends talk), with no analogy.
 - "watch": one thing to look for next, at most 90 characters, or null.
 - "used_facts": the names of the FACTS fields you relied on.
 Return only JSON matching the schema.`;

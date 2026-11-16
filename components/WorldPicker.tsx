@@ -14,6 +14,7 @@ const SAMPLE: Record<World, string> = {
   chess: "Like giving up your queen in the endgame.",
   bollywood: "Like the twist right before the interval.",
   gaming: "Like the final boss with one life left.",
+  hinglish: "Seedhi baat, apni bhasha mein. Jaise dost batate hain.",
   plain: "No comparisons. Just what happened and why it matters.",
 };
 
@@ -47,6 +48,12 @@ const ICON: Record<World, React.ReactNode> = {
     <>
       <path d="M7 8h10a4 4 0 0 1 4 4v3a2.500 2.500 0 0 1-4.600 1.400L15 15H9l-1.400 1.400A2.500 2.500 0 0 1 3 15v-3a4 4 0 0 1 4-4Z" />
       <path d="M7.500 10.500v3M6 12h3M16 11.500h.010M18 13h.010" />
+    </>
+  ),
+  hinglish: (
+    <>
+      <path d="M4 5h16v11H9l-5 4V5Z" />
+      <path d="M8 9.500h8M8 12.500h5" />
     </>
   ),
   plain: (

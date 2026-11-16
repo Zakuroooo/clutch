@@ -35,6 +35,7 @@ export const WORLD_LABEL: Record<World, string> = {
   chess: "Chess",
   bollywood: "Bollywood",
   gaming: "Gaming",
+  hinglish: "Hinglish",
   plain: "Keep it plain",
 };
 
@@ -45,5 +46,6 @@ export const WORLD_TERMS: Record<World, string> = {
   chess: "In chess terms",
   bollywood: "In Bollywood terms",
   gaming: "In gaming terms",
+  hinglish: "In Hinglish",
   plain: "In plain words",
 };

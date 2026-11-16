@@ -4,7 +4,7 @@
  * purpose: a false failure costs nothing (the fan gets a correct template); a false
  * pass shows a wrong fact.
  */
-import { WORLDS, type World } from "@/lib/engine/types";
+import { PLAIN_WORLDS, WORLDS, type World } from "@/lib/engine/types";
 import type { Anchors } from "./anchors";
 import { ABUSE, BANNED, DENY, FIXED_PHRASES, ORDINARY_CAPITALS, VOCAB } from "./lists";
 import { CardTextSchema, FACT_FIELDS, type CardText, type Facts } from "./schema";
@@ -23,7 +23,8 @@ const NUMBER_WORDS: Record<string, number> = {
   eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, hundred: 100,
 }; // prettier-ignore
 
-const RESULT_WORDS = /\b(won|wins the match|have won|has won|victory is theirs)\b/i;
+const RESULT_WORDS =
+  /\b(won|wins the match|have won|has won|victory is theirs|jeet gaye|jeet gayi|jeet liya|jeet gaya)\b/i;
 const AHEAD = ["on top", "in control", "favourites", "cruising", "ahead now", "take charge"];
 const BEHIND = ["in trouble", "collapsing", "slipping", "lose their grip"];
 
@@ -152,7 +153,7 @@ export function check(
     // R9. The analogy is one; a plain card is plain.
     () => {
       const why = parsed.data.why;
-      if (world !== "plain") {
+      if (!PLAIN_WORLDS.includes(world)) {
         return VOCAB[world].some((w) => wholeWord(w).test(why))
           ? { ok: true }
           : fail("R9", `the why line has no ${world} word`);

@@ -34,6 +34,118 @@ function swingHeadline(f: Facts): string {
   return line.length <= 45 ? line : `${f.runs_off_ball} off one ball.`;
 }
 
+/** The Hinglish template: the same facts, said the way friends say it (Roman script). */
+export function hinglishTemplate(f: Facts): CardText {
+  const inChase =
+    f.kind !== "innings_end" &&
+    f.kind !== "result" &&
+    f.needed !== null &&
+    f.balls_left !== null &&
+    f.needed > 0;
+  const watch = inChase
+    ? `${f.batting_team} ko ${f.balls_left} ball mein ${f.needed} chahiye.`
+    : null;
+  const used = (...fields: (keyof Facts)[]) => [
+    ...fields,
+    ...(watch ? (["needed", "balls_left"] as const) : []),
+  ];
+  const chance = (span: string) =>
+    `${span} ${f.chance_team} ke jeetne ka chance ${f.chance_before} se ${f.chance_after} out of 100 ho gaya.`;
+  const fit = (line: string, fallback: string) => (line.length <= 45 ? line : fallback);
+  switch (f.kind) {
+    case "wicket_big":
+      return {
+        headline: fit(`${f.wicket!.player_out} out ho gaye.`, "Bada wicket gira."),
+        what: `${f.wicket!.player_out} ${f.batter_runs} (${f.batter_balls}) pe out. ${f.batting_team}: ${f.score_after}.`,
+        why: chance("Is ek ball se"),
+        watch,
+        used_facts: used(
+          "wicket",
+          "batter_runs",
+          "batter_balls",
+          "score_after",
+          "chance_before",
+          "chance_after",
+        ),
+      };
+    case "swing":
+      return {
+        headline: fit(
+          f.runs_off_ball === 6
+            ? `${f.batter} ka chhakka!`
+            : f.runs_off_ball === 4
+              ? `${f.batter} ka chauka!`
+              : f.runs_off_ball === 0
+                ? "Yeh dot ball bhaari padi."
+                : `Ek ball pe ${f.runs_off_ball} run.`,
+          `Ek ball pe ${f.runs_off_ball} run.`,
+        ),
+        what: `Is ball pe ${f.runs_off_ball} run, ${f.bowler} to ${f.batter}. ${f.batting_team}: ${f.score_after}.`,
+        why: chance("Is ek ball se"),
+        watch,
+        used_facts: used(
+          "runs_off_ball",
+          "batter",
+          "bowler",
+          "score_after",
+          "chance_before",
+          "chance_after",
+        ),
+      };
+    case "over_big":
+      return {
+        headline: `Ek over mein ${f.over_runs} run.`,
+        what: `${f.batting_team} ${f.score_before} se ${f.score_after} pe pahunche, ek hi over mein.`,
+        why: chance("Is over mein"),
+        watch,
+        used_facts: used(
+          "over_runs",
+          "score_before",
+          "score_after",
+          "chance_before",
+          "chance_after",
+        ),
+      };
+    case "milestone":
+      return {
+        headline: fit(`${f.batter} ke ${f.batter_runs} run poore.`, `${f.batter_runs} run poore.`),
+        what: `${f.batter}: ${f.batter_runs} run, ${f.batter_balls} ball mein.`,
+        why: `Itni der se tika hua batter rokna mushkil hai, aur ${f.batting_team} yeh jaante hain.`,
+        watch,
+        used_facts: used("batter", "batter_runs", "batter_balls"),
+      };
+    case "innings_end":
+      return {
+        headline: fit(`${f.bowling_team} ko ${f.needed} chahiye.`, `Target: ${f.needed}.`),
+        what: `${f.batting_team} ne ${f.score_after} banaye.`,
+        why: "Ab doosri team ko yeh score paar karna hai.",
+        watch: null,
+        used_facts: ["needed", "score_after"],
+      };
+    case "result":
+      return {
+        headline: fit(`${f.result!.winner} jeet gaye.`, "Match khatam."),
+        what: `${f.result!.winner} ${f.result!.margin} se jeete.`,
+        why: "Match khatam. Ab kuch chase karne ko nahi bacha.",
+        watch: null,
+        used_facts: ["result"],
+      };
+    case "new_batter": {
+      const nb = f.new_batter!;
+      return {
+        headline: fit(`${nb.name} crease pe aaye.`, "Naya batter aaya."),
+        what: `${nb.name} aaye, ${f.batting_team}: ${f.score_after}.`,
+        why:
+          nb.matches > 0
+            ? `Hamare data mein inke ${nb.matches} match hain, aur shuruaat pressure mein ho rahi hai.`
+            : "Naye batter ko zero se shuru karna hai, woh bhi pressure mein.",
+        watch,
+        used_facts: used("new_batter", "score_after"),
+      };
+    }
+  }
+}
+
 /** The plain template card. Always passes the check with world "plain". */
 export function plainTemplate(f: Facts): CardText {
   const watch = watchLine(f);
@@ -136,7 +248,7 @@ type Line = (f: Facts, a: Anchors) => string;
 type WorldLines = Record<Facts["kind"], Line>;
 
 /** One fixed analogy sentence per world and kind. Roles only, never real names. */
-const ANALOGY: Record<Exclude<World, "plain">, WorldLines> = {
+const ANALOGY: Record<Exclude<World, "plain" | "hinglish">, WorldLines> = {
   football: {
     wicket_big: (f, a) => `Think of minute ${a.minute} in football: ${f.batting_team} just lost a striker to a red card, and ${f.bowling_team} have the momentum.`,
     swing: (f, a) => `Minute ${a.minute}, and ${f.who_gained} just scored a goal against the run of play. The whole game looks different.`,
@@ -195,6 +307,7 @@ export function templateCard(
 ): { card: CardText; world: World } {
   const plain = plainTemplate(f);
   if (world === "plain") return { card: plain, world };
+  if (world === "hinglish") return { card: hinglishTemplate(f), world };
   // A wicket analogy says the bowling side gained. If the numbers say otherwise, stay plain.
   if (f.kind === "wicket_big" && f.who_gained !== f.bowling_team)
     return { card: plain, world: "plain" };

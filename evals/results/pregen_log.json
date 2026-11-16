@@ -1,12 +1,12 @@
 {
  "summary": {
   "match_id": "1539472",
-  "prompt_version": "p1",
+  "prompt_version": "p2",
   "provider": "none",
-  "cards": 276,
+  "cards": 322,
   "passed_first_try": 0,
   "passed_on_retry": 0,
-  "template": 276,
+  "template": 322,
   "kept_from_earlier_run": 0
  },
  "cards": [
@@ -42,6 +42,12 @@
   },
   {
    "moment_id": "m_8",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_8",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -78,6 +84,12 @@
   },
   {
    "moment_id": "m_24",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_24",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -114,6 +126,12 @@
   },
   {
    "moment_id": "m_28",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_28",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -150,6 +168,12 @@
   },
   {
    "moment_id": "m_53",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_53",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -186,6 +210,12 @@
   },
   {
    "moment_id": "m_75",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_75",
    "world": "plain",
    "outcome": "template",
    "failed_rules": []
@@ -217,6 +247,12 @@
   {
    "moment_id": "m_78",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -253,6 +289,12 @@
   {
    "moment_id": "nb_79",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -289,6 +331,12 @@
   {
    "moment_id": "m_97",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -325,6 +373,12 @@
   {
    "moment_id": "m_104",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -361,6 +415,12 @@
   {
    "moment_id": "m_125",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_125",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -397,6 +457,12 @@
   {
    "moment_id": "m_130",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -433,6 +499,12 @@
   {
    "moment_id": "nb_137",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -469,6 +541,12 @@
   {
    "moment_id": "m_141",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -505,6 +583,12 @@
   {
    "moment_id": "nb_142",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -541,6 +625,12 @@
   {
    "moment_id": "m_144",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_144",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -577,6 +667,12 @@
   {
    "moment_id": "m_147",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_147",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -613,6 +709,12 @@
   {
    "moment_id": "m_148",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -649,6 +751,12 @@
   {
    "moment_id": "m_155",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -685,6 +793,12 @@
   {
    "moment_id": "m_162",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_162",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -721,6 +835,12 @@
   {
    "moment_id": "nb_167",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -757,6 +877,12 @@
   {
    "moment_id": "m_168",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -793,6 +919,12 @@
   {
    "moment_id": "m_174",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_174",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -829,6 +961,12 @@
   {
    "moment_id": "m_180",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -865,6 +1003,12 @@
   {
    "moment_id": "m_181",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -901,6 +1045,12 @@
   {
    "moment_id": "m_197",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -937,6 +1087,12 @@
   {
    "moment_id": "m_202",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -973,6 +1129,12 @@
   {
    "moment_id": "m_203",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1009,6 +1171,12 @@
   {
    "moment_id": "nb_203",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1045,6 +1213,12 @@
   {
    "moment_id": "m_209",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1081,6 +1255,12 @@
   {
    "moment_id": "m_212",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_212",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1117,6 +1297,12 @@
   {
    "moment_id": "m_213",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_213",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1153,6 +1339,12 @@
   {
    "moment_id": "m_216",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_216",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1189,6 +1381,12 @@
   {
    "moment_id": "m_223",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1225,6 +1423,12 @@
   {
    "moment_id": "m_224",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_224",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1261,6 +1465,12 @@
   {
    "moment_id": "m_227",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_227",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1297,6 +1507,12 @@
   {
    "moment_id": "m_228",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_228",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1333,6 +1549,12 @@
   {
    "moment_id": "nb_228",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1369,6 +1591,12 @@
   {
    "moment_id": "m_229",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_229",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1405,6 +1633,12 @@
   {
    "moment_id": "m_236",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_236",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1441,6 +1675,12 @@
   {
    "moment_id": "m_239",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1477,6 +1717,12 @@
   {
    "moment_id": "nb_244",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1513,6 +1759,12 @@
   {
    "moment_id": "m_245",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1549,6 +1801,12 @@
   {
    "moment_id": "m_246",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1585,6 +1843,12 @@
   {
    "moment_id": "nb_246",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1621,6 +1885,12 @@
   {
    "moment_id": "m_247",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_247",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },
@@ -1657,6 +1927,12 @@
   {
    "moment_id": "nb_247",
    "world": "gaming",
+   "outcome": "template",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "hinglish",
    "outcome": "template",
    "failed_rules": []
   },

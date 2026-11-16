@@ -25,6 +25,7 @@ export function anchorsFor(world: World, progress: Progress): Anchors {
       return { act: part };
     case "gaming":
       return { round: Math.max(1, Math.round(12 * p)), total_rounds: 12 };
+    case "hinglish":
     case "plain":
       return {};
   }

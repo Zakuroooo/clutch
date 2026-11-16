@@ -114,7 +114,18 @@ export const MomentSchema = z.object({
 });
 export type Moment = z.infer<typeof MomentSchema>;
 
-export const WORLDS = ["football", "f1", "chess", "bollywood", "gaming", "plain"] as const;
+export const WORLDS = [
+  "football",
+  "f1",
+  "chess",
+  "bollywood",
+  "gaming",
+  "hinglish",
+  "plain",
+] as const;
+
+/** Worlds with no analogy: the card says it straight, in English or in Hinglish. */
+export const PLAIN_WORLDS: readonly string[] = ["plain", "hinglish"];
 export const WorldSchema = z.enum(WORLDS);
 export type World = z.infer<typeof WorldSchema>;
 

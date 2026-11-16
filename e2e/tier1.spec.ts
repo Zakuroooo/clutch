@@ -193,3 +193,21 @@ test.describe("the two-minute demo", () => {
     expect(await page.evaluate(() => Notification.permission)).not.toBe("granted");
   });
 });
+
+test.describe("the match video", () => {
+  const video = JSON.parse(readFileSync("data/replay.json", "utf8")).video as
+    { channel: string } | undefined;
+  test.skip(!video, "this replay match has no video");
+
+  test("starts only on a tap, credits the channel, and the replay runs without it", async ({
+    page,
+  }) => {
+    await page.goto(`/match?t0=${ticks[60].t_ms + 1000}`);
+    await expect(page.getByTestId("video-start")).toBeVisible();
+    await expect(page.locator("iframe")).toHaveCount(0);
+    await expect(page.getByText(video!.channel)).toBeVisible();
+    await expect(page.getByTestId("team-a").locator(".runs")).toHaveText(
+      `${ticks[60].state.score}/${ticks[60].state.wickets}`,
+    );
+  });
+});

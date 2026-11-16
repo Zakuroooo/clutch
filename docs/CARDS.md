@@ -117,13 +117,14 @@ The fan picks one world. The LLM writes the "why" line in that world's terms.
 | `chess` | `move` = max(1, round(40 × p)) | queen, sacrifice, endgame, clock, time trouble, a pawn up |
 | `bollywood` | `act` = 1 before the innings break, 2 after | interval, climax, hero, villain, twist, the last song, the final scene |
 | `gaming` | `round` = max(1, round(12 × p)), `total_rounds` = 12 | final boss, health bar, respawn, clutch round, carry, last life |
+| `hinglish` | none | no analogy: the facts said the way friends talk, Hindi and English mixed in Roman script |
 | `plain` | none | no analogy: a plain-words explanation for someone new to cricket |
 
 The 50 laps, 40 moves and 12 rounds are fixed, stated conventions so the mapping is the same every time. They are not claims about any real race or game.
 
 ## 4. The prompt and the output schema
 
-Prompt version: `p1`. The version is part of every cache key. Any change to the text below bumps it.
+Prompt version: `p2` (p2 adds the Hinglish world). The version is part of every cache key. Any change to the text below bumps it.
 
 **System**
 
@@ -139,7 +140,7 @@ Rules:
 - No betting or gambling words. No insults.
 - "headline": at most 45 characters. A spoken line that says what it means for the match. End with a full stop.
 - "what": one sentence of plain fact, at most 120 characters.
-- "why": at most 220 characters. If WORLD is not "plain", explain why this matters as an analogy from WORLD, using ANCHORS where a number helps. If WORLD is "plain", explain it in everyday words with no cricket jargon.
+- "why": at most 220 characters. If WORLD is not "plain", explain why this matters as an analogy from WORLD, using ANCHORS where a number helps. If WORLD is "plain", explain it in everyday words with no cricket jargon. If WORLD is "hinglish", write every field in natural Hinglish (Hindi and English mixed, Roman script, the way friends talk), with no analogy.
 - "watch": one thing to look for next, at most 90 characters, or null.
 - "used_facts": the names of the FACTS fields you relied on.
 Return only JSON matching the schema.
@@ -203,10 +204,12 @@ The check runs on the three text fields joined together (`headline`, `what`, `wh
 | R3 | Names from this match | For every name in the match's full player and team list (from `timeline.json`, full names and surnames of 4 or more letters), if it appears in the text as a whole word it must be in `facts.names`. This catches a wrong player being named. |
 | R4 | No real people from the world | The text must not contain any entry of the world's deny-list (`lib/cards/worlds/<world>.deny.txt`: well-known people, clubs, teams, films and game titles). In addition, any capitalised word that is not at the start of a sentence must be in `facts.names` or in the world's vocabulary list or in a small list of ordinary capitalised words (`I`, month and day names). |
 | R5 | Direction | Let `G = facts.who_gained` and `L` the other team. The text fails if it matches `L` followed within 40 characters by any of: `on top`, `in control`, `favourites`, `cruising`, `ahead now`, `take charge`; or `G` followed within 40 characters by any of: `in trouble`, `collapsing`, `slipping`, `lose their grip`. (A narrow, mechanical check. Wider direction errors are measured by the rubric in EVALS.md.) |
-| R6 | No result unless it is one | If `facts.result` is null, the text must not match `\b(won|wins the match|have won|has won|victory is theirs)\b`. |
+| R6 | No result unless it is one | If `facts.result` is null, the text must not match `\b(won|wins the match|have won|has won|victory is theirs|jeet gaye|jeet gayi|jeet liya|jeet gaya)\b`. |
 | R7 | Banned words | The text must not contain, as whole words: `bet`, `bets`, `betting`, `odds`, `wager`, `gamble`, `gambling`, `jackpot`, `payout`, `bookie`, `punter`, or any word in `lib/cards/abuse.txt`. |
 | R8 | Used facts are real | Every entry of `used_facts` is a field name of `Facts`, and its value is not null. |
-| R9 | The analogy is one | If `world` is not `plain`, the `why` field contains at least one word from that world's vocabulary list. If `world` is `plain`, it contains none of the other worlds' vocabulary. |
+| R9 | The analogy is one | If `world` is an analogy world, the `why` field contains at least one word from that world's vocabulary list. If `world` is `plain` or `hinglish`, it contains none of the analogy worlds' vocabulary. |
+
+In R4, a deny-listed word that is also a person or team in this moment's facts is allowed: it is that player, not the famous person (a player named Anand is not the chess champion).
 
 **Fixed phrases allowed by R2** (numbers that are idiom, not data): `out of 100` (the scale every chance is stated on), `one goal up`, `one goal down`, `a goal up`, `a goal down`, `one move`, `one lap`, `one life`, `last life`, `first ball`, `one ball`, `one over`, `one shot`, `number one`.
 
