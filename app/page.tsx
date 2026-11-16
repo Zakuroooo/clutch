@@ -6,7 +6,7 @@ import { teamName } from "@/lib/adapters/cricket/scoreboard";
 import { getBundle } from "@/lib/server/bundle";
 
 export default async function StartPage() {
-  const { match, ticks } = await getBundle();
+  const { match, ticks, video } = await getBundle();
   const [a, b] = match.teams;
   const vars = {
     "--team-a": a.colors[0],
@@ -59,7 +59,8 @@ export default async function StartPage() {
             <span className="badge replay">{REPLAY_NOTE}</span>
           </p>
           <p className="micro faint" style={{ textAlign: "center", marginTop: "var(--s-2)" }}>
-            {match.venue} · {ticks.length} balls, replayed on a clock
+            {match.venue} · {ticks.length} balls
+            {video ? ", with the full match video, synced ball by ball" : ", replayed on a clock"}
           </p>
         </div>
       </section>
