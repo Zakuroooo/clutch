@@ -21,14 +21,16 @@ Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artif
 | ~1:20 | **Moments** shows the one you missed while you were away, kept for you. |
 | ~1:40 | **Behind the scenes** shows what the model and the rules decided, ball by ball. At full time, **the wrap** shows the turning point. |
 
+<p><img src="design/review/video-1280.png" width="100%" alt="On a laptop: the real match video on the left with the score card under it, the Pulse ring saying This is it on the right, and Behind the scenes below"></p>
+
 <p>
-  <img src="design/review/live/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
-  <img src="design/review/live/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
-  <img src="design/review/live/07-moments.png" width="24%" alt="Moments: You missed one big moment, with replay thumbnails and swing chips">
-  <img src="design/review/live/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
+  <img src="design/review/video/04-demo-callback.png" width="24%" alt="Match screen: score card, the Pulse ring saying Look up, the win-chance line and bar">
+  <img src="design/review/video/05-demo-card.png" width="24%" alt="An explanation card with a jersey, a drawn replay, stat tiles and the moment explained in football terms">
+  <img src="design/review/video/07-moments.png" width="24%" alt="Moments: You missed one big moment, with replay thumbnails and swing chips">
+  <img src="design/review/video/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
 </p>
 
-*Screenshots of the deployed app at 390 by 844, taken by `scripts/demo-shots.mjs` against the live link. The match is Punjab Kings v Mumbai Indians, Indian Premier League, 2026-05-14, replayed from Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
+*Screenshots of the app at 1280 by 800 and 390 by 844, taken by `scripts/video-check.mjs` and `scripts/demo-shots.mjs`. The match is Denmark v Germany, 1st T20I, Svanholm Park, 18 June 2026: the host ground's own stream played in YouTube's player, with every ball synced to Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
 
 ## The problem, in my words
 

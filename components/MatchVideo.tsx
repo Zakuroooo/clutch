@@ -153,12 +153,11 @@ export function MatchVideo({ video }: { video: VideoInfo }) {
         )}
       </div>
       <p className="video-credit">
-        {state === "ready" ? "Sound starts off: unmute in the player. " : ""}
-        Match video by{" "}
+        Video:{" "}
         <a href={video.channel_url} target="_blank" rel="noreferrer">
           {video.channel}
-        </a>
-        , played in YouTube&apos;s player. Every ball on this page follows the video.
+        </a>{" "}
+        on YouTube. Every ball here follows it.{state === "ready" ? " Sound starts off." : ""}
       </p>
     </section>
   );

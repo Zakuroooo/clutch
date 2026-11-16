@@ -1462,13 +1462,57 @@ h3,
   .match-grid .side .sec:first-child {
     padding-top: var(--s-2);
   }
-  .tabbar,
+  .side-pulse .pulse-ring {
+    width: 220px;
+  }
+  .side-pulse + .sec {
+    padding-top: var(--s-4);
+  }
   .cta-bar,
   .coach {
     max-width: 430px;
   }
+  /* On a laptop the tabs sit in the header's empty middle, not over the content. */
+  .tabbar {
+    top: var(--s-2);
+    bottom: auto;
+    width: auto;
+    max-width: none;
+    grid-auto-columns: auto;
+    gap: var(--s-1);
+    padding: var(--s-1);
+    border: 1px solid var(--line);
+    border-radius: var(--r-full);
+  }
+  .tab {
+    flex-direction: row;
+    min-height: 40px;
+    padding: 0 var(--s-4);
+    border-radius: var(--r-full);
+    font-size: var(--t-small);
+    gap: var(--s-2);
+  }
+  .tab svg {
+    width: 18px;
+    height: 18px;
+  }
+  .tab.on {
+    background: var(--surface-2);
+  }
+  .tab.on::before {
+    display: none;
+  }
+  .tab .dot {
+    position: static;
+  }
+  .cta-bar {
+    bottom: 0;
+  }
+  .coach {
+    bottom: var(--s-4);
+  }
   .screen {
-    padding-bottom: calc(var(--tabbar-h) + var(--s-6));
+    padding-bottom: var(--s-7);
   }
   main > .wrap,
   main > .sec,

@@ -39,7 +39,7 @@ export function EngineLog() {
           <dt>Model</dt>
           <dd>
             {model
-              ? `${model.name}. Brier score ${model.brier} on ${model.test_matches} unseen matches (a run-rate rule scores ${model.baseline_brier}; lower is better).`
+              ? `${model.name.charAt(0).toUpperCase()}${model.name.slice(1)}. Brier score ${model.brier} on ${model.test_matches} unseen matches (a run-rate rule scores ${model.baseline_brier}; lower is better).`
               : "Win-probability model"}
           </dd>
         </div>

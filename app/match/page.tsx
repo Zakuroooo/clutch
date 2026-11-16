@@ -12,6 +12,7 @@ import { PulseCard } from "@/components/PulseCard";
 import { ScoreCard } from "@/components/ScoreCard";
 import { WinBar, WinWorm } from "@/components/WinBar";
 import { useSettings, WORLD_LABEL } from "@/lib/client/settings";
+import { useWide } from "@/lib/client/useWide";
 
 const CLOCK_SPEEDS = [1, 4, 16];
 const VIDEO_SPEEDS = [1, 2];
@@ -20,6 +21,7 @@ export default function MatchPage() {
   const { data, store, snap, wordsFor, factsFor, open } = useMatch();
   const view = useMatchView();
   const settings = useSettings();
+  const wide = useWide();
   const { match, ticks } = data;
   const [a, b] = match.teams;
   const title = [match.event.name, match.event.stage].filter(Boolean).join(" · ");
@@ -33,6 +35,15 @@ export default function MatchPage() {
   const facts = latest ? factsFor(latest.id) : null;
   const moreMoments = data.moments.some((m) => m.i > snap.index);
   const matchChapters = chapters(ticks, match);
+
+  // On a laptop the Pulse leads the right column, beside the video; on a phone it sits
+  // under the score card. Rendered once, so the live region is announced once.
+  const pulse = (
+    <PulseCard pulse={view.pulse} lookUp={view.callback?.line ?? null}>
+      <WinWorm points={worm} />
+      <WinBar a={a} b={b} chanceA={view.chanceA} />
+    </PulseCard>
+  );
 
   if (!snap.ready) return <MatchSkeleton />;
 
@@ -53,10 +64,7 @@ export default function MatchPage() {
               view={view.scoreboard}
               progress={view.progress}
             />
-            <PulseCard pulse={view.pulse} lookUp={view.callback?.line ?? null}>
-              <WinWorm points={worm} />
-              <WinBar a={a} b={b} chanceA={view.chanceA} />
-            </PulseCard>
+            {wide ? null : pulse}
           </div>
 
           <div className="chiprow" style={{ marginTop: "var(--s-3)" }}>
@@ -127,6 +135,7 @@ export default function MatchPage() {
         </div>
 
         <div className="side">
+          {wide ? <div className="wrap side-pulse">{pulse}</div> : null}
           <div className="sec">
             <h2>{view.phase === "finished" ? "Match summary" : "Just happened"}</h2>
             <Link href="/match/moments" className="link">

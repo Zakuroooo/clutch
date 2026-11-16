@@ -190,11 +190,11 @@ export class MatchStore {
    */
   startDemo(plan: DemoPlan) {
     const t = this.plan.times;
-    const from =
-      plan.missIndex !== null ? t[plan.missIndex] - 2_000 : t[plan.targetIndex] - DEMO_LEAD_MS;
-    this.start(from);
+    const open = t[plan.startIndex] - DEMO_LEAD_MS;
+    const from = plan.missIndex !== null ? t[plan.missIndex] - 2_000 : open;
+    this.start(Math.min(from, open));
     this.demo = plan;
-    this.jumpTo(t[plan.targetIndex] - DEMO_LEAD_MS);
+    this.jumpTo(open);
   }
   endDemo() {
     this.demo = null;

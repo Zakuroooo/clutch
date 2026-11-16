@@ -21,7 +21,13 @@ describe("demo", () => {
   test("the demo picks a moment the Pulse rises into, and an earlier one to miss", () => {
     const plan = pickDemo(fixtureTicks, moments, fixtureThresholds)!;
     // Ball 25: stakes 80 on the ball, 20 on the two balls before it. Swing 0.14.
-    expect(plan).toEqual({ targetId: "m_25", targetIndex: 25, missId: "m_15", missIndex: 15 });
+    expect(plan).toEqual({
+      targetId: "m_25",
+      targetIndex: 25,
+      startIndex: 24,
+      missId: "m_15",
+      missIndex: 15,
+    });
   });
 
   test("no single-ball moments means no demo plan", () => {
@@ -33,4 +39,12 @@ describe("demo", () => {
       ),
     ).toBeNull();
   });
+});
+
+test("prefers a target with an earlier moment to miss", () => {
+  // Make the first single-ball moment the biggest rising one: the plan must still have a miss.
+  const first = moments.find((m) => m.replay_kind !== "none")!;
+  const tweaked = moments.map((m) => (m.id === first.id ? { ...m, swing: 0.99 } : m));
+  const plan = pickDemo(fixtureTicks, tweaked, fixtureThresholds)!;
+  expect(plan.missId).not.toBeNull();
 });
