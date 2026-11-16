@@ -147,7 +147,7 @@ const artifactHtml = page(
 <tr><td>Rooms with friends, reactions, per-over calls, Back me up</td><td>Designed, not built</td></tr>
 </table>
 <h2>Building next (designed, not built yet)</h2>
-<p class="small">Each of these is specified in the repository's design documents, with its data model, API and tests written down before any code.</p>
+<p class="small">Each of these is specified in the repository's design documents, with its data model, API and tests written down before any code. Clutch keeps shipping during the review: <b>the current list of what is built is always at <a href="${LIVE}/status">${LIVE.replace("https://", "")}/status</a></b>.</p>
 <table>
 <tr><th>Feature</th><th>What it does</th><th>State</th></tr>
 <tr><td>AI-written cards</td><td>An LLM writes each card in your world from facts built by code; every card passes the same code check first, or the fan gets the template</td><td>Built behind the check and tested; switched on once a model key is added</td></tr>

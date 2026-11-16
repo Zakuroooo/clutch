@@ -60,7 +60,7 @@ A match centre built like the sports apps fans already use, with one thing of it
 
 ## Built, and designed but not built
 
-Tier 1 is finished before tier 2 starts. This table is updated as work lands.
+Tier 1 is finished before tier 2 starts. This table is updated as work lands. The live version of this list is at [clutch-one-mu.vercel.app/status](https://clutch-one-mu.vercel.app/status), read from `data/status.json`.
 
 | Tier | Feature | State |
 |---|---|---|

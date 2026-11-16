@@ -14,7 +14,7 @@ export function StartActions() {
         Show me in 2 minutes
       </LinkButton>
       <p className="micro muted" style={{ textAlign: "center" }}>
-        Watching with friends is coming later.
+        Watching with friends is coming next. <a href="/status">See what&apos;s built</a>
       </p>
     </section>
   );
