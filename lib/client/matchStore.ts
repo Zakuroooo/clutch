@@ -4,7 +4,8 @@
  * every tick of the worker, and tells React when something a screen shows has changed.
  */
 import { z } from "zod";
-import { nextMomentAnchor, setSpeed, skipTo, startAnchor } from "@/lib/clock/anchor";
+import { elapsed, nextMomentAnchor, setSpeed, skipTo, startAnchor } from "@/lib/clock/anchor";
+import { catchUpTarget, followPlayer, type PlayerReading } from "@/lib/clock/follow";
 import { DEMO_LEAD_MS, type DemoPlan } from "@/lib/engine/demo";
 import { markSeen } from "@/lib/engine/shelf";
 import { newSession, restart, step, type MatchPlan, type Session } from "@/lib/engine/session";
@@ -48,12 +49,20 @@ export const SERVER_SNAPSHOT: Snapshot = {
   demo: null,
 };
 
+/** A match video the clock can follow. Implemented by the YouTube player component. */
+export type VideoLink = {
+  read(): PlayerReading | null;
+  seek(ms: number): void;
+  setRate(rate: number): void;
+};
+
 export class MatchStore {
   private snapshot: Snapshot = SERVER_SNAPSHOT;
   private listeners = new Set<() => void>();
   private session: Session = IDLE;
   private durable = true;
   private demo: DemoPlan | null = null;
+  private video: VideoLink | null = null;
   private readonly key: string;
 
   constructor(
@@ -76,7 +85,7 @@ export class MatchStore {
     } catch {
       this.durable = false;
     }
-    this.session = saved ?? newSession(startAnchor(this.now(), -COUNTDOWN_MS));
+    this.session = saved ?? newSession(startAnchor(this.now(), this.firstBallMs() - COUNTDOWN_MS));
     if (startAt !== undefined) {
       this.session = restart(this.session, startAnchor(this.now(), startAt));
       // Land on the ball without marking what came before it as missed.
@@ -93,10 +102,46 @@ export class MatchStore {
   };
   getSnapshot = () => this.snapshot;
 
+  /** The match time of the first ball (0 for a clock replay, later for a video). */
+  private firstBallMs(): number {
+    return this.plan.times[0] ?? 0;
+  }
+
+  /** The player reports in; while it is attached and the tab is visible, it leads. */
+  attachVideo(link: VideoLink) {
+    this.video = link;
+  }
+  detachVideo(link: VideoLink) {
+    if (this.video === link) this.video = null;
+  }
+  hasVideo(): boolean {
+    return this.video !== null;
+  }
+  /** Where the player should be now: the clock's match time. */
+  clockMs(): number {
+    return elapsed(this.session.anchor, this.now());
+  }
+  /** The fan is back: move the player to the clock if they drifted apart. */
+  catchUpVideo() {
+    const reading = this.video?.read();
+    if (!this.video || !reading) return;
+    const target = catchUpTarget(this.session.anchor, this.now(), reading.ms);
+    if (target !== null) this.video.seek(target);
+  }
+
   tick = () => {
     const hidden = typeof document !== "undefined" && document.visibilityState === "hidden";
+    let moved = false;
+    if (this.video && !hidden) {
+      const reading = this.video.read();
+      const next = reading ? followPlayer(this.session.anchor, this.now(), reading) : null;
+      if (next) {
+        this.session = { ...this.session, anchor: next };
+        moved = true;
+      }
+    }
     const r = step(this.session, this.plan, this.now(), { hidden });
-    const changed = r.session !== this.session;
+    const changed = r.session !== this.session || moved;
     this.session = r.session;
     if (changed) this.save();
     const elapsedSec = Math.floor(r.elapsedMs / 1000);
@@ -164,6 +209,7 @@ export class MatchStore {
     this.update({ ...this.session, focus });
   }
   setSpeed(speed: number) {
+    this.video?.setRate(speed);
     this.update({ ...this.session, anchor: setSpeed(this.session.anchor, this.now(), speed) });
   }
   /** Jump to 8 s before the next moment. Returns false when there is none left. */
@@ -172,13 +218,17 @@ export class MatchStore {
     const anchor = nextMomentAnchor(this.session.anchor, this.now(), times);
     if (!anchor) return false;
     this.update({ ...this.session, anchor });
+    this.video?.seek(anchor.anchor_elapsed_ms);
     return true;
   }
   jumpTo(elapsedMs: number) {
     this.update({ ...this.session, anchor: skipTo(this.session.anchor, this.now(), elapsedMs) });
+    this.video?.seek(elapsedMs);
   }
   restart() {
-    this.update(restart(this.session, startAnchor(this.now(), -COUNTDOWN_MS)));
+    const start = this.firstBallMs() - COUNTDOWN_MS;
+    this.update(restart(this.session, startAnchor(this.now(), start)));
+    this.video?.seek(start);
   }
   markSeen(ids: string[]) {
     if (ids.every((id) => this.session.marks[id] === "seen")) return; // nothing to change

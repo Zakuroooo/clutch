@@ -20,7 +20,7 @@ Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to r
 1. **Facts come from code, never from the model.** The LLM only words facts it is given. Every LLM output goes through `lib/cards/check.ts` before anyone sees it. On failure, show the template.
 2. **No number without a source.** Do not write a metric, count or percentage into any doc or UI string unless it is read from a file in `model/artifacts/` or `evals/results/`. Unmeasured means blank.
 3. **It is a replay.** "Replay of a real match, running as live" stays visible on every match screen. Never describe the product as live or as having users.
-4. **No faces.** Never generate, draw or add an image of a real player, and no official logos. Jerseys, crests and numbers only.
+4. **No faces.** Never generate, draw or add an image of a real player, and no official logos. Jerseys, crests and numbers only. The one exception is the match video itself, embedded in YouTube's player (DECISIONS/0010).
 5. **No betting language** anywhere: bet, odds, wager, gamble, jackpot, payout.
 6. **Secrets stay in `.env.local`.** Never print, log, commit or paste a key. Server-only keys never get a `NEXT_PUBLIC_` prefix.
 7. **Tier 1 before tier 2.** Do not start a tier 2 task until Review 3 in the build plan.

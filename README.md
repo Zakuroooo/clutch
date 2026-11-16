@@ -180,6 +180,6 @@ The idea is my own, and I built it with AI. Claude Code (Anthropic) wrote most o
 
 Match data from [Cricsheet](https://cricsheet.org), used under the [Open Data Commons Attribution License v1.0](https://opendatacommons.org/licenses/by/1-0/). Processed files in `data/` are adapted from it and carry the same licence. Details in [DATA.md](docs/DATA.md).
 
-No real player's face or likeness is used anywhere; players are shown as jerseys. No video. No betting, money or prizes.
+Clutch never draws or generates a real player; players are shown as jerseys. The match video is the original stream, embedded in YouTube's player with credit to the channel, never downloaded or clipped. No betting, money or prizes.
 
 Pranay Sarkar

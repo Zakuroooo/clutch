@@ -14,6 +14,25 @@ async function main() {
   const bad = (msg: string) => problems.push(msg);
   const id = await replayMatchId();
   const { match, ticks, alerts, moments, thresholds } = await loadMatch(id);
+  // With a match video, ball times come from the video, not the fixed gaps.
+  let video: { ball_times: number[]; scoreboard_lag_s?: number } | null = null;
+  try {
+    video = JSON.parse(
+      await readFile(path.join(process.cwd(), "data", "matches", id, "video_sync.json"), "utf8"),
+    );
+  } catch {
+    video = null;
+  }
+  if (video) {
+    const lag = video.scoreboard_lag_s ?? 0;
+    if (video.ball_times.length !== ticks.length)
+      bad("video_sync.json does not have one time per ball");
+    else
+      video.ball_times.forEach((t, i) => {
+        if (Math.abs(Math.round((t - lag) * 1000) - ticks[i].t_ms) > 1)
+          bad(`event ${i}: t_ms is not its video time`);
+      });
+  }
 
   if (thresholds.fitted_on !== "train") bad("thresholds.json is not fitted on train");
   for (const [k, v] of Object.entries({
@@ -56,7 +75,9 @@ async function main() {
     if (!(t.stakes.pct >= 0 && t.stakes.pct <= 100)) bad(`event ${i}: stakes.pct out of range`);
     if (t.wp.team !== match.batting_order[0])
       bad(`event ${i}: wp is not from the first team's view`);
-    if (prev) {
+    if (prev && video) {
+      if (!(t.t_ms > prev.t_ms)) bad(`event ${i}: video time does not increase`);
+    } else if (prev) {
       if (Math.abs(prev.wp.after - t.wp.before) > 1e-9 && prev.event.innings === e.innings) {
         bad(`event ${i}: wp.before does not continue from the last ball`);
       }
@@ -67,7 +88,7 @@ async function main() {
         if (prev.event.wicket) gap += GAP.wicket;
       }
       if (t.t_ms - prev.t_ms !== gap) bad(`event ${i}: gap ${t.t_ms - prev.t_ms}, expected ${gap}`);
-    } else if (t.t_ms !== 0) bad("event 0: t_ms is not 0");
+    } else if (!video && t.t_ms !== 0) bad("event 0: t_ms is not 0");
   });
 
   const last = ticks[ticks.length - 1];

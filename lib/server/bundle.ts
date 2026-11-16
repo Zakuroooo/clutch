@@ -8,6 +8,7 @@ import {
   loadMatch,
   loadModelInfo,
   loadPulsePromise,
+  loadVideo,
   replayMatchId,
 } from "@/lib/adapters/cricket/load";
 import { CardsFileSchema, type CardsFile } from "@/lib/cards/schema";
@@ -31,5 +32,6 @@ export async function getBundle(): Promise<MatchBundle> {
     loadPulsePromise(),
     loadModelInfo(),
   ]);
-  return { ...data, cards, promise, model };
+  const video = await loadVideo(id);
+  return { ...data, cards, promise, model, video };
 }

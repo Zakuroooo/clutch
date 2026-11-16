@@ -62,6 +62,14 @@ def build_timeline(d: dict, match_id: str, model, table: list[float], teams: dic
     scored.loc[scored.index[-1], "wp_after"] = float(match["label"])
     scored["stakes_pct"] = to_pct(scored["stakes_raw"].to_numpy(), table)
     times = build_times(rows)
+    sync_file = DATA / "matches" / match_id / "video_sync.json"
+    if sync_file.exists():
+        # With a match video, a ball's time is its time in the video (TRD section 3.6),
+        # moved earlier by the scoreboard's measured delay so the call-back still comes first.
+        sync = read_json(sync_file)
+        if len(sync["ball_times"]) == len(rows):
+            lag = sync.get("scoreboard_lag_s", 0)
+            times = [round((t - lag) * 1000) for t in sync["ball_times"]]
     order = match["batting_order"]
     metas = [team_meta(name, teams, k) for k, name in enumerate(order)]
     code = {m["name"]: m["code"] for m in metas}

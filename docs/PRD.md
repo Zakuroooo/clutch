@@ -165,7 +165,7 @@ Limit, stated honestly: call-backs need the page to be open (in front or in a ba
 
 ## 8. Out of scope
 
-- Video or screen sharing of the match. No broadcast rights. Clutch is a second screen.
+- Re-streaming, clipping or screen sharing of match video. The replay match's own stream is embedded in YouTube's player and nothing else ([DECISIONS/0010](DECISIONS/0010-embedded-match-video.md)).
 - Money, betting, fantasy teams, prizes.
 - Accounts, passwords, profiles.
 - Real players' faces or likenesses, drawn or generated.

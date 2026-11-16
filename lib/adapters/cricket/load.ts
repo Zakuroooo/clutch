@@ -81,6 +81,27 @@ export async function loadModelInfo(): Promise<ModelInfo | null> {
   };
 }
 
+/** The match video, when the replay match has one and its balls are synced to it. */
+export type VideoInfo = { youtube_id: string; title: string; channel: string; channel_url: string };
+
+export async function loadVideo(matchId: string): Promise<VideoInfo | null> {
+  const replay = z
+    .object({
+      video: z
+        .object({
+          youtube_id: z.string(),
+          title: z.string(),
+          channel: z.string(),
+          channel_url: z.string(),
+        })
+        .optional(),
+    })
+    .safeParse(await readOptional(path.join(DATA, "replay.json")));
+  const synced = await readOptional(path.join(DATA, "matches", matchId, "video_sync.json"));
+  if (!replay.success || !replay.data.video || !synced) return null;
+  return replay.data.video;
+}
+
 export async function loadPulsePromise(): Promise<PulsePromise | null> {
   const raw = await readOptional(path.join(process.cwd(), "model", "artifacts", "pulse_eval.json"));
   const parsed = PulseEvalSchema.safeParse(raw);

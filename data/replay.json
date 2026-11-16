@@ -8,7 +8,8 @@
     "channel": "Svanholm Cricket Club",
     "channel_url": "https://www.youtube.com/@SvanholmCricketClub",
     "scoreboard_codes": {
-      "DNM": "DEN"
+      "DNM": "DEN",
+      "GRM": "GER"
     }
   }
 }

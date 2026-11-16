@@ -22,6 +22,7 @@ const bundle: MatchBundle = {
   cards: {},
   promise: null,
   model: null,
+  video: null,
 };
 
 const GOOD = {

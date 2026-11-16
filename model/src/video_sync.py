@@ -25,7 +25,7 @@ from pathlib import Path
 from .common import DATA, read_json, write_json
 
 SCORE = re.compile(r"^(\d{1,3})\s*/\s*(\d{1,2})$")
-OVERS = re.compile(r"OVERS\s*(\d{1,2})\s*[.,]\s*(\d)", re.I)
+OVERS = re.compile(r"^OVERS\s*(\d{1,2})\s*[.,]\s*(\d)$", re.I)
 
 
 def parse_reading(text: str, codes: dict[str, int]) -> tuple[int, int, int, int] | None:
@@ -33,7 +33,8 @@ def parse_reading(text: str, codes: dict[str, int]) -> tuple[int, int, int, int]
     lines = [ln.split("\t", 1)[-1].strip() for ln in text.splitlines()]
     team = next((codes[ln] for ln in lines if ln in codes), None)
     score = next((SCORE.match(ln) for ln in lines if SCORE.match(ln)), None)
-    overs = next((OVERS.search(ln) for ln in lines if OVERS.search(ln)), None)
+    # Only the main box: a line that is just "OVERS 9.1" (the ticker also says "OVERS 20.0").
+    overs = next((OVERS.match(ln) for ln in lines if OVERS.match(ln)), None)
     if team is None or score is None or overs is None:
         return None
     o, b = int(overs.group(1)), int(overs.group(2))

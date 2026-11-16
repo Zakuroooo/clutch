@@ -8,12 +8,32 @@ const late = ticks[ticks.length - 20].t_ms + 1000;
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 360, height: 740 }, deviceScaleFactor: 2 });
 let bad = 0;
-for (const [name, path] of [["start", "/"], ["world", "/world"], ["match", `/match?t0=${late}`], ["focus", "/match/focus"], ["moments", "/match/moments"]]) {
+for (const [name, path] of [
+  ["start", "/"],
+  ["world", "/world"],
+  ["match", `/match?t0=${late}`],
+  ["focus", "/match/focus"],
+  ["moments", "/match/moments"],
+]) {
   await page.goto(base + path, { waitUntil: "load" });
   await page.waitForTimeout(1500);
-  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-  const fold = name === "match" ? await page.evaluate(() => Math.round(document.querySelector('[data-testid="pulse-card"]').getBoundingClientRect().bottom)) : null;
-  console.log(name, "sideways overflow:", overflow, fold !== null ? `| Pulse card ends at ${fold} of 740` : "");
+  const overflow = await page.evaluate(
+    () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  );
+  const fold =
+    name === "match"
+      ? await page.evaluate(() =>
+          Math.round(
+            document.querySelector('[data-testid="pulse-card"]').getBoundingClientRect().bottom,
+          ),
+        )
+      : null;
+  console.log(
+    name,
+    "sideways overflow:",
+    overflow,
+    fold !== null ? `| Pulse card ends at ${fold} of 740` : "",
+  );
   if (overflow > 0) bad++;
   if (name === "match") await page.screenshot({ path: "design/review/10-match-360.png" });
 }

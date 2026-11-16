@@ -5,13 +5,15 @@ import { BallChips } from "@/components/BallChips";
 import { EngineLog } from "@/components/EngineLog";
 import { IconRestart, IconSkip, IconSpeed, IconTrophy, IconWorld } from "@/components/Icons";
 import { useMatch, useMatchView } from "@/components/MatchProvider";
+import { MatchVideo } from "@/components/MatchVideo";
 import { MomentCard } from "@/components/MomentCard";
 import { PulseCard } from "@/components/PulseCard";
 import { ScoreCard } from "@/components/ScoreCard";
 import { WinBar, WinWorm } from "@/components/WinBar";
 import { useSettings, WORLD_LABEL } from "@/lib/client/settings";
 
-const SPEEDS = [1, 4, 16];
+const CLOCK_SPEEDS = [1, 4, 16];
+const VIDEO_SPEEDS = [1, 2];
 
 export default function MatchPage() {
   const { data, store, snap, wordsFor, factsFor, open } = useMatch();
@@ -37,6 +39,11 @@ export default function MatchPage() {
       <AppBar />
       <div className="match-grid">
         <div className="stage">
+          {data.video ? (
+            <div className="wrap">
+              <MatchVideo video={data.video} />
+            </div>
+          ) : null}
           <div className="wrap stack">
             <ScoreCard
               title={title}
@@ -71,9 +78,10 @@ export default function MatchPage() {
             <button
               type="button"
               className="chip"
-              onClick={() =>
-                store.setSpeed(SPEEDS[(SPEEDS.indexOf(speed) + 1) % SPEEDS.length] ?? 1)
-              }
+              onClick={() => {
+                const speeds = store.hasVideo() ? VIDEO_SPEEDS : CLOCK_SPEEDS;
+                store.setSpeed(speeds[(speeds.indexOf(speed) + 1) % speeds.length] ?? 1);
+              }}
               aria-label={`Replay speed ${speed} times. Tap to change.`}
             >
               <IconSpeed />
@@ -91,7 +99,7 @@ export default function MatchPage() {
             <h2>This over</h2>
             <span className="small muted num">
               {view.over.label}
-              {view.phase === "play" && view.nextBallIn !== null
+              {view.phase === "play" && view.nextBallIn !== null && !data.video
                 ? ` · next ball in ${view.nextBallIn}s`
                 : ""}
             </span>

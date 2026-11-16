@@ -13,7 +13,7 @@ import {
 } from "react";
 import { describeMoment, type MomentWords } from "@/lib/adapters/cricket/describe";
 import { facts as buildFacts } from "@/lib/adapters/cricket/facts";
-import type { MatchData, ModelInfo, PulsePromise } from "@/lib/adapters/cricket/load";
+import type { MatchData, ModelInfo, PulsePromise, VideoInfo } from "@/lib/adapters/cricket/load";
 import { scoreboardAt, segment, teamName } from "@/lib/adapters/cricket/scoreboard";
 import type { CardsFile, Facts } from "@/lib/cards/schema";
 import { MatchStore, SERVER_SNAPSHOT, type Snapshot } from "@/lib/client/matchStore";
@@ -29,6 +29,7 @@ export type MatchBundle = MatchData & {
   cards: CardsFile;
   promise: PulsePromise | null;
   model: ModelInfo | null;
+  video: VideoInfo | null;
 };
 
 type Ctx = {
@@ -90,6 +91,7 @@ export function MatchProvider({
     }
     const onVisible = () => {
       store.tick();
+      if (document.visibilityState === "visible") store.catchUpVideo();
       if (document.visibilityState === "visible") restoreTitle();
     };
     document.addEventListener("visibilitychange", onVisible);
