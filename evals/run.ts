@@ -90,6 +90,12 @@ async function runCheck() {
 
   const logFile = path.join("evals", "results", "pregen_log.json");
   const pregen = existsSync(logFile) ? JSON.parse(readFileSync(logFile, "utf8")).summary : null;
+  // The first full run against a real model: the honest first-pass rate. Later runs resume
+  // and only retry cards that fell back to a template, so their own counts mostly say "kept".
+  const runOneFile = path.join("evals", "results", "pregen_log_run1.json");
+  const firstRun = existsSync(runOneFile)
+    ? JSON.parse(readFileSync(runOneFile, "utf8")).summary
+    : null;
   const summary = {
     prompt_version: PROMPT_VERSION,
     adversarial: {
@@ -105,6 +111,7 @@ async function runCheck() {
       by_source: bySource,
     },
     pregen,
+    first_run: firstRun,
     rubric: null,
     note:
       pregen?.provider === "none"

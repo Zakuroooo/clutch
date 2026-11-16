@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "built": [
     { "name": "The full match video, every ball synced", "date": "2026-11-16" },
     { "name": "Win-probability model and stakes for every ball", "date": "2026-11-14" },
     { "name": "The Pulse and Focus mode call-backs", "date": "2026-11-14" },
     { "name": "Moment shelf, drawn replay, Catch me up", "date": "2026-11-15" },
-    { "name": "Cards in your world, checked by code (templates)", "date": "2026-11-15" },
+    { "name": "Cards in your world, checked by code", "date": "2026-11-15" },
+    { "name": "AI-written cards: 287 of 322 worded by Gemini, every one checked", "date": "2026-11-17" },
     { "name": "Two-minute guided demo", "date": "2026-11-15" },
     { "name": "Laptop layout, Behind the scenes, the match wrap", "date": "2026-11-16" },
     { "name": "Read it out, Hinglish, Jump to chapters", "date": "2026-11-16" }
   ],
   "next": [
-    { "name": "AI-written cards", "note": "built behind the check; switched on when a model key is added" },
     { "name": "Rooms with friends", "note": "join by a 6-letter code, everyone on the same ball" },
     { "name": "Reactions", "note": "one tap, on every screen in the room" },
     { "name": "Per-over calls and a leaderboard", "note": "points only" },

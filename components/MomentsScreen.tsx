@@ -1,8 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { plural } from "@/lib/adapters/cricket/scoreboard";
-import { cardKey } from "@/lib/cards/schema";
-import { useSettings } from "@/lib/client/settings";
 import { AppBar } from "./AppBar";
 import { Badge } from "./Badge";
 import { Button } from "./Button";
@@ -17,7 +15,6 @@ const count = (n: number) => WORDS[n] ?? `${n}`;
 export function MomentsScreen() {
   const { data, snap, wordsFor, factsFor, open } = useMatch();
   const view = useMatchView();
-  const settings = useSettings();
   const [playing, setPlaying] = useState<string[] | null>(null);
   const stop = useCallback(() => setPlaying(null), []);
   const missed = view.missed;
@@ -91,12 +88,7 @@ export function MomentsScreen() {
                   key={m.id}
                   moment={m}
                   badge={words.badge}
-                  title={
-                    data.cards[cardKey(m.id, settings.world ?? "plain")]?.headline.replace(
-                      /\.$/,
-                      "",
-                    ) ?? words.title
-                  }
+                  title={words.title}
                   line={words.line}
                   swing={{ code, points: f.chance_after - f.chance_before }}
                   mark={snap.session.marks[m.id] ?? "seen"}

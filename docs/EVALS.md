@@ -44,11 +44,11 @@ For every case, the runner takes the LLM output and runs `check()`.
 
 | Metric | Meaning | Result |
 |---|---|---|
-| First-try pass rate | Share of outputs passing every rule on the first generation | to be measured |
-| Pass rate after one retry | | to be measured |
-| Template rate | Share that would fall back to a template in production | to be measured |
-| Failures by rule (R1 to R9) | Which rule failed, counted | to be measured |
-| By world | Pass rate for each of the 6 worlds | to be measured |
+| First-try pass rate | Share of outputs passing every rule on the first generation | 211 of 322 (first full run) |
+| Pass rate after one retry | | 263 of 322 |
+| Template rate | Share that would fall back to a template in production | 59 of 322 in the first run; 35 of 322 shipped after a second pass |
+| Failures by rule (R1 to R9) | Which rule failed, counted | Over all failed attempts in the first run: request error or timeout 67, R9 59, R7 12, R8 11, R4 8, R2 7, R1 4, R6 2 |
+| By world | Passed (first try or retry) out of 46, first run | plain 42, f1 44, hinglish 41, football 40, chess 37, bollywood 37, gaming 22 |
 
 Source: `evals/results/summary.json`.
 
@@ -128,6 +128,6 @@ Smaller set: 20 player pairs from the replay match's squads × 2 worlds (plain a
 - Whether the judge model shares the writer's blind spots.
 - Anything beyond cricket and the six worlds.
 
-## 9. Status on 15 Nov 2026
+## 9. Status on 17 Nov 2026
 
-Built and run: the adversarial set (30 of 30 caught, 10 of 10 good cards pass) and `npm run evals:check`, which also re-checks every recorded card for the replay match. Not run: anything that needs an LLM. No key has been used, so sections 3, 5 and 6 have no results, and every recorded card is a template. `evals:judge` is designed, not built. Back me up (section 6) is tier 2 and not built.
+Built and run: the adversarial set (30 of 30 caught, 10 of 10 good cards pass) and `npm run evals:check`, which also re-checks every recorded card for the replay match. Run against a real model on 17 Nov 2026: `npm run pregen` with Gemini (gemini-3.5-flash-lite), prompt p2, all 322 cards for the replay match. First full run: 211 passed first time, 52 on retry, 59 fell back to a template (`evals/results/pregen_log_run1.json`). A second pass retried only those 59; 287 of the shipped cards are now model-worded and 35 are templates, and all 322 pass the check again in `evals:check`. Not run: the rubric (section 5) and the judge, which is designed, not built. Back me up (section 6) is tier 2 and not built.

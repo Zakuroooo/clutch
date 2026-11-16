@@ -1,0 +1,2227 @@
+{
+ "summary": {
+  "match_id": "1539472",
+  "prompt_version": "p2",
+  "provider": "gemini:gemini-3.5-flash-lite",
+  "cards": 322,
+  "passed_first_try": 211,
+  "passed_on_retry": 52,
+  "template": 59,
+  "kept_from_earlier_run": 0
+ },
+ "cards": [
+  {
+   "moment_id": "m_8",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "R1",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_8",
+   "world": "f1",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_8",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_8",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_8",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_8",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_8",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_24",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_24",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_24",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_24",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_24",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_24",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_24",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_28",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_28",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_28",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_28",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_28",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_28",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_28",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_53",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_53",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_53",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_53",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_53",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_53",
+   "world": "hinglish",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_53",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_75",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "R2",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_75",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_75",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_75",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_75",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_75",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_75",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R6"
+   ]
+  },
+  {
+   "moment_id": "m_78",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "R4"
+   ]
+  },
+  {
+   "moment_id": "m_78",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_78",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_79",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_97",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_97",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "R7",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_104",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_104",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_125",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_125",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_125",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_125",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_125",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_125",
+   "world": "hinglish",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_125",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_130",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_130",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_130",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_137",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_141",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_141",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_141",
+   "world": "plain",
+   "outcome": "retry",
+   "failed_rules": [
+    "R2"
+   ]
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "R8",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_142",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_144",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_144",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_144",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_144",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_144",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_144",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_144",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_147",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_147",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_147",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_147",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R4"
+   ]
+  },
+  {
+   "moment_id": "m_147",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_147",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_147",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_148",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_148",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_148",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_155",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_155",
+   "world": "plain",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_162",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R2"
+   ]
+  },
+  {
+   "moment_id": "m_162",
+   "world": "f1",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_162",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_162",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_162",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_162",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_162",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R2"
+   ]
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_167",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_168",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_168",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_174",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_174",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_174",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_174",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_174",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_174",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_174",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "f1",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_180",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_180",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_180",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_181",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_181",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_197",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_202",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_202",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "chess",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_203",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_203",
+   "world": "hinglish",
+   "outcome": "retry",
+   "failed_rules": [
+    "R2"
+   ]
+  },
+  {
+   "moment_id": "m_203",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_203",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R4"
+   ]
+  },
+  {
+   "moment_id": "m_209",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_209",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_209",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_212",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_212",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_212",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_212",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "R4",
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_212",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_212",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_212",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_213",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_213",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_213",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_213",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "R4",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_213",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_213",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_213",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_216",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_216",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_216",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_216",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_216",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_216",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_216",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R4"
+   ]
+  },
+  {
+   "moment_id": "m_223",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_223",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_223",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_224",
+   "world": "football",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_224",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_224",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R2",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_224",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_224",
+   "world": "gaming",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_224",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_224",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_227",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_227",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_227",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_227",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_227",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R8",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_227",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_227",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_228",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_228",
+   "world": "f1",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_228",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_228",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_228",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_228",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_228",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "hinglish",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_228",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_229",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_229",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": [
+    "R1",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_229",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_229",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_229",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R7",
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_229",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_229",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_236",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_236",
+   "world": "f1",
+   "outcome": "retry",
+   "failed_rules": [
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_236",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_236",
+   "world": "bollywood",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R4"
+   ]
+  },
+  {
+   "moment_id": "m_236",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R2",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_236",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_236",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_239",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_239",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_244",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "gaming",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_245",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_246",
+   "world": "hinglish",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_246",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "football",
+   "outcome": "retry",
+   "failed_rules": [
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R4",
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "hinglish",
+   "outcome": "retry",
+   "failed_rules": [
+    "error"
+   ]
+  },
+  {
+   "moment_id": "nb_246",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_247",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_247",
+   "world": "f1",
+   "outcome": "template",
+   "failed_rules": [
+    "R8",
+    "R8"
+   ]
+  },
+  {
+   "moment_id": "m_247",
+   "world": "chess",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "m_247",
+   "world": "bollywood",
+   "outcome": "retry",
+   "failed_rules": [
+    "R7"
+   ]
+  },
+  {
+   "moment_id": "m_247",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "m_247",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "error"
+   ]
+  },
+  {
+   "moment_id": "m_247",
+   "world": "plain",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "football",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "f1",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "chess",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "bollywood",
+   "outcome": "first_try",
+   "failed_rules": []
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "gaming",
+   "outcome": "template",
+   "failed_rules": [
+    "R9",
+    "R9"
+   ]
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "hinglish",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R1"
+   ]
+  },
+  {
+   "moment_id": "nb_247",
+   "world": "plain",
+   "outcome": "template",
+   "failed_rules": [
+    "error",
+    "R6"
+   ]
+  }
+ ]
+}

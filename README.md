@@ -5,7 +5,7 @@
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
 > **Status, 16 Nov 2026: tier 1 (watching alone) is built, with the real match video synced ball by ball. Tier 2 (rooms with friends) is designed, not built. Deployed at https://clutch-one-mu.vercel.app**
-> Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. No LLM key has been used yet, so every explanation card is a fixed template filled by code; the LLM path is built and tested with a fake provider only.
+> Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. Most explanation cards (287 of 322) were worded by Google's Gemini (gemini-3.5-flash-lite) from facts built by code, and every one passed the code check; the other 35 are fixed templates because the model's wording failed the check or the request failed.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
@@ -68,7 +68,7 @@ Tier 1 is finished before tier 2 starts. This table is updated as work lands. Th
 | 1 | Win-probability model and stakes | built |
 | 1 | The Pulse and Focus mode call-backs | built. Background-tab notification not yet checked by hand |
 | 1 | Moment Shelf, drawn replay, Catch me up | built |
-| 1 | Your World cards with the faithfulness check | built. Wording is template-only until an LLM key is used |
+| 1 | Your World cards with the faithfulness check | built. 287 of 322 cards worded by Gemini and checked; 35 templates |
 | 1 | Two-minute reviewer demo | built |
 | 2 | Friends' room by code | designed, not built |
 | 2 | Reactions | designed, not built |
@@ -121,9 +121,9 @@ Each number is copied from the file named, not typed. Run on 14 and 15 Nov 2026.
 | Share of each test match's 10 biggest swings that had a call-back in the over before | Only the decider 30% (random, same count: 10%) · Big moments 52% (random, same count: 22%) · Everything 82% (random, same count: 42%) | `model/artifacts/pulse_eval.json` |
 | Call-backs per match (median) | 2 · 8 · 20 | same |
 | Planted errors the check caught | 30 of 30, each by the rule it was planted for; 10 of 10 good cards passed | `evals/results/summary.json` |
-| Recorded cards for the replay match that pass the check | 322 of 322, all templates (7 ways to read each moment, Hinglish included) | same |
-| Cards passing the check first time when written by an LLM | not measured: no LLM key has been used | |
-| Analogy quality by rubric; agreement with my own scoring | not measured: needs LLM-written cards | |
+| Recorded cards for the replay match that pass the check | 322 of 322 (287 worded by Gemini, 35 templates; 7 ways to read each moment, Hinglish included) | same |
+| Cards passing the check when written by an LLM (first full run, gemini-3.5-flash-lite) | 211 of 322 first time, 52 more on the one retry, 59 fell back to a template. 67 of the failed attempts were timeouts or a busy model, not broken rules. A second pass retried only the 59 | `evals/results/pregen_log_run1.json`, `evals/results/summary.json` |
+| Analogy quality by rubric; agreement with my own scoring | not measured: the judge is not built, and I have not scored a sample by hand yet | |
 | Automated tests, run locally and in CI | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |
 
 **Reading the Pulse numbers honestly.** At every bar the Pulse catches two to three times as many of the biggest swings as the same number of random call-backs. It is far from complete: at "Big moments", about half of a match's ten biggest swings had a call-back in the over before them. And "biggest swings" are measured with the same model that triggers the call-backs, so the absolute number is optimistic ([MODEL.md](docs/MODEL.md) section 8).
@@ -165,7 +165,7 @@ npm run e2e
 
 To rebuild the model from Cricsheet (Python 3.11, about 100 MB of downloads): `make model-setup`, `make model`, `make model-test`. See [RUNBOOK.md](docs/RUNBOOK.md).
 
-To have an LLM write the cards, put `LLM_PROVIDER=gemini`, `LLM_MODEL` and `LLM_API_KEY` in `.env.local` (never in the repository) and run `npm run pregen`, then `npm run evals:check`. This path is built and unit-tested with a fake provider; it has not been run against a real model yet.
+To have an LLM write the cards, put `LLM_PROVIDER=gemini`, `LLM_MODEL` and `LLM_API_KEY` in `.env.local` (never in the repository) and run `npm run pregen`, then `npm run evals:check`. The shipped cards were made this way on 17 Nov 2026 with `LLM_MODEL=gemini-3.5-flash-lite` (the larger Gemini Flash models answered "high demand" that night).
 
 **CI:** green on GitHub Actions for the first time on 15 Nov (lint, typecheck, unit tests, data check, evals check, build, Python tests and the 13 end-to-end tests). Before that, every run had failed at the start because of a mistake in the workflow file.
 

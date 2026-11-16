@@ -201,7 +201,7 @@ If time runs short, cut from the top. Each cut moves the item to "designed, not 
 | Cool-down of 12 balls | 6 balls | 12 capped a match at 20 call-backs, below the "Everything" target |
 | Four tabs | Three: Match, Focus, Moments | Back me up and Room are tier 2; no dead tabs |
 | Template cards are plain | Plus one fixed analogy sentence per world and kind | So Your World works with no LLM key, still checked |
-| `evals:generate` and `evals:judge` run once | Not run | No LLM key yet; the judge is cut-order item 8 |
+| `evals:generate` and `evals:judge` run once | `evals:generate` (pregen) run with Gemini on 17 Nov; judge not run | The judge is cut-order item 8 |
 | Pranay picks the replay match from the list first | A provisional match was used while building; Pranay confirmed it on 15 Nov | Work was not blocked |
 | Tests written before code | Mostly written alongside the code, some after | Speed. Every test listed in TESTING.md for tier 1 exists except the ones named there |
 | CI goes green | Green from 15 Nov | The workflow used `hashFiles()` in job conditions, which GitHub rejects, so CI never ran until it was fixed on the first push |
