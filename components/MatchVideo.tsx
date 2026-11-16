@@ -135,13 +135,7 @@ export function MatchVideo({ video }: { video: VideoInfo }) {
             onClick={() => setState("loading")}
             data-testid="video-start"
           >
-            <span
-              className="video-poster"
-              style={{
-                backgroundImage: `url(https://i.ytimg.com/vi/${video.youtube_id}/hqdefault.jpg)`,
-              }}
-              aria-hidden="true"
-            />
+            <span className="video-poster" aria-hidden="true" />
             <span className="video-start-label">
               <IconPlay />
               Watch the match video

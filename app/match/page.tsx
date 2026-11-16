@@ -137,7 +137,7 @@ export default function MatchPage() {
             key={latest.id}
             moment={latest}
             badge={words.badge}
-            title={data.cards[`${latest.id}:${settings.world ?? "plain"}`]?.headline ?? words.title}
+            title={words.title}
             line={words.line}
             swing={{
               code: codeOf(match, facts.chance_team),

@@ -144,7 +144,7 @@ const artifactHtml = page(
 <tr><td>Win-probability model and stakes for every ball</td><td>Built</td></tr>
 <tr><td>The Pulse and Focus mode call-backs (notification, vibration, tab title)</td><td>Built. Notifications need the tab open</td></tr>
 <tr><td>Moment shelf, drawn replay, Catch me up</td><td>Built</td></tr>
-<tr><td>Cards in your world, with a code check on every number and name</td><td>Built. Wording comes from checked templates; an LLM writer is built behind the same check but not switched on</td></tr>
+<tr><td>Cards in your world, with a code check on every number and name</td><td>Built. 287 of 322 cards worded by Gemini from facts built by code, each passed the check; 35 checked templates</td></tr>
 <tr><td>Two-minute guided demo, laptop layout, Behind the scenes, the match wrap, read-aloud, Hinglish</td><td>Built</td></tr>
 <tr><td>Rooms with friends, reactions, per-over calls, Back me up</td><td>Designed, not built</td></tr>
 </table>
@@ -152,7 +152,6 @@ const artifactHtml = page(
 <p class="small">Each of these is specified in the repository's design documents, with its data model, API and tests written down before any code. Clutch keeps shipping during the review: <b>the current list of what is built is always at <a href="${LIVE}/status">${LIVE.replace("https://", "")}/status</a></b>.</p>
 <table>
 <tr><th>Feature</th><th>What it does</th><th>State</th></tr>
-<tr><td>AI-written cards</td><td>An LLM writes each card in your world from facts built by code; every card passes the same code check first, or the fan gets the template</td><td>Built behind the check and tested; switched on once a model key is added</td></tr>
 <tr><td>Rooms with friends</td><td>Join by a 6-letter code, no sign-up; everyone on the same ball; who is here now</td><td>Designed: database, row-level security, realtime protocol</td></tr>
 <tr><td>Reactions</td><td>One tap sends a reaction across every screen in the room</td><td>Designed</td></tr>
 <tr><td>Per-over calls</td><td>Call the runs in the next over, points only, a leaderboard for the room</td><td>Designed</td></tr>
@@ -218,7 +217,7 @@ ${prow("notable", "Everything")}
 <li>Ball times come from reading the video’s own scoreboard: 162 of 248 balls are pinned to it directly (26 of 33 call-back balls); the rest are spread evenly between them.</li>
 <li>The model knows the score situation only, not who is batting. “Biggest swings” are measured by the same model, so the Pulse numbers are optimistic.</li>
 <li>Call-backs need the page open (in front or in a background tab). Push with the app closed is designed, not built.</li>
-<li>Card wording is from checked templates. An LLM writer is built behind the same check but has not been run.</li>
+<li>Card wording: 287 of 322 cards by Gemini (gemini-3.5-flash-lite), each passed the code check; the other 35 are checked templates. Analogy quality has not been scored.</li>
 <li>The replay drawing shows the kind of outcome only; the data has no ball-tracking.</li>
 </ul>
 <h2>Next</h2>
@@ -237,7 +236,7 @@ const aiHtml = page(
 <tr><th>Tool</th><th>Used for</th></tr>
 <tr><td>Claude Code (Anthropic)</td><td>Planning, every document, the design tokens and mock-ups, the Python model pipeline, the app, the tests, and reviewing screenshots against the design rules</td></tr>
 <tr><td>scikit-learn (inside the product)</td><td>The win-probability model that decides when to call a fan back</td></tr>
-<tr><td>An LLM for card wording (built, not switched on)</td><td>Would only reword facts that code built, and every output is checked by code before anyone sees it</td></tr>
+<tr><td>Google Gemini (gemini-3.5-flash-lite) for card wording</td><td>Would only reword facts that code built, and every output is checked by code before anyone sees it</td></tr>
 </table>
 <h2>How the agent was kept honest</h2>
 <ul>

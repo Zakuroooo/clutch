@@ -16,7 +16,7 @@ I did not write most of this code by hand. I directed it, reviewed it, and studi
 | Tool | Used for | Not used for |
 |---|---|---|
 | Claude Code (Anthropic), models Claude Fable 5.2 and Claude Opus 5.5 | Writing the documents in `docs/`, the design tokens and mock-ups, the agent setup in `.claude/`, the code and the tests | The idea, the hypothesis or scope |
-| _LLM provider used in the product (fill in: name and model)_. **As of 15 Nov: none. No LLM has written any card; all cards are fixed templates** | Wording of explanation cards, from facts built by code | Any fact, number or decision in the product |
+| Google Gemini, model gemini-3.5-flash-lite (17 Nov 2026) | Wording of explanation cards, from facts built by code; 287 of 322 shipped cards, each passed the code check | Any fact, number or decision in the product |
 | _Judge model for the rubric (fill in)_ | Scoring analogy quality in evals | |
 | _Any other tool (fill in, or delete this row)_ | | |
 
