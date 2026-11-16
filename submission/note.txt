@@ -12,4 +12,4 @@ One ring, the Pulse, fills before a ball that could change the match and calls y
 
 AI used.
 
-A win-probability model (scikit-learn), trained on 3,137 past T20 matches, scores the stakes of every ball. On 673 held-out matches, its call-backs came before 52% of the biggest swings, against 22% for random ones. I built Clutch with Claude Code (Anthropic) for planning, code, tests and design review. The problem, product decisions and final review are mine.
+A win-probability model (scikit-learn), trained on 3,137 past T20 matches, scores the stakes of every ball. On 673 held-out matches, its call-backs came before 52% of the biggest swings, against 22% for random ones. The idea is my own, and I built it with AI: Claude Code (Anthropic) for code, tests and design review.

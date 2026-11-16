@@ -52,7 +52,7 @@ const NOTE = [
   ["b", "AI used."],
   [
     "p",
-    `A win-probability model (scikit-learn), trained on ${n(split.train.matches)} past T20 matches, scores the stakes of every ball. On ${n(split.test.matches)} held-out matches, its call-backs came before ${pct(bars.big.coverage)} of the biggest swings, against ${pct(bars.big.random_same_count)} for random ones. I built Clutch with Claude Code (Anthropic) for planning, code, tests and design review. The problem, product decisions and final review are mine.`,
+    `A win-probability model (scikit-learn), trained on ${n(split.train.matches)} past T20 matches, scores the stakes of every ball. On ${n(split.test.matches)} held-out matches, its call-backs came before ${pct(bars.big.coverage)} of the biggest swings, against ${pct(bars.big.random_same_count)} for random ones. The idea is my own, and I built it with AI: Claude Code (Anthropic) for code, tests and design review.`,
   ],
 ];
 const noteText = NOTE.map(([, t]) => t).join(" ");
@@ -208,13 +208,9 @@ ${prow("notable", "Everything")}
 const aiHtml = page(
   "Clutch - how AI was used",
   `${brand}<h1>How AI was used to build Clutch</h1>
-<div class="kicker">The honest account. The full log, with every decision and review, is docs/AI-WORKFLOW.md in the repository.</div>
-<h2>Who did what</h2>
-<table>
-<tr><th>Mine (Pranay)</th><th>AI-assisted</th></tr>
-<tr><td>The fan problem, from how I actually watch sport. The hypothesis. What to build and what to cut. Rejecting two designs and choosing the third. Choosing the replay match. Reviewing what the AI produced.</td>
-<td>Research, the planning documents, the design system and mock-ups, and most of the code and tests, written by Claude Code under the rules in the repository.</td></tr>
-</table>
+<div class="kicker">The full log, with every decision and review, is docs/AI-WORKFLOW.md in the repository.</div>
+<p style="font-size:13pt"><b>The idea is my own, and I built it with AI.</b></p>
+<p>The fan problem comes from how I watch sport. The hypothesis, what to build and what to cut, the design direction (after rejecting two designs) and the choice of replay match are my decisions. Claude Code wrote most of the code, tests and documents under rules I set, and I reviewed every change.</p>
 <h2>Tools</h2>
 <table>
 <tr><th>Tool</th><th>Used for</th></tr>

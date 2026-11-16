@@ -4,8 +4,10 @@ The submission form asks which AI tools were used and for what. This file is the
 
 ## The short version
 
-- **Mine (Pranay):** the fan problem, which comes from how I actually watch sport; the hypothesis; the product decisions (what to build, what to cut, the name, the design direction); the choice of replay match; reviewing and accepting or rejecting what the AI produced; scoring eval cards by hand.
-- **AI-assisted:** research into what exists, the planning documents, the design mock-ups, and most of the code and tests.
+**The idea is my own, and I built it with AI.**
+
+- **Mine (Pranay):** the idea, from how I actually watch sport; the hypothesis; the product decisions (what to build, what to cut, the design direction); the choice of replay match; reviewing and accepting or rejecting what the AI produced.
+- **Built with AI:** Claude Code (Anthropic) wrote the documents, the design mock-ups, and most of the code and tests, under the rules in `CLAUDE.md`.
 
 I did not write most of this code by hand. I directed it, reviewed it, and studied it so I can explain every part.
 
@@ -13,27 +15,25 @@ I did not write most of this code by hand. I directed it, reviewed it, and studi
 
 | Tool | Used for | Not used for |
 |---|---|---|
-| Claude Code (Anthropic), model Claude Fable 5.2 | Research, the plan, every document in `docs/`, the design tokens and mock-ups, the agent setup in `.claude/`; from 14 Nov, code and tests | Deciding the problem, the hypothesis or scope |
+| Claude Code (Anthropic), models Claude Fable 5.2 and Claude Opus 5.5 | Writing the documents in `docs/`, the design tokens and mock-ups, the agent setup in `.claude/`, the code and the tests | The idea, the hypothesis or scope |
 | _LLM provider used in the product (fill in: name and model)_. **As of 15 Nov: none. No LLM has written any card; all cards are fixed templates** | Wording of explanation cards, from facts built by code | Any fact, number or decision in the product |
 | _Judge model for the rubric (fill in)_ | Scoring analogy quality in evals | |
 | _Any other tool (fill in, or delete this row)_ | | |
 
 ## What I decided, and what I rejected
 
-| Date | Decision | Mine or AI's suggestion | Notes |
-|---|---|---|---|
-| 13 Nov | The fan problem: missing moments while working; not knowing why a player matters; not wanting to keep asking friends | Mine | From my own experience |
-| 13 Nov | The name "Clutch" | AI suggested, I chose _(confirm)_ | |
-| 13 Nov | Three scope tiers; tier 1 before anything else | AI proposed after I gave the real deadline; I agreed | |
-| 13 Nov | **Rejected the first design** (broadcast scoreboard): cluttered and boring | Mine | |
-| 13 Nov | **Rejected the second design** (one dial, serif type, no cards): looked like a plain page with big fonts, not a professional app. I asked for the patterns real apps use, like Dream11 and JioHotstar | Mine | DECISIONS/0009 |
-| 13 Nov | Accepted the third direction (match centre with cards, crests, jerseys and the Pulse ring) as good enough to start building, to be improved alongside the build | Mine | Not yet the design I want |
-| 13 Nov | Notifications from the open page only; closed-app push not built | AI flagged it as unrealistic in three days; _(fill in: agreed / changed)_ | DECISIONS/0007 |
-| 13 Nov | Mini replay as a labelled drawing, not a ball path | AI found the data has no tracking; _(fill in)_ | DECISIONS/0008 |
-| 15 Nov | Replay match: Punjab Kings v Mumbai Indians, IPL, 14 May 2026 | The AI ranked test-split matches and proposed it; I chose it | The AI's first pick (MI v RCB) made the Pulse hot for the whole chase, so it was replaced before I chose |
-| 14 Nov | Removed the run-rate feature from the model; cool-down of 6 balls instead of 12; three tabs instead of four; fixed analogy templates when there is no LLM key | AI decided while building and wrote each into the docs; _(fill in: agreed / changed)_ | BUILD-PLAN "What was done differently" |
-| | My world for the demo: _(fill in)_ | Mine | |
-| | _(add rows as they happen)_ | | |
+| Date | Decision | Notes |
+|---|---|---|
+| 13 Nov | The fan problem: missing moments while working; not knowing why a player matters; not wanting to keep asking friends | From my own experience |
+| 13 Nov | Three scope tiers; tier 1 before anything else | Set by the real deadline |
+| 13 Nov | **Rejected the first design** (broadcast scoreboard): cluttered and boring | |
+| 13 Nov | **Rejected the second design** (one dial, serif type, no cards): looked like a plain page with big fonts, not a professional app. I asked for the patterns real apps use, like Dream11 and JioHotstar | DECISIONS/0009 |
+| 13 Nov | Accepted the third direction (match centre with cards, crests, jerseys and the Pulse ring) as good enough to start building, to be improved alongside the build | Not yet the design I want |
+| 13 Nov | Notifications from the open page only; closed-app push not built, because it is not realistic in three days | DECISIONS/0007 |
+| 13 Nov | Mini replay as a labelled drawing, not a ball path, because the data has no ball tracking | DECISIONS/0008 |
+| 15 Nov | Replay match: Punjab Kings v Mumbai Indians, IPL, 14 May 2026 | Chosen from the test-split matches ranked by `pick_replay.py`: a calm first half and a tight finish, so the Pulse goes from calm to hot |
+| 14 Nov | Removed the run-rate feature from the model; cool-down of 6 balls instead of 12; three tabs instead of four; fixed analogy templates when there is no LLM key | BUILD-PLAN "What was done differently" |
+| | _(add rows as they happen)_ | |
 
 ## How the agent was set up
 

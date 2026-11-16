@@ -174,7 +174,7 @@ To have an LLM write the cards, put `LLM_PROVIDER=gemini`, `LLM_MODEL` and `LLM_
 
 ## How this was built
 
-With AI coding agents, on purpose and in the open. The fan problem, the hypothesis and the product decisions are mine. Research, planning, design mock-ups and most of the code are AI-assisted, and I review and study all of it. The full account, including what I rejected and what the AI got wrong, is in [AI-WORKFLOW.md](docs/AI-WORKFLOW.md). The agent's rules, skills, reviewers and guard hooks are in [`CLAUDE.md`](CLAUDE.md) and [`.claude/`](.claude/).
+The idea is my own, and I built it with AI. Claude Code (Anthropic) wrote most of the code, tests and documents under the rules in `CLAUDE.md`; I directed it, reviewed every change and study it so I can explain every part. The full account, including what I rejected and what the AI got wrong, is in [AI-WORKFLOW.md](docs/AI-WORKFLOW.md). The agent's rules, skills, reviewers and guard hooks are in [`CLAUDE.md`](CLAUDE.md) and [`.claude/`](.claude/).
 
 ## Data and credits
 

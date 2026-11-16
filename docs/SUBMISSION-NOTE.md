@@ -14,11 +14,11 @@ Try it: https://clutch-one-mu.vercel.app and tap “Show me in 2 minutes”. No 
 
 **How Clutch helps.** One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf with a drawn replay, explained in a world you already know: football, F1, chess, Bollywood or gaming. Code builds and checks every number. It replays a real IPL match as if live; there are no real users yet.
 
-**AI used.** A win-probability model (scikit-learn), trained on 3,137 past T20 matches, scores the stakes of every ball. On 673 held-out matches, its call-backs came before 52% of the biggest swings, against 22% for random ones. I built Clutch with Claude Code (Anthropic) for planning, code, tests and design review. The problem, product decisions and final review are mine.
+**AI used.** A win-probability model (scikit-learn), trained on 3,137 past T20 matches, scores the stakes of every ball. On 673 held-out matches, its call-backs came before 52% of the biggest swings, against 22% for random ones. The idea is my own, and I built it with AI: Claude Code (Anthropic) for code, tests and design review.
 
 ---
 
-Word count of the note above (title to last line): 194, counted by script on 16 Nov. Recount after any edit.
+Word count of the note above (title to last line): 191, counted by script on 16 Nov. Recount after any edit.
 
 ## Before submitting
 
@@ -26,4 +26,4 @@ Word count of the note above (title to last line): 194, counted by script on 16 
 - [x] "Friends can join a room by code" removed (tier 2 was not built)
 - [x] The worlds listed are the ones that actually work (football, F1, chess, Bollywood, gaming, plain, all as checked templates)
 - [x] 200 words or fewer
-- [x] The form's AI question answered: Claude Code (Anthropic) to build it; scikit-learn for the model in the product
+- [x] The form's AI question answered: "The idea is my own, and I built it with AI", naming Claude Code (Anthropic); scikit-learn for the model in the product
