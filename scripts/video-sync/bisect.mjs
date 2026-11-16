@@ -1,7 +1,7 @@
 // Second pass: for each ball, narrow the moment the scoreboard first shows it to ~2 s by
 // bisecting between two coarse readings. Viewing only; crops are deleted after reading.
 // Usage: node bisect.mjs <timeline.json> <coarse.jsonl...> --part k/n --out fine-k.jsonl
-import { chromium } from "/Users/pranaysarkar/Desktop/clutch/node_modules/@playwright/test/index.mjs";
+import { chromium } from "@playwright/test";
 import { execFileSync } from "node:child_process";
 import { appendFileSync, readFileSync, rmSync } from "node:fs";
 const args = process.argv.slice(2);
@@ -59,7 +59,7 @@ console.log(`part ${part}/${parts}: ${mine.length} of ${brackets.length} bracket
 const b = await chromium.launch({ args: ["--autoplay-policy=no-user-gesture-required", "--mute-audio"] });
 const p = await b.newPage({ viewport: { width: 1280, height: 720 } });
 const open = async (t) => {
-  await p.goto(`http://localhost:8765/?v=lp2aesSYQxc&t=${Math.floor(t)}`, { waitUntil: "load" });
+  await p.goto(`http://localhost:8765/player.html?v=lp2aesSYQxc&t=${Math.floor(t)}`, { waitUntil: "load" });
   await p.waitForFunction(() => window.ready === true, null, { timeout: 30000 }).catch(() => {});
 };
 const landed = async (t, ms) => {

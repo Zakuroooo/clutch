@@ -2,7 +2,7 @@
 
 How `data/matches/<id>/video_sync.json` was made. Run by hand once per match; not part of CI.
 
-1. A small local page embeds the video with the YouTube IFrame API (the player refuses
+1. `player.html` (served with `python3 -m http.server 8765` from this folder) embeds the video with the YouTube IFrame API (the player refuses
    embeds without a host page).
 2. `sample.mjs` seeks the player every 30 seconds, takes a screenshot of only the bottom
    scoreboard strip, reads it with `ocr` (macOS Vision, built from `ocr.swift` with

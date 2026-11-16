@@ -1,13 +1,13 @@
 // Seeks through the embedded match video and reads the scoreboard strip every STEP seconds.
 // Viewing only: each crop is deleted right after it is read.
-import { chromium } from "/Users/pranaysarkar/Desktop/clutch/node_modules/@playwright/test/index.mjs";
+import { chromium } from "@playwright/test";
 import { execFileSync } from "node:child_process";
 import { appendFileSync, rmSync } from "node:fs";
 const [id, from, to, step, out, tag] = process.argv.slice(2);
 const b = await chromium.launch({ args: ["--autoplay-policy=no-user-gesture-required", "--mute-audio"] });
 const p = await b.newPage({ viewport: { width: 1280, height: 720 } });
 const open = async (t) => {
-  await p.goto(`http://localhost:8765/?v=${id}&t=${t}`, { waitUntil: "load" });
+  await p.goto(`http://localhost:8765/player.html?v=${id}&t=${t}`, { waitUntil: "load" });
   await p.waitForFunction(() => window.ready === true, null, { timeout: 30000 }).catch(() => {});
 };
 const landed = async (t, ms) => {
