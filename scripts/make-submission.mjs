@@ -38,7 +38,7 @@ const img = (name) =>
 // ---------------------------------------------------------------- the 200-word note
 const NOTE = [
   ["h", "Clutch: the friend who tells you when to look up"],
-  ["p", `Try it: ${LIVE} and tap “Show me in 2 minutes”. No sign-up.`],
+  ["p", `Try it: ${LIVE} and tap “Show me in 2 minutes”.`],
   ["b", "The fan problem."],
   [
     "p",
@@ -47,7 +47,7 @@ const NOTE = [
   ["b", "How Clutch helps."],
   [
     "p",
-    `One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf, explained in a world you already know: football, F1, chess, Bollywood, gaming or Hinglish. Code builds and checks every number. It replays a real T20I with its full match video, every ball synced; there are no real users yet.`,
+    `One ring, the Pulse, fills before a ball that could change the match and calls you back. Moments you missed wait on a shelf, explained in a world you already know: football, F1, chess, Bollywood, gaming or Hinglish. Code builds and checks every number. It replays a real T20I with its full match video, every ball synced; there are no real users yet. Next: AI-written cards and rooms with friends.`,
   ],
   ["b", "AI used."],
   [
@@ -146,6 +146,18 @@ const artifactHtml = page(
 <tr><td>Two-minute guided demo, laptop layout, Behind the scenes, the match wrap, read-aloud, Hinglish</td><td>Built</td></tr>
 <tr><td>Rooms with friends, reactions, per-over calls, Back me up</td><td>Designed, not built</td></tr>
 </table>
+<h2>Building next (designed, not built yet)</h2>
+<p class="small">Each of these is specified in the repository's design documents, with its data model, API and tests written down before any code.</p>
+<table>
+<tr><th>Feature</th><th>What it does</th><th>State</th></tr>
+<tr><td>AI-written cards</td><td>An LLM writes each card in your world from facts built by code; every card passes the same code check first, or the fan gets the template</td><td>Built behind the check and tested; switched on once a model key is added</td></tr>
+<tr><td>Rooms with friends</td><td>Join by a 6-letter code, no sign-up; everyone on the same ball; who is here now</td><td>Designed: database, row-level security, realtime protocol</td></tr>
+<tr><td>Reactions</td><td>One tap sends a reaction across every screen in the room</td><td>Designed</td></tr>
+<tr><td>Per-over calls</td><td>Call the runs in the next over, points only, a leaderboard for the room</td><td>Designed</td></tr>
+<tr><td>Back me up</td><td>Your player's best true case against your friend's, from the same stats, fair to both</td><td>Designed, with its own code check</td></tr>
+<tr><td>Call-backs with the app closed</td><td>Web push, so the phone buzzes even when Clutch is not open</td><td>Designed</td></tr>
+<tr><td>More sports</td><td>The engine never names cricket; a football adapter is sketched</td><td>Designed</td></tr>
+</table>
 <h2>Code</h2>
 <p>Source: ${repoLink}. The README, the design documents in <code>docs/</code>, and the test and evaluation results are all there. The code is also attached as <code>clutch-source.zip</code>.</p>
 <p class="small">To run it on a laptop: Node 22, then <code>npm install</code> and <code>npm run dev</code>, and open http://localhost:3000. No keys needed.</p>`,
@@ -206,7 +218,9 @@ ${prow("notable", "Everything")}
 <li>Call-backs need the page open (in front or in a background tab). Push with the app closed is designed, not built.</li>
 <li>Card wording is from checked templates. An LLM writer is built behind the same check but has not been run.</li>
 <li>The replay drawing shows the kind of outcome only; the data has no ball-tracking.</li>
-</ul>`,
+</ul>
+<h2>Next</h2>
+<p>Switch on AI-written cards and score them (the faithfulness check and the planted-error set are already in place), then rooms with friends, reactions, per-over calls and Back me up, all designed in the repository.</p>`,
 );
 
 // ---------------------------------------------------------------- 4. AI workflow
