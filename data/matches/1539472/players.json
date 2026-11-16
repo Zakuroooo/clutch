@@ -1,0 +1,552 @@
+{
+  "Musa Shaheen": {
+    "id": "6709b2de",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 30,
+    "batting": {
+      "innings": 26,
+      "runs": 515,
+      "average": 20.6,
+      "strike_rate": 109.1,
+      "fifties": 2,
+      "sixes": 18,
+      "chase_innings": 10,
+      "chase_average": 14.7,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 1,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "HAM Shah": {
+    "id": "007113d7",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 39,
+    "batting": {
+      "innings": 39,
+      "runs": 1513,
+      "average": 40.9,
+      "strike_rate": 133.7,
+      "fifties": 12,
+      "sixes": 59,
+      "chase_innings": 13,
+      "chase_average": 38.2,
+      "chase_fifties": 4,
+      "chase_not_outs": 2,
+      "death_strike_rate": 244.8
+    },
+    "bowling": {
+      "innings": 19,
+      "wickets": 29,
+      "economy": 6.8,
+      "death_economy": 5.7
+    }
+  },
+  "Lucky Ali": {
+    "id": "28b032ac",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 29,
+    "batting": {
+      "innings": 17,
+      "runs": 183,
+      "average": 16.6,
+      "strike_rate": 86.3,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 7,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 3,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 20,
+      "wickets": 20,
+      "economy": 5.9,
+      "death_economy": null
+    }
+  },
+  "S Heath": {
+    "id": "884905a1",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 9,
+    "batting": {
+      "innings": 9,
+      "runs": 273,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 1,
+      "sixes": 14,
+      "chase_innings": 3,
+      "chase_average": null,
+      "chase_fifties": 1,
+      "chase_not_outs": 1,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "T Bharaj": {
+    "id": "49556abb",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 37,
+    "batting": {
+      "innings": 36,
+      "runs": 756,
+      "average": 24.4,
+      "strike_rate": 119.1,
+      "fifties": 5,
+      "sixes": 18,
+      "chase_innings": 13,
+      "chase_average": 35.0,
+      "chase_fifties": 3,
+      "chase_not_outs": 3,
+      "death_strike_rate": 157.3
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Surya Anand": {
+    "id": "ef141f36",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 37,
+    "batting": {
+      "innings": 28,
+      "runs": 390,
+      "average": 24.4,
+      "strike_rate": 107.1,
+      "fifties": 1,
+      "sixes": 14,
+      "chase_innings": 9,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 134.4
+    },
+    "bowling": {
+      "innings": 35,
+      "wickets": 28,
+      "economy": 6.2,
+      "death_economy": null
+    }
+  },
+  "Abdullah Mahmood": {
+    "id": "926c6d3c",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 23,
+    "batting": {
+      "innings": 9,
+      "runs": 25,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 3,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 21,
+      "wickets": 22,
+      "economy": 6.3,
+      "death_economy": 4.3
+    }
+  },
+  "Mustakim Aslam": {
+    "id": "966b2677",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 4,
+    "batting": {
+      "innings": 1,
+      "runs": 1,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 0,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 4,
+      "wickets": 3,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Shakeel Zeb": {
+    "id": "4709e746",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 4,
+    "batting": {
+      "innings": 2,
+      "runs": 20,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 0,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 4,
+      "wickets": 5,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Jabran Khan": {
+    "id": "02fe46ca",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 2,
+    "batting": {
+      "innings": 1,
+      "runs": 1,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 0,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "E Karimi": {
+    "id": "95bd9407",
+    "team": "Denmark",
+    "jersey": null,
+    "matches": 16,
+    "batting": {
+      "innings": 6,
+      "runs": 9,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 2,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 16,
+      "wickets": 19,
+      "economy": 6.8,
+      "death_economy": null
+    }
+  },
+  "JWP Stephan": {
+    "id": "bf0e0601",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 3,
+    "batting": {
+      "innings": 3,
+      "runs": 22,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 1,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Musaddiq Ahmed": {
+    "id": "f8fb7e7b",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 24,
+    "batting": {
+      "innings": 24,
+      "runs": 687,
+      "average": 28.6,
+      "strike_rate": 168.8,
+      "fifties": 3,
+      "sixes": 43,
+      "chase_innings": 11,
+      "chase_average": 29.7,
+      "chase_fifties": 1,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 5,
+      "wickets": 2,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "J van Heerden": {
+    "id": "01549705",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 19,
+    "batting": {
+      "innings": 18,
+      "runs": 591,
+      "average": 42.2,
+      "strike_rate": 134.9,
+      "fifties": 3,
+      "sixes": 15,
+      "chase_innings": 10,
+      "chase_average": 48.5,
+      "chase_fifties": 1,
+      "chase_not_outs": 4,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 8,
+      "wickets": 10,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "H Singh": {
+    "id": "8209da53",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 51,
+    "batting": {
+      "innings": 45,
+      "runs": 990,
+      "average": 26.8,
+      "strike_rate": 131.5,
+      "fifties": 6,
+      "sixes": 27,
+      "chase_innings": 24,
+      "chase_average": 28.6,
+      "chase_fifties": 2,
+      "chase_not_outs": 7,
+      "death_strike_rate": 182.1
+    },
+    "bowling": {
+      "innings": 3,
+      "wickets": 1,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "K Klesse": {
+    "id": "9538c7be",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 6,
+    "batting": {
+      "innings": 6,
+      "runs": 170,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 1,
+      "sixes": 6,
+      "chase_innings": 4,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Fayaz Khan": {
+    "id": "373954ca",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 32,
+    "batting": {
+      "innings": 25,
+      "runs": 450,
+      "average": 22.5,
+      "strike_rate": 154.1,
+      "fifties": 3,
+      "sixes": 36,
+      "chase_innings": 9,
+      "chase_average": null,
+      "chase_fifties": 1,
+      "chase_not_outs": 0,
+      "death_strike_rate": 170.9
+    },
+    "bowling": {
+      "innings": 21,
+      "wickets": 22,
+      "economy": 8.1,
+      "death_economy": 9.8
+    }
+  },
+  "Shahid Afridi": {
+    "id": "5b2acc3f",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 25,
+    "batting": {
+      "innings": 23,
+      "runs": 327,
+      "average": 14.9,
+      "strike_rate": 187.9,
+      "fifties": 1,
+      "sixes": 33,
+      "chase_innings": 11,
+      "chase_average": 18.1,
+      "chase_fifties": 1,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 22,
+      "wickets": 30,
+      "economy": 8.6,
+      "death_economy": 7.9
+    }
+  },
+  "Muslim Yar": {
+    "id": "37d8d19a",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 56,
+    "batting": {
+      "innings": 28,
+      "runs": 304,
+      "average": 15.2,
+      "strike_rate": 122.6,
+      "fifties": 0,
+      "sixes": 18,
+      "chase_innings": 13,
+      "chase_average": 20.5,
+      "chase_fifties": 0,
+      "chase_not_outs": 5,
+      "death_strike_rate": 126.0
+    },
+    "bowling": {
+      "innings": 56,
+      "wickets": 69,
+      "economy": 6.6,
+      "death_economy": 6.0
+    }
+  },
+  "Sajid Liaqat": {
+    "id": "b1b99a1a",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 23,
+    "batting": {
+      "innings": 13,
+      "runs": 145,
+      "average": 18.1,
+      "strike_rate": 146.5,
+      "fifties": 0,
+      "sixes": 12,
+      "chase_innings": 6,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 2,
+      "death_strike_rate": 169.3
+    },
+    "bowling": {
+      "innings": 23,
+      "wickets": 27,
+      "economy": 9.2,
+      "death_economy": 10.0
+    }
+  },
+  "Nooruddin Mujadady": {
+    "id": "fcd92ab0",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 10,
+    "batting": {
+      "innings": 5,
+      "runs": 40,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 2,
+      "chase_innings": 3,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 2,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 9,
+      "wickets": 6,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "V Jatinder Kumar": {
+    "id": "72ef2c6b",
+    "team": "Germany",
+    "jersey": null,
+    "matches": 19,
+    "batting": {
+      "innings": 8,
+      "runs": 23,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "sixes": 0,
+      "chase_innings": 3,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 0,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 19,
+      "wickets": 22,
+      "economy": 6.1,
+      "death_economy": null
+    }
+  }
+}

@@ -1,5 +1,11 @@
 {
-  "match_id": "1529301",
-  "chosen_by": "Pranay",
-  "chosen_on": "2026-11-15"
+  "match_id": "1539472",
+  "chosen_by": "provisional: picked for the video branch because its full match is on YouTube, until Pranay confirms",
+  "chosen_on": "2026-11-16",
+  "video": {
+    "youtube_id": "lp2aesSYQxc",
+    "title": "Denmark vs Germany - 1st T20i (18/6-2026)",
+    "channel": "Svanholm Cricket Club",
+    "channel_url": "https://www.youtube.com/@SvanholmCricketClub"
+  }
 }

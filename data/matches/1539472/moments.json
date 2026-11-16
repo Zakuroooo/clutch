@@ -1,0 +1,335 @@
+[
+  {
+    "id": "m_8",
+    "i": 8,
+    "kind": "swing",
+    "level": "big",
+    "over_label": "1.2",
+    "swing": 0.0707,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_24",
+    "i": 24,
+    "kind": "swing",
+    "level": "notable",
+    "over_label": "3.4",
+    "swing": 0.0597,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_28",
+    "i": 28,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "4.2",
+    "swing": -0.0935,
+    "replay_kind": "bowled"
+  },
+  {
+    "id": "m_53",
+    "i": 53,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "8.3",
+    "swing": -0.0682,
+    "replay_kind": "bowled"
+  },
+  {
+    "id": "m_75",
+    "i": 75,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "12.1",
+    "swing": -0.0598,
+    "replay_kind": "stumped"
+  },
+  {
+    "id": "m_78",
+    "i": 78,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "12.4",
+    "swing": -0.0881,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_97",
+    "i": 97,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "15.3",
+    "swing": -0.0822,
+    "replay_kind": "bowled"
+  },
+  {
+    "id": "m_104",
+    "i": 104,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "16.3",
+    "swing": -0.0889,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_125",
+    "i": 125,
+    "kind": "innings_end",
+    "level": "notable",
+    "over_label": "19.6",
+    "swing": 0.0223,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_130",
+    "i": 130,
+    "kind": "swing",
+    "level": "notable",
+    "over_label": "0.5",
+    "swing": -0.067,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_141",
+    "i": 141,
+    "kind": "wicket_big",
+    "level": "big",
+    "over_label": "2.3",
+    "swing": 0.1149,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_144",
+    "i": 144,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "2.6",
+    "swing": 0.096,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_147",
+    "i": 147,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "3.3",
+    "swing": -0.1273,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_148",
+    "i": 148,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "3.4",
+    "swing": 0.096,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_155",
+    "i": 155,
+    "kind": "swing",
+    "level": "notable",
+    "over_label": "4.5",
+    "swing": -0.0769,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_162",
+    "i": 162,
+    "kind": "wicket_big",
+    "level": "notable",
+    "over_label": "5.6",
+    "swing": 0.0582,
+    "replay_kind": "lbw"
+  },
+  {
+    "id": "m_168",
+    "i": 168,
+    "kind": "over_big",
+    "level": "decider",
+    "over_label": "6.6",
+    "swing": 0.1178,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_174",
+    "i": 174,
+    "kind": "over_big",
+    "level": "decider",
+    "over_label": "7.6",
+    "swing": 0.1006,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_180",
+    "i": 180,
+    "kind": "over_big",
+    "level": "decider",
+    "over_label": "8.6",
+    "swing": -0.1693,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_181",
+    "i": 181,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "9.1",
+    "swing": -0.0733,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_197",
+    "i": 197,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "11.5",
+    "swing": -0.1918,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_202",
+    "i": 202,
+    "kind": "wicket_big",
+    "level": "decider",
+    "over_label": "12.4",
+    "swing": 0.1405,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_203",
+    "i": 203,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "12.5",
+    "swing": 0.0676,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_209",
+    "i": 209,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "13.4",
+    "swing": -0.1684,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_212",
+    "i": 212,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "14.1",
+    "swing": 0.0592,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_213",
+    "i": 213,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "14.2",
+    "swing": -0.1665,
+    "replay_kind": "four"
+  },
+  {
+    "id": "m_216",
+    "i": 216,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "14.5",
+    "swing": 0.0584,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_223",
+    "i": 223,
+    "kind": "over_big",
+    "level": "decider",
+    "over_label": "15.6",
+    "swing": -0.155,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_224",
+    "i": 224,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "16.1",
+    "swing": 0.0723,
+    "replay_kind": "dot"
+  },
+  {
+    "id": "m_227",
+    "i": 227,
+    "kind": "wicket_big",
+    "level": "decider",
+    "over_label": "16.4",
+    "swing": 0.1622,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_228",
+    "i": 228,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "16.5",
+    "swing": -0.2552,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_229",
+    "i": 229,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "16.6",
+    "swing": -0.2194,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_236",
+    "i": 236,
+    "kind": "over_big",
+    "level": "decider",
+    "over_label": "17.7",
+    "swing": 0.1079,
+    "replay_kind": "none"
+  },
+  {
+    "id": "m_239",
+    "i": 239,
+    "kind": "swing",
+    "level": "decider",
+    "over_label": "18.3",
+    "swing": -0.2311,
+    "replay_kind": "six"
+  },
+  {
+    "id": "m_245",
+    "i": 245,
+    "kind": "wicket_big",
+    "level": "decider",
+    "over_label": "19.3",
+    "swing": 0.3241,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_246",
+    "i": 246,
+    "kind": "wicket_big",
+    "level": "decider",
+    "over_label": "19.4",
+    "swing": 0.5802,
+    "replay_kind": "caught"
+  },
+  {
+    "id": "m_247",
+    "i": 247,
+    "kind": "result",
+    "level": "decider",
+    "over_label": "19.5",
+    "swing": -0.9248,
+    "replay_kind": "none"
+  }
+]
