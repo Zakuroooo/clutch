@@ -36,3 +36,7 @@ coverage/
 
 # data pulled in for the build
 model/.venv/
+
+# submission: the HTML is an intermediate; the PDFs are kept
+submission/*.html
+submission/*.zip

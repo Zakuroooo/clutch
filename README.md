@@ -4,7 +4,7 @@
 
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
-> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Live at https://clutch-one-mu.vercel.app**
+> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Deployed at https://clutch-one-mu.vercel.app**
 > Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. No LLM key has been used yet, so every explanation card is a fixed template filled by code; the LLM path is built and tested with a fake provider only.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
