@@ -3,6 +3,8 @@
 // Usage: node scripts/make-submission.mjs
 import { chromium } from "@playwright/test";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 
 const read = (f) => JSON.parse(readFileSync(f, "utf8"));
 const split = read("model/artifacts/split.json");
@@ -159,7 +161,7 @@ const artifactHtml = page(
 <tr><td>More sports</td><td>The engine never names cricket; a football adapter is sketched</td><td>Designed</td></tr>
 </table>
 <h2>Code</h2>
-<p>Source: ${repoLink}. The README, the design documents in <code>docs/</code>, and the test and evaluation results are all there. The code is also attached as <code>clutch-source.zip</code>.</p>
+<p>Source: ${repoLink}. The README, the design documents in <code>docs/</code>, and the test and evaluation results are all there.</p>
 <p class="small">To run it on a laptop: Node 22, then <code>npm install</code> and <code>npm run dev</code>, and open http://localhost:3000. No keys needed.</p>`,
 );
 
@@ -268,7 +270,6 @@ const docs = [
 const browser = await chromium.launch();
 const tab = await browser.newPage();
 for (const [name, html] of docs) {
-  writeFileSync(`submission/${name}.html`, html);
   await tab.setContent(html, { waitUntil: "load" });
   await tab.pdf({
     path: `submission/${name}.pdf`,
@@ -279,5 +280,6 @@ for (const [name, html] of docs) {
   console.log(`submission/${name}.pdf`);
 }
 await browser.close();
-writeFileSync("submission/note.txt", NOTE.map(([k, t]) => (k === "h" ? t : t)).join("\n\n") + "\n");
+// The note as plain text, for docs/SUBMISSION-NOTE.md. The submission folder holds only the PDFs.
+writeFileSync(path.join(tmpdir(), "clutch-note.txt"), NOTE.map(([, t]) => t).join("\n\n") + "\n");
 console.log(`note: ${noteWords} words`);
