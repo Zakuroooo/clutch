@@ -51,3 +51,15 @@ export const IconCheck = () => (
     <path d="M5 12.5l4.500 4.500L19 7.500" />
   </svg>
 );
+export const IconSpeaker = () => (
+  <svg {...base}>
+    <path d="M4 9.5h3.500L12 5.500v13L7.500 14.500H4z" />
+    <path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11" />
+  </svg>
+);
+export const IconTrophy = () => (
+  <svg {...base}>
+    <path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" />
+    <path d="M8 6H5v1.500A3 3 0 0 0 8 10.500M16 6h3v1.500A3 3 0 0 1 16 10.500M12 13v4M8.500 20h7M10 17h4" />
+  </svg>
+);

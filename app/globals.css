@@ -1356,3 +1356,137 @@ h3,
   padding: var(--s-5) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom));
   background: linear-gradient(transparent, var(--surface) 34%);
 }
+
+/* ---- Behind the scenes ---- */
+.engine-facts {
+  margin: var(--s-3) 0;
+  display: grid;
+  gap: var(--s-2);
+  font-size: var(--t-small);
+}
+.engine-facts div {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: var(--s-2);
+}
+.engine-facts dt {
+  color: var(--muted);
+}
+.engine-facts dd {
+  margin: 0;
+}
+.engine-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.engine-rows li {
+  display: grid;
+  grid-template-columns: 40px 34px 1fr;
+  gap: var(--s-2);
+  align-items: start;
+  padding: var(--s-2) 0;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--t-small);
+}
+.engine-rows .over {
+  color: var(--muted);
+}
+.engine-rows .glyph {
+  font-weight: 700;
+  text-align: center;
+  background: var(--surface-2);
+  border-radius: var(--r-chip);
+  padding: 2px 0;
+}
+.engine-rows .what {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--s-2);
+  align-items: center;
+}
+.engine-rows .tag {
+  font-size: var(--t-micro);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.up-text {
+  color: var(--up);
+}
+.down-text {
+  color: var(--down);
+}
+
+/* ---- Wrap ---- */
+.wrap-teams {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  text-align: center;
+}
+.wrap-result h1 {
+  font-size: var(--t-title);
+  font-weight: 800;
+  text-wrap: balance;
+}
+.sec-inline {
+  font-size: var(--t-lead);
+  font-weight: 700;
+  margin-top: var(--s-5);
+}
+
+/* ---- Wide screens: a laptop gets a real two-column match centre ---- */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1180px;
+  }
+  .match-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: var(--s-5);
+    align-items: start;
+    padding: 0 var(--s-3);
+  }
+  .match-grid .stage {
+    position: sticky;
+    top: var(--s-3);
+  }
+  .match-grid .stage .pulse-ring {
+    width: 240px;
+  }
+  .match-grid .side .sec:first-child {
+    padding-top: var(--s-2);
+  }
+  .tabbar,
+  .cta-bar,
+  .coach {
+    max-width: 430px;
+  }
+  .screen {
+    padding-bottom: calc(var(--tabbar-h) + var(--s-6));
+  }
+  main > .wrap,
+  main > .sec,
+  main > .chiprow,
+  main > .note {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .match-grid .wrap,
+  .match-grid .sec,
+  .match-grid .chiprow {
+    max-width: none;
+  }
+  .worlds {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .start .start-hero {
+    padding-top: var(--s-6);
+  }
+}
