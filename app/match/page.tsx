@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AppBar } from "@/components/AppBar";
 import { BallChips } from "@/components/BallChips";
 import { EngineLog } from "@/components/EngineLog";
+import { CHAPTER_LEAD_MS, chapters } from "@/lib/adapters/cricket/chapters";
 import { IconRestart, IconSkip, IconSpeed, IconTrophy, IconWorld } from "@/components/Icons";
 import { useMatch, useMatchView } from "@/components/MatchProvider";
 import { MatchVideo } from "@/components/MatchVideo";
@@ -31,6 +32,7 @@ export default function MatchPage() {
   const words = latest ? wordsFor(latest.id) : null;
   const facts = latest ? factsFor(latest.id) : null;
   const moreMoments = data.moments.some((m) => m.i > snap.index);
+  const matchChapters = chapters(ticks, match);
 
   if (!snap.ready) return <MatchSkeleton />;
 
@@ -93,6 +95,23 @@ export default function MatchPage() {
                 ? WORLD_LABEL[settings.world].replace("Keep it plain", "Plain")
                 : "Your world"}
             </Link>
+          </div>
+
+          <div className="sec">
+            <h2>Jump to</h2>
+          </div>
+          <div className="chiprow chapters">
+            {matchChapters.map((c) => (
+              <button
+                key={c.label}
+                type="button"
+                className="chapter"
+                onClick={() => store.jumpTo(Math.max(0, data.ticks[c.i].t_ms - CHAPTER_LEAD_MS))}
+              >
+                <b>{c.label}</b>
+                <span>{c.sub}</span>
+              </button>
+            ))}
           </div>
 
           <div className="sec">

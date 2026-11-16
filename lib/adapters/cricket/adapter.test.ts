@@ -225,3 +225,15 @@ describe("replayKind", () => {
     ]);
   });
 });
+
+describe("chapters", () => {
+  test("mark where each part starts and say nothing about what happens", async () => {
+    const { chapters } = await import("./chapters");
+    const list = chapters(fixtureTicks, fixtureMatch);
+    expect(list.map((c) => [c.label, c.i])).toEqual([
+      ["The start", 0],
+      ["The chase", 19],
+    ]);
+    expect(JSON.stringify(list)).not.toMatch(/won|wicket|out\b|six|four/i);
+  });
+});

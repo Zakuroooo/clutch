@@ -1555,3 +1555,31 @@ h3,
 .video-credit a {
   color: var(--text);
 }
+
+/* ---- Jump to: chapters that give nothing away ---- */
+.chapters {
+  padding-bottom: var(--s-1);
+}
+.chapter {
+  flex: none;
+  min-height: var(--tap);
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tile);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  transition: background var(--d-tap) linear;
+}
+.chapter:active {
+  background: var(--surface-2);
+}
+.chapter b {
+  font: 700 var(--t-small) / 1.2 var(--font-head);
+}
+.chapter span {
+  font-size: var(--t-micro);
+  color: var(--muted);
+}
