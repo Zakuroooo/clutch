@@ -4,7 +4,7 @@
 
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
-> **Status, 15 Nov 2026: tier 1 (watching alone) is built and runs locally. Tier 2 (rooms with friends) is designed, not built. Deployed at https://clutch-one-mu.vercel.app**
+> **Status, 16 Nov 2026: tier 1 (watching alone) is built, with the real match video synced ball by ball. Tier 2 (rooms with friends) is designed, not built. Deployed at https://clutch-one-mu.vercel.app**
 > Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. No LLM key has been used yet, so every explanation card is a fixed template filled by code; the LLM path is built and tested with a fake provider only.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
@@ -121,7 +121,7 @@ Each number is copied from the file named, not typed. Run on 14 and 15 Nov 2026.
 | Share of each test match's 10 biggest swings that had a call-back in the over before | Only the decider 30% (random, same count: 10%) · Big moments 52% (random, same count: 22%) · Everything 82% (random, same count: 42%) | `model/artifacts/pulse_eval.json` |
 | Call-backs per match (median) | 2 · 8 · 20 | same |
 | Planted errors the check caught | 30 of 30, each by the rule it was planted for; 10 of 10 good cards passed | `evals/results/summary.json` |
-| Recorded cards for the replay match that pass the check | 216 of 216, all templates | same |
+| Recorded cards for the replay match that pass the check | 322 of 322, all templates (7 ways to read each moment, Hinglish included) | same |
 | Cards passing the check first time when written by an LLM | not measured: no LLM key has been used | |
 | Analogy quality by rubric; agreement with my own scoring | not measured: needs LLM-written cards | |
 | Automated tests, run locally and in CI | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |

@@ -1,6 +1,6 @@
 # 0010. The match video, embedded and synced ball by ball
 
-**Date:** 16 Nov 2026 · **Status:** accepted, on the `video` branch · **Supersedes:** 0004 in part
+**Date:** 16 Nov 2026 · **Status:** accepted, merged on 16 Nov · **Supersedes:** 0004 in part
 
 ## Context
 Without the match itself on screen, Clutch felt like a scoreboard. Pranay decided to add the
