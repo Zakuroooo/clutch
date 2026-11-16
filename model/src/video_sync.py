@@ -43,18 +43,35 @@ def parse_reading(text: str, codes: dict[str, int]) -> tuple[int, int, int, int]
     return team, int(score.group(1)), int(score.group(2)), o * 6 + b
 
 
-def state_index(events: list[dict]) -> dict[tuple[int, int, int, int], int]:
-    """Each state after an event -> the LAST event with that state (a wide keeps the
-    ball count, a dot keeps the score; the full tuple is still unique within an innings)."""
-    out = {}
+SCORE_TOLERANCE = 4  # the stream's scorer and Cricsheet can differ by a run or two
+
+
+def state_index(events: list[dict]) -> dict[tuple[int, int, int], list[tuple[int, int]]]:
+    """(innings, wickets, legal balls) -> [(score, event index)] for every event that ends
+    in that state. The score is matched loosely: the stream's own scorer sometimes misses
+    a wide or a leg-bye that Cricsheet records."""
+    out: dict[tuple[int, int, int], list[tuple[int, int]]] = {}
     for e in events:
         s = e["state"]
-        out[(e["event"]["innings"], s["score"], s["wickets"], s["balls_bowled"])] = e["i"]
-    # Before the first ball of each innings: score 0/0 after 0 balls.
-    out.setdefault((1, 0, 0, 0), -1)
-    first2 = next(e["i"] for e in events if e["event"]["innings"] == 2)
-    out.setdefault((2, 0, 0, 0), first2 - 1)
+        out.setdefault((e["event"]["innings"], s["wickets"], s["balls_bowled"]), []).append((s["score"], e["i"]))
+    out.setdefault((1, 0, 0), [(0, -1)])
+    first2 = next((e["i"] for e in events if e["event"]["innings"] == 2), None)
+    if first2 is not None:
+        out.setdefault((2, 0, 0), [(0, first2 - 1)])
     return out
+
+
+def resolve(index, reading: tuple[int, int, int, int]) -> int | None:
+    """The event a reading shows: same innings, wickets and legal balls, nearest score
+    (the later event on a tie), within SCORE_TOLERANCE runs."""
+    innings, score, wickets, balls = reading
+    options = index.get((innings, wickets, balls), [])
+    best = None
+    for sc, i in options:
+        d = abs(sc - score)
+        if d <= SCORE_TOLERANCE and (best is None or d < best[0] or (d == best[0] and i > best[1])):
+            best = (d, i)
+    return best[1] if best else None
 
 
 def anchors_from(readings: list[dict], events: list[dict], codes: dict[str, int]):
@@ -66,7 +83,7 @@ def anchors_from(readings: list[dict], events: list[dict], codes: dict[str, int]
         parsed = parse_reading(r["text"], codes)
         if parsed is None:
             continue
-        i = index.get(parsed)
+        i = resolve(index, parsed)
         if i is None:
             unresolved.append({"t": r["now"], "reading": parsed})
             continue

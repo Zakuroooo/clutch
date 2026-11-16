@@ -28,6 +28,7 @@ def test_anchors_use_the_first_time_a_state_is_shown_and_report_the_rest():
         {"now": 70.0, "text": line("DNM", "5/0", "0.3")},
         {"now": 75.0, "text": line("DNM", "5/0", "0.3")},
         {"now": 99.0, "text": line("DNM", "9/9", "0.3")},
+        {"now": 120.0, "text": line("DNM", "7/0", "0.3")},
         {"now": 300.0, "text": line("GRM", "6/0", "0.2")},
     ]
     anchors, unresolved = anchors_from(readings, ev, CODES)
@@ -39,3 +40,11 @@ def test_ball_times_fill_gaps_evenly_and_increase():
     times = ball_times(6, [(0, 100.0), (4, 220.0), (5, 250.0)])
     assert times == [100.0, 130.0, 160.0, 190.0, 220.0, 250.0]
     assert all(b > a for a, b in zip(times, times[1:]))
+
+
+def test_a_score_a_run_or_two_off_still_matches_the_ball():
+    ev = events([(1, 1, 0, 1), (1, 2, 0, 1), (1, 6, 0, 2)])  # a wide at ball 1
+    line = lambda sc, ov: f"x\tDNM\nx\t{sc}\nx\tOVERS {ov}\n"
+    anchors, unresolved = anchors_from([{"now": 5.0, "text": line("1/0", "0.1")}, {"now": 9.0, "text": line("5/0", "0.2")}], ev, CODES)
+    assert anchors == [(0, 5.0), (2, 9.0)]
+    assert unresolved == []
