@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { debatePoints } from "@/lib/adapters/cricket/profile";
+import { debatePoints, isPlayer } from "@/lib/adapters/cricket/profile";
 import {
   joinRoom,
   joinVoice,
@@ -112,7 +112,7 @@ export function RoomScreen() {
   }
 
   const link = typeof window === "undefined" ? "" : `${window.location.origin}/match/room?code=${room.code}`;
-  const mine = settings.favourite && data.players[settings.favourite] ? settings.favourite : null;
+  const mine = isPlayer(data.players, settings.favourite) ? settings.favourite : null;
   const argue = mine ? `${full(mine)}: ${debatePoints(mine, data.players).slice(0, 2).join("; ")}`.slice(0, MAX_CHAT) : null;
   const send = (t: string) => {
     const r = sendChat(t);

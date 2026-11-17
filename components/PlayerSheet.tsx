@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
-import { achievements, knownFor, roleOf } from "@/lib/adapters/cricket/profile";
+import { achievements, isPlayer, knownFor, roleOf } from "@/lib/adapters/cricket/profile";
 import { Button } from "./Button";
 import { useMatch } from "./MatchProvider";
 import { PlayerPhoto, useFullName } from "./PlayerPhoto";
@@ -11,7 +11,7 @@ import { StatTile } from "./StatTile";
 export function PlayerSheet({ name, onClose }: { name: string; onClose: () => void }) {
   const { data } = useMatch();
   const full = useFullName();
-  const p = data.players[name];
+  const p = isPlayer(data.players, name) ? data.players[name] : undefined;
   const photo = data.people[name]?.photo;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();

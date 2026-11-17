@@ -5,8 +5,7 @@ import {
   compare,
   debatePoints,
   knownFor,
-  roleOf,
-} from "@/lib/adapters/cricket/profile";
+  roleOf, isPlayer } from "@/lib/adapters/cricket/profile";
 import { setFavourite, useSettings } from "@/lib/client/settings";
 import { AppBar } from "./AppBar";
 import { useMatch } from "./MatchProvider";
@@ -27,13 +26,13 @@ export function PlayersScreen() {
   // /match/players?p=<name> (from "Back them in a debate") picks that player.
   useEffect(() => {
     const p = new URLSearchParams(window.location.search).get("p");
-    if (p && data.players[p]) {
+    if (isPlayer(data.players, p)) {
       setFavourite(p);
       window.history.replaceState(null, "", window.location.pathname);
     }
   }, [data.players]);
 
-  const mine = settings.favourite && data.players[settings.favourite] ? settings.favourite : null;
+  const mine = isPlayer(data.players, settings.favourite) ? settings.favourite : null;
   const teams = data.match.teams.map((t) => ({
     team: t,
     names: Object.keys(data.players).filter((n) => data.players[n].team === t.name),
@@ -70,7 +69,7 @@ export function PlayersScreen() {
   const photo = data.people[mine]?.photo;
   const points = debatePoints(mine, data.players);
   const others = Object.keys(data.players).filter((n) => n !== mine);
-  const vs = rival && rival !== mine ? rival : null;
+  const vs = isPlayer(data.players, rival) && rival !== mine ? rival : null;
   const rows = vs ? compare(mine, vs, data.players) : [];
   const share = [`Why ${full(mine)}:`, ...points.map((x) => `• ${x}`)].join("\n");
 

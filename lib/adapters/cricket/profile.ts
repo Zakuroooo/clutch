@@ -13,6 +13,11 @@ export type CompareRow = {
   lead: "a" | "b" | "tie";
 };
 
+/** True only for a real player of this match: never "constructor", "__proto__" and the like. */
+export function isPlayer(players: Players, name: string | null | undefined): name is string {
+  return typeof name === "string" && Object.hasOwn(players, name);
+}
+
 const ALL_ROUND_RUNS = 300;
 const BOWLER_WICKETS = 10;
 
@@ -36,7 +41,7 @@ const wickets = (p: Player) => p.bowling.wickets;
 
 /** All true claims about a player, strongest first. */
 function claims(name: string, players: Players): string[] {
-  const p = players[name];
+  const p = isPlayer(players, name) ? players[name] : undefined;
   if (!p || p.matches === 0) return ["No T20 matches in our records before this one"];
   const out: string[] = [];
   if (p.batting.runs > 0 && rankInTeam(name, players, runs) === 1)
@@ -77,7 +82,7 @@ export function achievements(p: Player): Tile[] {
 
 /** Points to make in a debate about this player: true, short, strongest first. */
 export function debatePoints(name: string, players: Players): string[] {
-  const p = players[name];
+  const p = isPlayer(players, name) ? players[name] : undefined;
   if (!p) return [];
   const out = claims(name, players);
   if (p.batting.strike_rate !== null && p.batting.strike_rate >= 130)
@@ -91,8 +96,8 @@ const highNum = (s: string | null) => (s ? parseInt(s, 10) : 0);
 
 /** Side by side, row by row, with who leads. A row neither player has is left out. */
 export function compare(a: string, b: string, players: Players): CompareRow[] {
-  const pa = players[a];
-  const pb = players[b];
+  const pa = isPlayer(players, a) ? players[a] : undefined;
+  const pb = isPlayer(players, b) ? players[b] : undefined;
   if (!pa || !pb) return [];
   const rows: {
     label: string;

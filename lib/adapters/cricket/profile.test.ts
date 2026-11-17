@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { achievements, arrivals, compare, debatePoints, knownFor, roleOf } from "./profile";
+import { achievements, arrivals, compare, debatePoints, isPlayer, knownFor, roleOf } from "./profile";
 import type { Player, Players } from "./types";
 
 function p(over: Partial<Player> & { team: string }, bat: Partial<Player["batting"]> = {}, bowl: Partial<Player["bowling"]> = {}): Player {
@@ -118,5 +118,18 @@ describe("arrivals", () => {
       { i: 2, name: "C", as: "batter" },
       { i: 2, name: "Y", as: "bowler" },
     ]);
+  });
+});
+
+describe("isPlayer", () => {
+  it("accepts a real player and refuses built-in object names", () => {
+    expect(isPlayer(players, "Ace")).toBe(true);
+    for (const bad of ["constructor", "__proto__", "toString", "hasOwnProperty", "", null, undefined])
+      expect(isPlayer(players, bad)).toBe(false);
+  });
+  it("makes every profile function safe on a hostile name", () => {
+    expect(knownFor("constructor", players)).toEqual(["No T20 matches in our records before this one"]);
+    expect(debatePoints("__proto__", players)).toEqual([]);
+    expect(compare("constructor", "Ace", players)).toEqual([]);
   });
 });
