@@ -4,7 +4,14 @@
  * every tick of the worker, and tells React when something a screen shows has changed.
  */
 import { z } from "zod";
-import { elapsed, nextMomentAnchor, setSpeed, skipTo, startAnchor } from "@/lib/clock/anchor";
+import {
+  elapsed,
+  nextMomentAnchor,
+  setSpeed,
+  skipTo,
+  startAnchor,
+  type Anchor,
+} from "@/lib/clock/anchor";
 import { catchUpTarget, followPlayer, type PlayerReading } from "@/lib/clock/follow";
 import { DEMO_LEAD_MS, type DemoPlan } from "@/lib/engine/demo";
 import { markSeen } from "@/lib/engine/shelf";
@@ -59,6 +66,8 @@ export type VideoLink = {
 export class MatchStore {
   private snapshot: Snapshot = SERVER_SNAPSHOT;
   private listeners = new Set<() => void>();
+  /** Told when the fan moves the clock (skip, jump, speed, restart): a room shares it. */
+  private anchorListeners = new Set<(anchor: Anchor) => void>();
   private session: Session = IDLE;
   private durable = true;
   private demo: DemoPlan | null = null;
@@ -172,6 +181,26 @@ export class MatchStore {
     if (r.notify) this.onCallback(r.notify);
   };
 
+  /** Listen for clock moves made on this device. Returns an unsubscribe function. */
+  onAnchorChange(listener: (anchor: Anchor) => void): () => void {
+    this.anchorListeners.add(listener);
+    return () => this.anchorListeners.delete(listener);
+  }
+  anchor(): Anchor {
+    return this.session.anchor;
+  }
+  /** Take a clock from the room. Does not tell anchor listeners, so it is not echoed back. */
+  adoptAnchor(anchor: Anchor) {
+    const a = this.session.anchor;
+    if (a.anchor_at === anchor.anchor_at && a.anchor_elapsed_ms === anchor.anchor_elapsed_ms && a.speed === anchor.speed) return;
+    this.update({ ...this.session, anchor });
+    this.video?.seek(elapsed(anchor, this.now()));
+  }
+  private moved() {
+    const a = this.session.anchor;
+    this.anchorListeners.forEach((l) => l(a));
+  }
+
   private update(next: Session) {
     this.session = next;
     this.save();
@@ -216,6 +245,7 @@ export class MatchStore {
   setSpeed(speed: number) {
     this.video?.setRate(speed);
     this.update({ ...this.session, anchor: setSpeed(this.session.anchor, this.now(), speed) });
+    this.moved();
   }
   /** Jump to 8 s before the next moment. Returns false when there is none left. */
   skipAhead(): boolean {
@@ -224,16 +254,19 @@ export class MatchStore {
     if (!anchor) return false;
     this.update({ ...this.session, anchor });
     this.video?.seek(anchor.anchor_elapsed_ms);
+    this.moved();
     return true;
   }
   jumpTo(elapsedMs: number) {
     this.update({ ...this.session, anchor: skipTo(this.session.anchor, this.now(), elapsedMs) });
     this.video?.seek(elapsedMs);
+    this.moved();
   }
   restart() {
     const start = this.firstBallMs() - COUNTDOWN_MS;
     this.update(restart(this.session, startAnchor(this.now(), start)));
     this.video?.seek(start);
+    this.moved();
   }
   markSeen(ids: string[]) {
     if (ids.every((id) => this.session.marks[id] === "seen")) return; // nothing to change

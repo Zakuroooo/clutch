@@ -7,10 +7,12 @@ const SettingsSchema = z.object({
   /** Null until the fan has picked a world. */
   world: WorldSchema.nullable(),
   vibrate: z.boolean(),
+  /** The player the fan backs on the My player tab. */
+  favourite: z.string().nullable().default(null),
 });
 export type Settings = z.infer<typeof SettingsSchema>;
 
-export const DEFAULT_SETTINGS: Settings = { world: null, vibrate: true };
+export const DEFAULT_SETTINGS: Settings = { world: null, vibrate: true, favourite: null };
 
 export const settingsStore = persisted<Settings>("clutch.settings.v1", DEFAULT_SETTINGS, (raw) => {
   const parsed = SettingsSchema.safeParse(raw);
@@ -27,6 +29,10 @@ export function setWorld(world: World) {
 
 export function setVibrate(vibrate: boolean) {
   settingsStore.set((s) => ({ ...s, vibrate }));
+}
+
+export function setFavourite(favourite: string | null) {
+  settingsStore.set((s) => ({ ...s, favourite }));
 }
 
 export const WORLD_LABEL: Record<World, string> = {

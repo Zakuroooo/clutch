@@ -16,7 +16,14 @@ import {
   type Thresholds,
 } from "@/lib/engine/types";
 import { detectNewBatters, type NewBatterEvent } from "./moments";
-import { PlayersSchema, TimelineSchema, type CricketTick, type Players } from "./types";
+import {
+  PeopleSchema,
+  PlayersSchema,
+  TimelineSchema,
+  type CricketTick,
+  type People,
+  type Players,
+} from "./types";
 
 const DATA = path.join(process.cwd(), "data");
 
@@ -125,6 +132,7 @@ export type MatchData = {
   newBatters: NewBatterEvent[];
   thresholds: Thresholds;
   players: Players;
+  people: People;
 };
 
 export async function loadMatch(matchId: string): Promise<MatchData> {
@@ -136,6 +144,7 @@ export async function loadMatch(matchId: string): Promise<MatchData> {
     .array(MomentSchema)
     .parse((await readOptional(path.join(dir, "moments.json"))) ?? []);
   const players = PlayersSchema.parse((await readOptional(path.join(dir, "players.json"))) ?? {});
+  const people = PeopleSchema.parse((await readOptional(path.join(dir, "people.json"))) ?? {});
   const ticks = timeline.events as CricketTick[];
   return {
     match: timeline.match,
@@ -145,5 +154,6 @@ export async function loadMatch(matchId: string): Promise<MatchData> {
     newBatters: detectNewBatters(ticks, thresholds),
     thresholds,
     players,
+    people,
   };
 }

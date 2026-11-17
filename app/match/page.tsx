@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { AppBar } from "@/components/AppBar";
 import { BallChips } from "@/components/BallChips";
-import { EngineLog } from "@/components/EngineLog";
+import { NewAtCrease } from "@/components/NewAtCrease";
 import { CHAPTER_LEAD_MS, chapters } from "@/lib/adapters/cricket/chapters";
 import { IconRestart, IconSkip, IconSpeed, IconTrophy, IconWorld } from "@/components/Icons";
 import { useMatch, useMatchView } from "@/components/MatchProvider";
@@ -14,6 +14,7 @@ import { CommentaryFeed } from "@/components/CommentaryFeed";
 import { WinBar, WinWorm } from "@/components/WinBar";
 import { useSettings, WORLD_LABEL } from "@/lib/client/settings";
 import { useWide } from "@/lib/client/useWide";
+import { ROOMS_ENABLED, useRoom } from "@/lib/client/room";
 
 const CLOCK_SPEEDS = [1, 4, 16];
 const VIDEO_SPEEDS = [1, 2];
@@ -23,6 +24,7 @@ export default function MatchPage() {
   const view = useMatchView();
   const settings = useSettings();
   const wide = useWide();
+  const room = useRoom();
   const { match, ticks } = data;
   const [a, b] = match.teams;
   const title = [match.event.name, match.event.stage].filter(Boolean).join(" · ");
@@ -114,6 +116,11 @@ export default function MatchPage() {
         <IconSpeed />
         <span className="num">{speed === 0 ? "Paused" : `${speed}×`}</span>
       </button>
+      {ROOMS_ENABLED ? (
+        <Link href="/match/room" className="chip" data-testid="room-chip">
+          {room.status === "live" ? `Room ${room.code} · ${room.members.length}` : "Watch with friends"}
+        </Link>
+      ) : null}
       <Link href="/world" className="chip">
         <IconWorld />
         {settings.world
@@ -190,9 +197,9 @@ export default function MatchPage() {
       <CommentaryFeed />
     </div>
   );
-  const engine = (
-    <div className="wrap block-gap">
-      <EngineLog />
+  const crease = (
+    <div className="wrap">
+      <NewAtCrease />
     </div>
   );
 
@@ -204,6 +211,7 @@ export default function MatchPage() {
           <div className="stage">
             {video}
             {score}
+            {crease}
             {controls}
             {thisOver}
             {jumpTo}
@@ -212,20 +220,18 @@ export default function MatchPage() {
           <div className="side">
             <div className="wrap side-pulse">{pulse}</div>
             {justHappened}
-            {engine}
           </div>
         </div>
       ) : (
         <div className="phone-stack">
           {video}
           {score}
+          {crease}
           <div className="wrap">{pulse}</div>
           {thisOver}
           {controls}
           {justHappened}
           {feed}
-          {jumpTo}
-          {engine}
         </div>
       )}
       {!snap.durable ? (

@@ -19,6 +19,7 @@ const bundle: MatchBundle = {
   newBatters: detectNewBatters(fixtureTicks, fixtureThresholds),
   thresholds: fixtureThresholds,
   players: {},
+  people: {},
   cards: {},
   promise: null,
   model: null,

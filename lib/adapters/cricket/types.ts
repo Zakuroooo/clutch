@@ -57,12 +57,17 @@ export const PlayerSchema = z.object({
   team: z.string(),
   jersey: z.number().nullable(),
   matches: z.number(),
+  /** Player-of-the-match awards before this match. */
+  player_of_match: z.number().default(0),
   batting: z.object({
     innings: z.number(),
     runs: z.number(),
     average: Nullable,
     strike_rate: Nullable,
     fifties: z.number(),
+    hundreds: z.number().default(0),
+    /** "63*" means not out. */
+    highest: z.string().nullable().default(null),
     sixes: z.number(),
     chase_innings: z.number(),
     chase_average: Nullable,
@@ -73,10 +78,23 @@ export const PlayerSchema = z.object({
   bowling: z.object({
     innings: z.number(),
     wickets: z.number(),
+    /** Best figures in one innings, "4/19". */
+    best: z.string().nullable().default(null),
     economy: Nullable,
     death_economy: Nullable,
   }),
 });
 export type Player = z.infer<typeof PlayerSchema>;
+
+/** A player's full name and, when one is freely licensed, a photo with its credit. */
+export const PersonSchema = z.object({
+  full_name: z.string(),
+  photo: z
+    .object({ src: z.string(), author: z.string(), licence: z.string(), page: z.string() })
+    .nullable(),
+});
+export type Person = z.infer<typeof PersonSchema>;
+export const PeopleSchema = z.record(z.string(), PersonSchema);
+export type People = z.infer<typeof PeopleSchema>;
 export const PlayersSchema = z.record(z.string(), PlayerSchema);
 export type Players = z.infer<typeof PlayersSchema>;
