@@ -78,6 +78,9 @@ let audioCtx: AudioContext | null = null;
 let meter: number | null = null;
 const peers = new Map<string, RTCPeerConnection>();
 const pendingIce = new Map<string, RTCIceCandidateInit[]>();
+/** Offers that arrived before the caller showed as in voice: answered once they do. */
+const pendingOffers = new Map<string, { offer: RTCSessionDescriptionInit; at: number }>();
+const OFFER_WAIT_MS = 10_000;
 const players = new Map<string, HTMLAudioElement>();
 const analysers = new Map<string, AnalyserNode>();
 
@@ -222,6 +225,7 @@ export function leaveVoice() {
   for (const pc of peers.values()) pc.close();
   peers.clear();
   pendingIce.clear();
+  pendingOffers.clear();
   for (const a of players.values()) {
     a.srcObject = null;
     a.remove();
@@ -329,6 +333,14 @@ function dropPeer(other: string) {
 function syncCalls() {
   if (state.voice !== "on" || !state.me) return;
   const inVoice = new Set(state.members.filter((m) => m.voice).map((m) => m.id));
+  // Answer calls that arrived before the caller's in-voice status did.
+  for (const [from, held] of [...pendingOffers]) {
+    if (Date.now() - held.at > OFFER_WAIT_MS) pendingOffers.delete(from);
+    else if (inVoice.has(from)) {
+      pendingOffers.delete(from);
+      void answer(from, held.offer);
+    }
+  }
   for (const other of [...peers.keys()]) if (!inVoice.has(other)) dropPeer(other);
   for (const other of toCall(state.me.id, state.members, new Set(peers.keys()))) {
     const pc = peerFor(other);
@@ -344,19 +356,26 @@ async function onSignal(payload: unknown) {
   if (!state.me || p.to !== state.me.id || typeof p.from !== "string" || state.voice !== "on")
     return;
   const other = p.from;
-  // Only room members may call me, and only the side allowed to offer. (Their "in voice"
-  // flag can arrive a moment after their offer, so membership is the check, not the flag.)
-  if (!state.members.some((m) => m.id === other)) return;
-  if (p.kind === "offer" && !shouldOffer(other, state.me.id)) return;
+  // Only someone in the room's voice may call me, and only from the side allowed to offer.
+  // Their in-voice status can arrive a moment after their offer: hold it until it does.
+  const sender = state.members.find((m) => m.id === other);
+  if (p.kind === "offer") {
+    if (!shouldOffer(other, state.me.id)) return;
+    if (!sender?.voice) {
+      pendingOffers.set(other, { offer: p.data as RTCSessionDescriptionInit, at: Date.now() });
+      return;
+    }
+    await answer(other, p.data as RTCSessionDescriptionInit);
+    return;
+  }
+  if (!sender?.voice) {
+    // A candidate can also beat the status; keep it for when the call is answered.
+    if (p.kind === "ice" && pendingOffers.has(other))
+      pendingIce.set(other, [...(pendingIce.get(other) ?? []), p.data as RTCIceCandidateInit]);
+    return;
+  }
   try {
-    if (p.kind === "offer") {
-      const pc = peerFor(other);
-      await pc.setRemoteDescription(p.data as RTCSessionDescriptionInit);
-      await pc.setLocalDescription(await pc.createAnswer());
-      signal(other, "answer", pc.localDescription?.toJSON());
-      for (const c of pendingIce.get(other) ?? []) await pc.addIceCandidate(c);
-      pendingIce.delete(other);
-    } else if (p.kind === "answer") {
+    if (p.kind === "answer") {
       const pc = peers.get(other);
       if (!pc) return;
       await pc.setRemoteDescription(p.data as RTCSessionDescriptionInit);
@@ -368,6 +387,19 @@ async function onSignal(payload: unknown) {
       if (pc?.remoteDescription) await pc.addIceCandidate(c);
       else pendingIce.set(other, [...(pendingIce.get(other) ?? []), c]);
     }
+  } catch {
+    set({ unreachable: [...new Set([...state.unreachable, other])] });
+  }
+}
+
+async function answer(other: string, offer: RTCSessionDescriptionInit) {
+  try {
+    const pc = peerFor(other);
+    await pc.setRemoteDescription(offer);
+    await pc.setLocalDescription(await pc.createAnswer());
+    signal(other, "answer", pc.localDescription?.toJSON());
+    for (const c of pendingIce.get(other) ?? []) await pc.addIceCandidate(c);
+    pendingIce.delete(other);
   } catch {
     set({ unreachable: [...new Set([...state.unreachable, other])] });
   }
