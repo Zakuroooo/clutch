@@ -344,9 +344,9 @@ async function onSignal(payload: unknown) {
   if (!state.me || p.to !== state.me.id || typeof p.from !== "string" || state.voice !== "on")
     return;
   const other = p.from;
-  // Only room members who are in voice may call me, and only the side allowed to offer.
-  const sender = state.members.find((m) => m.id === other);
-  if (!sender || !sender.voice) return;
+  // Only room members may call me, and only the side allowed to offer. (Their "in voice"
+  // flag can arrive a moment after their offer, so membership is the check, not the flag.)
+  if (!state.members.some((m) => m.id === other)) return;
   if (p.kind === "offer" && !shouldOffer(other, state.me.id)) return;
   try {
     if (p.kind === "offer") {
