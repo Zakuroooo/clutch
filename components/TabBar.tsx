@@ -34,9 +34,19 @@ const TABS = [
       </>
     ),
   },
+  {
+    href: "/match/players",
+    label: "My player",
+    icon: (
+      <>
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+      </>
+    ),
+  },
 ] as const;
 
-/** Tier 1 tabs. Back me up and Room join when tier 2 is built. */
+/** The main tabs. */
 export function TabBar({ missed }: { missed: number }) {
   const path = usePathname();
   return (

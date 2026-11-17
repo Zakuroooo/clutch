@@ -159,12 +159,14 @@ def rate(num: float, den: float, per: float = 1.0) -> float | None:
     return round(num * per / den, 1) if den else None
 
 
-def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
-    """Career counts for the given people over every men's T20 in our files (all splits:
-    this is counting, not predicting). squad_ids maps registry id -> display name."""
+def player_stats(squad_ids: dict[str, str], files, before: str | None = None) -> dict[str, dict]:
+    """Career counts for the given people over every men's T20 in our files dated before
+    `before` (the replay match's date), so nothing from the match itself or later leaks in.
+    All splits: this is counting, not predicting. squad_ids maps registry id -> display name."""
     stat = {
         pid: defaultdict(float, {"matches": 0}) for pid in squad_ids
     }
+    best: dict[str, dict] = {pid: {"high": None, "bowl": None} for pid in squad_ids}
     seen: set[str] = set()
     for path in files:
         if path.stem in seen:
@@ -174,6 +176,8 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
         info = d.get("info", {})
         if info.get("gender") != "male" or info.get("match_type") not in {"T20", "IT20"}:
             continue
+        if before is not None and str(info.get("dates", ["9999"])[0]) >= before:
+            continue
         people = info.get("registry", {}).get("people", {})
         ids = {name: pid for name, pid in people.items() if pid in stat}
         if not ids:
@@ -182,9 +186,13 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
             for name in names:
                 if name in ids:
                     stat[ids[name]]["matches"] += 1
+        for name in info.get("player_of_match", []):
+            if name in ids:
+                stat[ids[name]]["player_of_match"] += 1
         for n, inn in enumerate([i for i in d.get("innings", []) if not i.get("super_over")], start=1):
             bat = defaultdict(lambda: {"runs": 0, "balls": 0, "out": False})
             bowled_by: set[str] = set()
+            spell = defaultdict(lambda: [0, 0])  # bowler -> [wickets, runs] this innings
             for over in inn.get("overs", []):
                 death = over["over"] >= 15
                 for dl in over["deliveries"]:
@@ -205,6 +213,7 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
                         bowled_by.add(dl["bowler"])
                         conceded = dl["runs"]["total"] - sum(extras.get(k, 0) for k in ("byes", "legbyes", "penalty"))
                         s["bowl_runs"] += conceded
+                        spell[dl["bowler"]][1] += conceded
                         s["bowl_balls"] += int(legal)
                         if death:
                             s["death_bowl_runs"] += conceded
@@ -215,8 +224,13 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
                         bat[w["player_out"]]["out"] = True
                         if dl["bowler"] in ids and w["kind"] not in NOT_BOWLERS_WICKET:
                             stat[ids[dl["bowler"]]]["wickets"] += 1
+                            spell[dl["bowler"]][0] += 1
             for name in bowled_by:
                 stat[ids[name]]["bowl_innings"] += 1
+                w, r = spell[name]
+                cur = best[ids[name]]["bowl"]
+                if cur is None or (w, -r) > (cur[0], -cur[1]):
+                    best[ids[name]]["bowl"] = (w, r)
             for name, b in bat.items():
                 if name not in ids:
                     continue
@@ -225,7 +239,11 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
                 s["runs"] += b["runs"]
                 s["balls"] += b["balls"]
                 s["outs"] += int(b["out"])
-                s["fifties"] += int(b["runs"] >= 50)
+                s["fifties"] += int(50 <= b["runs"] < 100)
+                s["hundreds"] += int(b["runs"] >= 100)
+                cur = best[ids[name]]["high"]
+                if cur is None or b["runs"] > cur[0] or (b["runs"] == cur[0] and not b["out"] and cur[1]):
+                    best[ids[name]]["high"] = (b["runs"], b["out"])
                 if n == 2:
                     s["chase_innings"] += 1
                     s["chase_runs"] += b["runs"]
@@ -239,12 +257,17 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
         enough_bowl = s["bowl_innings"] >= MIN_INNINGS
         out[pid] = {
             "matches": int(s["matches"]),
+            "player_of_match": int(s["player_of_match"]),
             "batting": {
                 "innings": int(s["bat_innings"]),
                 "runs": int(s["runs"]),
                 "average": rate(s["runs"], s["outs"]) if enough_bat else None,
                 "strike_rate": rate(s["runs"], s["balls"], 100) if enough_bat else None,
                 "fifties": int(s["fifties"]),
+                "hundreds": int(s["hundreds"]),
+                "highest": (
+                    f"{best[pid]['high'][0]}{'' if best[pid]['high'][1] else '*'}" if best[pid]["high"] else None
+                ),
                 "sixes": int(s["sixes"]),
                 "chase_innings": int(s["chase_innings"]),
                 "chase_average": rate(s["chase_runs"], s["chase_outs"]) if enough_chase else None,
@@ -257,6 +280,7 @@ def player_stats(squad_ids: dict[str, str], files) -> dict[str, dict]:
             "bowling": {
                 "innings": int(s["bowl_innings"]),
                 "wickets": int(s["wickets"]),
+                "best": f"{best[pid]['bowl'][0]}/{best[pid]['bowl'][1]}" if best[pid]["bowl"] else None,
                 "economy": rate(s["bowl_runs"], s["bowl_balls"], 6) if enough_bowl else None,
                 "death_economy": (
                     rate(s["death_bowl_runs"], s["death_bowl_balls"], 6)
@@ -296,7 +320,7 @@ def main() -> None:
     people = d["info"]["registry"]["people"]
     squads = d["info"].get("players", {})
     ids = {people[name]: name for names in squads.values() for name in names if name in people}
-    stats = player_stats(ids, sorted(RAW.glob("*/*.json")))
+    stats = player_stats(ids, sorted(RAW.glob("*/*.json")), before=str(d["info"]["dates"][0]))
     players = {}
     for team, names in squads.items():
         for name in names:

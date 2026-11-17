@@ -1,0 +1,640 @@
+{
+  "SV Samson": {
+    "id": "a4cc73aa",
+    "team": "India",
+    "jersey": null,
+    "matches": 235,
+    "player_of_match": 15,
+    "batting": {
+      "innings": 223,
+      "runs": 5925,
+      "average": 29.9,
+      "strike_rate": 141.5,
+      "fifties": 30,
+      "hundreds": 6,
+      "highest": "119",
+      "sixes": 288,
+      "chase_innings": 115,
+      "chase_average": 28.4,
+      "chase_fifties": 15,
+      "chase_not_outs": 15,
+      "death_strike_rate": 182.6
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "best": null,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "Abhishek Sharma": {
+    "id": "f29185a1",
+    "team": "India",
+    "jersey": null,
+    "matches": 121,
+    "player_of_match": 11,
+    "batting": {
+      "innings": 117,
+      "runs": 3193,
+      "average": 29.6,
+      "strike_rate": 173.4,
+      "fifties": 18,
+      "hundreds": 3,
+      "highest": "141",
+      "sixes": 194,
+      "chase_innings": 54,
+      "chase_average": 28.4,
+      "chase_fifties": 10,
+      "chase_not_outs": 3,
+      "death_strike_rate": 169.8
+    },
+    "bowling": {
+      "innings": 50,
+      "wickets": 17,
+      "best": "2/3",
+      "economy": 8.9,
+      "death_economy": null
+    }
+  },
+  "Ishan Kishan": {
+    "id": "752f7486",
+    "team": "India",
+    "jersey": null,
+    "matches": 162,
+    "player_of_match": 11,
+    "batting": {
+      "innings": 155,
+      "runs": 4233,
+      "average": 29.2,
+      "strike_rate": 139.6,
+      "fifties": 26,
+      "hundreds": 2,
+      "highest": "106*",
+      "sixes": 198,
+      "chase_innings": 69,
+      "chase_average": 28.9,
+      "chase_fifties": 13,
+      "chase_not_outs": 5,
+      "death_strike_rate": 189.4
+    },
+    "bowling": {
+      "innings": 1,
+      "wickets": 0,
+      "best": "0/4",
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "S Dube": {
+    "id": "a4e37e47",
+    "team": "India",
+    "jersey": null,
+    "matches": 135,
+    "player_of_match": 5,
+    "batting": {
+      "innings": 116,
+      "runs": 2647,
+      "average": 29.4,
+      "strike_rate": 145.5,
+      "fifties": 14,
+      "hundreds": 0,
+      "highest": "95*",
+      "sixes": 172,
+      "chase_innings": 45,
+      "chase_average": 32.8,
+      "chase_fifties": 4,
+      "chase_not_outs": 14,
+      "death_strike_rate": 169.3
+    },
+    "bowling": {
+      "innings": 52,
+      "wickets": 33,
+      "best": "3/4",
+      "economy": 9.8,
+      "death_economy": 10.3
+    }
+  },
+  "SA Yadav": {
+    "id": "271f83cd",
+    "team": "India",
+    "jersey": null,
+    "matches": 274,
+    "player_of_match": 26,
+    "batting": {
+      "innings": 254,
+      "runs": 7513,
+      "average": 35.9,
+      "strike_rate": 154.2,
+      "fifties": 53,
+      "hundreds": 6,
+      "highest": "117",
+      "sixes": 342,
+      "chase_innings": 113,
+      "chase_average": 37.0,
+      "chase_fifties": 27,
+      "chase_not_outs": 25,
+      "death_strike_rate": 196.8
+    },
+    "bowling": {
+      "innings": 2,
+      "wickets": 2,
+      "best": "2/5",
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "HH Pandya": {
+    "id": "dbe50b21",
+    "team": "India",
+    "jersey": null,
+    "matches": 286,
+    "player_of_match": 16,
+    "batting": {
+      "innings": 245,
+      "runs": 4925,
+      "average": 28.1,
+      "strike_rate": 145.8,
+      "fifties": 19,
+      "hundreds": 0,
+      "highest": "91",
+      "sixes": 268,
+      "chase_innings": 97,
+      "chase_average": 25.8,
+      "chase_fifties": 3,
+      "chase_not_outs": 31,
+      "death_strike_rate": 172.5
+    },
+    "bowling": {
+      "innings": 228,
+      "wickets": 189,
+      "best": "5/36",
+      "economy": 8.7,
+      "death_economy": 9.8
+    }
+  },
+  "Tilak Varma": {
+    "id": "b0482a1d",
+    "team": "India",
+    "jersey": null,
+    "matches": 99,
+    "player_of_match": 4,
+    "batting": {
+      "innings": 94,
+      "runs": 2834,
+      "average": 41.1,
+      "strike_rate": 144.7,
+      "fifties": 14,
+      "hundreds": 2,
+      "highest": "120*",
+      "sixes": 142,
+      "chase_innings": 46,
+      "chase_average": 45.2,
+      "chase_fifties": 8,
+      "chase_not_outs": 15,
+      "death_strike_rate": 181.4
+    },
+    "bowling": {
+      "innings": 11,
+      "wickets": 4,
+      "best": "1/1",
+      "economy": 6.3,
+      "death_economy": null
+    }
+  },
+  "AR Patel": {
+    "id": "2e171977",
+    "team": "India",
+    "jersey": null,
+    "matches": 251,
+    "player_of_match": 15,
+    "batting": {
+      "innings": 178,
+      "runs": 2604,
+      "average": 21.0,
+      "strike_rate": 133.8,
+      "fifties": 4,
+      "hundreds": 0,
+      "highest": "66",
+      "sixes": 122,
+      "chase_innings": 74,
+      "chase_average": 19.3,
+      "chase_fifties": 2,
+      "chase_not_outs": 16,
+      "death_strike_rate": 149.6
+    },
+    "bowling": {
+      "innings": 242,
+      "wickets": 216,
+      "best": "4/21",
+      "economy": 7.4,
+      "death_economy": 8.3
+    }
+  },
+  "CV Varun": {
+    "id": "5b7ab5a9",
+    "team": "India",
+    "jersey": null,
+    "matches": 126,
+    "player_of_match": 8,
+    "batting": {
+      "innings": 20,
+      "runs": 29,
+      "average": 3.6,
+      "strike_rate": 47.5,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "10*",
+      "sixes": 0,
+      "chase_innings": 9,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 7,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 124,
+      "wickets": 171,
+      "best": "5/17",
+      "economy": 7.5,
+      "death_economy": 8.0
+    }
+  },
+  "Arshdeep Singh": {
+    "id": "244048f6",
+    "team": "India",
+    "jersey": null,
+    "matches": 160,
+    "player_of_match": 6,
+    "batting": {
+      "innings": 40,
+      "runs": 118,
+      "average": 5.6,
+      "strike_rate": 90.8,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "12",
+      "sixes": 3,
+      "chase_innings": 13,
+      "chase_average": 3.6,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 91.8
+    },
+    "bowling": {
+      "innings": 157,
+      "wickets": 215,
+      "best": "5/32",
+      "economy": 8.8,
+      "death_economy": 9.6
+    }
+  },
+  "JJ Bumrah": {
+    "id": "462411b3",
+    "team": "India",
+    "jersey": null,
+    "matches": 235,
+    "player_of_match": 17,
+    "batting": {
+      "innings": 36,
+      "runs": 80,
+      "average": 6.2,
+      "strike_rate": 82.5,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "16*",
+      "sixes": 1,
+      "chase_innings": 19,
+      "chase_average": 5.1,
+      "chase_fifties": 0,
+      "chase_not_outs": 11,
+      "death_strike_rate": 81.5
+    },
+    "bowling": {
+      "innings": 233,
+      "wickets": 295,
+      "best": "5/10",
+      "economy": 7.0,
+      "death_economy": 7.9
+    }
+  },
+  "PD Salt": {
+    "id": "3d284ca3",
+    "team": "England",
+    "jersey": null,
+    "matches": 93,
+    "player_of_match": 10,
+    "batting": {
+      "innings": 89,
+      "runs": 2768,
+      "average": 34.6,
+      "strike_rate": 169.5,
+      "fifties": 18,
+      "hundreds": 4,
+      "highest": "141*",
+      "sixes": 139,
+      "chase_innings": 48,
+      "chase_average": 39.7,
+      "chase_fifties": 15,
+      "chase_not_outs": 7,
+      "death_strike_rate": 225.7
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "best": null,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "JC Buttler": {
+    "id": "99b75528",
+    "team": "England",
+    "jersey": null,
+    "matches": 272,
+    "player_of_match": 24,
+    "batting": {
+      "innings": 257,
+      "runs": 8093,
+      "average": 37.0,
+      "strike_rate": 148.8,
+      "fifties": 52,
+      "hundreds": 8,
+      "highest": "124",
+      "sixes": 359,
+      "chase_innings": 140,
+      "chase_average": 35.1,
+      "chase_fifties": 29,
+      "chase_not_outs": 25,
+      "death_strike_rate": 182.1
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "best": null,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "HC Brook": {
+    "id": "4ae1755b",
+    "team": "England",
+    "jersey": null,
+    "matches": 72,
+    "player_of_match": 5,
+    "batting": {
+      "innings": 64,
+      "runs": 1479,
+      "average": 29.6,
+      "strike_rate": 149.5,
+      "fifties": 6,
+      "hundreds": 2,
+      "highest": "100*",
+      "sixes": 64,
+      "chase_innings": 32,
+      "chase_average": 26.8,
+      "chase_fifties": 3,
+      "chase_not_outs": 6,
+      "death_strike_rate": 194.1
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "best": null,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "JG Bethell": {
+    "id": "3c55c703",
+    "team": "England",
+    "jersey": null,
+    "matches": 32,
+    "player_of_match": 0,
+    "batting": {
+      "innings": 30,
+      "runs": 659,
+      "average": 26.4,
+      "strike_rate": 144.5,
+      "fifties": 4,
+      "hundreds": 0,
+      "highest": "62*",
+      "sixes": 36,
+      "chase_innings": 18,
+      "chase_average": 20.4,
+      "chase_fifties": 1,
+      "chase_not_outs": 2,
+      "death_strike_rate": 208.3
+    },
+    "bowling": {
+      "innings": 6,
+      "wickets": 8,
+      "best": "4/11",
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "T Banton": {
+    "id": "25f7b7d6",
+    "team": "England",
+    "jersey": null,
+    "matches": 36,
+    "player_of_match": 2,
+    "batting": {
+      "innings": 33,
+      "runs": 697,
+      "average": 24.9,
+      "strike_rate": 145.8,
+      "fifties": 4,
+      "hundreds": 0,
+      "highest": "73",
+      "sixes": 31,
+      "chase_innings": 18,
+      "chase_average": 32.6,
+      "chase_fifties": 3,
+      "chase_not_outs": 4,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 0,
+      "wickets": 0,
+      "best": null,
+      "economy": null,
+      "death_economy": null
+    }
+  },
+  "WG Jacks": {
+    "id": "9caf69a1",
+    "team": "England",
+    "jersey": null,
+    "matches": 60,
+    "player_of_match": 7,
+    "batting": {
+      "innings": 52,
+      "runs": 1058,
+      "average": 24.0,
+      "strike_rate": 148.8,
+      "fifties": 3,
+      "hundreds": 1,
+      "highest": "100*",
+      "sixes": 56,
+      "chase_innings": 29,
+      "chase_average": 22.9,
+      "chase_fifties": 2,
+      "chase_not_outs": 5,
+      "death_strike_rate": 205.9
+    },
+    "bowling": {
+      "innings": 28,
+      "wickets": 22,
+      "best": "3/14",
+      "economy": 8.9,
+      "death_economy": null
+    }
+  },
+  "SM Curran": {
+    "id": "e94915e6",
+    "team": "England",
+    "jersey": null,
+    "matches": 137,
+    "player_of_match": 6,
+    "batting": {
+      "innings": 101,
+      "runs": 1675,
+      "average": 22.9,
+      "strike_rate": 132.8,
+      "fifties": 8,
+      "hundreds": 0,
+      "highest": "88",
+      "sixes": 73,
+      "chase_innings": 58,
+      "chase_average": 20.2,
+      "chase_fifties": 3,
+      "chase_not_outs": 17,
+      "death_strike_rate": 163.3
+    },
+    "bowling": {
+      "innings": 132,
+      "wickets": 120,
+      "best": "4/11",
+      "economy": 9.2,
+      "death_economy": 10.6
+    }
+  },
+  "J Overton": {
+    "id": "59559bc2",
+    "team": "England",
+    "jersey": null,
+    "matches": 26,
+    "player_of_match": 0,
+    "batting": {
+      "innings": 16,
+      "runs": 101,
+      "average": 10.1,
+      "strike_rate": 114.8,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "19",
+      "sixes": 4,
+      "chase_innings": 9,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 4,
+      "death_strike_rate": 121.9
+    },
+    "bowling": {
+      "innings": 22,
+      "wickets": 26,
+      "best": "3/18",
+      "economy": 8.6,
+      "death_economy": 8.8
+    }
+  },
+  "JC Archer": {
+    "id": "5574750c",
+    "team": "England",
+    "jersey": null,
+    "matches": 96,
+    "player_of_match": 3,
+    "batting": {
+      "innings": 47,
+      "runs": 357,
+      "average": 12.3,
+      "strike_rate": 142.2,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "30",
+      "sixes": 22,
+      "chase_innings": 27,
+      "chase_average": 12.9,
+      "chase_fifties": 0,
+      "chase_not_outs": 10,
+      "death_strike_rate": 155.2
+    },
+    "bowling": {
+      "innings": 96,
+      "wickets": 115,
+      "best": "4/33",
+      "economy": 8.0,
+      "death_economy": 9.6
+    }
+  },
+  "LA Dawson": {
+    "id": "4a461c24",
+    "team": "England",
+    "jersey": null,
+    "matches": 31,
+    "player_of_match": 1,
+    "batting": {
+      "innings": 9,
+      "runs": 79,
+      "average": null,
+      "strike_rate": null,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "34",
+      "sixes": 2,
+      "chase_innings": 4,
+      "chase_average": null,
+      "chase_fifties": 0,
+      "chase_not_outs": 2,
+      "death_strike_rate": null
+    },
+    "bowling": {
+      "innings": 29,
+      "wickets": 32,
+      "best": "4/20",
+      "economy": 7.7,
+      "death_economy": null
+    }
+  },
+  "AU Rashid": {
+    "id": "249d60c9",
+    "team": "England",
+    "jersey": null,
+    "matches": 145,
+    "player_of_match": 7,
+    "batting": {
+      "innings": 42,
+      "runs": 185,
+      "average": 7.7,
+      "strike_rate": 93.4,
+      "fifties": 0,
+      "hundreds": 0,
+      "highest": "22",
+      "sixes": 2,
+      "chase_innings": 20,
+      "chase_average": 5.6,
+      "chase_fifties": 0,
+      "chase_not_outs": 6,
+      "death_strike_rate": 90.0
+    },
+    "bowling": {
+      "innings": 138,
+      "wickets": 161,
+      "best": "4/2",
+      "economy": 7.5,
+      "death_economy": 8.8
+    }
+  }
+}

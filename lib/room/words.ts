@@ -1,0 +1,37 @@
+/**
+ * Words a chat message may not contain: betting language (rule 5) and abuse. A copy of
+ * BANNED and abuse.txt from lib/cards, for the browser; a test keeps them the same.
+ */
+export const BLOCKED: readonly string[] = [
+  "bet",
+  "bets",
+  "betting",
+  "bookie",
+  "choker",
+  "chokers",
+  "clown",
+  "clowns",
+  "coward",
+  "cowards",
+  "disgrace",
+  "dumb",
+  "fraud",
+  "gamble",
+  "gambling",
+  "garbage",
+  "idiot",
+  "idiots",
+  "jackpot",
+  "loser",
+  "losers",
+  "moron",
+  "odds",
+  "pathetic",
+  "payout",
+  "punter",
+  "shameful",
+  "stupid",
+  "trash",
+  "useless",
+  "wager",
+];

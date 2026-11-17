@@ -17,9 +17,9 @@ const f = (id: string): Facts => {
   const m = moments.find((x) => x.id === id) ?? newBatters.find((x) => x.id === id)!;
   return facts(m, fixtureTicks, fixtureMatch, {
     "B Marlow": {
-      id: "x", team: "Bravos", jersey: null, matches: 41,
-      batting: { innings: 30, runs: 600, average: 24.5, strike_rate: 131.2, fifties: 2, sixes: 20, chase_innings: 12, chase_average: 22, chase_fifties: 1, chase_not_outs: 3, death_strike_rate: null },
-      bowling: { innings: 0, wickets: 0, economy: null, death_economy: null },
+      id: "x", team: "Bravos", jersey: null, matches: 41, player_of_match: 0,
+      batting: { innings: 30, runs: 600, average: 24.5, strike_rate: 131.2, fifties: 2, hundreds: 0, highest: "77", sixes: 20, chase_innings: 12, chase_average: 22, chase_fifties: 1, chase_not_outs: 3, death_strike_rate: null },
+      bowling: { innings: 0, wickets: 0, best: null, economy: null, death_economy: null },
     },
   }); // prettier-ignore
 };
@@ -240,7 +240,9 @@ describe("templates", () => {
         count += 1;
       }
     }
-    expect(count).toBeGreaterThan(100);
+    // One card per moment or new batter, per world; and the match has some of both.
+    expect(count).toBe((moments.length + newBatters.length) * WORLDS.length);
+    expect(moments.length).toBeGreaterThan(0);
   });
 
   test("a wicket where the batting side somehow gained stays plain", () => {

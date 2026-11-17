@@ -1,6 +1,6 @@
 # Clutch
 
-A second screen for casual sports fans: a Pulse ring that says when to look up, a shelf of missed moments, and explanations in the fan's own world. It replays one real past cricket match as live. Dream11 assignment, due 16 Nov 2026.
+A second screen for casual sports fans: a Pulse ring that says when to look up, a shelf of missed moments, and explanations in the fan's own world. It replays one real past cricket match as live (India v England, T20 World Cup 2026 semi-final). Friends can watch together in a room with chat and voice. Dream11 assignment, due 16 Nov 2026.
 
 Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to read for each task.
 
@@ -20,10 +20,10 @@ Docs are the spec. Start with `docs/BUILD-PLAN.md`; it links to the section to r
 1. **Facts come from code, never from the model.** The LLM only words facts it is given. Every LLM output goes through `lib/cards/check.ts` before anyone sees it. On failure, show the template.
 2. **No number without a source.** Do not write a metric, count or percentage into any doc or UI string unless it is read from a file in `model/artifacts/` or `evals/results/`. Unmeasured means blank.
 3. **It is a replay.** "Replay of a real match, running as live" stays visible on every match screen. Never describe the product as live or as having users.
-4. **No faces.** Never generate, draw or add an image of a real player, and no official logos. Jerseys, crests and numbers only. The one exception is the match video itself, embedded in YouTube's player (DECISIONS/0010).
+4. **No made or borrowed faces.** Never generate or draw a real player, and no official logos. Player photos only from Wikimedia Commons with a free licence, credited with author and licence (DECISIONS/0012). Otherwise jerseys, crests and numbers. An embedded match video plays in YouTube's own player (DECISIONS/0010).
 5. **No betting language** anywhere: bet, odds, wager, gamble, jackpot, payout.
 6. **Secrets stay in `.env.local`.** Never print, log, commit or paste a key. Server-only keys never get a `NEXT_PUBLIC_` prefix.
-7. **Tier 1 before tier 2.** Do not start a tier 2 task until Review 3 in the build plan.
+7. **Tier 1 before tier 2.** Done: Pranay started tier 2 on 17 Nov 2026 (rooms, chat, voice; DECISIONS/0011).
 
 ## How to work
 - Tests first. For each task, write the failing tests named in `docs/TESTING.md`, then the code.

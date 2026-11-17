@@ -4,8 +4,8 @@
 
 A second screen for casual sports fans. Get on with your work: Clutch calls you back when a moment matters, shows you the one you missed, and explains why it mattered in the language of something you already love.
 
-> **Status, 16 Nov 2026: tier 1 (watching alone) is built, with the real match video synced ball by ball. Tier 2 (rooms with friends) is designed, not built. Deployed at https://clutch-one-mu.vercel.app**
-> Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. Most explanation cards (287 of 322) were worded by Google's Gemini (gemini-3.5-flash-lite) from facts built by code, and every one passed the code check; the other 35 are fixed templates because the model's wording failed the check or the request failed.
+> **Status, 17 Nov 2026: watching alone and watching with friends are built. The replay is India v England, T20 World Cup 2026 semi-final. Rooms have chat, reactions, a shared match clock and voice. Every player has a profile with a free-licence photo where one exists. Deployed at https://clutch-one-mu.vercel.app**
+> Nothing here is live: the product replays one real past cricket match as if it were live. It has no real users, and its hypothesis is untested. Most explanation cards (55 of 70) were worded by Google's Gemini (gemini-3.1-flash-lite) from facts built by code, and every one passed the code check; the other 15 are fixed templates because the model's wording failed the check or the request failed.
 
 Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artifact that solves a real problem fans face during a live match.
 
@@ -30,7 +30,7 @@ Built for the Dream11 Forward Deployed Engineer assignment: one AI-powered artif
   <img src="design/review/video/09-focus.png" width="24%" alt="Focus mode: a calm Pulse, the call-back selector, stat tiles and the notification card">
 </p>
 
-*Screenshots of the app at 1280 by 800 and 390 by 844, taken by `scripts/video-check.mjs` and `scripts/demo-shots.mjs`. The match is Denmark v Germany, 1st T20I, Svanholm Park, 18 June 2026: the host ground's own stream played in YouTube's player, with every ball synced to Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
+*These screenshots are from the earlier version, before the switch to India v England (DECISIONS/0012). Screenshots of the app at 1280 by 800 and 390 by 844, taken by `scripts/video-check.mjs` and `scripts/demo-shots.mjs`. The match was Denmark v Germany, 1st T20I, Svanholm Park, 18 June 2026: the host ground's own stream played in YouTube's player, with every ball synced to Cricsheet data. Every number on screen comes from the pipeline. The first design mock-ups are still in [`design/screens/`](design/screens/).*
 
 ## The problem, in my words
 
@@ -56,7 +56,9 @@ A match centre built like the sports apps fans already use, with one thing of it
 - **Focus mode.** Say you're working. Clutch goes quiet and calls you back only for moments above the bar you choose.
 - **The Moment Shelf.** Every big moment is kept. Come back after two minutes or twenty and it says "You missed three", with a drawn replay of each and how far the win chance moved. "Catch me up" plays them in under a minute.
 - **Your World.** Pick what you already love: football, F1, chess, Bollywood, gaming. Each moment is explained in those terms. The facts come from code; the LLM only chooses the words; code checks every number and name before you see it.
-- **With friends** (tier 2). A room by 6-letter code, no sign-up. Everyone is on the same ball. Reactions, a call before each over (points only), and **Back me up**: your player's best true case against your friend's, fair to both sides.
+- **Who's this?** Every player gets a profile the moment they walk in or bowl their first over: photo (free licence, credited), role, what they are known for, and their numbers before this match.
+- **My player.** Pick the player you back: their achievements, your arguments, and a head to head against your friend's player. Copy the arguments or send them into the room.
+- **With friends.** A room by 6-letter code, no sign-up. Everyone is on the same ball: when anyone skips or pauses, everyone follows. Chat, reactions, and open voice like a call, with mute.
 
 ## Built, and designed but not built
 
@@ -64,17 +66,18 @@ Tier 1 is finished before tier 2 starts. This table is updated as work lands. Th
 
 | Tier | Feature | State |
 |---|---|---|
-| 1 | Shared match clock and score (replay) | built, solo. The shared part (two devices on one clock) needs rooms, which are not built |
+| 1 | Shared match clock and score (replay) | built, solo and in rooms |
 | 1 | Win-probability model and stakes | built |
 | 1 | The Pulse and Focus mode call-backs | built. Background-tab notification not yet checked by hand |
 | 1 | Moment Shelf, drawn replay, Catch me up | built |
-| 1 | Your World cards with the faithfulness check | built. 287 of 322 cards worded by Gemini and checked; 35 templates |
+| 1 | Your World cards with the faithfulness check | built. 55 of 70 cards worded by Gemini and checked; 15 templates |
 | 1 | Two-minute reviewer demo | built |
-| 2 | Friends' room by code | designed, not built |
-| 2 | Reactions | designed, not built |
+| 2 | Friends' room by code, chat, shared clock | built (Supabase Realtime, no tables; DECISIONS/0011) |
+| 2 | Reactions | built |
+| 2 | Voice in the room, open mic with mute | built; tested with two browser tabs, not yet between two real phones |
+| 2 | Player profiles with photos; My player with arguments and head to head | built |
 | 2 | Per-over calls and leaderboard | designed, not built |
-| 2 | Back me up | designed, not built |
-| 3 | Voice room · floating mini Pulse · memento · spoiler guard · football adapter · roar trigger · push with the app closed | designed, not built |
+| 3 | Floating mini Pulse · memento · spoiler guard · football adapter · roar trigger · push with the app closed | designed, not built |
 
 ## How it works
 
@@ -121,8 +124,8 @@ Each number is copied from the file named, not typed. Run on 14 and 15 Nov 2026.
 | Share of each test match's 10 biggest swings that had a call-back in the over before | Only the decider 30% (random, same count: 10%) · Big moments 52% (random, same count: 22%) · Everything 82% (random, same count: 42%) | `model/artifacts/pulse_eval.json` |
 | Call-backs per match (median) | 2 · 8 · 20 | same |
 | Planted errors the check caught | 30 of 30, each by the rule it was planted for; 10 of 10 good cards passed | `evals/results/summary.json` |
-| Recorded cards for the replay match that pass the check | 322 of 322 (287 worded by Gemini, 35 templates; 7 ways to read each moment, Hinglish included) | same |
-| Cards passing the check when written by an LLM (first full run, gemini-3.5-flash-lite) | 211 of 322 first time, 52 more on the one retry, 59 fell back to a template. 67 of the failed attempts were timeouts or a busy model, not broken rules. A second pass retried only the 59 | `evals/results/pregen_log_run1.json`, `evals/results/summary.json` |
+| Recorded cards for the replay match that pass the check | 70 of 70 (55 worded by Gemini, 15 templates; 7 ways to read each moment, Hinglish included) | same |
+| Cards passing the check when written by an LLM (gemini-3.1-flash-lite, India v England) | 44 of 70 first time, 11 more on the one retry, 15 fell back to a template. (On the earlier match with gemini-3.5-flash-lite: 211 of 322 first time, 52 on retry, 59 templates, in `evals/results/archive/`) | `evals/results/pregen_log_run1.json`, `evals/results/summary.json` |
 | Analogy quality by rubric; agreement with my own scoring | not measured: the judge is not built, and I have not scored a sample by hand yet | |
 | Automated tests, run locally and in CI | 159 of 159 unit and integration · 33 Python · 13 end to end, all passing | `evals/results/tests.json` |
 
@@ -194,6 +197,6 @@ The idea is my own, and I built it with AI. Claude Code (Anthropic) wrote most o
 
 Match data from [Cricsheet](https://cricsheet.org), used under the [Open Data Commons Attribution License v1.0](https://opendatacommons.org/licenses/by/1-0/). Processed files in `data/` are adapted from it and carry the same licence. Details in [DATA.md](docs/DATA.md).
 
-Clutch never draws or generates a real player; players are shown as jerseys. The match video is the original stream, embedded in YouTube's player with credit to the channel, never downloaded or clipped. No betting, money or prizes.
+Clutch never draws or generates a real player. Player photos are only freely licensed ones from Wikimedia Commons, credited on each profile; other players are shown as jerseys. The match video is the original stream, embedded in YouTube's player with credit to the channel, never downloaded or clipped. No betting, money or prizes.
 
 Pranay Sarkar

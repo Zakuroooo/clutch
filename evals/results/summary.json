@@ -7,32 +7,32 @@
     "good_passed": 10
   },
   "recorded_cards": {
-    "match_id": "1539472",
-    "checked": 322,
-    "passing": 322,
+    "match_id": "1512772",
+    "checked": 70,
+    "passing": 70,
     "by_source": {
-      "pregen": 287,
-      "template": 35
+      "pregen": 55,
+      "template": 15
     }
   },
   "pregen": {
-    "match_id": "1539472",
+    "match_id": "1512772",
     "prompt_version": "p2",
-    "provider": "gemini:gemini-3.5-flash-lite",
-    "cards": 322,
-    "passed_first_try": 19,
-    "passed_on_retry": 5,
-    "template": 35,
-    "kept_from_earlier_run": 263
+    "provider": "gemini:gemini-3.1-flash-lite",
+    "cards": 70,
+    "passed_first_try": 44,
+    "passed_on_retry": 11,
+    "template": 15,
+    "kept_from_earlier_run": 0
   },
   "first_run": {
-    "match_id": "1539472",
+    "match_id": "1512772",
     "prompt_version": "p2",
-    "provider": "gemini:gemini-3.5-flash-lite",
-    "cards": 322,
-    "passed_first_try": 211,
-    "passed_on_retry": 52,
-    "template": 59,
+    "provider": "gemini:gemini-3.1-flash-lite",
+    "cards": 70,
+    "passed_first_try": 44,
+    "passed_on_retry": 11,
+    "template": 15,
     "kept_from_earlier_run": 0
   },
   "rubric": null

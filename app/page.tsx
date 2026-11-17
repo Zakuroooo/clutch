@@ -17,12 +17,23 @@ const STEPS = [
     ),
   },
   {
-    title: "Never lose a moment",
-    body: "Anything you missed waits on a shelf, with a drawing of what happened and how far it moved the match.",
+    title: "Know every player",
+    body: "When someone walks in, tap Who's this? for their photo, what they're known for and their numbers. Back your player with real arguments.",
     icon: (
       <>
-        <rect x="4" y="4" width="16" height="6" rx="2" />
-        <rect x="4" y="14" width="16" height="6" rx="2" />
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+      </>
+    ),
+  },
+  {
+    title: "Watch with friends",
+    body: "Share a room code. Everyone sees the same ball, chats, reacts and talks by voice, like a call.",
+    icon: (
+      <>
+        <circle cx="8" cy="9" r="3" />
+        <circle cx="16" cy="9" r="3" />
+        <path d="M2 20c0-3 2.7-5 6-5s6 2 6 5M12 20c0-3 1.5-5 4-5s6 2 6 5" />
       </>
     ),
   },

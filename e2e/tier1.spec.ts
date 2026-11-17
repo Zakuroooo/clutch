@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 // The tests read the same data files the app ships, so they follow the replay match.
 const matchId = JSON.parse(readFileSync("data/replay.json", "utf8")).match_id as string;
@@ -25,6 +25,10 @@ const overText = (i: number) =>
   `Over ${Math.floor(ticks[i].state.balls_bowled / 6)}.${ticks[i].state.balls_bowled % 6}`;
 const ring = (page: Page) => page.getByTestId("pulse-card").getByTestId("ring");
 const moment = moments.find((m) => m.replay_kind !== "none" && m.i > 20)!;
+// The strongest call-back this match has (not every match has a "decider").
+const top = (["decider", "big", "notable"] as const).find((b) => alerts.some((a) => a.bar === b))!;
+const topAlert = alerts.find((a) => a.bar === top)!;
+const BAR_LABEL = { decider: "The decider", big: "Big moments", notable: "Everything" } as const;
 
 test.describe("clock and scoreboard", () => {
   test("shows the score from the data for the ball on the clock", async ({ page }) => {
@@ -71,8 +75,7 @@ test.describe("clock and scoreboard", () => {
 test.describe("the Pulse", () => {
   test("with reduced motion nothing animates and the word still shows", async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
-    const hot = alerts.find((a) => a.bar === "decider")!;
-    await page.goto(`/match?t0=${ticks[hot.i - 1].t_ms + 1000}`);
+    await page.goto(`/match?t0=${ticks[topAlert.i - 1].t_ms + 1000}`);
     await expect(ring(page)).toHaveAttribute("data-state", /high|decider/);
     const animation = await ring(page)
       .locator(".wave")
@@ -133,9 +136,8 @@ test.describe("focus mode and the shelf", () => {
   test("a call-back changes the tab title and shows the banner, with notifications off", async ({
     page,
   }) => {
-    const alert = alerts.find((a) => a.bar === "decider")!;
-    await page.goto(`/match/focus?t0=${ticks[alert.i].t_ms - 14_000}`);
-    await page.getByRole("button", { name: "The decider" }).click();
+    await page.goto(`/match/focus?t0=${ticks[topAlert.i].t_ms - 14_000}`);
+    await page.getByRole("button", { name: BAR_LABEL[top] }).click();
     await page.getByRole("button", { name: "Turn Focus on" }).click();
     await expect(page).toHaveTitle("Look up · Clutch", { timeout: 12_000 });
     await expect(page.getByRole("status")).toContainText("Look up");
@@ -209,5 +211,47 @@ test.describe("the match video", () => {
     await expect(page.getByTestId("team-a").locator(".runs")).toHaveText(
       `${ticks[60].state.score}/${ticks[60].state.wickets}`,
     );
+  });
+});
+
+test.describe("players", () => {
+  test("a new player shows up with Who's this, and the profile says who they are", async ({
+    page,
+  }) => {
+    await page.goto(`/match?t0=${ticks[0].t_ms + 500}`);
+    const strip = page.getByTestId("new-at-crease");
+    await expect(strip).toBeVisible();
+    await strip.click();
+    const sheet = page.getByTestId("player-sheet");
+    await expect(sheet).toBeVisible();
+    await expect(sheet.getByText("Known for")).toBeVisible();
+    await expect(sheet).toContainText("before this one");
+  });
+
+  test("My player gives arguments and a head to head", async ({ page }) => {
+    const players = JSON.parse(readFileSync(`${dir}/players.json`, "utf8")) as Record<string, unknown>;
+    const [a, b] = Object.keys(players);
+    await page.goto(`/match/players?p=${encodeURIComponent(a)}`);
+    await expect(page.getByRole("heading", { name: "Your arguments" })).toBeVisible();
+    await page.getByLabel("Your friend backs").selectOption(b);
+    await expect(page.getByTestId("head-to-head")).toBeVisible();
+    await expect(page.getByTestId("head-to-head")).toContainText("Matches");
+  });
+});
+
+test.describe("watch with friends", () => {
+  // The app build reads .env.local; CI has none, so rooms are off there and this is skipped.
+  const hasRooms =
+    Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL) ||
+    (existsSync(".env.local") && /^NEXT_PUBLIC_SUPABASE_URL=.+/m.test(readFileSync(".env.local", "utf8")));
+  test.skip(!hasRooms, "no Supabase project on this run");
+
+  test("starting a room gives a six-letter code and a voice button", async ({ page }) => {
+    await page.goto("/match/room");
+    await page.locator("#room-name").fill("Tester");
+    await page.getByTestId("room-start").click();
+    await expect(page.getByTestId("room-code")).toHaveText(/^[A-Z2-9]{6}$/, { timeout: 15_000 });
+    await expect(page.getByTestId("join-voice")).toBeVisible();
+    await expect(page.getByText("Replay of a real match")).toBeVisible();
   });
 });
