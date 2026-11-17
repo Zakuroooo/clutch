@@ -11,7 +11,14 @@ export const MAX_CHAT = 140;
 export const MAX_NAME = 20;
 export const REACTIONS = ["🔥", "😱", "👏", "😂", "💔", "🏏"] as const;
 
-export function makeCode(rand: () => number = Math.random): string {
+/** A random number in [0, 1) from the browser's secure generator. */
+function secureRandom(): number {
+  const a = new Uint32Array(1);
+  globalThis.crypto.getRandomValues(a);
+  return a[0] / 2 ** 32;
+}
+
+export function makeCode(rand: () => number = secureRandom): string {
   let code = "";
   for (let k = 0; k < CODE_LENGTH; k++) code += ALPHABET[Math.floor(rand() * ALPHABET.length)];
   return code;

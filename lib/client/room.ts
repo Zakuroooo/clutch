@@ -16,7 +16,7 @@ import {
   type ChatMessage,
   type Reaction,
 } from "@/lib/room/protocol";
-import { ICE_SERVERS, level, MAX_VOICE, SPEAKING_LEVEL, toCall } from "@/lib/room/voice";
+import { ICE_SERVERS, level, MAX_VOICE, shouldOffer, SPEAKING_LEVEL, toCall } from "@/lib/room/voice";
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -344,6 +344,10 @@ async function onSignal(payload: unknown) {
   if (!state.me || p.to !== state.me.id || typeof p.from !== "string" || state.voice !== "on")
     return;
   const other = p.from;
+  // Only room members who are in voice may call me, and only the side allowed to offer.
+  const sender = state.members.find((m) => m.id === other);
+  if (!sender || !sender.voice) return;
+  if (p.kind === "offer" && !shouldOffer(other, state.me.id)) return;
   try {
     if (p.kind === "offer") {
       const pc = peerFor(other);
